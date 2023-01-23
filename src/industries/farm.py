@@ -6,10 +6,6 @@ industry = IndustryPrimaryOrganic(
     prob_in_game="3",
     prob_map_gen="15",  # intended to be relatively prevalent in Steeltown, split this per economy if needed
     map_colour="85",
-    special_flags=[
-        "IND_FLAG_PLANT_FIELDS_PERIODICALLY",
-        "IND_FLAG_PLANT_FIELDS_WHEN_BUILT",
-    ],
     # basic farm doesn't cluster, by design - no industry location checks needed
     prospect_chance="0.75",
     name="string(STR_IND_FARM)",

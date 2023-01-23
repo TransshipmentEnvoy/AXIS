@@ -6,10 +6,6 @@ industry = IndustryPrimaryOrganic(
     prob_in_game="4",
     prob_map_gen="11",
     map_colour="209",
-    special_flags=[
-        "IND_FLAG_PLANT_FIELDS_PERIODICALLY",
-        "IND_FLAG_PLANT_FIELDS_WHEN_BUILT",
-    ],
     location_checks=dict(require_cluster=[72, 4]),
     prospect_chance="0.75",
     name="string(STR_IND_ARABLE_FARM)",
