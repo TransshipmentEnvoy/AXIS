@@ -404,6 +404,8 @@ rubber_plantation.industry.register()
 from industries import salt_mine
 salt_mine.industry.register()
 
+from industries import salt_evaporator
+salt_evaporator.industry.register()
 
 from industries import sawmill
 
@@ -458,6 +460,10 @@ sulphuric_acid_plant.industry.register()
 from industries import supply_yard
 
 supply_yard.industry.register()
+
+from industries import tar_sands_mine
+
+tar_sands_mine.industry.register()
 
  
 from industries import textile_mill
