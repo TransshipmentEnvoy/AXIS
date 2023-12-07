@@ -34,9 +34,8 @@ industry.economy_variations["IN_A_HOT_COUNTRY"].prod_cargo_types_with_output_rat
 industry.economy_variations["STEELTOWN"].enabled = True
 industry.economy_variations["STEELTOWN"].accept_cargos_with_input_ratios = [
     ("STSE", 2),
-    ("FISH", 2),
+    ("FISH", 4),
     ("SALT", 2),
-    ("FRUT", 2),
 ]
 
 industry.add_tile(

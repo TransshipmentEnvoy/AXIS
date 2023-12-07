@@ -18,6 +18,8 @@ industry.economy_variations["BASIC_TROPIC"].accept_cargos_with_input_ratios = [
     ("GRAI", 6)
 ]
 
+industry.economy_variations["STEELTOWN"].enabled = True
+
 industry.economy_variations['BETTER_LIVING_THROUGH_CHEMISTRY'].enabled = True
 
 industry.economy_variations["IN_A_HOT_COUNTRY"].enabled = True

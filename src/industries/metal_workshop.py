@@ -31,8 +31,9 @@ industry.economy_variations["STEELTOWN"].accept_cargos_with_input_ratios = [
     ("STWR", 2),
 ]
 industry.economy_variations["STEELTOWN"].prod_cargo_types_with_output_ratios = [
-    ("GOOD", 4),
+    ("GOOD", 3),
     ("STSE", 4),  
+    ("SCMT", 1),  
 ]
 
 industry.add_tile(

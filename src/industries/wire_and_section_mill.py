@@ -6,7 +6,8 @@ industry = IndustrySecondary(
     combined_cargos_boost_prod=True,
     prod_cargo_types_with_output_ratios=[
         ("STSE", 4),
-        ("STWR", 4),
+        ("STWR", 3),
+        ("SCMT", 1),
     ],  # balance is deliberate, steel sections need to feed wharf, vehicle chain is already well supplied
     prob_in_game="3",
     prob_map_gen="5",
@@ -19,9 +20,7 @@ industry = IndustrySecondary(
 
 
 industry.economy_variations["STEELTOWN"].enabled = True
-industry.economy_variations[
-    "STEELTOWN"
-].prob_in_game = "0"  # do not build during gameplay
+
 
 industry.add_tile(
     id="wire_and_section_mill_tile_1",
