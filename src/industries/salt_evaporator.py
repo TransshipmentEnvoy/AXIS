@@ -3,7 +3,7 @@ from industry import IndustryPrimaryExtractive, TileLocationChecks
 industry = IndustryPrimaryExtractive(
     id="salt_evaporator",
     accept_cargo_types=[],
-    prod_cargo_types_with_multipliers=[("SALT", 8)],
+    prod_cargo_types_with_multipliers=[("SALT", 15)],
     prob_in_game="14",
     prob_map_gen="14",
     substitute="5",
@@ -19,7 +19,7 @@ industry = IndustryPrimaryExtractive(
     ),
     prospect_chance="0.75",
     name="string(STR_IND_SALT_EVAPORATOR)",
-    nearby_station_name="string(STR_STATION_SALT)",  # appears to not work - maybe water industries don't accept station names?
+    nearby_station_name="string(STR_STATION_SALT)",  
     fund_cost_multiplier="88",
     pollution_and_squalor_factor=1,
 )
@@ -29,6 +29,8 @@ industry.economy_variations["BASIC_ARCTIC"].enabled = True
 industry.economy_variations['BETTER_LIVING_THROUGH_CHEMISTRY'].enabled = True
 
 industry.economy_variations["STEELTOWN"].enabled = True
+
+industry.economy_variations["BASIC_TROPIC"].enabled = True
 
 
 industry.add_tile(

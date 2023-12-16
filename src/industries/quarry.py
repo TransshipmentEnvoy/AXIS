@@ -28,6 +28,14 @@ industry.economy_variations["IN_A_HOT_COUNTRY"].prod_cargo_types_with_multiplier
     ("SAND", 14),
     ("GRVL", 14),
 ]
+
+industry.economy_variations["BASIC_TROPIC"].enabled = True
+industry.economy_variations["BASIC_TROPIC"].prod_cargo_types_with_multipliers = [
+    ("SAND", 14),
+    ("LIME", 14),
+]
+
+
 # industry.economy_variations['IN_A_HOT_COUNTRY'].prod_cargo_types_with_multipliers = [('LIME', 16)]
 
 # 2 tiles for this industry: pit outer tile cannot be on slopes; pit inner tiles and processor tiles can be

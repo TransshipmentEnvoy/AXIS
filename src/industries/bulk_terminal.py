@@ -42,6 +42,15 @@ industry.economy_variations["STEELTOWN"].prod_cargo_types_with_multipliers = [
     ("COAL", 16),
 ]
 
+industry.economy_variations["BASIC_TROPIC"].enabled = True
+industry.economy_variations["BASIC_TROPIC"].accept_cargo_types = ["BDMT", "FERT", "BOOM", "VEHI"]
+industry.economy_variations["BASIC_TROPIC"].prod_cargo_types_with_multipliers = [
+    ("ACET", 19),
+    ("COAL", 19),
+    ("RAMT", 16),
+    ("LIME", 16),
+]
+
 industry.add_tile(
     id="bulk_terminal_tile_1",
     land_shape_flags="bitmask(LSF_ONLY_ON_FLAT_LAND)",

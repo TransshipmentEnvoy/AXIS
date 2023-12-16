@@ -8,6 +8,10 @@ industry = IndustryPrimaryOrganic(
     map_colour="209",
     location_checks=dict(require_cluster=[72, 4]),
     prospect_chance="0.75",
+    special_flags=[
+        "IND_FLAG_PLANT_FIELDS_PERIODICALLY",
+        "IND_FLAG_PLANT_FIELDS_WHEN_BUILT",
+    ],
     name="string(STR_IND_ARABLE_FARM)",
     extra_text_fund="string(STR_FUND_ARABLE_FARM)",
     nearby_station_name="string(STR_STATION_FARM_1)",
@@ -18,14 +22,9 @@ industry = IndustryPrimaryOrganic(
 industry.economy_variations["BASIC_TROPIC"].enabled = True
 industry.economy_variations["BASIC_TROPIC"].prod_cargo_types_with_multipliers = [
     ("GRAI", 14),
-    ("BEAN", 14),
+    ("SGCN", 14),
 ]
 
-industry.economy_variations["IN_A_HOT_COUNTRY"].enabled = True
-industry.economy_variations["IN_A_HOT_COUNTRY"].prod_cargo_types_with_multipliers = [
-    ("CASS", 14),
-    ("NUTS", 14),
-]
 
 industry.economy_variations["STEELTOWN"].enabled = True
 industry.economy_variations["STEELTOWN"].prod_cargo_types_with_multipliers = [
@@ -44,7 +43,7 @@ industry.add_tile(
 
 sprite_ground = industry.add_sprite(sprite_number="GROUNDTILE_MUD_TRACKS")
 spriteset_ground_empty = industry.add_spriteset(type="empty")
-spriteset_ground_overlay = industry.add_spriteset(type="empty")
+spriteset_ground_overlay = industry.add_sprite(sprite_number=3943)
 spriteset_1 = industry.add_spriteset(
     sprites=[(10, 10, 64, 59, -31, -28)],
 )

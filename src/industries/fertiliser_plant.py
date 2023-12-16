@@ -28,6 +28,16 @@ industry.economy_variations["STEELTOWN"].accept_cargos_with_input_ratios = [
     ("ACID", 2),
 ]
 
+industry.economy_variations["BASIC_TROPIC"].enabled = True
+industry.economy_variations["BASIC_TROPIC"].accept_cargos_with_input_ratios = [
+    ("PHAC", 4),
+    ("BIOM", 2),
+    ("SLAG", 2),
+]
+industry.economy_variations["BASIC_TROPIC"].prod_cargo_types_with_output_ratios = [
+    ("FERT", 6),
+]
+
 industry.add_tile(
     id="fertiliser_plant_tile_1",
     animation_length=7,

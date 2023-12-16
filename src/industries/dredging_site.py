@@ -2,7 +2,10 @@ from industry import IndustryPrimaryExtractive, TileLocationChecks
 
 industry = IndustryPrimaryExtractive(
     id="dredging_site",
-    prod_cargo_types_with_multipliers=[("SAND", 17)],
+    prod_cargo_types_with_multipliers=[
+        ("SAND", 17),
+        ("CLAY", 13),
+    ],
     prob_in_game="3",
     prob_map_gen="5",
     map_colour="194",
@@ -28,6 +31,7 @@ industry.economy_variations["STEELTOWN"].prod_cargo_types_with_multipliers = [
     ("SAND", 17),
 ]
 
+industry.economy_variations["BASIC_TROPIC"].enabled = True
 
 
 industry.add_tile(

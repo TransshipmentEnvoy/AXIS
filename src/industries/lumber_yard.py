@@ -25,8 +25,17 @@ industry.economy_variations["IN_A_HOT_COUNTRY"].prod_cargo_types_with_output_rat
     ("BDMT", 8)
 ]
 
-
-
+industry.economy_variations["BASIC_TROPIC"].enabled = True
+industry.economy_variations["BASIC_TROPIC"].accept_cargos_with_input_ratios = [
+    ("WDPR", 4),
+    ("GLAS", 2), 
+    ("STSE", 1),
+    ("COAT", 1),  
+]
+industry.economy_variations["BASIC_TROPIC"].prod_cargo_types_with_output_ratios = [
+    ("BDMT", 6),
+    ("MNSP", 6)
+]
 
 
 # non-animated tile, allowed on slopes
@@ -68,7 +77,6 @@ industry.add_spritelayout(
     ground_sprite=sprite_ground,
     ground_overlay=spriteset_ground_overlay,
     building_sprites=[spriteset_1],
-    fences=["nw", "ne", "se", "sw"],
 )
 industry.add_spritelayout(
     id="lumber_yard_spritelayout_2",
@@ -76,7 +84,6 @@ industry.add_spritelayout(
     ground_overlay=spriteset_ground_overlay,
     building_sprites=[spriteset_2],
     smoke_sprites=[sprite_smoke],
-    fences=["nw", "ne", "se", "sw"],
 )
 # no spritelayout 3 for this industry, historical reasons
 industry.add_spritelayout(
@@ -84,35 +91,30 @@ industry.add_spritelayout(
     ground_sprite=sprite_ground,
     ground_overlay=spriteset_ground_overlay,
     building_sprites=[spriteset_4],
-    fences=["nw", "ne", "se", "sw"],
 )
 industry.add_spritelayout(
     id="lumber_yard_spritelayout_5",
     ground_sprite=sprite_ground,
     ground_overlay=spriteset_ground_overlay,
     building_sprites=[spriteset_5],
-    fences=["nw", "ne", "se", "sw"],
 )
 industry.add_spritelayout(
     id="lumber_yard_spritelayout_6",
     ground_sprite=sprite_ground,
     ground_overlay=spriteset_ground_overlay,
     building_sprites=[spriteset_6],
-    fences=["nw", "ne", "se", "sw"],
 )
 industry.add_spritelayout(
     id="lumber_yard_spritelayout_7",
     ground_sprite=sprite_ground,
     ground_overlay=spriteset_ground_overlay,
     building_sprites=[spriteset_7],
-    fences=["nw", "ne", "se", "sw"],
 )
 industry.add_spritelayout(
     id="lumber_yard_spritelayout_8",
     ground_sprite=sprite_ground,
     ground_overlay=spriteset_ground_overlay,
     building_sprites=[spriteset_8],
-    fences=["nw", "ne", "se", "sw"],
 )
 
 industry.add_industry_layout(

@@ -12,10 +12,35 @@ industry = IndustrySecondary(
     name="string(STR_IND_SUGAR_REFINERY)",
     nearby_station_name="string(STR_STATION_SUGAR_COMPANY)",
     fund_cost_multiplier="140",
+    location_checks=dict(
+        near_at_least_one_of_these_keystone_industries=[
+            ["arable_farm"],
+            72,
+        ]
+    )
 )
 
 # deliberately not in BLTC, requires sugar beet, which is too climate-specific for BLTC
 industry.economy_variations['BETTER_LIVING_THROUGH_CHEMISTRY'].enabled = True
+
+industry.economy_variations["BASIC_TROPIC"].enabled = True
+industry.economy_variations["BASIC_TROPIC"].accept_cargos_with_input_ratios = [
+    ("SGCN", 6),
+    ("PHOS", 1),
+    ("ENUM", 1),
+]
+industry.economy_variations["BASIC_TROPIC"].prod_cargo_types_with_output_ratios = [
+    ("SUGR", 6),
+    ("BIOM", 2),
+]
+
+
+
+
+industry.economy_variations["STEELTOWN"].enabled = True
+industry.economy_variations["STEELTOWN"].accept_cargos_with_input_ratios = [
+    ("FRUT", 6),
+]
 
 industry.add_tile(
     id="sugar_refinery_tile_1",
@@ -26,11 +51,6 @@ industry.add_tile(
         require_effectively_flat=True, disallow_industry_adjacent=True
     ),
 )
-
-industry.economy_variations["STEELTOWN"].enabled = True
-industry.economy_variations["STEELTOWN"].accept_cargos_with_input_ratios = [
-    ("FRUT", 6),
-]
 
 spriteset_ground = industry.add_spriteset(type="concrete")
 spriteset_ground_overlay = industry.add_spriteset(type="empty")
@@ -101,7 +121,6 @@ industry.add_spritelayout(
     ground_sprite=spriteset_ground,
     ground_overlay=spriteset_ground_overlay,
     building_sprites=[spriteset_5],
-    fences=["se"],
 )
 industry.add_spritelayout(
     id="sugar_refinery_spritelayout_6",

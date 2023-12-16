@@ -22,6 +22,16 @@ industry.economy_variations["BASIC_ARCTIC"].accept_cargo_types = ["PEAT"]
 
 industry.economy_variations["STEELTOWN"].enabled = True
 
+industry.economy_variations["BASIC_TROPIC"].enabled = True
+industry.economy_variations["BASIC_TROPIC"].accept_cargo_types = [
+    "COAL",
+    "PETR",
+    "BIOM",
+
+]
+
+
+
 industry.add_tile(
     id="power_plant_tile_1",
     animation_length=7,
@@ -35,76 +45,164 @@ industry.add_tile(
         require_effectively_flat=True, disallow_industry_adjacent=True
     ),
 )
-sprite_ground = industry.add_sprite(sprite_number="GROUNDTILE_MUD_TRACKS")
-sprite_ground_overlay = industry.add_sprite(sprite_number="GROUNDTILE_MUD_TRACKS")
-sprite_1 = industry.add_sprite(sprite_number="2047")
-sprite_2 = industry.add_sprite(sprite_number="2050")
-sprite_3 = industry.add_sprite(sprite_number="2053")
-sprite_4 = industry.add_sprite(sprite_number="2054")
-sprite_smoke_1 = industry.add_smoke_sprite(
-    smoke_type="white_smoke_big", xoffset=3, yoffset=0, zoffset=36
+
+spriteset_ground = industry.add_spriteset(
+    type="dirty_concrete",
+)
+spriteset_ground_overlay = industry.add_spriteset(
+    type="empty",
 )
 
+spriteset_boiler = industry.add_spriteset(
+    sprites=[(10, 10, 64, 114, -31, -83)],
+)
+spriteset_chimneys = industry.add_spriteset(
+    sprites=[(80, 10, 64, 114, -31, -83)],
+)
+spriteset_tanks_group = industry.add_spriteset(
+    sprites=[(150, 10, 64, 114, -31, -83)],
+)
+spriteset_silos = industry.add_spriteset(
+    sprites=[(220, 10, 64, 114, -31, -83)],
+)
+spriteset_silos_with_office = industry.add_spriteset(
+    sprites=[(290, 10, 64, 114, -31, -83)],
+)
+
+sprite_transformer = industry.add_sprite(
+    sprite_number=2054,
+)
+
+sprite_smoke_1 = industry.add_smoke_sprite(
+    smoke_type="white_smoke_big",
+    xoffset=0,
+    yoffset=0,
+    zoffset=81,
+)
+
+
 industry.add_spritelayout(
-    id="power_plant_spritelayout_cooling_tower",
-    ground_sprite=sprite_ground,
-    ground_overlay=sprite_ground_overlay,
-    building_sprites=[sprite_1],
+    id="power_plant_spritelayout_empty",
+    ground_sprite=spriteset_ground,
+    ground_overlay=spriteset_ground_overlay,
+    building_sprites=[],
 )
 industry.add_spritelayout(
-    id="power_plant_spritelayout_large_building",
-    ground_sprite=sprite_ground,
-    ground_overlay=sprite_ground_overlay,
-    building_sprites=[sprite_2],
+    id="power_plant_spritelayout_boiler",
+    ground_sprite=spriteset_ground,
+    ground_overlay=spriteset_ground_overlay,
+    building_sprites=[spriteset_boiler],
+)
+industry.add_spritelayout(
+    id="power_plant_spritelayout_chimneys",
+    ground_sprite=spriteset_ground,
+    ground_overlay=spriteset_ground_overlay,
+    building_sprites=[spriteset_chimneys],
     smoke_sprites=[sprite_smoke_1],
 )
 industry.add_spritelayout(
-    id="power_plant_spritelayout_small_building",
-    ground_sprite=sprite_ground,
-    ground_overlay=sprite_ground_overlay,
-    building_sprites=[sprite_3],
+    id="power_plant_spritelayout_tanks_group",
+    ground_sprite=spriteset_ground,
+    ground_overlay=spriteset_ground_overlay,
+    building_sprites=[sprite_transformer],
 )
 industry.add_spritelayout(
-    id="power_plant_spritelayout_substation",
-    ground_sprite=sprite_ground,
-    ground_overlay=sprite_ground_overlay,
-    building_sprites=[sprite_4],
+    id="power_plant_spritelayout_silos",
+    ground_sprite=spriteset_ground,
+    ground_overlay=spriteset_ground_overlay,
+    building_sprites=[spriteset_silos],
+)
+industry.add_spritelayout(
+    id="power_plant_spritelayout_silos_with_office",
+    ground_sprite=spriteset_ground,
+    ground_overlay=spriteset_ground_overlay,
+    building_sprites=[spriteset_silos_with_office],
 )
 
 industry.add_industry_layout(
     id="power_plant_industry_layout_1",
     layout=[
-        (0, 0, "power_plant_tile_1", "power_plant_spritelayout_cooling_tower"),
-        (0, 1, "power_plant_tile_1", "power_plant_spritelayout_small_building"),
-        (1, 0, "power_plant_tile_1", "power_plant_spritelayout_cooling_tower"),
-        (1, 1, "power_plant_tile_1", "power_plant_spritelayout_large_building"),
-        (2, 0, "power_plant_tile_1", "power_plant_spritelayout_cooling_tower"),
-        (2, 1, "power_plant_tile_1", "power_plant_spritelayout_large_building"),
-        (3, 0, "power_plant_tile_1", "power_plant_spritelayout_substation"),
-        (3, 1, "power_plant_tile_1", "power_plant_spritelayout_substation"),
+        (0, 0, "power_plant_tile_1", "power_plant_spritelayout_chimneys"),
+        (0, 1, "power_plant_tile_1", "power_plant_spritelayout_boiler"),
+        (
+            0,
+            2,
+            "power_plant_tile_1",
+            "power_plant_spritelayout_tanks_group",
+        ),
+        (1, 0, "power_plant_tile_1", "power_plant_spritelayout_chimneys"),
+        (1, 1, "power_plant_tile_1", "power_plant_spritelayout_boiler"),
+        (
+            1,
+            2,
+            "power_plant_tile_1",
+            "power_plant_spritelayout_tanks_group",
+        ),
+        (
+            2,
+            0,
+            "power_plant_tile_1",
+            "power_plant_spritelayout_silos_with_office",
+        ),
+        (2, 1, "power_plant_tile_1", "power_plant_spritelayout_silos"),
+        (2, 2, "power_plant_tile_1", "power_plant_spritelayout_empty"),
     ],
 )
 industry.add_industry_layout(
     id="power_plant_industry_layout_2",
     layout=[
-        (0, 1, "power_plant_tile_1", "power_plant_spritelayout_cooling_tower"),
-        (0, 2, "power_plant_tile_1", "power_plant_spritelayout_cooling_tower"),
-        (1, 0, "power_plant_tile_1", "power_plant_spritelayout_large_building"),
-        (1, 1, "power_plant_tile_1", "power_plant_spritelayout_large_building"),
-        (1, 2, "power_plant_tile_1", "power_plant_spritelayout_cooling_tower"),
-        (2, 0, "power_plant_tile_1", "power_plant_spritelayout_small_building"),
-        (2, 1, "power_plant_tile_1", "power_plant_spritelayout_substation"),
-        (2, 2, "power_plant_tile_1", "power_plant_spritelayout_small_building"),
+        (0, 0, "power_plant_tile_1", "power_plant_spritelayout_boiler"),
+        (
+            0,
+            1,
+            "power_plant_tile_1",
+            "power_plant_spritelayout_tanks_group",
+        ),
+        (1, 0, "power_plant_tile_1", "power_plant_spritelayout_boiler"),
+        (
+            1,
+            1,
+            "power_plant_tile_1",
+            "power_plant_spritelayout_tanks_group",
+        ),
+        (2, 0, "power_plant_tile_1", "power_plant_spritelayout_chimneys"),
+        (2, 1, "power_plant_tile_1", "power_plant_spritelayout_silos"),
+        (
+            3,
+            0,
+            "power_plant_tile_1",
+            "power_plant_spritelayout_silos_with_office",
+        ),
+        (3, 1, "power_plant_tile_1", "power_plant_spritelayout_empty"),
     ],
 )
 industry.add_industry_layout(
     id="power_plant_industry_layout_3",
     layout=[
-        (0, 0, "power_plant_tile_1", "power_plant_spritelayout_cooling_tower"),
-        (0, 1, "power_plant_tile_1", "power_plant_spritelayout_cooling_tower"),
-        (1, 0, "power_plant_tile_1", "power_plant_spritelayout_small_building"),
-        (1, 1, "power_plant_tile_1", "power_plant_spritelayout_large_building"),
-        (2, 0, "power_plant_tile_1", "power_plant_spritelayout_substation"),
-        (2, 1, "power_plant_tile_1", "power_plant_spritelayout_small_building"),
+        (0, 0, "power_plant_tile_1", "power_plant_spritelayout_boiler"),
+        (
+            0,
+            1,
+            "power_plant_tile_1",
+            "power_plant_spritelayout_tanks_group",
+        ),
+        (0, 2, "power_plant_tile_1", "power_plant_spritelayout_chimneys"),
+        (0, 3, "power_plant_tile_1", "power_plant_spritelayout_silos"),
+        (1, 0, "power_plant_tile_1", "power_plant_spritelayout_boiler"),
+        (
+            1,
+            1,
+            "power_plant_tile_1",
+            "power_plant_spritelayout_tanks_group",
+        ),
+        (
+            1,
+            2,
+            "power_plant_tile_1",
+            "power_plant_spritelayout_silos_with_office",
+        ),
+        (1, 3, "power_plant_tile_1", "power_plant_spritelayout_empty"),
     ],
 )
+
+

@@ -20,7 +20,7 @@ industry = IndustryTertiary(
 industry.economy_variations['BETTER_LIVING_THROUGH_CHEMISTRY'].enabled = True
 
 industry.economy_variations['STEELTOWN'].enabled = True
-industry.economy_variations["STEELTOWN"].accept_cargo_types = ["FOOD", "FRUT", "FISH"]
+industry.economy_variations["STEELTOWN"].accept_cargo_types = ["FOOD"]
 
 industry.add_tile(
     id="food_market_tile_1",

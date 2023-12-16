@@ -8,13 +8,6 @@ industry = IndustrySecondary(
     prob_in_game="3",
     prob_map_gen="5",
     map_colour="191",
-    # it's rare to force co-location of secondaries, but this one is near port by design
-    # !! this will fail if port is not available in economy
-    # wharf was added to avoid pathological case in Arctic Basic where checking for only port would often fail to yield a location (for reasons I didn't fully understand eh)
-    location_checks=dict(
-        near_at_least_one_of_these_keystone_industries=[["port", "wharf"], 96],
-        same_type_distance=128,
-    ),
     name="string(STR_IND_CHEMICAL_PLANT)",
     nearby_station_name="string(STR_STATION_HEAVY_INDUSTRY_2)",
     fund_cost_multiplier="170",
@@ -22,6 +15,15 @@ industry = IndustrySecondary(
 )
 
 industry.economy_variations["BASIC_TROPIC"].enabled = True
+industry.economy_variations["BASIC_TROPIC"].accept_cargos_with_input_ratios = [
+    ("SALT", 2),
+    ("NITR", 2),  
+    ("RFPR", 2),  
+]
+industry.economy_variations["BASIC_TROPIC"].prod_cargo_types_with_output_ratios = [
+    ("ACET", 6),
+    ("ENUM", 4),
+]
 
 industry.economy_variations["BASIC_ARCTIC"].enabled = True
 industry.economy_variations["BASIC_ARCTIC"].accept_cargos_with_input_ratios = [
@@ -107,67 +109,18 @@ sprite_smoke_1 = industry.add_smoke_sprite(
     yoffset=0,
     zoffset=81,
 )
-sprite_smoke_2 = industry.add_smoke_sprite(
-    smoke_type="white_smoke_small",
-    xoffset=6,
-    yoffset=-1,
-    zoffset=45,
-)
-sprite_smoke_3 = industry.add_smoke_sprite(
-    smoke_type="white_smoke_small",
-    xoffset=6,
-    yoffset=3,
-    zoffset=45,
-)
-sprite_smoke_4 = industry.add_smoke_sprite(
-    smoke_type="white_smoke_small",
-    xoffset=2,
-    yoffset=-1,
-    zoffset=45,
-)
-sprite_smoke_5 = industry.add_smoke_sprite(
-    smoke_type="white_smoke_small",
-    xoffset=2,
-    yoffset=3,
-    zoffset=45,
-)
-sprite_smoke_6 = industry.add_smoke_sprite(
-    smoke_type="white_smoke_small",
-    xoffset=6,
-    yoffset=0,
-    zoffset=60,
-)
-sprite_smoke_7 = industry.add_smoke_sprite(
-    smoke_type="white_smoke_small",
-    xoffset=6,
-    yoffset=3,
-    zoffset=60,
-)
-sprite_smoke_8 = industry.add_smoke_sprite(
-    smoke_type="white_smoke_small",
-    xoffset=3,
-    yoffset=0,
-    zoffset=60,
-)
-sprite_smoke_9 = industry.add_smoke_sprite(
-    smoke_type="white_smoke_small",
-    xoffset=3,
-    yoffset=3,
-    zoffset=60,
-)
+
 industry.add_spritelayout(
     id="chemical_plant_spritelayout_horizontal_tanks",
     ground_sprite=spriteset_ground,
     ground_overlay=spriteset_ground_overlay,
     building_sprites=[spriteset_horizontal_tanks],
-    fences=["nw", "ne", "se", "sw"],
 )
 industry.add_spritelayout(
     id="chemical_plant_spritelayout_frac_columns",
     ground_sprite=spriteset_ground,
     ground_overlay=spriteset_ground_overlay,
     building_sprites=[spriteset_frac_columns],
-    fences=["nw", "ne", "se", "sw"],
 )
 industry.add_spritelayout(
     id="chemical_plant_spritelayout_drop_tower_and_thin_chimney",
@@ -175,44 +128,36 @@ industry.add_spritelayout(
     ground_overlay=spriteset_ground_overlay,
     building_sprites=[spriteset_drop_tower_and_thin_chimney],
     smoke_sprites=[sprite_smoke_1],
-    fences=["nw", "ne", "se", "sw"],
 )
 industry.add_spritelayout(
     id="chemical_plant_spritelayout_large_building",
     ground_sprite=spriteset_ground,
     ground_overlay=spriteset_ground_overlay,
     building_sprites=[spriteset_large_building],
-    smoke_sprites=[sprite_smoke_2, sprite_smoke_3, sprite_smoke_4, sprite_smoke_5],
-    fences=["nw", "ne", "se", "sw"],
 )
 industry.add_spritelayout(
     id="chemical_plant_spritelayout_fat_chimney",
     ground_sprite=spriteset_ground,
     ground_overlay=spriteset_ground_overlay,
     building_sprites=[spriteset_fat_chimney],
-    smoke_sprites=[sprite_smoke_6, sprite_smoke_7, sprite_smoke_8, sprite_smoke_9],
-    fences=["nw", "ne", "se", "sw"],
 )
 industry.add_spritelayout(
     id="chemical_plant_spritelayout_spherical_tanks",
     ground_sprite=spriteset_ground,
     ground_overlay=spriteset_ground_overlay,
     building_sprites=[spriteset_spherical_tanks],
-    fences=["nw", "ne", "se", "sw"],
 )
 industry.add_spritelayout(
     id="chemical_plant_spritelayout_vertical_tanks",
     ground_sprite=spriteset_ground,
     ground_overlay=spriteset_ground_overlay,
     building_sprites=[spriteset_vertical_tanks],
-    fences=["nw", "ne", "se", "sw"],
 )
 industry.add_spritelayout(
     id="chemical_plant_spritelayout_barrels",
     ground_sprite=spriteset_ground,
     ground_overlay=spriteset_ground_overlay,
     building_sprites=[spriteset_barrels],
-    fences=["nw", "ne", "se", "sw"],
 )
 
 

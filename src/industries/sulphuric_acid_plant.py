@@ -26,6 +26,9 @@ industry.economy_variations["STEELTOWN"].prod_cargo_types_with_output_ratios = [
     ("ACID", 8),
 ]
 
+industry.economy_variations["BASIC_TROPIC"].enabled = True
+
+
 industry.add_tile(
     id="sulphuric_acid_plant_tile_1",
     animation_length=7,

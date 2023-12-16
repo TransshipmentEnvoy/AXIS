@@ -15,7 +15,12 @@ industry = IndustrySecondary(
 
 industry.economy_variations["BASIC_TROPIC"].enabled = True
 industry.economy_variations["BASIC_TROPIC"].accept_cargos_with_input_ratios = [
-    ("GRAI", 6)
+    ("GRAI", 4),
+    ("OLSD", 4),
+]
+industry.economy_variations["BASIC_TROPIC"].prod_cargo_types_with_output_ratios = [
+    ("BAKE", 6),
+    ("EOIL", 2),
 ]
 
 industry.economy_variations["STEELTOWN"].enabled = True
@@ -42,7 +47,7 @@ industry.add_tile(
 )
 
 spriteset_ground_bakery = industry.add_spriteset(
-    type="cobble",
+    type="hard_standing_dirt",
 )
 spriteset_ground_overlay_1 = industry.add_spriteset(
     sprites=[(10, 10, 64, 31, -31, 0)],
@@ -71,7 +76,7 @@ spriteset_windmill_anim = industry.add_spriteset(
     animation_rate=1,
 )
 spriteset_ground_windmill = industry.add_spriteset(
-    type="empty",
+    type="hard_standing_dirt",
     # autofills number of frames to match another spriteset which is animated etc (can get frame count from the other spriteset if defined already)
     num_sprites_to_autofill=len(spriteset_windmill_anim.sprites),
 )
@@ -80,22 +85,22 @@ spriteset_ground_overlay_windmill = industry.add_spriteset(
     # autofills number of frames to match another spriteset which is animated etc (can get frame count from the other spriteset if defined already)
     num_sprites_to_autofill=len(spriteset_windmill_anim.sprites),
 )
-spriteset_ground_overlay_windmill_granary = industry.add_spriteset(
+spriteset_ground_overlay_building_big = industry.add_spriteset(
     sprites=[(80, 160, 64, 31, -31, 0)],
     # autofills number of frames to match another spriteset which is animated etc (can get frame count from the other spriteset if defined already)
     num_sprites_to_autofill=len(spriteset_windmill_anim.sprites),
 )
-spriteset_windmill_granary = industry.add_spriteset(
+spriteset_building_big = industry.add_spriteset(
     sprites=[(80, 60, 64, 82, -31, -52)],
     # autofills number of frames to match another spriteset which is animated etc (can get frame count from the other spriteset if defined already)
     num_sprites_to_autofill=len(spriteset_windmill_anim.sprites),
 )
-spriteset_ground_overlay_windmill_shed = industry.add_spriteset(
+spriteset_ground_overlay_building_small = industry.add_spriteset(
     sprites=[(10, 160, 64, 31, -31, 0)],
     # autofills number of frames to match another spriteset which is animated etc (can get frame count from the other spriteset if defined already)
     num_sprites_to_autofill=len(spriteset_windmill_anim.sprites),
 )
-spriteset_windmill_shed = industry.add_spriteset(
+spriteset_building_small = industry.add_spriteset(
     sprites=[(10, 60, 64, 82, -31, -52)],
     # autofills number of frames to match another spriteset which is animated etc (can get frame count from the other spriteset if defined already)
     num_sprites_to_autofill=len(spriteset_windmill_anim.sprites),
@@ -107,122 +112,114 @@ spriteset_ground_overlay_windmill_greeble = industry.add_spriteset(
 )
 
 industry.add_spritelayout(
-    id="flour_mill_spritelayout_brickbakery_1",
+    id="flour_mill_spritelayout_empty",
     ground_sprite=spriteset_ground_bakery,
     ground_overlay=spriteset_ground_overlay_1,
     building_sprites=[],
-    fences=["nw", "ne", "se"],
 )
 industry.add_spritelayout(
-    id="flour_mill_spritelayout_brickbakery_2",
+    id="flour_mill_spritelayout_silos_2",
     ground_sprite=spriteset_ground_bakery,
     ground_overlay=spriteset_ground_overlay_2,
     building_sprites=[],
-    fences=["nw", "ne", "se", "sw"],
 )
 industry.add_spritelayout(
-    id="flour_mill_spritelayout_brickbakery_3",
+    id="flour_mill_spritelayout_silos_3",
     ground_sprite=spriteset_ground_bakery,
     ground_overlay=spriteset_ground_overlay_3,
     building_sprites=[spriteset_3],
-    fences=["nw", "ne", "se", "sw"],
 )
 industry.add_spritelayout(
-    id="flour_mill_spritelayout_brickbakery_4",
+    id="flour_mill_spritelayout_silos_4",
     ground_sprite=spriteset_ground_bakery,
     ground_overlay=spriteset_ground_overlay_4,
     building_sprites=[spriteset_4],
-    fences=["nw", "ne", "se", "sw"],
 )
 industry.add_spritelayout(
     id="flour_mill_spritelayout_windmill_anim",
     ground_sprite=spriteset_ground_windmill,
     ground_overlay=spriteset_ground_overlay_windmill,
     building_sprites=[spriteset_windmill_anim],
-    fences=["nw", "ne", "se", "sw"],
-    terrain_aware_ground=True,
 )
 industry.add_spritelayout(
-    id="flour_mill_spritelayout_windmill_granary",
+    id="flour_mill_spritelayout_building_big",
     ground_sprite=spriteset_ground_windmill,
-    ground_overlay=spriteset_ground_overlay_windmill_granary,
-    building_sprites=[spriteset_windmill_granary],
-    fences=["nw", "ne", "se", "sw"],
-    terrain_aware_ground=True,
+    ground_overlay=spriteset_ground_overlay_building_big,
+    building_sprites=[spriteset_building_big],
 )
 industry.add_spritelayout(
-    id="flour_mill_spritelayout_windmill_shed",
+    id="flour_mill_spritelayout_building_small",
     ground_sprite=spriteset_ground_windmill,
-    ground_overlay=spriteset_ground_overlay_windmill_shed,
-    building_sprites=[spriteset_windmill_shed],
-    fences=["nw", "ne", "se", "sw"],
-    terrain_aware_ground=True,
+    ground_overlay=spriteset_ground_overlay_building_small,
+    building_sprites=[spriteset_building_small],
 )
 industry.add_spritelayout(
     id="flour_mill_spritelayout_windmill_greeble",
     ground_sprite=spriteset_ground_windmill,
     ground_overlay=spriteset_ground_overlay_windmill_greeble,
-    building_sprites=[],
-    fences=["nw", "ne", "se", "sw"],
-    terrain_aware_ground=True,
+    building_sprites=[spriteset_ground_overlay_windmill_greeble],
 )
 industry.add_industry_layout(
     id="flour_mill_industry_layout_1",
     layout=[
-        (0, 0, "flour_mill_tile_1", "flour_mill_spritelayout_brickbakery_3"),
-        (0, 1, "flour_mill_tile_1", "flour_mill_spritelayout_brickbakery_4"),
-        (1, 0, "flour_mill_tile_1", "flour_mill_spritelayout_brickbakery_1"),
-        (1, 1, "flour_mill_tile_1", "flour_mill_spritelayout_brickbakery_2"),
+        (0, 0, "flour_mill_tile_1", "flour_mill_spritelayout_silos_3"),
+        (0, 1, "flour_mill_tile_1", "flour_mill_spritelayout_silos_4"),
+        (1, 0, "flour_mill_tile_1", "flour_mill_spritelayout_empty"),
+        (1, 1, "flour_mill_tile_1", "flour_mill_spritelayout_building_big"),
     ],
 )
 industry.add_industry_layout(
     id="flour_mill_industry_layout_2",
     layout=[
-        (0, 0, "flour_mill_tile_1", "flour_mill_spritelayout_brickbakery_3"),
-        (0, 1, "flour_mill_tile_1", "flour_mill_spritelayout_brickbakery_4"),
-        (1, 0, "flour_mill_tile_1", "flour_mill_spritelayout_brickbakery_3"),
-        (1, 1, "flour_mill_tile_1", "flour_mill_spritelayout_brickbakery_4"),
-        (2, 0, "flour_mill_tile_1", "flour_mill_spritelayout_brickbakery_1"),
-        (2, 1, "flour_mill_tile_1", "flour_mill_spritelayout_brickbakery_2"),
+        (0, 0, "flour_mill_tile_1", "flour_mill_spritelayout_empty"),
+        (0, 1, "flour_mill_tile_1", "flour_mill_spritelayout_building_big"),
+        (1, 0, "flour_mill_tile_1", "flour_mill_spritelayout_silos_3"),
+        (1, 1, "flour_mill_tile_1", "flour_mill_spritelayout_silos_4"),
     ],
 )
 industry.add_industry_layout(
     id="flour_mill_industry_layout_3",
     layout=[
-        (0, 0, "flour_mill_tile_1", "flour_mill_spritelayout_brickbakery_3"),
-        (0, 1, "flour_mill_tile_1", "flour_mill_spritelayout_brickbakery_4"),
-        (0, 2, "flour_mill_tile_1", "flour_mill_spritelayout_brickbakery_3"),
-        (0, 3, "flour_mill_tile_1", "flour_mill_spritelayout_brickbakery_4"),
-        (1, 0, "flour_mill_tile_1", "flour_mill_spritelayout_brickbakery_1"),
-        (1, 1, "flour_mill_tile_1", "flour_mill_spritelayout_brickbakery_2"),
-        (1, 2, "flour_mill_tile_1", "flour_mill_spritelayout_brickbakery_1"),
-        (1, 3, "flour_mill_tile_1", "flour_mill_spritelayout_brickbakery_2"),
+        (0, 0, "flour_mill_tile_1", "flour_mill_spritelayout_silos_3"),
+        (0, 1, "flour_mill_tile_1", "flour_mill_spritelayout_silos_4"),
+        (0, 2, "flour_mill_tile_1", "flour_mill_spritelayout_silos_3"),
+        (0, 3, "flour_mill_tile_1", "flour_mill_spritelayout_silos_4"),
+        (1, 0, "flour_mill_tile_1", "flour_mill_spritelayout_empty"),
+        (1, 1, "flour_mill_tile_1", "flour_mill_spritelayout_building_small"),
+        (1, 2, "flour_mill_tile_1", "flour_mill_spritelayout_empty"),
+        (1, 3, "flour_mill_tile_1", "flour_mill_spritelayout_building_big"),
     ],
 )
+
 industry.add_industry_layout(
     id="flour_mill_industry_layout_4",
     layout=[
-        (0, 0, "flour_mill_tile_1", "flour_mill_spritelayout_windmill_shed"),
-        (0, 1, "flour_mill_tile_1", "flour_mill_spritelayout_windmill_granary"),
-        (1, 0, "flour_mill_tile_1", "flour_mill_spritelayout_windmill_anim"),
-        (1, 1, "flour_mill_tile_1", "flour_mill_spritelayout_windmill_greeble"),
+        (0, 0, "flour_mill_tile_1", "flour_mill_spritelayout_silos_3"),
+        (0, 1, "flour_mill_tile_1", "flour_mill_spritelayout_silos_4"),
+        (0, 2, "flour_mill_tile_1", "flour_mill_spritelayout_building_big"),
+        (1, 1, "flour_mill_tile_1", "flour_mill_spritelayout_empty"),
+        (1, 2, "flour_mill_tile_1", "flour_mill_spritelayout_empty"),
     ],
 )
 industry.add_industry_layout(
     id="flour_mill_industry_layout_5",
     layout=[
-        (0, 0, "flour_mill_tile_1", "flour_mill_spritelayout_windmill_shed"),
-        (0, 1, "flour_mill_tile_1", "flour_mill_spritelayout_windmill_anim"),
-        (1, 0, "flour_mill_tile_1", "flour_mill_spritelayout_windmill_granary"),
-        (1, 1, "flour_mill_tile_1", "flour_mill_spritelayout_windmill_greeble"),
+        (0, 0, "flour_mill_tile_1", "flour_mill_spritelayout_building_small"),
+        (0, 1, "flour_mill_tile_1", "flour_mill_spritelayout_empty"),
+        (0, 2, "flour_mill_tile_1", "flour_mill_spritelayout_building_big"),
+
+        (1, 0, "flour_mill_tile_1", "flour_mill_spritelayout_empty"),
+        (1, 1, "flour_mill_tile_1", "flour_mill_spritelayout_silos_3"),
+        (1, 2, "flour_mill_tile_1", "flour_mill_spritelayout_silos_4"),
     ],
 )
+
 industry.add_industry_layout(
     id="flour_mill_industry_layout_6",
     layout=[
-        (0, 0, "flour_mill_tile_1", "flour_mill_spritelayout_windmill_granary"),
-        (0, 1, "flour_mill_tile_1", "flour_mill_spritelayout_windmill_greeble"),
-        (1, 0, "flour_mill_tile_1", "flour_mill_spritelayout_windmill_anim"),
-        (1, 1, "flour_mill_tile_1", "flour_mill_spritelayout_windmill_shed"),
+        (0, 0, "flour_mill_tile_1", "flour_mill_spritelayout_empty"),
+        (0, 1, "flour_mill_tile_1", "flour_mill_spritelayout_building_big"),
+        (1, 0, "flour_mill_tile_1", "flour_mill_spritelayout_silos_3"),
+        (1, 1, "flour_mill_tile_1", "flour_mill_spritelayout_silos_4"),
     ],
 )

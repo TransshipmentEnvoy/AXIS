@@ -28,6 +28,20 @@ industry.economy_variations["STEELTOWN"].prod_cargo_types_with_output_ratios = [
     ("FMSP", 2),
 ]
 
+industry.economy_variations["BASIC_TROPIC"].enabled = True
+industry.economy_variations["BASIC_TROPIC"].accept_cargos_with_input_ratios = [
+    ("STEL", 3),
+    ("GLAS", 2),
+    ("VPTS", 2),
+    ("TYRE", 1),
+#    ("COAT", 1),
+]
+industry.economy_variations["BASIC_TROPIC"].prod_cargo_types_with_output_ratios = [
+    ("GOOD", 4),
+    ("ENSP", 2),
+    ("FMSP", 2),
+]
+
 industry.add_tile(
     id="machine_shop_tile_1",
     animation_length=71,

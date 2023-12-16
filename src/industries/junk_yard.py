@@ -17,6 +17,9 @@ industry = IndustryTownProducerPopulationDependent(
 
 industry.economy_variations["BASIC_TEMPERATE"].enabled = True
 
+industry.economy_variations["BASIC_TROPIC"].enabled = True
+
+
 industry.economy_variations["STEELTOWN"].enabled = True
 industry.economy_variations["STEELTOWN"].prob_map_gen = "14"
 

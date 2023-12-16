@@ -8,7 +8,7 @@ cargo = Cargo(
     sprite="NEW_CARGO_SPRITE",
     weight="1.0",
     is_freight="1",
-    cargo_classes="bitmask(CC_LIQUID, CC_BULK, CC_PIECE_GOODS)",
+    cargo_classes="bitmask(CC_LIQUID, CC_PIECE_GOODS)",
     cargo_label="ENUM",  # yes it's a terrible pun on several things at once - LordAro suggested it
     # apart from TOWNGROWTH_PASSENGERS and TOWNGROWTH_MAIL, FIRS does not set any town growth effects; this has the intended effect of disabling food / water requirements for towns in desert and above snowline
     town_growth_effect="TOWNGROWTH_NONE",
@@ -19,6 +19,6 @@ cargo = Cargo(
     single_penalty_length="255",
     price_factor=117,
     capacity_multiplier="1",
-    icon_indices=(10, 1),
-    sprites_complete=False,
+    icon_indices=(14, 6),
+    sprites_complete=True,
 )

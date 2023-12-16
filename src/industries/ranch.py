@@ -8,22 +8,38 @@ industry = IndustryPrimaryOrganic(
     map_colour="168",
     location_checks=dict(require_cluster=[72, 4]),
     prospect_chance="0.75",
-    name="string(STR_IND_RANCH)",
+    special_flags=[
+        "IND_FLAG_PLANT_FIELDS_PERIODICALLY",
+        "IND_FLAG_PLANT_FIELDS_WHEN_BUILT",
+    ],
+    name="string(STR_IND_COTTON_FARM)",
     nearby_station_name="string(STR_STATION_FARM_3)",
     fund_cost_multiplier="45",
 )
 
 industry.economy_variations["BASIC_TROPIC"].enabled = True
+industry.economy_variations["BASIC_TROPIC"].prod_cargo_types_with_multipliers = [
+    ("FICR", 14),
+    ("OLSD", 14),
+]
+
 
 industry.add_tile(
     id="ranch_tile_1",
     location_checks=TileLocationChecks(
-        disallow_coast=True, disallow_industry_adjacent=True
+        disallow_slopes=True,
+        disallow_above_snowline=True,
+        disallow_desert=True,
+        disallow_industry_adjacent=True,
     ),
 )
 
+
+
 spriteset_ground = industry.add_spriteset(type="empty")
-spriteset_ground_overlay = industry.add_spriteset(type="empty")
+spriteset_ground_overlay = industry.add_sprite(sprite_number=3943)
+
+
 spriteset_1 = industry.add_spriteset(
     sprites=[(10, 10, 64, 52, -31, -21)],
 )

@@ -28,6 +28,18 @@ industry.economy_variations["STEELTOWN"].prod_cargo_types_with_output_ratios = [
     ("ENSP", 2),
 ]
 
+
+industry.economy_variations["BASIC_TROPIC"].enabled = True
+industry.economy_variations["BASIC_TROPIC"].accept_cargos_with_input_ratios = [
+    ("NITR", 2),
+    ("SUAC", 2),  
+    ("RFPR", 2),  
+]
+industry.economy_variations["BASIC_TROPIC"].prod_cargo_types_with_output_ratios = [
+    ("BOOM", 6),
+    ("FERT", 4),
+]
+
 industry.add_tile(
     id="civil_explosives_facility_tile_1",
     animation_length=7,

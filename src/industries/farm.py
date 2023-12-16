@@ -2,13 +2,16 @@ from industry import IndustryPrimaryOrganic, TileLocationChecks
 
 industry = IndustryPrimaryOrganic(
     id="farm",
-    prod_cargo_types_with_multipliers=[],
+    prod_cargo_types_with_multipliers=[
+        ("GRAI", 14),
+        ("LVST", 13),
+    ],
     prob_in_game="3",
     prob_map_gen="15",  # intended to be relatively prevalent in Steeltown, split this per economy if needed
     map_colour="85",
     # basic farm doesn't cluster, by design - no industry location checks needed
     prospect_chance="0.75",
-    name="string(STR_IND_FARM)",
+    name="string(STR_IND_MIXEDFARM)",
     extra_text_fund="string(STR_FUND_FARM)",
     nearby_station_name="string(STR_STATION_BARNS)",
     fund_cost_multiplier="49",
@@ -28,10 +31,9 @@ industry.economy_variations['BETTER_LIVING_THROUGH_CHEMISTRY'].enabled = True
 industry.economy_variations['BETTER_LIVING_THROUGH_CHEMISTRY'].prod_cargo_types_with_multipliers = [('GRAI', 14), ('LVST', 13)]
 
 industry.economy_variations["STEELTOWN"].enabled = True
-industry.economy_variations["STEELTOWN"].prod_cargo_types_with_multipliers = [
-    ("GRAI", 14),
-    ("LVST", 13),
-]
+
+industry.economy_variations["BASIC_TROPIC"].enabled = True
+
 
 industry.add_tile(
     id="farm_tile_1",

@@ -24,6 +24,14 @@ industry.economy_variations["STEELTOWN"].prod_cargo_types_with_output_ratios = [
     ("C2H4", 3),
 ]
 
+industry.economy_variations["BASIC_TROPIC"].enabled = True
+industry.economy_variations["BASIC_TROPIC"].accept_cargos_with_input_ratios = [
+    ("BIOM", 6),
+    ("OLSD", 6),  
+    ("GRAI", 6),
+]
+
+
 industry.add_tile(
     id="biorefinery_tile_1",
     animation_length=7,

@@ -23,7 +23,12 @@ industry.economy_variations["BASIC_TEMPERATE"].accept_cargos_with_input_ratios =
 
 industry.economy_variations["BASIC_TROPIC"].enabled = True
 industry.economy_variations["BASIC_TROPIC"].accept_cargos_with_input_ratios = [
-    ("LVST", 6)
+    ("LVST", 8),
+    ("SOAP", 2),
+]
+industry.economy_variations["BASIC_TROPIC"].prod_cargo_types_with_output_ratios = [
+    ("MEAT", 6),
+    ("BIOM", 2),
 ]
 
 industry.economy_variations['BETTER_LIVING_THROUGH_CHEMISTRY'].enabled = True

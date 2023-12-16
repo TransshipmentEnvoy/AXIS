@@ -2,7 +2,10 @@ from industry import IndustryPrimaryOrganic, TileLocationChecks
 
 industry = IndustryPrimaryOrganic(
     id="fruit_plantation",
-    prod_cargo_types_with_multipliers=[("FRUT", 16)],
+    prod_cargo_types_with_multipliers=[
+        ("FRUT", 14),
+        ("NUTS", 13),
+    ],
     prob_in_game="4",
     prob_map_gen="10",
     prospect_chance="0.75",
@@ -19,6 +22,15 @@ industry.economy_variations['BETTER_LIVING_THROUGH_CHEMISTRY'].enabled = True
 industry.economy_variations["IN_A_HOT_COUNTRY"].enabled = True
 
 industry.economy_variations["STEELTOWN"].enabled = True
+industry.economy_variations["STEELTOWN"].prod_cargo_types_with_multipliers = [
+    ("FRUT", 16)
+]
+industry.economy_variations["BASIC_TROPIC"].enabled = True
+industry.economy_variations["BASIC_TROPIC"].prod_cargo_types_with_multipliers = [
+    ("FRUT", 16),
+    ("OLSD", 13),
+]
+
 
 
 industry.add_tile(
@@ -26,8 +38,9 @@ industry.add_tile(
     foundations="return CB_RESULT_NO_FOUNDATIONS",
     autoslope="return CB_RESULT_NO_AUTOSLOPE",
     location_checks=TileLocationChecks(
+        disallow_slopes=True,
         disallow_above_snowline=True,
-        disallow_coast=True,
+        disallow_desert=True,
         disallow_industry_adjacent=True,
     ),
 )
@@ -35,8 +48,9 @@ industry.add_tile(
     id="fruit_plantation_tile_2",  # house
     autoslope="return CB_RESULT_AUTOSLOPE",
     location_checks=TileLocationChecks(
+        disallow_slopes=True,
         disallow_above_snowline=True,
-        disallow_coast=True,
+        disallow_desert=True,
         disallow_industry_adjacent=True,
     ),
 )

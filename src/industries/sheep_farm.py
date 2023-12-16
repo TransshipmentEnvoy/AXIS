@@ -14,6 +14,8 @@ industry = IndustryPrimaryOrganic(
 )
 
 
+
+
 industry.add_tile(
     id="sheep_farm_tile_1",
     location_checks=TileLocationChecks(

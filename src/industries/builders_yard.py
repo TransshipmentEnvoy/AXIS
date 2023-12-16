@@ -29,6 +29,8 @@ industry.economy_variations["IN_A_HOT_COUNTRY"].enabled = True
 industry.economy_variations["IN_A_HOT_COUNTRY"].prob_map_gen = "14"
 # industry.economy_variations['IN_A_HOT_COUNTRY'].accept_cargo_types = ['CMNT', 'WDPR']
 
+
+
 industry.add_tile(
     id="builders_yard_tile_1",
     location_checks=TileLocationChecks(

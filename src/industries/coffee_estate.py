@@ -7,7 +7,7 @@ industry = IndustryPrimaryOrganic(
     prob_in_game="3",
     prob_map_gen="10",
     prospect_chance="0.75",
-    name="string(STR_IND_COFFEE_ESTATE)",
+    name="string(STR_IND_SPICE_PLANTATION)",
     extra_text_fund="string(STR_FUND_COFFEE_ESTATE)",
     location_checks=dict(require_cluster=[72, 4]),
     nearby_station_name="string(STR_STATION_ESTATE)",
@@ -18,8 +18,7 @@ industry = IndustryPrimaryOrganic(
 industry.economy_variations["IN_A_HOT_COUNTRY"].enabled = True
 industry.economy_variations["BASIC_TROPIC"].enabled = True
 industry.economy_variations["BASIC_TROPIC"].prod_cargo_types_with_multipliers = [
-    ("JAVA", 9),
-    ("FRUT", 9),
+    ("ENUM", 13),
 ]
 
 industry.add_tile(

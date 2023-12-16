@@ -9,7 +9,7 @@ industry = IndustrySecondary(
     prob_map_gen="5",
     map_colour="209",
     name="string(STR_IND_POLYMER_PLANT)",
-    nearby_station_name="string(STR_STATION_MOULDINGS)",
+    nearby_station_name="string(STR_STATION_POLYMERS)",
     fund_cost_multiplier="125",
     intro_year="1900",
 )
@@ -23,6 +23,16 @@ industry.economy_variations["STEELTOWN"].accept_cargos_with_input_ratios = [
 ]
 industry.economy_variations["STEELTOWN"].prod_cargo_types_with_output_ratios = [
     ("PLAS", 8),
+]
+
+industry.economy_variations["BASIC_TROPIC"].enabled = True
+industry.economy_variations["BASIC_TROPIC"].accept_cargos_with_input_ratios = [
+    ("RFPR", 6),
+    ("ACET", 2),
+]
+industry.economy_variations["BASIC_TROPIC"].prod_cargo_types_with_output_ratios = [
+    ("PLAS", 5),
+    ("RUBR", 3),
 ]
 
 

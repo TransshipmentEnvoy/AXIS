@@ -2,7 +2,7 @@ from industry import IndustryPrimaryOrganic, TileLocationChecks
 
 industry = IndustryPrimaryOrganic(
     id="vineyard",
-    prod_cargo_types_with_multipliers=[("BEER", 9), ("FRUT", 9)],
+    prod_cargo_types_with_multipliers=[("FRUT", 14)],
     map_colour="85",
     prob_in_game="3",
     prob_map_gen="10",
@@ -52,14 +52,14 @@ industry.add_spritelayout(
     ground_sprite=sprite_ground,
     ground_overlay=spriteset_ground_overlay,
     building_sprites=[spriteset_1],
-    fences=["nw", "ne", "se", "sw"],
+
 )
 industry.add_spritelayout(
     id="vineyard_shed_spritelayout",
     ground_sprite=sprite_ground,
     ground_overlay=spriteset_ground_overlay,
     building_sprites=[spriteset_2],
-    fences=["nw", "ne", "se", "sw"],
+
 )
 industry.add_magic_spritelayout(
     type="slope_aware_trees",

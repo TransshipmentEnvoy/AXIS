@@ -24,6 +24,12 @@ industry = IndustrySecondary(
 
 industry.economy_variations["BASIC_TEMPERATE"].enabled = True
 industry.economy_variations["BASIC_TROPIC"].enabled = True
+industry.economy_variations["BASIC_TROPIC"].prod_cargo_types_with_output_ratios = [
+    ("MEAT", 6),
+    ("BIOM", 2),
+]
+
+
 industry.economy_variations["BASIC_ARCTIC"].enabled = True
 
 industry.economy_variations['BETTER_LIVING_THROUGH_CHEMISTRY'].enabled = True

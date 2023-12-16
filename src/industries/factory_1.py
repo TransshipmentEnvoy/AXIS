@@ -1,6 +1,7 @@
 from industry import IndustrySecondary, TileLocationChecks
 
 # !! layout names will need set correctly
+# appliance factory
 industry = IndustrySecondary(
     id="factory_1",
     accept_cargos_with_input_ratios=[("GLAS", 2), ("STEL", 2), ("PLAS", 2)],
@@ -26,6 +27,13 @@ industry.economy_variations["STEELTOWN"].accept_cargos_with_input_ratios = [
     ("TYRE", 1),
 ]
 
+industry.economy_variations["BASIC_TROPIC"].enabled = True
+industry.economy_variations["BASIC_TROPIC"].accept_cargos_with_input_ratios = [
+    ("STSE", 4),
+    ("GLAS", 2),
+    ("PLAS", 2),
+    ("TYRE", 2),
+]
 
 
 industry.add_tile(

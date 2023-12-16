@@ -20,6 +20,7 @@ industry = IndustrySecondary(
 industry.economy_variations["IN_A_HOT_COUNTRY"].enabled = True
 industry.economy_variations["BASIC_ARCTIC"].enabled = True
 
+industry.economy_variations["BASIC_TROPIC"].enabled = True
 
 
 industry.add_tile(
@@ -43,35 +44,30 @@ industry.add_spritelayout(
     ground_sprite=sprite_ground,
     ground_overlay=spriteset_ground_overlay,
     building_sprites=[sprite_hut_1],
-    fences=["nw", "ne", "se", "sw"],
 )
 industry.add_spritelayout(
     id="sawmill_spritelayout_2",
     ground_sprite=sprite_ground,
     ground_overlay=spriteset_ground_overlay,
     building_sprites=[sprite_hut_2],
-    fences=["nw", "ne", "se", "sw"],
 )
 industry.add_spritelayout(
     id="sawmill_spritelayout_3",
     ground_sprite=sprite_ground,
     ground_overlay=spriteset_ground_overlay,
     building_sprites=[sprite_logs_1],
-    fences=["nw", "ne", "se", "sw"],
 )
 industry.add_spritelayout(
     id="sawmill_spritelayout_4",
     ground_sprite=sprite_ground,
     ground_overlay=spriteset_ground_overlay,
     building_sprites=[sprite_logs_2],
-    fences=["nw", "ne", "se", "sw"],
 )
 industry.add_spritelayout(
     id="sawmill_spritelayout_5",
     ground_sprite=sprite_ground,
     ground_overlay=spriteset_ground_overlay,
     building_sprites=[sprite_logs_3],
-    fences=["nw", "ne", "se", "sw"],
 )
 
 industry.add_industry_layout(

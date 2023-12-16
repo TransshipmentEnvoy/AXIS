@@ -38,7 +38,7 @@ economy = Economy(
         "ethylene",
         "farm_supplies",
         "ferrochrome",
-        "fish",
+        "fish_and_meat",
         "forgings_and_castings",
         "fruits",
         "glass",

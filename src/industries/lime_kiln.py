@@ -38,6 +38,15 @@ industry.economy_variations["STEELTOWN"].prod_cargo_types_with_output_ratios = [
     ("CMNT", 2),
 ]
 
+industry.economy_variations["BASIC_TROPIC"].enabled = True
+industry.economy_variations["BASIC_TROPIC"].accept_cargos_with_input_ratios = [
+    ("LIME", 6),
+    ("PETR", 2),
+]
+industry.economy_variations["BASIC_TROPIC"].prod_cargo_types_with_output_ratios = [
+    ("QLME", 6),
+    ("FERT", 2),
+]
 
 
 industry.add_tile(

@@ -46,6 +46,15 @@ industry.economy_variations[
     "STEELTOWN"
 ].prob_in_game = "1"  # low probability of build during gameplay
 
+industry.economy_variations["BASIC_TROPIC"].enabled = True
+industry.economy_variations["BASIC_TROPIC"].accept_cargos_with_input_ratios = [
+    ("SAND", 4),
+    ("SASH", 2),
+    ("QLME", 1),
+    ("PLAS", 1),
+]
+
+
 industry.add_tile(
     id="glass_works_tile_1",
     animation_length=71,

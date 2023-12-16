@@ -14,6 +14,19 @@ industry = IndustrySecondary(
     fund_cost_multiplier="120",
 )
 
+industry.economy_variations["BASIC_TROPIC"].enabled = True
+industry.economy_variations[
+    "BASIC_TROPIC"
+].prob_in_game = "1"  # low chance of build during gameplay
+industry.economy_variations["BASIC_TROPIC"].accept_cargos_with_input_ratios = [
+    ("CLAY", 4),
+    ("SAND", 3),  
+    ("COAL", 2),  
+]
+industry.economy_variations["BASIC_TROPIC"].prod_cargo_types_with_output_ratios = [
+    ("BDMT", 6),
+]
+
 
 
 industry.add_tile(
@@ -74,14 +87,12 @@ industry.add_spritelayout(
     ground_overlay=spriteset_ground_overlay,
     building_sprites=[spriteset_1],
     smoke_sprites=[sprite_smoke_boilerhouse],
-    fences=["nw", "ne", "se", "sw"],
 )
 industry.add_spritelayout(
     id="brick_works_spritelayout_2",
     ground_sprite=spriteset_ground,
     ground_overlay=spriteset_ground_overlay,
     building_sprites=[spriteset_2],
-    fences=["nw", "ne", "se", "sw"],
 )
 industry.add_spritelayout(
     id="brick_works_spritelayout_3",
@@ -89,28 +100,24 @@ industry.add_spritelayout(
     ground_overlay=spriteset_ground_overlay,
     building_sprites=[spriteset_3],
     smoke_sprites=[sprite_smoke_kiln],
-    fences=["nw", "ne", "se", "sw"],
 )
 industry.add_spritelayout(
     id="brick_works_spritelayout_4",
     ground_sprite=spriteset_ground,
     ground_overlay=spriteset_ground_overlay,
     building_sprites=[spriteset_4],
-    fences=["nw", "ne", "se", "sw"],
 )
 industry.add_spritelayout(
     id="brick_works_spritelayout_sand_staithe",
     ground_sprite=spriteset_ground,
     ground_overlay=spriteset_ground_overlay,
     building_sprites=[spriteset_sand_staithe],
-    fences=["nw", "ne", "se", "sw"],
 )
 industry.add_spritelayout(
     id="brick_works_spritelayout_clay_staithe",
     ground_sprite=spriteset_ground,
     ground_overlay=spriteset_ground_overlay,
     building_sprites=[spriteset_clay_staithe],
-    fences=["nw", "ne", "se", "sw"],
 )
 
 industry.add_industry_layout(

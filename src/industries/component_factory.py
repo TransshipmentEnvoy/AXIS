@@ -30,6 +30,16 @@ industry.economy_variations['IN_A_HOT_COUNTRY'].accept_cargos_with_input_ratios 
 industry.economy_variations['IN_A_HOT_COUNTRY'].prod_cargo_types_with_output_ratios = [('YARN', 8)]
 """
 
+industry.economy_variations["BASIC_TROPIC"].enabled = True
+industry.economy_variations["BASIC_TROPIC"].accept_cargos_with_input_ratios = [
+    ("STSE", 2),
+    ("TYRE", 2),  
+    ("PLAS", 2),  
+    ("TEXT", 2),  
+    ("COAT", 2),  
+]
+
+
 industry.add_tile(
     id="component_factory_tile_1",
     location_checks=TileLocationChecks(

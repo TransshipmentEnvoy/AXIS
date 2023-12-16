@@ -20,6 +20,16 @@ industry = IndustrySecondary(
 )
 
 industry.economy_variations["BASIC_TROPIC"].enabled = True
+industry.economy_variations["BASIC_TROPIC"].accept_cargos_with_input_ratios = [
+    ("SUGR", 6),
+    ("FRUT", 6),
+    ("MEAT", 6),
+    ("ENUM", 2),
+    ("EOIL", 2),
+    ("MNSP", 2),
+]
+
+
 
 industry.economy_variations["IN_A_HOT_COUNTRY"].enabled = True
 industry.economy_variations["IN_A_HOT_COUNTRY"].accept_cargos_with_input_ratios = [

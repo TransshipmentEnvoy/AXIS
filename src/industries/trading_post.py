@@ -1,31 +1,28 @@
-from industry import IndustryPrimaryPort, TileLocationChecks
+#convert into shipbreaker?
 
-industry = IndustryPrimaryPort(
+from industry import IndustryPrimaryExtractive, TileLocationChecks
+
+industry = IndustryPrimaryExtractive(
     id="trading_post",
-    accept_cargo_types=["FOOD", "FRUT", "BEER"],
-    prod_cargo_types_with_multipliers=[],
+    accept_cargo_types=[],
+    prod_cargo_types_with_multipliers=[("SCMT", 12),],
     prob_in_game="2",
     prob_map_gen="6",
     map_colour="37",
     special_flags=["IND_FLAG_BUILT_ON_WATER"],
     location_checks=dict(same_type_distance=16),
     prospect_chance="0.75",
-    name="string(STR_IND_TRADING_POST)",
+    name="string(STR_IND_SHIPBREAKER)",
     nearby_station_name="string(STR_STATION_INDUSTRY_HARBOUR_3)",
     fund_cost_multiplier="152",
     override_default_construction_states=True,
 )
 
-industry.economy_variations["IN_A_HOT_COUNTRY"].enabled = True
-industry.economy_variations["IN_A_HOT_COUNTRY"].accept_cargo_types = [
-    "DIAM",
-    "JAVA",
-    "RUBR",
-]
-industry.economy_variations["IN_A_HOT_COUNTRY"].prod_cargo_types_with_multipliers = [
-    ("ENSP", 7),
-    ("FMSP", 6),
-]
+
+industry.economy_variations["BASIC_TROPIC"].enabled = True
+
+industry.economy_variations["STEELTOWN"].enabled = True
+
 
 industry.add_tile(
     id="trading_post_tile_1",

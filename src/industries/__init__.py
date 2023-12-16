@@ -21,6 +21,10 @@ from industries import assembly_plant
 
 assembly_plant.industry.register()
 
+from industries import bakery
+
+bakery.industry.register()
+
 from industries import basic_oxygen_furnace
 
 basic_oxygen_furnace.industry.register()
@@ -155,19 +159,23 @@ ethylene_cracker.industry.register()
 
 
  
-from industries import factory_1
-factory_1.industry.register()
+from industries import appliance_factory
+appliance_factory.industry.register()
 
-from industries import factory_2
-factory_2.industry.register()
+from industries import cleaning_products_factory
+cleaning_products_factory.industry.register()
 
-from industries import factory_3
-factory_3.industry.register()
+from industries import paint_factory
+paint_factory.industry.register()
 
 
 from industries import farm
 
 farm.industry.register()
+
+from industries import farm_supply_yard
+
+farm_supply_yard.industry.register()
 
 
 from industries import ferrochrome_smelter
@@ -213,6 +221,9 @@ from industries import forest
 
 forest.industry.register()
 
+from industries import fruit_packing_plant
+
+fruit_packing_plant.industry.register()
 
 from industries import fruit_plantation
 
@@ -287,13 +298,19 @@ machine_shop.industry.register()
 
 
 
-from industries import machine_works
-machine_works.industry.register()
+from industries import electrical_works
+electrical_works.industry.register()
 
 
 from industries import manganese_mine
 
 manganese_mine.industry.register()
+
+
+from industries import meat_packing_plant
+
+meat_packing_plant.industry.register()
+
 
 from industries import metal_workshop
 
@@ -345,11 +362,11 @@ phosphoric_acid_plant.industry.register()
 from industries import plastics_plant
 plastics_plant.industry.register()
 
-
+"""
 from industries import plaza
 
 plaza.industry.register()
-
+"""
  
 from industries import polyethylene_plant
 polyethylene_plant.industry.register()
@@ -411,6 +428,8 @@ from industries import sawmill
 
 sawmill.industry.register()
 
+from industries import seaweed_farm
+seaweed_farm.industry.register()
 
 from industries import sheep_farm
 sheep_farm.industry.register()

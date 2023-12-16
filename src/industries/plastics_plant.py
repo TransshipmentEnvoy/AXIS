@@ -25,6 +25,17 @@ industry.economy_variations["STEELTOWN"].prod_cargo_types_with_output_ratios = [
     ("PPAR", 8),
 ]
 
+industry.economy_variations["BASIC_TROPIC"].enabled = True
+industry.economy_variations["BASIC_TROPIC"].accept_cargos_with_input_ratios = [
+    ("PLAS", 2),
+    ("STEL", 2),
+    ("GLAS", 2),
+]
+industry.economy_variations["BASIC_TROPIC"].prod_cargo_types_with_output_ratios = [
+    ("MNSP", 6),
+#    ("GOOD", 4),
+]
+
 industry.add_tile(
     id="plastics_plant_tile_1",
     location_checks=TileLocationChecks(

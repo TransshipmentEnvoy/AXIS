@@ -24,6 +24,16 @@ industry.economy_variations["IN_A_HOT_COUNTRY"].prod_cargo_types_with_output_rat
     ("TEXT", 8)
 ]
 
+industry.economy_variations["BASIC_TROPIC"].enabled = True
+industry.economy_variations["BASIC_TROPIC"].accept_cargos_with_input_ratios = [
+    ("FICR", 6),
+    ("PLAS", 1),
+    ("ACET", 1),
+]
+industry.economy_variations["BASIC_TROPIC"].prod_cargo_types_with_output_ratios = [
+    ("TEXT", 8),
+    ("GOOD", 4),
+]
 
 
 
@@ -67,42 +77,36 @@ industry.add_spritelayout(
     ground_overlay=spriteset_ground_overlay,
     building_sprites=[spriteset_large_chimney],
     smoke_sprites=[sprite_smoke],
-    fences=["nw", "ne", "se", "sw"],
 )
 industry.add_spritelayout(
     id="textile_mill_spritelayout_2",
     ground_sprite=spriteset_ground,
     ground_overlay=spriteset_ground_overlay,
     building_sprites=[spriteset_large_building_lh_part],
-    fences=["nw", "ne", "se", "sw"],
 )
 industry.add_spritelayout(
     id="textile_mill_spritelayout_3",
     ground_sprite=spriteset_ground,
     ground_overlay=spriteset_ground_overlay,
     building_sprites=[spriteset_large_building_rh_part],
-    fences=["nw", "ne", "se", "sw"],
 )
 industry.add_spritelayout(
     id="textile_mill_spritelayout_4",
     ground_sprite=spriteset_ground,
     ground_overlay=spriteset_ground_overlay,
     building_sprites=[spriteset_crates_greeble],
-    fences=["nw", "ne", "se", "sw"],
 )
 industry.add_spritelayout(
     id="textile_mill_spritelayout_5",
     ground_sprite=spriteset_ground,
     ground_overlay=spriteset_ground_overlay,
     building_sprites=[spriteset_small_warehouse],
-    fences=["nw", "ne", "se", "sw"],
 )
 industry.add_spritelayout(
     id="textile_mill_spritelayout_6",
     ground_sprite=spriteset_ground,
     ground_overlay=spriteset_ground_overlay,
     building_sprites=[],
-    fences=["nw", "ne", "se", "sw"],
 )
 
 industry.add_industry_layout(

@@ -24,6 +24,18 @@ industry.economy_variations["IN_A_HOT_COUNTRY"].accept_cargos_with_input_ratios 
     ("MAIZ", 4),
 ]
 
+industry.economy_variations["BASIC_TROPIC"].enabled = True
+industry.economy_variations["BASIC_TROPIC"].accept_cargos_with_input_ratios = [
+    ("GRAI", 6),
+    ("SUGR", 4),  
+    ("MNSP", 2),
+#    ("ENUM", 1),  
+]
+industry.economy_variations["BASIC_TROPIC"].prod_cargo_types_with_output_ratios = [
+    ("BEER", 6),
+    ("BIOM", 2),
+]
+
 industry.add_tile(
     id="brewery_tile_1",
     animation_length=6,
@@ -94,21 +106,18 @@ industry.add_spritelayout(
     ground_overlay=spriteset_ground_overlay,
     building_sprites=[spriteset_1],
     smoke_sprites=[sprite_smoke],
-    fences=["nw", "ne", "se", "sw"],
 )
 industry.add_spritelayout(
     id="brewery_spritelayout_2",
     ground_sprite=spriteset_ground_anim,
     ground_overlay=spriteset_ground_overlay_anim,
     building_sprites=[spriteset_2_anim],
-    fences=["nw", "ne", "se", "sw"],
 )
 industry.add_spritelayout(
     id="brewery_spritelayout_3",
     ground_sprite=spriteset_ground,
     ground_overlay=spriteset_ground_overlay,
     building_sprites=[spriteset_3],
-    fences=["nw", "ne", "se", "sw"],
 )
 
 industry.add_industry_layout(
