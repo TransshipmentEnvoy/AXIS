@@ -12,7 +12,7 @@ cargo = Cargo(
     cargo_label="BIOM",
     # apart from TOWNGROWTH_PASSENGERS and TOWNGROWTH_MAIL, FIRS does not set any town growth effects; this has the intended effect of disabling food / water requirements for towns in desert and above snowline
     town_growth_effect="TOWNGROWTH_NONE",
-    town_growth_multiplier="0.9",
+    town_growth_multiplier="1",
     units_of_cargo="TTD_STR_TONS",
     items_of_cargo="string(STR_CARGO_UNIT_BIOMASS)",
     penalty_lowerbound="30",
