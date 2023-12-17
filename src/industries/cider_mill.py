@@ -9,7 +9,7 @@ industry = IndustrySecondary(
     prob_map_gen="5",
     map_colour="191",
     location_checks=dict(
-        near_at_least_one_of_these_keystone_industries=[["vineyard"], 72],
+        near_at_least_one_of_these_keystone_industries=[["vineyard", "arable_farm"], 72],
         same_type_distance=72,
     ),
     name="string(STR_IND_DISTILLERY)",
@@ -17,6 +17,7 @@ industry = IndustrySecondary(
     fund_cost_multiplier="50",
     pollution_and_squalor_factor=1,
 )
+
 
 industry.economy_variations["BASIC_TROPIC"].enabled = True
 

@@ -33,6 +33,10 @@ industry.economy_variations['BETTER_LIVING_THROUGH_CHEMISTRY'].prod_cargo_types_
 industry.economy_variations["STEELTOWN"].enabled = True
 
 industry.economy_variations["BASIC_TROPIC"].enabled = True
+industry.economy_variations["BASIC_TROPIC"].prod_cargo_types_with_multipliers = [
+    ("GRAI", 20),
+    ("LVST", 12),
+]
 
 
 industry.add_tile(

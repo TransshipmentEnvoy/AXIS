@@ -7,9 +7,14 @@ industry = IndustrySecondary(
     prob_map_gen="10",
     prob_in_game="10",
     map_colour="49",
-    location_checks=dict(flour_mill_layouts_by_date=True),
     name="string(STR_IND_FLOUR_MILL)",
     nearby_station_name="string(STR_STATION_MILL)",
+    location_checks=dict(
+        near_at_least_one_of_these_keystone_industries=[
+            ["arable_farm", "fruit_plantation", "farm"],
+            72,
+        ]
+    ),
     fund_cost_multiplier="50",
 )
 

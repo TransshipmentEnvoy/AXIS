@@ -3,8 +3,8 @@ from industry import IndustryPrimaryOrganic, TileLocationChecks
 industry = IndustryPrimaryOrganic(
     id="arable_farm",
     prod_cargo_types_with_multipliers=[("GRAI", 14), ("BEAN", 14)],
-    prob_in_game="4",
-    prob_map_gen="11",
+    prob_in_game="5",
+    prob_map_gen="12",
     map_colour="209",
     location_checks=dict(require_cluster=[72, 4]),
     prospect_chance="0.75",
@@ -22,7 +22,7 @@ industry = IndustryPrimaryOrganic(
 industry.economy_variations["BASIC_TROPIC"].enabled = True
 industry.economy_variations["BASIC_TROPIC"].prod_cargo_types_with_multipliers = [
     ("GRAI", 14),
-    ("SGCN", 14),
+    ("SGCN", 24),
 ]
 
 

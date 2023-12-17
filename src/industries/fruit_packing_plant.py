@@ -10,6 +10,12 @@ industry = IndustrySecondary(
     map_colour="165",
     name="string(STR_IND_FRUIT_PACKING_PLANT)",
     nearby_station_name="string(STR_STATION_FOOD_CORPORATION)",
+    location_checks=dict(
+        near_at_least_one_of_these_keystone_industries=[
+            ["fruit_plantation", "coffee_estate", "vineyard"],
+            72,
+        ]
+    ),
     fund_cost_multiplier="118",
 )
 
