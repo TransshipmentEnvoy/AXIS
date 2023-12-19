@@ -23,6 +23,18 @@ industry.economy_variations["BASIC_TROPIC"].prod_cargo_types_with_output_ratios 
     ("FMSP", 8),
 ]
 
+
+industry.economy_variations["STEELTOWN"].enabled = True
+industry.economy_variations["STEELTOWN"].accept_cargos_with_input_ratios = [
+    ("NHNO", 8),
+    ("VEHI", 8),  
+    ("PETR", 8),
+    ("TYRE", 8),
+]
+industry.economy_variations["STEELTOWN"].prod_cargo_types_with_output_ratios = [
+    ("FMSP", 8),
+]
+
 industry.add_tile(
     id="farm_supply_yard_tile_1",
     animation_length=71,

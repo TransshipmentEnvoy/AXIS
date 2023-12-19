@@ -19,13 +19,13 @@ industry.economy_variations["STEELTOWN"].enabled = True
 industry.economy_variations["BASIC_TROPIC"].enabled = True
 industry.economy_variations["BASIC_TROPIC"].accept_cargos_with_input_ratios = [
     ("MEAT", 4),
-    ("BIOM", 2),
-    ("MNSP", 1),
-    ("ENUM", 1),
+    ("MNSP", 2),
+    ("ENUM", 2),
 ]
 industry.economy_variations["BASIC_TROPIC"].prod_cargo_types_with_output_ratios = [
-    ("FOOD", 8),
-    ("EOIL", 2),
+    ("FOOD", 6),
+    ("EOIL", 4),
+    ("BIOM", 2),
 ]
 
 

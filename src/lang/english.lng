@@ -23,7 +23,7 @@ STR_PARAM_DESC_EXPERIMENTAL_FEATURES                                            
 
 STR_PARAM_VALUE_ECONOMIES_BASIC_TEMPERATE                                       :INCOMPLETE Classic
 STR_PARAM_VALUE_ECONOMIES_BASIC_ARCTIC                                          :INCOMPLETE Boreal
-STR_PARAM_VALUE_ECONOMIES_BASIC_TROPIC                                          :INCOMPLETE Tropical
+STR_PARAM_VALUE_ECONOMIES_BASIC_TROPIC                                          :Tropical Paradise
 STR_PARAM_VALUE_ECONOMIES_BETTER_LIVING_THROUGH_CHEMISTRY                       :INCOMPLETE BLTC
 STR_PARAM_VALUE_ECONOMIES_IN_A_HOT_COUNTRY                                      :INCOMPLETE IAHC
 STR_PARAM_VALUE_ECONOMIES_STEELTOWN                                             :Steel City
@@ -568,7 +568,7 @@ STR_STATION                                                                     
 
 STR_STATION_ANIMALS                                                             :Horse Market
 STR_STATION_AUTOMOTIVE                                                          :Automotive
-STR_STATION_BAR_GRILL_AND_ROOMS                                                 :Bar, Grill and Rooms
+STR_STATION_BAR_GRILL_AND_ROOMS                                                 :Resort
 STR_STATION_BARNS                                                               :Barns
 STR_STATION_BARREL_AND_KEG                                                      :Barrel and Keg
 STR_STATION_BASE                                                                :Base

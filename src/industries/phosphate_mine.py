@@ -28,7 +28,6 @@ industry.economy_variations["BASIC_ARCTIC"].prod_cargo_types_with_multipliers = 
 industry.economy_variations["BASIC_TROPIC"].enabled = True
 industry.economy_variations["BASIC_TROPIC"].prod_cargo_types_with_multipliers = [
     ("PHOS", 16),
-    ("CLAY", 10),
 ]
 
 # 2 tiles for this industry: pit outer tile cannot be on slopes; pit inner tiles and processor tiles can be

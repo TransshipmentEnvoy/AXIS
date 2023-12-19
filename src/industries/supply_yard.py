@@ -29,11 +29,9 @@ industry.economy_variations["STEELTOWN"].accept_cargos_with_input_ratios = [
     ("VEHI", 8),  
     ("PETR", 8),
     ("TYRE", 8),
-    ("H2__", 8),
 ]
 industry.economy_variations["STEELTOWN"].prod_cargo_types_with_output_ratios = [
     ("ENSP", 8),
-    ("FMSP", 8),
 ]
 
 industry.economy_variations["BASIC_TROPIC"].enabled = True

@@ -27,8 +27,7 @@ industry.economy_variations["BASIC_TROPIC"].accept_cargos_with_input_ratios = [
     ("SOAP", 2),
 ]
 industry.economy_variations["BASIC_TROPIC"].prod_cargo_types_with_output_ratios = [
-    ("MEAT", 6),
-    ("BIOM", 2),
+    ("MEAT", 8),
 ]
 
 industry.economy_variations['BETTER_LIVING_THROUGH_CHEMISTRY'].enabled = True

@@ -26,12 +26,12 @@ industry.economy_variations["IN_A_HOT_COUNTRY"].prod_cargo_types_with_output_rat
 
 industry.economy_variations["BASIC_TROPIC"].enabled = True
 industry.economy_variations["BASIC_TROPIC"].accept_cargos_with_input_ratios = [
-    ("FICR", 6),
-    ("PLAS", 1),
+    ("FICR", 5),
+    ("PLAS", 2),
     ("ACET", 1),
 ]
 industry.economy_variations["BASIC_TROPIC"].prod_cargo_types_with_output_ratios = [
-    ("TEXT", 8),
+    ("TEXT", 7),
     ("GOOD", 4),
 ]
 

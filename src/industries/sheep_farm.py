@@ -13,13 +13,20 @@ industry = IndustryPrimaryOrganic(
     fund_cost_multiplier="45",
 )
 
+industry.economy_variations["BASIC_TROPIC"].enabled = True
+industry.economy_variations["BASIC_TROPIC"].prod_cargo_types_with_multipliers = [
+    ("LVST", 16),
+    ("FICR", 13),
+]
 
 
 
 industry.add_tile(
     id="sheep_farm_tile_1",
     location_checks=TileLocationChecks(
-        disallow_coast=True, disallow_industry_adjacent=True
+        disallow_coast=True, 
+        disallow_industry_adjacent=True,
+        disallow_desert=True,
     ),
 )
 

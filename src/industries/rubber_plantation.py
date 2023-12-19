@@ -30,6 +30,7 @@ industry.add_tile(
     location_checks=TileLocationChecks(
         disallow_above_snowline=True,
         disallow_coast=True,
+        disallow_desert=True,
         disallow_industry_adjacent=True,
     ),
 )
@@ -39,6 +40,7 @@ industry.add_tile(
     location_checks=TileLocationChecks(
         disallow_above_snowline=True,
         disallow_coast=True,
+        disallow_desert=True,
         disallow_industry_adjacent=True,
     ),
 )
@@ -68,12 +70,12 @@ industry.add_spritelayout(
 industry.add_magic_spritelayout(
     type="slope_aware_trees",
     base_id="rubber_plantation_slope_aware_ground_with_trees_1",
-    config={"ground_sprite": 4145, "trees_default": [1908, 1908, 1908, 1908]},
+    config={"ground_sprite": 3962, "trees_default": [1908, 1908, 1908, 1908]},
 )
 industry.add_magic_spritelayout(
     type="slope_aware_trees",
     base_id="rubber_plantation_slope_aware_ground_with_trees_2",
-    config={"ground_sprite": 4145, "trees_default": [1906, 1905, 1905, 1907]},
+    config={"ground_sprite": 3962, "trees_default": [1906, 1905, 1905, 1907]},
 )
 
 industry.add_industry_layout(

@@ -3,7 +3,7 @@ from industry import IndustryPrimaryOrganic, TileLocationChecks
 industry = IndustryPrimaryOrganic(
     id="seaweed_farm",
     accept_cargo_types=[],
-    prod_cargo_types_with_multipliers=[("FICR", 8), ("ENUM", 6)],
+    prod_cargo_types_with_multipliers=[("BIOM", 8), ("ENUM", 6)],
     prob_in_game="14",
     prob_map_gen="14",
     substitute="5",
@@ -25,6 +25,11 @@ industry = IndustryPrimaryOrganic(
 
 
 industry.economy_variations["BASIC_TROPIC"].enabled = True
+
+industry.economy_variations["STEELTOWN"].enabled = True
+industry.economy_variations["STEELTOWN"].prod_cargo_types_with_multipliers = [
+    ("FRUT", 16)
+]
 
 
 
