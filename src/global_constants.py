@@ -132,6 +132,8 @@ industry_numeric_ids = dict(
 # Definition of industry tile numeric IDs
 # tiles 0-xxx currently vacant
 tile_numeric_ids = dict(
+    copper_mine_tile_1=73,
+    copper_mine_tile_2=74,
     fruit_packing_plant_tile_1= 75,
     farm_supply_yard_tile_1=76,
     seaweed_farm_tile_1=77,
@@ -231,7 +233,7 @@ tile_numeric_ids = dict(
     orchard_piggery_tile_1=171,
     orchard_piggery_tile_2=172,
     ranch_tile_1=173,
-    copper_mine_tile_1=174,
+    #copper_mine_tile_1=174,
     dairy_tile_1=175,
     dairy_tile_2=176,
     copper_refinery_tile_1=177,
