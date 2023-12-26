@@ -19,10 +19,11 @@ industry.economy_variations['BETTER_LIVING_THROUGH_CHEMISTRY'].enabled = True
 industry.economy_variations["STEELTOWN"].enabled = True
 industry.economy_variations["STEELTOWN"].accept_cargos_with_input_ratios = [
     ("PLAS", 5),
-    ("FOCA", 3),
+    ("STSE", 3),
 ]
 industry.economy_variations["STEELTOWN"].prod_cargo_types_with_output_ratios = [
-    ("PPAR", 8),
+    ("PPAR", 6),
+    ("MNSP", 5),
 ]
 
 industry.economy_variations["BASIC_TROPIC"].enabled = True

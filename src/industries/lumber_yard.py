@@ -41,7 +41,9 @@ industry.economy_variations["BASIC_TROPIC"].prod_cargo_types_with_output_ratios 
 # non-animated tile, allowed on slopes
 industry.add_tile(
     id="lumber_yard_tile_1",
-    location_checks=TileLocationChecks(disallow_industry_adjacent=True),
+    location_checks=TileLocationChecks(
+        require_effectively_flat=True, disallow_industry_adjacent=True
+    ),
 )
 
 # animated kiln-building tile, graphics break if built on slopes

@@ -22,8 +22,8 @@ grf {
 	param 2 {
 	    <!--! legacy use of bit 2 as other bool params were deleted from here -->
 		restrict_open_during_gameplay {
-			name: string(STR_PARAM_NAME_NO_OPENINGS);
-			desc: string(STR_PARAM_DESC_NO_OPENINGS);
+			name: string(STR_PARAM_NAME_NO_SPAWNING);
+			desc: string(STR_PARAM_DESC_NO_SPAWNING);
 			type: bool;
 			bit: 2;
 		}

@@ -1,16 +1,16 @@
-from industry import IndustryTownProducerPopulationDependent, TileLocationChecks
+from industry import IndustrySecondary, TileLocationChecks
 
-industry = IndustryTownProducerPopulationDependent(
+industry = IndustrySecondary(
     id="junk_yard",
-    prod_cargo_types_with_multipliers=[("SCMT", 32)],  # prod dependent on town popn
+    accept_cargos_with_input_ratios=[("RCYC", 6)],
+    prod_cargo_types_with_output_ratios=[("SCMT", 3)],
     prob_in_game="3",
     prob_map_gen="10",
     map_colour="64",
-    location_checks=dict(require_town_min_population=400),
     prospect_chance="0.75",
     name="string(STR_IND_JUNKYARD)",
     nearby_station_name="string(STR_STATION_BONEYARD)",
-    fund_cost_multiplier="101",
+    fund_cost_multiplier="110",
     graphics_change_dates=[1949, 1960, 1980, 2000],
 )
 
@@ -18,6 +18,10 @@ industry = IndustryTownProducerPopulationDependent(
 industry.economy_variations["BASIC_TEMPERATE"].enabled = True
 
 industry.economy_variations["BASIC_TROPIC"].enabled = True
+industry.economy_variations["BASIC_TROPIC"].prod_cargo_types_with_output_ratios = [
+    ("SCMT", 4),
+    ("RAMT", 1),
+]
 
 
 industry.economy_variations["STEELTOWN"].enabled = True
@@ -29,6 +33,7 @@ industry.add_tile(
         disallow_steep_slopes=True,
         require_houses_nearby=True,
         disallow_industry_adjacent=True,
+        require_effectively_flat=True, 
     ),
 )
 

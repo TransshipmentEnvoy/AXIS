@@ -21,7 +21,8 @@ industry.economy_variations["STEELTOWN"].accept_cargos_with_input_ratios = [
     ("SAND", 2),
 ]
 industry.economy_variations["STEELTOWN"].prod_cargo_types_with_output_ratios = [
-    ("FOCA", 8),
+    ("STSE", 7),
+    ("SLAG", 1),
 ]
 
 

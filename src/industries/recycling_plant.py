@@ -3,10 +3,13 @@ from industry import IndustrySecondary, TileLocationChecks
 industry = IndustrySecondary(
     id="recycling_plant",
     accept_cargos_with_input_ratios=[("RCYC", 6)],
-    prod_cargo_types_with_output_ratios=[("SCMT", 4), ("PLAS", 4)],
+    prod_cargo_types_with_output_ratios=[("PLAS", 3)],
     prob_in_game="7",
     prob_map_gen="7",
     map_colour="164",
+    location_checks=dict(
+        near_at_least_one_of_these_keystone_industries=[["junk_yard"], 48],
+    ),
     name="string(STR_IND_RECYCLING_PLANT)",
     nearby_station_name="string(STR_STATION_INDUSTRY_ESTATE_1)",
     fund_cost_multiplier="118",

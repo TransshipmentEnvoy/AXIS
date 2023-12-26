@@ -11,7 +11,6 @@ industry = IndustryTownProducerPopulationDependent(
     name="string(STR_IND_RECYCLING_DEPOT)",
     nearby_station_name="string(STR_STATION_TOWN_2)",
     fund_cost_multiplier="118",
-    intro_year=1978,
 )
 
 industry.economy_variations["STEELTOWN"].enabled = True
@@ -24,6 +23,7 @@ industry.add_tile(
         always_allow_founder=False,
         require_houses_nearby=False,
         disallow_industry_adjacent=True,
+        require_effectively_flat=True, 
     ),
 )
 
