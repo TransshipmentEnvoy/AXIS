@@ -5,14 +5,22 @@ A fork of FIRS 4.4.0 by andythenorth. The official successor to XIS: Xtreme Indu
 ## Table of contents
 
 - 1.0 [Overview](#10-overview)
-- 2.0 [Graphics](#20-graphics)
+- 2.0 [Economies](#20-economies)
 - 3.0 [Source code](#30-source-code)
 - 4.0 [Developer Notices](#40-developer-notices)
 - 5.0 [Credits](#50-credits)
 
 ## 1.0 Overview
 
-If you are familiar with FIRS, you will also be familiar with AXIS because the game mechanics are largely unchanged. However, AXIS has much bigger and broader economies than FIRS.
+AXIS is an industry set for OpenTTD. 
+
+If you are familiar with FIRS, you will also be familiar with AXIS because the game mechanics are largely unchanged. However, AXIS has much bigger, broader and more complex economies than FIRS. 
+
+Using JGR Patch Pack is highly recommended, though not required. AXIS is best played with cargodist (asymmetric equal distribution) enabled for all cargos, and cargo delivery distribution mode set to Balanced. 
+
+Using compatible vehicle NewGRFs is also highly recommended, but not required in recent versions of OpenTTD. 
+
+## 2.0 Economies
 
 Currently, there are two complete economies; Steel City and Tropical Paradise.
 
@@ -24,18 +32,13 @@ Tropical Paradise is not based on any specific FIRS economy, but it incorporates
 
 Tropical Paradise is suitable for representing industrialised regions in tropical or subtropical areas. Examples include India, Southeast Asia and parts of South Africa and South America.
 
-
-## 2.0 Graphics
-
-The majority of the graphics are drawn with the DOS Palette. Some vehicles are available in 32bpp (normal zoom) for better colour reproduction.
-
-There may be some inconsistencies between sprites due to different artists and eras. Sprites will slowly be updated to maintain a consistent level of quality.
-
 ## 3.0 Source code
 
 The source code is available on GitHub (https://github.com/EmperorJake/AXIS)
 
 To compile, follow the instructions to compile FIRS.
+
+Translations are welcome. Please pay attention to the new strings added in AXIS, and strings which are similar to, but changed from FIRS.
 
 ## 4.0 Developer Notices
 
