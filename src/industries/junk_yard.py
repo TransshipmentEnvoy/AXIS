@@ -31,7 +31,7 @@ industry.add_tile(
     id="junk_yard_tile_1",
     location_checks=TileLocationChecks(
         disallow_steep_slopes=True,
-        require_houses_nearby=False,
+        require_houses_nearby=True,
         disallow_industry_adjacent=True,
         require_effectively_flat=True, 
     ),
