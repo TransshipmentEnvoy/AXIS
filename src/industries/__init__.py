@@ -145,6 +145,11 @@ from industries import dredging_site
 
 dredging_site.industry.register()
 
+from industries import edible_oil_refinery
+
+edible_oil_refinery.industry.register()
+
+
 from industries import electric_arc_furnace
 
 electric_arc_furnace.industry.register()

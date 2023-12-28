@@ -21,14 +21,14 @@ industry.add_tile(
     id="recycling_depot_tile_1",
     location_checks=TileLocationChecks(
         always_allow_founder=False,
-        require_houses_nearby=False,
+        require_houses_nearby=True,
         disallow_industry_adjacent=True,
         require_effectively_flat=True, 
     ),
 )
 
-sprite_ground = industry.add_sprite(
-    sprite_number="GROUNDTILE_SLABS",
+spriteset_ground = industry.add_spriteset(
+    type="dirty_concrete",
 )
 spriteset_ground_overlay = industry.add_spriteset(type="empty")
 spriteset_hut = industry.add_spriteset(sprites=[(10, 10, 64, 31, -31, 0)])
@@ -36,14 +36,14 @@ spriteset_no_hut = industry.add_spriteset(sprites=[(80, 10, 64, 31, -31, 0)])
 
 industry.add_spritelayout(
     id="recycling_depot_spritelayout_hut",
-    ground_sprite=sprite_ground,
+    ground_sprite=spriteset_ground,
     ground_overlay=spriteset_ground_overlay,
     building_sprites=[spriteset_hut],
     fences=["nw", "ne", "se", "sw"],
 )
 industry.add_spritelayout(
     id="recycling_depot_spritelayout_no_hut",
-    ground_sprite=sprite_ground,
+    ground_sprite=spriteset_ground,
     ground_overlay=spriteset_ground_overlay,
     building_sprites=[spriteset_no_hut],
     fences=["nw", "ne", "se", "sw"],

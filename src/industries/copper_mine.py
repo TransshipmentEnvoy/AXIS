@@ -17,369 +17,370 @@ industry = IndustryPrimaryExtractive(
 industry.economy_variations["IN_A_HOT_COUNTRY"].enabled = True
 industry.economy_variations["BASIC_TROPIC"].enabled = True
 
+
 industry.add_tile(
     id="copper_mine_tile_1",
+    animation_length=81,
+    animation_looping=True,
+    animation_speed=1,
+    custom_animation_next_frame="((animation_frame == 80) ? CB_RESULT_STOP_ANIMATION : CB_RESULT_NEXT_FRAME)",
+    custom_animation_control={
+        "macro": "first_frame_is_0",
+        "animation_triggers": "bitmask(ANIM_TRIGGER_INDTILE_TILE_LOOP)",
+    },
     location_checks=TileLocationChecks(
-        require_effectively_flat=True,
-        disallow_industry_adjacent=True,
+        require_effectively_flat=True, disallow_industry_adjacent=True
     ),
 )
+
 industry.add_tile(
     id="copper_mine_tile_2",
-    animation_length=56,
+    animation_length=71,
     animation_looping=True,
-    animation_speed=4,
+    animation_speed=2,
     custom_animation_control={
         "macro": "random_first_frame",
         "animation_triggers": "bitmask(ANIM_TRIGGER_INDTILE_CONSTRUCTION_STATE)",
     },
-    foundations="return CB_RESULT_NO_FOUNDATIONS",  # might not be needed, cargo-culted from previous code, didn't test; may be needed to stop rear foundations showing in some cases?
-    autoslope="return CB_RESULT_NO_AUTOSLOPE",
     location_checks=TileLocationChecks(
-        disallow_slopes=True,
-        disallow_coast=True,
-        disallow_industry_adjacent=True,
+        require_effectively_flat=True, disallow_industry_adjacent=True
     ),
 )
 
-spriteset_ground = industry.add_spriteset(type="empty")
-spriteset_animated_dozer = industry.add_spriteset(
+industry.add_tile(
+    id="copper_mine_tile_3",
+    animation_length=200,
+    animation_looping=True,
+    animation_speed=3,
+    custom_animation_next_frame="((animation_frame == 18) ? CB_RESULT_STOP_ANIMATION : CB_RESULT_NEXT_FRAME)",
+    custom_animation_control={
+        "macro": "first_frame_is_0",
+        "animation_triggers": "bitmask(ANIM_TRIGGER_INDTILE_TILE_LOOP)",
+    },
+    location_checks=TileLocationChecks(
+        require_effectively_flat=True, disallow_industry_adjacent=True
+    ),
+)
+
+sprite_ground = industry.add_sprite(sprite_number="GROUNDTILE_MUD_TRACKS")
+sprite_ground_overlay = industry.add_sprite(sprite_number="GROUNDTILE_MUD_TRACKS")
+
+spriteset_headgear_animated = industry.add_spriteset(
     sprites=[
-        (440, 90, 64, 31, -31, 0),
-        (510, 90, 64, 31, -31, 0),
-        (580, 90, 64, 31, -31, 0),
-        (650, 90, 64, 31, -31, 0),
-        (720, 90, 64, 31, -31, 0),
-        (790, 90, 64, 31, -31, 0),
-        (790, 90, 64, 31, -31, 0),
-        (720, 90, 64, 31, -31, 0),
-        (650, 90, 64, 31, -31, 0),
-        (580, 90, 64, 31, -31, 0),
-        (510, 90, 64, 31, -31, 0),
-        (440, 90, 64, 31, -31, 0),
+        (10, 310, 64, 122, -31, -88),
+        (80, 310, 64, 122, -31, -88),
+        (150, 310, 64, 122, -31, -88),
     ],
     animation_rate=1,
-    custom_sprite_selector="(animation_frame < 36) ? (animation_frame % 12) : 0",
+    custom_sprite_selector="(animation_frame % 3)",
 )
-spriteset_ground_animated_tile = industry.add_spriteset(
-    type="empty",
-    # autofills number of frames to match another spriteset which is animated etc (can get frame count from the other spriteset if defined already)
-    num_sprites_to_autofill=len(spriteset_animated_dozer.sprites),
-)
-spriteset_1 = industry.add_spriteset(
-    sprites=[(10, 90, 64, 31, -31, 0)],
-    # autofills number of frames to match another spriteset which is animated etc (can get frame count from the other spriteset if defined already)
-    num_sprites_to_autofill=len(spriteset_animated_dozer.sprites),
-)
-spriteset_2 = industry.add_spriteset(
-    sprites=[(80, 90, 64, 31, -31, 0)],
-    # autofills number of frames to match another spriteset which is animated etc (can get frame count from the other spriteset if defined already)
-    num_sprites_to_autofill=len(spriteset_animated_dozer.sprites),
-)
-spriteset_4 = industry.add_spriteset(
-    sprites=[(150, 90, 64, 31, -31, 0)],
-    # autofills number of frames to match another spriteset which is animated etc (can get frame count from the other spriteset if defined already)
-    num_sprites_to_autofill=len(spriteset_animated_dozer.sprites),
-)
-spriteset_5 = industry.add_spriteset(
-    sprites=[(220, 90, 64, 31, -31, 0)],
-    # autofills number of frames to match another spriteset which is animated etc (can get frame count from the other spriteset if defined already)
-    num_sprites_to_autofill=len(spriteset_animated_dozer.sprites),
-)
-spriteset_6 = industry.add_spriteset(
-    sprites=[(290, 90, 64, 31, -31, 0)],
-    # autofills number of frames to match another spriteset which is animated etc (can get frame count from the other spriteset if defined already)
-    num_sprites_to_autofill=len(spriteset_animated_dozer.sprites),
-)
-spriteset_7 = industry.add_spriteset(
-    sprites=[(10, 50, 64, 31, -31, 0)],
-    # autofills number of frames to match another spriteset which is animated etc (can get frame count from the other spriteset if defined already)
-    num_sprites_to_autofill=len(spriteset_animated_dozer.sprites),
-)
-spriteset_8 = industry.add_spriteset(
-    sprites=[(80, 50, 64, 31, -31, 0)],
-    # autofills number of frames to match another spriteset which is animated etc (can get frame count from the other spriteset if defined already)
-    num_sprites_to_autofill=len(spriteset_animated_dozer.sprites),
-)
-spriteset_10 = industry.add_spriteset(
-    sprites=[(150, 50, 64, 31, -31, 0)],
-    # autofills number of frames to match another spriteset which is animated etc (can get frame count from the other spriteset if defined already)
-    num_sprites_to_autofill=len(spriteset_animated_dozer.sprites),
-)
-spriteset_11 = industry.add_spriteset(
-    sprites=[(220, 50, 64, 31, -31, 0)],
-    # autofills number of frames to match another spriteset which is animated etc (can get frame count from the other spriteset if defined already)
-    num_sprites_to_autofill=len(spriteset_animated_dozer.sprites),
-)
-spriteset_12 = industry.add_spriteset(
-    sprites=[(290, 50, 64, 31, -31, 0)],
-    # autofills number of frames to match another spriteset which is animated etc (can get frame count from the other spriteset if defined already)
-    num_sprites_to_autofill=len(spriteset_animated_dozer.sprites),
-)
-spriteset_19 = industry.add_spriteset(
-    sprites=[(10, 10, 64, 31, -31, 0)],
-    # autofills number of frames to match another spriteset which is animated etc (can get frame count from the other spriteset if defined already)
-    num_sprites_to_autofill=len(spriteset_animated_dozer.sprites),
-)
-spriteset_20 = industry.add_spriteset(
-    sprites=[(80, 10, 64, 31, -31, 0)],
-    # autofills number of frames to match another spriteset which is animated etc (can get frame count from the other spriteset if defined already)
-    num_sprites_to_autofill=len(spriteset_animated_dozer.sprites),
-)
-spriteset_22 = industry.add_spriteset(
-    sprites=[(150, 10, 64, 31, -31, 0)],
-    # autofills number of frames to match another spriteset which is animated etc (can get frame count from the other spriteset if defined already)
-    num_sprites_to_autofill=len(spriteset_animated_dozer.sprites),
-)
-spriteset_23 = industry.add_spriteset(
-    sprites=[(220, 10, 64, 31, -31, 0)],
-    # autofills number of frames to match another spriteset which is animated etc (can get frame count from the other spriteset if defined already)
-    num_sprites_to_autofill=len(spriteset_animated_dozer.sprites),
-)
-spriteset_24 = industry.add_spriteset(
-    sprites=[(290, 10, 64, 31, -31, 0)],
-    # autofills number of frames to match another spriteset which is animated etc (can get frame count from the other spriteset if defined already)
-    num_sprites_to_autofill=len(spriteset_animated_dozer.sprites),
-)
-spriteset_pile = industry.add_spriteset(
-    sprites=[(360, 50, 64, 31, -63, -16)],
-    # autofills number of frames to match another spriteset which is animated etc (can get frame count from the other spriteset if defined already)
-    num_sprites_to_autofill=len(spriteset_animated_dozer.sprites),
-)
-spriteset_crane_1 = industry.add_spriteset(
+spriteset_exit_trestle_animated = industry.add_spriteset(
     sprites=[
-        (440, 10, 64, 71, -48, -55),
-        (440, 10, 64, 71, -48, -55),
-        (510, 10, 64, 71, -48, -55),
-        (580, 10, 64, 71, -48, -55),
-        (650, 10, 64, 71, -48, -55),
-        (650, 10, 64, 71, -48, -55),
-        (650, 10, 64, 71, -48, -55),
-        (580, 10, 64, 71, -48, -55),
-        (510, 10, 64, 71, -48, -55),
-        (440, 10, 64, 71, -48, -55),
-        (440, 10, 64, 71, -48, -55),
-        (440, 10, 64, 71, -48, -55),
+        (10, 160, 64, 122, -31, -88),
+        (80, 160, 64, 122, -31, -88),
+        (150, 160, 64, 122, -31, -88),
+        (220, 160, 64, 122, -31, -88),
+        (290, 160, 64, 122, -31, -88),
+        (360, 160, 64, 122, -31, -88),
+        (430, 160, 64, 122, -31, -88),
+        (500, 160, 64, 122, -31, -88),
+        (500, 160, 64, 122, -31, -88),
+        (570, 160, 64, 122, -31, -88),
+        (570, 160, 64, 122, -31, -88),
+        (640, 160, 64, 122, -31, -88),
+        (640, 160, 64, 122, -31, -88),
+        (710, 160, 64, 122, -31, -88),
+        (780, 160, 64, 122, -31, -88),
+        (850, 160, 64, 122, -31, -88),
+        (920, 160, 64, 122, -31, -88),
+        (990, 160, 64, 122, -31, -88),
+        (1060, 160, 64, 122, -31, -88),
     ],
     animation_rate=1,
-    custom_sprite_selector="(animation_frame > 32) ? (animation_frame % 12) : 0",
 )
-spriteset_pit_conveyor_0 = industry.add_spriteset(
-    sprites=[(10, 130, 64, 64, -31, -22)],
-    # autofills number of frames to match another spriteset which is animated etc (can get frame count from the other spriteset if defined already)
-    num_sprites_to_autofill=len(spriteset_animated_dozer.sprites),
+spriteset_crusher_front_part = industry.add_spriteset(
+    sprites=[(10, 10, 64, 122, -31, -90)],
 )
-spriteset_pit_conveyor_1 = industry.add_spriteset(
-    sprites=[(80, 130, 64, 64, -31, -22)],
-    # autofills number of frames to match another spriteset which is animated etc (can get frame count from the other spriteset if defined already)
-    num_sprites_to_autofill=len(spriteset_animated_dozer.sprites),
+spriteset_crusher_rear_part = industry.add_spriteset(
+    sprites=[(80, 10, 64, 122, -31, -74)],
 )
-spriteset_pit_conveyor_2 = industry.add_spriteset(
-    sprites=[(150, 130, 64, 64, -31, -22)],
-    # autofills number of frames to match another spriteset which is animated etc (can get frame count from the other spriteset if defined already)
-    num_sprites_to_autofill=len(spriteset_animated_dozer.sprites),
+spriteset_hut_vents = industry.add_spriteset(
+    sprites=[(150, 10, 64, 122, -31, -90)],
 )
-spriteset_pit_conveyor_3 = industry.add_spriteset(
-    sprites=[(220, 130, 64, 64, -31, -22)],
-    # autofills number of frames to match another spriteset which is animated etc (can get frame count from the other spriteset if defined already)
-    num_sprites_to_autofill=len(spriteset_animated_dozer.sprites),
+spriteset_ore_1 = industry.add_spriteset(
+    sprites=[(220, 10, 64, 122, -31, -90)],
 )
-spriteset_pit_conveyor_4 = industry.add_spriteset(
-    sprites=[(290, 130, 64, 64, -31, -22)],
-    # autofills number of frames to match another spriteset which is animated etc (can get frame count from the other spriteset if defined already)
-    num_sprites_to_autofill=len(spriteset_animated_dozer.sprites),
+spriteset_ore_2 = industry.add_spriteset(
+    sprites=[(290, 10, 64, 122, -31, -90)],
 )
-spriteset_39 = industry.add_spriteset(
-    sprites=[(870, 10, 64, 31, -31, 0)],
+spriteset_winding_house = industry.add_spriteset(
+    sprites=[(360, 10, 64, 122, -31, -90)],
 )
-spriteset_40 = industry.add_spriteset(
-    sprites=[(940, 10, 64, 31, -31, 0)],
+spriteset_exit_shed_rear = industry.add_spriteset(
+    sprites=[(430, 10, 64, 122, -31, -90)],
 )
-spriteset_41 = industry.add_spriteset(
-    sprites=[(1010, 10, 64, 34, -31, -3)],
+sprite_smoke_1 = industry.add_smoke_sprite(
+    smoke_type="dark_smoke_small",
+    xoffset=-1,
+    yoffset=2,
+    zoffset=38,
 )
-spriteset_silo = industry.add_spriteset(
-    sprites=[(870, 50, 64, 64, -31, -35)],
-)
-spriteset_conveyor_2 = industry.add_spriteset(
-    sprites=[(940, 50, 64, 64, -31, -35)],
-)
-spriteset_crusher = industry.add_spriteset(
-    sprites=[(1010, 50, 64, 64, -31, -33)],
+sprite_smoke_2 = industry.add_smoke_sprite(
+    smoke_type="dark_smoke_small",
+    xoffset=-1,
+    yoffset=6,
+    zoffset=38,
 )
 
 industry.add_spritelayout(
-    id="copper_mine_spritelayout_1",
-    ground_sprite=spriteset_ground_animated_tile,
-    ground_overlay=spriteset_1,
+    id="copper_mine_spritelayout_tile_empty",
+    ground_sprite=sprite_ground,
+    ground_overlay=sprite_ground_overlay,
     building_sprites=[],
-    terrain_aware_ground=True,
 )
 industry.add_spritelayout(
-    id="copper_mine_spritelayout_2",
-    ground_sprite=spriteset_ground_animated_tile,
-    ground_overlay=spriteset_2,
-    building_sprites=[spriteset_pit_conveyor_0],
-    terrain_aware_ground=True,
+    id="copper_mine_spritelayout_headgear_animated",
+    ground_sprite=sprite_ground,
+    ground_overlay=sprite_ground_overlay,
+    building_sprites=[spriteset_headgear_animated],
 )
 industry.add_spritelayout(
-    id="copper_mine_spritelayout_4",
-    ground_sprite=spriteset_ground_animated_tile,
-    ground_overlay=spriteset_4,
-    building_sprites=[],
-    terrain_aware_ground=True,
+    id="copper_mine_spritelayout_exit_trestle_animated",
+    ground_sprite=sprite_ground,
+    ground_overlay=sprite_ground_overlay,
+    building_sprites=[spriteset_exit_trestle_animated],
 )
 industry.add_spritelayout(
-    id="copper_mine_spritelayout_5",
-    ground_sprite=spriteset_ground_animated_tile,
-    ground_overlay=spriteset_5,
-    building_sprites=[spriteset_crane_1, spriteset_pile],
-    terrain_aware_ground=True,
+    id="copper_mine_spritelayout_crusher_front_part",
+    ground_sprite=sprite_ground,
+    ground_overlay=sprite_ground_overlay,
+    building_sprites=[spriteset_crusher_front_part],
 )
 industry.add_spritelayout(
-    id="copper_mine_spritelayout_6",
-    ground_sprite=spriteset_ground_animated_tile,
-    ground_overlay=spriteset_6,
-    building_sprites=[],
-    terrain_aware_ground=True,
+    id="copper_mine_spritelayout_crusher_rear_part",
+    ground_sprite=sprite_ground,
+    ground_overlay=sprite_ground_overlay,
+    building_sprites=[spriteset_crusher_rear_part],
 )
 industry.add_spritelayout(
-    id="copper_mine_spritelayout_7",
-    ground_sprite=spriteset_ground_animated_tile,
-    ground_overlay=spriteset_7,
-    building_sprites=[],
-    terrain_aware_ground=True,
+    id="copper_mine_spritelayout_hut_vents",
+    ground_sprite=sprite_ground,
+    ground_overlay=sprite_ground_overlay,
+    building_sprites=[spriteset_hut_vents],
 )
 industry.add_spritelayout(
-    id="copper_mine_spritelayout_8",
-    ground_sprite=spriteset_ground_animated_tile,
-    ground_overlay=spriteset_8,
-    building_sprites=[spriteset_animated_dozer],
-    terrain_aware_ground=True,
+    id="copper_mine_spritelayout_ore_1",
+    ground_sprite=sprite_ground,
+    ground_overlay=sprite_ground_overlay,
+    building_sprites=[spriteset_ore_1],
 )
 industry.add_spritelayout(
-    id="copper_mine_spritelayout_10",
-    ground_sprite=spriteset_ground_animated_tile,
-    ground_overlay=spriteset_10,
-    building_sprites=[],
-    terrain_aware_ground=True,
+    id="copper_mine_spritelayout_ore_2",
+    ground_sprite=sprite_ground,
+    ground_overlay=sprite_ground_overlay,
+    building_sprites=[spriteset_ore_2],
 )
 industry.add_spritelayout(
-    id="copper_mine_spritelayout_11",
-    ground_sprite=spriteset_ground_animated_tile,
-    ground_overlay=spriteset_11,
-    building_sprites=[],
-    terrain_aware_ground=True,
+    id="copper_mine_spritelayout_winding_house",
+    ground_sprite=sprite_ground,
+    ground_overlay=sprite_ground_overlay,
+    building_sprites=[spriteset_winding_house],
+    smoke_sprites=[sprite_smoke_1, sprite_smoke_2],
 )
 industry.add_spritelayout(
-    id="copper_mine_spritelayout_12",
-    ground_sprite=spriteset_ground_animated_tile,
-    ground_overlay=spriteset_12,
-    building_sprites=[],
-    terrain_aware_ground=True,
+    id="copper_mine_spritelayout_exit_shed_rear",
+    ground_sprite=sprite_ground,
+    ground_overlay=sprite_ground_overlay,
+    building_sprites=[spriteset_exit_shed_rear],
 )
-industry.add_spritelayout(
-    id="copper_mine_spritelayout_19",
-    ground_sprite=spriteset_ground_animated_tile,
-    ground_overlay=spriteset_19,
-    building_sprites=[],
-    terrain_aware_ground=True,
-)
-industry.add_spritelayout(
-    id="copper_mine_spritelayout_20",
-    ground_sprite=spriteset_ground_animated_tile,
-    ground_overlay=spriteset_20,
-    building_sprites=[spriteset_pit_conveyor_1],
-    terrain_aware_ground=True,
-)
-industry.add_spritelayout(
-    id="copper_mine_spritelayout_22",
-    ground_sprite=spriteset_ground_animated_tile,
-    ground_overlay=spriteset_22,
-    building_sprites=[spriteset_pit_conveyor_2],
-    terrain_aware_ground=True,
-)
-industry.add_spritelayout(
-    id="copper_mine_spritelayout_23",
-    ground_sprite=spriteset_ground_animated_tile,
-    ground_overlay=spriteset_23,
-    building_sprites=[spriteset_pit_conveyor_3],
-    terrain_aware_ground=True,
-)
-industry.add_spritelayout(
-    id="copper_mine_spritelayout_24",
-    ground_sprite=spriteset_ground_animated_tile,
-    ground_overlay=spriteset_24,
-    building_sprites=[spriteset_pit_conveyor_4],
-    terrain_aware_ground=True,
-)
-industry.add_spritelayout(
-    id="copper_mine_spritelayout_39",
-    ground_sprite=spriteset_ground,
-    ground_overlay=spriteset_39,
-    building_sprites=[spriteset_silo],
-    terrain_aware_ground=True,
-)
-industry.add_spritelayout(
-    id="copper_mine_spritelayout_40",
-    ground_sprite=spriteset_ground,
-    ground_overlay=spriteset_40,
-    building_sprites=[spriteset_conveyor_2],
-    terrain_aware_ground=True,
-)
-industry.add_spritelayout(
-    id="copper_mine_spritelayout_41",
-    ground_sprite=spriteset_ground,
-    ground_overlay=spriteset_41,
-    building_sprites=[spriteset_crusher],
-    terrain_aware_ground=True,
-)
-
 
 industry.add_industry_layout(
-    id="copper_mine_layout_1",
+    id="copper_mine_industry_layout_1",
     layout=[
-        (0, 1, "copper_mine_tile_2", "copper_mine_spritelayout_24"),
-        (0, 2, "copper_mine_tile_2", "copper_mine_spritelayout_12"),
-        (0, 3, "copper_mine_tile_2", "copper_mine_spritelayout_6"),
-        (1, 0, "copper_mine_tile_1", "copper_mine_spritelayout_41"),
-        (1, 1, "copper_mine_tile_2", "copper_mine_spritelayout_23"),
-        (1, 2, "copper_mine_tile_1", "copper_mine_spritelayout_11"),
-        (1, 3, "copper_mine_tile_2", "copper_mine_spritelayout_5"),
-        (2, 0, "copper_mine_tile_1", "copper_mine_spritelayout_40"),
-        (2, 1, "copper_mine_tile_2", "copper_mine_spritelayout_22"),
-        (2, 2, "copper_mine_tile_1", "copper_mine_spritelayout_10"),
-        (2, 3, "copper_mine_tile_2", "copper_mine_spritelayout_4"),
-        (3, 0, "copper_mine_tile_1", "copper_mine_spritelayout_39"),
-        (3, 1, "copper_mine_tile_2", "copper_mine_spritelayout_20"),
-        (3, 2, "copper_mine_tile_2", "copper_mine_spritelayout_8"),
-        (3, 3, "copper_mine_tile_2", "copper_mine_spritelayout_2"),
-        (4, 1, "copper_mine_tile_2", "copper_mine_spritelayout_19"),
-        (4, 2, "copper_mine_tile_2", "copper_mine_spritelayout_7"),
-        (4, 3, "copper_mine_tile_2", "copper_mine_spritelayout_1"),
+        (
+            0,
+            1,
+            "copper_mine_tile_1",
+            "copper_mine_spritelayout_headgear_animated",
+        ),
+        (0, 2, "copper_mine_tile_2", "copper_mine_spritelayout_winding_house"),
+        (
+            1,
+            0,
+            "copper_mine_tile_2",
+            "copper_mine_spritelayout_crusher_rear_part",
+        ),
+        (1, 1, "copper_mine_tile_2", "copper_mine_spritelayout_exit_shed_rear"),
+        (1, 2, "copper_mine_tile_2", "copper_mine_spritelayout_hut_vents"),
+        (2, 0, "copper_mine_tile_2", "copper_mine_spritelayout_tile_empty"),
+        (
+            2,
+            1,
+            "copper_mine_tile_3",
+            "copper_mine_spritelayout_exit_trestle_animated",
+        ),
+        (2, 2, "copper_mine_tile_2", "copper_mine_spritelayout_tile_empty"),
+        (
+            3,
+            0,
+            "copper_mine_tile_2",
+            "copper_mine_spritelayout_crusher_front_part",
+        ),
+        (3, 1, "copper_mine_tile_2", "copper_mine_spritelayout_ore_1"),
+        (3, 2, "copper_mine_tile_2", "copper_mine_spritelayout_ore_2"),
     ],
 )
 
 industry.add_industry_layout(
-    id="copper_mine_layout_2",
+    id="copper_mine_industry_layout_2",
     layout=[
-        (0, 0, "copper_mine_tile_2", "copper_mine_spritelayout_24"),
-        (0, 1, "copper_mine_tile_2", "copper_mine_spritelayout_12"),
-        (0, 2, "copper_mine_tile_2", "copper_mine_spritelayout_6"),
-        (1, 0, "copper_mine_tile_2", "copper_mine_spritelayout_23"),
-        (1, 1, "copper_mine_tile_1", "copper_mine_spritelayout_11"),
-        (1, 2, "copper_mine_tile_2", "copper_mine_spritelayout_5"),
-        (1, 3, "copper_mine_tile_1", "copper_mine_spritelayout_41"),
-        (2, 0, "copper_mine_tile_2", "copper_mine_spritelayout_22"),
-        (2, 1, "copper_mine_tile_1", "copper_mine_spritelayout_10"),
-        (2, 2, "copper_mine_tile_2", "copper_mine_spritelayout_4"),
-        (2, 3, "copper_mine_tile_1", "copper_mine_spritelayout_40"),
-        (3, 0, "copper_mine_tile_2", "copper_mine_spritelayout_20"),
-        (3, 1, "copper_mine_tile_2", "copper_mine_spritelayout_8"),
-        (3, 2, "copper_mine_tile_2", "copper_mine_spritelayout_2"),
-        (3, 3, "copper_mine_tile_1", "copper_mine_spritelayout_39"),
-        (4, 0, "copper_mine_tile_2", "copper_mine_spritelayout_19"),
-        (4, 1, "copper_mine_tile_2", "copper_mine_spritelayout_7"),
-        (4, 2, "copper_mine_tile_2", "copper_mine_spritelayout_1"),
+        (
+            0,
+            0,
+            "copper_mine_tile_2",
+            "copper_mine_spritelayout_crusher_rear_part",
+        ),
+        (
+            0,
+            1,
+            "copper_mine_tile_1",
+            "copper_mine_spritelayout_headgear_animated",
+        ),
+        (0, 2, "copper_mine_tile_2", "copper_mine_spritelayout_winding_house"),
+        (
+            0,
+            3,
+            "copper_mine_tile_1",
+            "copper_mine_spritelayout_headgear_animated",
+        ),
+        (0, 4, "copper_mine_tile_2", "copper_mine_spritelayout_winding_house"),
+        (1, 0, "copper_mine_tile_2", "copper_mine_spritelayout_tile_empty"),
+        (1, 1, "copper_mine_tile_2", "copper_mine_spritelayout_exit_shed_rear"),
+        (1, 2, "copper_mine_tile_2", "copper_mine_spritelayout_tile_empty"),
+        (1, 3, "copper_mine_tile_2", "copper_mine_spritelayout_exit_shed_rear"),
+        (1, 4, "copper_mine_tile_2", "copper_mine_spritelayout_hut_vents"),
+        (
+            2,
+            0,
+            "copper_mine_tile_2",
+            "copper_mine_spritelayout_crusher_front_part",
+        ),
+        (
+            2,
+            1,
+            "copper_mine_tile_3",
+            "copper_mine_spritelayout_exit_trestle_animated",
+        ),
+        (2, 2, "copper_mine_tile_2", "copper_mine_spritelayout_ore_1"),
+        (
+            2,
+            3,
+            "copper_mine_tile_3",
+            "copper_mine_spritelayout_exit_trestle_animated",
+        ),
+        (2, 4, "copper_mine_tile_2", "copper_mine_spritelayout_ore_2"),
+    ],
+)
+
+industry.add_industry_layout(
+    id="copper_mine_industry_layout_3",
+    layout=[
+        (
+            0,
+            0,
+            "copper_mine_tile_1",
+            "copper_mine_spritelayout_headgear_animated",
+        ),
+        (0, 1, "copper_mine_tile_2", "copper_mine_spritelayout_winding_house"),
+        (1, 0, "copper_mine_tile_2", "copper_mine_spritelayout_exit_shed_rear"),
+        (1, 1, "copper_mine_tile_2", "copper_mine_spritelayout_ore_2"),
+        (1, 2, "copper_mine_tile_2", "copper_mine_spritelayout_tile_empty"),
+        (
+            2,
+            0,
+            "copper_mine_tile_3",
+            "copper_mine_spritelayout_exit_trestle_animated",
+        ),
+        (
+            2,
+            1,
+            "copper_mine_tile_1",
+            "copper_mine_spritelayout_headgear_animated",
+        ),
+        (2, 2, "copper_mine_tile_2", "copper_mine_spritelayout_winding_house"),
+        (3, 2, "copper_mine_tile_2", "copper_mine_spritelayout_hut_vents"),
+        (3, 1, "copper_mine_tile_2", "copper_mine_spritelayout_exit_shed_rear"),
+        (
+            3,
+            0,
+            "copper_mine_tile_2",
+            "copper_mine_spritelayout_crusher_rear_part",
+        ),
+        (4, 0, "copper_mine_tile_2", "copper_mine_spritelayout_tile_empty"),
+        (
+            4,
+            1,
+            "copper_mine_tile_3",
+            "copper_mine_spritelayout_exit_trestle_animated",
+        ),
+        (4, 2, "copper_mine_tile_2", "copper_mine_spritelayout_ore_2"),
+        (
+            5,
+            0,
+            "copper_mine_tile_2",
+            "copper_mine_spritelayout_crusher_front_part",
+        ),
+        (5, 1, "copper_mine_tile_2", "copper_mine_spritelayout_ore_1"),
+    ],
+)
+
+industry.add_industry_layout(
+    id="copper_mine_industry_layout_4",
+    layout=[
+        (
+            0,
+            0,
+            "copper_mine_tile_1",
+            "copper_mine_spritelayout_headgear_animated",
+        ),
+        (0, 1, "copper_mine_tile_2", "copper_mine_spritelayout_winding_house"),
+        (
+            0,
+            2,
+            "copper_mine_tile_1",
+            "copper_mine_spritelayout_headgear_animated",
+        ),
+        (0, 3, "copper_mine_tile_2", "copper_mine_spritelayout_winding_house"),
+        (
+            0,
+            4,
+            "copper_mine_tile_2",
+            "copper_mine_spritelayout_crusher_rear_part",
+        ),
+        (1, 0, "copper_mine_tile_2", "copper_mine_spritelayout_exit_shed_rear"),
+        (1, 1, "copper_mine_tile_2", "copper_mine_spritelayout_ore_2"),
+        (1, 2, "copper_mine_tile_2", "copper_mine_spritelayout_exit_shed_rear"),
+        (1, 3, "copper_mine_tile_2", "copper_mine_spritelayout_tile_empty"),
+        (1, 4, "copper_mine_tile_2", "copper_mine_spritelayout_tile_empty"),
+        (
+            2,
+            0,
+            "copper_mine_tile_3",
+            "copper_mine_spritelayout_exit_trestle_animated",
+        ),
+        (2, 1, "copper_mine_tile_2", "copper_mine_spritelayout_hut_vents"),
+        (
+            2,
+            2,
+            "copper_mine_tile_3",
+            "copper_mine_spritelayout_exit_trestle_animated",
+        ),
+        (2, 3, "copper_mine_tile_2", "copper_mine_spritelayout_ore_1"),
+        (
+            2,
+            4,
+            "copper_mine_tile_2",
+            "copper_mine_spritelayout_crusher_front_part",
+        ),
     ],
 )

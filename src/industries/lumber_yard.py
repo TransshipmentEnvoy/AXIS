@@ -57,7 +57,9 @@ industry.add_tile(
     ),
 )
 
-sprite_ground = industry.add_sprite(sprite_number="GROUNDTILE_MUD_TRACKS")
+spriteset_ground = industry.add_spriteset(
+    type="hard_standing_dirt",
+)
 spriteset_ground_overlay = industry.add_spriteset(type="empty")
 spriteset_1 = industry.add_spriteset(sprites=[(80, 10, 64, 64, -31, -40)])
 spriteset_2 = industry.add_spriteset(sprites=[(150, 10, 64, 64, -31, -34)])
@@ -76,13 +78,13 @@ sprite_smoke = industry.add_smoke_sprite(
 
 industry.add_spritelayout(
     id="lumber_yard_spritelayout_1",
-    ground_sprite=sprite_ground,
+    ground_sprite=spriteset_ground,
     ground_overlay=spriteset_ground_overlay,
     building_sprites=[spriteset_1],
 )
 industry.add_spritelayout(
     id="lumber_yard_spritelayout_2",
-    ground_sprite=sprite_ground,
+    ground_sprite=spriteset_ground,
     ground_overlay=spriteset_ground_overlay,
     building_sprites=[spriteset_2],
     smoke_sprites=[sprite_smoke],
@@ -90,31 +92,31 @@ industry.add_spritelayout(
 # no spritelayout 3 for this industry, historical reasons
 industry.add_spritelayout(
     id="lumber_yard_spritelayout_4",
-    ground_sprite=sprite_ground,
+    ground_sprite=spriteset_ground,
     ground_overlay=spriteset_ground_overlay,
     building_sprites=[spriteset_4],
 )
 industry.add_spritelayout(
     id="lumber_yard_spritelayout_5",
-    ground_sprite=sprite_ground,
+    ground_sprite=spriteset_ground,
     ground_overlay=spriteset_ground_overlay,
     building_sprites=[spriteset_5],
 )
 industry.add_spritelayout(
     id="lumber_yard_spritelayout_6",
-    ground_sprite=sprite_ground,
+    ground_sprite=spriteset_ground,
     ground_overlay=spriteset_ground_overlay,
     building_sprites=[spriteset_6],
 )
 industry.add_spritelayout(
     id="lumber_yard_spritelayout_7",
-    ground_sprite=sprite_ground,
+    ground_sprite=spriteset_ground,
     ground_overlay=spriteset_ground_overlay,
     building_sprites=[spriteset_7],
 )
 industry.add_spritelayout(
     id="lumber_yard_spritelayout_8",
-    ground_sprite=sprite_ground,
+    ground_sprite=spriteset_ground,
     ground_overlay=spriteset_ground_overlay,
     building_sprites=[spriteset_8],
 )

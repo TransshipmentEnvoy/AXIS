@@ -122,6 +122,7 @@ industry_numeric_ids = dict(
     seaweed_farm = 119,
     farm_supply_yard = 120,
     fruit_packing_plant = 121,
+    edible_oil_refinery = 122,
 )
 # 127 is last ID to be used (128 industry limit, zero-based)
 # see also why 128 is a hard limit as of 2020 http://webster.openttdcoop.org/?channel=openttd&date=1586563200#1586641232
@@ -132,8 +133,9 @@ industry_numeric_ids = dict(
 # Definition of industry tile numeric IDs
 # tiles 0-xxx currently vacant
 tile_numeric_ids = dict(
-    copper_mine_tile_1=73,
-    copper_mine_tile_2=74,
+    copper_mine_tile_1=72,
+    copper_mine_tile_2=73,
+    copper_mine_tile_3=74,
     fruit_packing_plant_tile_1= 75,
     farm_supply_yard_tile_1=76,
     seaweed_farm_tile_1=77,
@@ -233,7 +235,7 @@ tile_numeric_ids = dict(
     orchard_piggery_tile_1=171,
     orchard_piggery_tile_2=172,
     ranch_tile_1=173,
-    #copper_mine_tile_1=174,
+    edible_oil_refinery_tile_1=174,
     dairy_tile_1=175,
     dairy_tile_2=176,
     copper_refinery_tile_1=177,

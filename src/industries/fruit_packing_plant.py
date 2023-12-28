@@ -25,9 +25,9 @@ industry.economy_variations["BASIC_TROPIC"].enabled = True
 
 industry.economy_variations["BASIC_TROPIC"].accept_cargos_with_input_ratios = [
     ("FRUT", 4),
+    ("BAKE", 4),
     ("MNSP", 2),
-    ("SUGR", 1),
-    ("ACET", 1),
+    ("ACET", 2),
 ]
 industry.economy_variations["BASIC_TROPIC"].prod_cargo_types_with_output_ratios = [
     ("FOOD", 8),

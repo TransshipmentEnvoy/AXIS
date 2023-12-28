@@ -459,6 +459,7 @@ STR_IND_DAIRY                                                                   
 STR_IND_DAIRY_FARM                                                              :Dairy Farm
 STR_IND_DISTILLERY                                                              :Distillery and Winery
 STR_IND_DREDGING_SITE                                                           :Dredging Site
+STR_IND_EDIBLE_OIL_REFINERY                                                     :Edible Oil Refinery
 STR_IND_ELECTRIC_ARC_FURNACE                                                    :Electric Arc Furnace
 STR_IND_ELECTRICAL_WORKS                                                        :Electrical Works
 STR_IND_ENGINE_PLANT                                                            :Engine Plant
@@ -539,7 +540,7 @@ STR_IND_SPICE_PLANTATION                                                        
 STR_IND_STOCKYARD                                                               :Abattoir
 STR_IND_SUGAR_REFINERY                                                          :Sugar Refinery
 STR_IND_SULPHURIC_ACID_PLANT                                                    :Acid Plant
-STR_IND_SUPPLY_YARD                                                             :Supply Yard
+STR_IND_SUPPLY_YARD                                                             :Engineering Supply Yard
 STR_IND_SYNTHETIC_RUBBER_PLANT                                                  :Synthetic Rubber Plant
 STR_IND_TAR_SANDS_MINE                                                          :Tar Sands Mine
 STR_IND_TEXTILE_MILL                                                            :Textile Mill
@@ -621,6 +622,7 @@ STR_STATION_MILL                                                                
 STR_STATION_MINE                                                                :Tanner Road
 STR_STATION_MOULDINGS                                                           :Mouldings
 STR_STATION_OIL_RIG                                                             :Field
+STR_STATION_OIL_PRESS                                                           :Oil Press
 STR_STATION_ORCHARDS                                                            :Orchards
 STR_STATION_PHENOLS                                                             :Phenols
 STR_STATION_PIT                                                                 :Pit

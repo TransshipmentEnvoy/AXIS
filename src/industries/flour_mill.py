@@ -2,8 +2,9 @@ from industry import IndustrySecondary, TileLocationChecks
 
 industry = IndustrySecondary(
     id="flour_mill",
-    accept_cargos_with_input_ratios=[("GRAI", 6)],
-    prod_cargo_types_with_output_ratios=[("FOOD", 8)],
+    accept_cargos_with_input_ratios=[("GRAI", 6), ("MNSP", 4)],
+    combined_cargos_boost_prod=True,
+    prod_cargo_types_with_output_ratios=[("FOOD", 6)],
     prob_map_gen="10",
     prob_in_game="10",
     map_colour="49",
@@ -11,7 +12,7 @@ industry = IndustrySecondary(
     nearby_station_name="string(STR_STATION_MILL)",
     location_checks=dict(
         near_at_least_one_of_these_keystone_industries=[
-            ["arable_farm", "fruit_plantation", "farm"],
+            ["arable_farm", "farm"],
             72,
         ]
     ),
@@ -20,12 +21,10 @@ industry = IndustrySecondary(
 
 industry.economy_variations["BASIC_TROPIC"].enabled = True
 industry.economy_variations["BASIC_TROPIC"].accept_cargos_with_input_ratios = [
-    ("GRAI", 4),
-    ("OLSD", 4),
+    ("GRAI", 6),
 ]
 industry.economy_variations["BASIC_TROPIC"].prod_cargo_types_with_output_ratios = [
     ("BAKE", 6),
-    ("EOIL", 2),
 ]
 
 industry.economy_variations["STEELTOWN"].enabled = True
@@ -46,13 +45,12 @@ industry.add_tile(
     animation_speed=3,
     location_checks=TileLocationChecks(
         require_effectively_flat=True,
-        require_houses_nearby=True,
         disallow_industry_adjacent=True,
     ),
 )
 
 spriteset_ground_bakery = industry.add_spriteset(
-    type="hard_standing_dirt",
+    type="dirty_concrete",
 )
 spriteset_ground_overlay_1 = industry.add_spriteset(
     sprites=[(10, 10, 64, 31, -31, 0)],
@@ -81,7 +79,7 @@ spriteset_windmill_anim = industry.add_spriteset(
     animation_rate=1,
 )
 spriteset_ground_windmill = industry.add_spriteset(
-    type="hard_standing_dirt",
+    type="dirty_concrete",
     # autofills number of frames to match another spriteset which is animated etc (can get frame count from the other spriteset if defined already)
     num_sprites_to_autofill=len(spriteset_windmill_anim.sprites),
 )
