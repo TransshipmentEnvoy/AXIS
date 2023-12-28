@@ -104,13 +104,13 @@ spriteset_crusher_front_part = industry.add_spriteset(
 spriteset_crusher_rear_part = industry.add_spriteset(
     sprites=[(80, 10, 64, 122, -31, -74)],
 )
-spriteset_hut_vents = industry.add_spriteset(
+spriteset_ore_truck = industry.add_spriteset(
     sprites=[(150, 10, 64, 122, -31, -90)],
 )
-spriteset_ore_1 = industry.add_spriteset(
+spriteset_joined_ore_front = industry.add_spriteset(
     sprites=[(220, 10, 64, 122, -31, -90)],
 )
-spriteset_ore_2 = industry.add_spriteset(
+spriteset_joined_ore_rear = industry.add_spriteset(
     sprites=[(290, 10, 64, 122, -31, -90)],
 )
 spriteset_winding_house = industry.add_spriteset(
@@ -118,6 +118,9 @@ spriteset_winding_house = industry.add_spriteset(
 )
 spriteset_exit_shed_rear = industry.add_spriteset(
     sprites=[(430, 10, 64, 122, -31, -90)],
+)
+spriteset_boiler_house = industry.add_spriteset(
+    sprites=[(500, 10, 64, 122, -31, -90)],
 )
 sprite_smoke_1 = industry.add_smoke_sprite(
     smoke_type="dark_smoke_small",
@@ -163,29 +166,35 @@ industry.add_spritelayout(
     building_sprites=[spriteset_crusher_rear_part],
 )
 industry.add_spritelayout(
-    id="copper_mine_spritelayout_hut_vents",
+    id="copper_mine_spritelayout_ore_truck",
     ground_sprite=sprite_ground,
     ground_overlay=sprite_ground_overlay,
-    building_sprites=[spriteset_hut_vents],
+    building_sprites=[spriteset_ore_truck],
 )
 industry.add_spritelayout(
-    id="copper_mine_spritelayout_ore_1",
+    id="copper_mine_spritelayout_joined_ore_front",
     ground_sprite=sprite_ground,
     ground_overlay=sprite_ground_overlay,
-    building_sprites=[spriteset_ore_1],
+    building_sprites=[spriteset_joined_ore_front],
 )
 industry.add_spritelayout(
-    id="copper_mine_spritelayout_ore_2",
+    id="copper_mine_spritelayout_joined_ore_rear",
     ground_sprite=sprite_ground,
     ground_overlay=sprite_ground_overlay,
-    building_sprites=[spriteset_ore_2],
+    building_sprites=[spriteset_joined_ore_rear],
+)
+industry.add_spritelayout(
+    id="copper_mine_spritelayout_boiler_house",
+    ground_sprite=sprite_ground,
+    ground_overlay=sprite_ground_overlay,
+    building_sprites=[spriteset_boiler_house],
+    smoke_sprites=[sprite_smoke_1, sprite_smoke_2],
 )
 industry.add_spritelayout(
     id="copper_mine_spritelayout_winding_house",
     ground_sprite=sprite_ground,
     ground_overlay=sprite_ground_overlay,
     building_sprites=[spriteset_winding_house],
-    smoke_sprites=[sprite_smoke_1, sprite_smoke_2],
 )
 industry.add_spritelayout(
     id="copper_mine_spritelayout_exit_shed_rear",
@@ -197,190 +206,26 @@ industry.add_spritelayout(
 industry.add_industry_layout(
     id="copper_mine_industry_layout_1",
     layout=[
-        (
-            0,
-            1,
-            "copper_mine_tile_1",
-            "copper_mine_spritelayout_headgear_animated",
-        ),
-        (0, 2, "copper_mine_tile_2", "copper_mine_spritelayout_winding_house"),
-        (
-            1,
-            0,
-            "copper_mine_tile_2",
-            "copper_mine_spritelayout_crusher_rear_part",
-        ),
-        (1, 1, "copper_mine_tile_2", "copper_mine_spritelayout_exit_shed_rear"),
-        (1, 2, "copper_mine_tile_2", "copper_mine_spritelayout_hut_vents"),
-        (2, 0, "copper_mine_tile_2", "copper_mine_spritelayout_tile_empty"),
-        (
-            2,
-            1,
-            "copper_mine_tile_3",
-            "copper_mine_spritelayout_exit_trestle_animated",
-        ),
+        (0, 0, "copper_mine_tile_2", "copper_mine_spritelayout_winding_house"),
+        (0, 1, "copper_mine_tile_1", "copper_mine_spritelayout_headgear_animated"),
+        (0, 2, "copper_mine_tile_2", "copper_mine_spritelayout_crusher_rear_part"),
+        (0, 3, "copper_mine_tile_2", "copper_mine_spritelayout_boiler_house"),
+        (1, 0, "copper_mine_tile_2", "copper_mine_spritelayout_winding_house"),
+        (1, 1, "copper_mine_tile_1", "copper_mine_spritelayout_headgear_animated"),
+        (1, 2, "copper_mine_tile_2", "copper_mine_spritelayout_crusher_rear_part"),
+        (1, 3, "copper_mine_tile_2", "copper_mine_spritelayout_ore_truck"),
+        (2, 0, "copper_mine_tile_2", "copper_mine_spritelayout_joined_ore_rear"),
+        (2, 1, "copper_mine_tile_2", "copper_mine_spritelayout_exit_shed_rear"),
         (2, 2, "copper_mine_tile_2", "copper_mine_spritelayout_tile_empty"),
+        (2, 3, "copper_mine_tile_2", "copper_mine_spritelayout_joined_ore_rear"),
+        (3, 0, "copper_mine_tile_2", "copper_mine_spritelayout_joined_ore_front"),
         (
             3,
-            0,
-            "copper_mine_tile_2",
-            "copper_mine_spritelayout_crusher_front_part",
-        ),
-        (3, 1, "copper_mine_tile_2", "copper_mine_spritelayout_ore_1"),
-        (3, 2, "copper_mine_tile_2", "copper_mine_spritelayout_ore_2"),
-    ],
-)
-
-industry.add_industry_layout(
-    id="copper_mine_industry_layout_2",
-    layout=[
-        (
-            0,
-            0,
-            "copper_mine_tile_2",
-            "copper_mine_spritelayout_crusher_rear_part",
-        ),
-        (
-            0,
-            1,
-            "copper_mine_tile_1",
-            "copper_mine_spritelayout_headgear_animated",
-        ),
-        (0, 2, "copper_mine_tile_2", "copper_mine_spritelayout_winding_house"),
-        (
-            0,
-            3,
-            "copper_mine_tile_1",
-            "copper_mine_spritelayout_headgear_animated",
-        ),
-        (0, 4, "copper_mine_tile_2", "copper_mine_spritelayout_winding_house"),
-        (1, 0, "copper_mine_tile_2", "copper_mine_spritelayout_tile_empty"),
-        (1, 1, "copper_mine_tile_2", "copper_mine_spritelayout_exit_shed_rear"),
-        (1, 2, "copper_mine_tile_2", "copper_mine_spritelayout_tile_empty"),
-        (1, 3, "copper_mine_tile_2", "copper_mine_spritelayout_exit_shed_rear"),
-        (1, 4, "copper_mine_tile_2", "copper_mine_spritelayout_hut_vents"),
-        (
-            2,
-            0,
-            "copper_mine_tile_2",
-            "copper_mine_spritelayout_crusher_front_part",
-        ),
-        (
-            2,
             1,
             "copper_mine_tile_3",
             "copper_mine_spritelayout_exit_trestle_animated",
         ),
-        (2, 2, "copper_mine_tile_2", "copper_mine_spritelayout_ore_1"),
-        (
-            2,
-            3,
-            "copper_mine_tile_3",
-            "copper_mine_spritelayout_exit_trestle_animated",
-        ),
-        (2, 4, "copper_mine_tile_2", "copper_mine_spritelayout_ore_2"),
-    ],
-)
-
-industry.add_industry_layout(
-    id="copper_mine_industry_layout_3",
-    layout=[
-        (
-            0,
-            0,
-            "copper_mine_tile_1",
-            "copper_mine_spritelayout_headgear_animated",
-        ),
-        (0, 1, "copper_mine_tile_2", "copper_mine_spritelayout_winding_house"),
-        (1, 0, "copper_mine_tile_2", "copper_mine_spritelayout_exit_shed_rear"),
-        (1, 1, "copper_mine_tile_2", "copper_mine_spritelayout_ore_2"),
-        (1, 2, "copper_mine_tile_2", "copper_mine_spritelayout_tile_empty"),
-        (
-            2,
-            0,
-            "copper_mine_tile_3",
-            "copper_mine_spritelayout_exit_trestle_animated",
-        ),
-        (
-            2,
-            1,
-            "copper_mine_tile_1",
-            "copper_mine_spritelayout_headgear_animated",
-        ),
-        (2, 2, "copper_mine_tile_2", "copper_mine_spritelayout_winding_house"),
-        (3, 2, "copper_mine_tile_2", "copper_mine_spritelayout_hut_vents"),
-        (3, 1, "copper_mine_tile_2", "copper_mine_spritelayout_exit_shed_rear"),
-        (
-            3,
-            0,
-            "copper_mine_tile_2",
-            "copper_mine_spritelayout_crusher_rear_part",
-        ),
-        (4, 0, "copper_mine_tile_2", "copper_mine_spritelayout_tile_empty"),
-        (
-            4,
-            1,
-            "copper_mine_tile_3",
-            "copper_mine_spritelayout_exit_trestle_animated",
-        ),
-        (4, 2, "copper_mine_tile_2", "copper_mine_spritelayout_ore_2"),
-        (
-            5,
-            0,
-            "copper_mine_tile_2",
-            "copper_mine_spritelayout_crusher_front_part",
-        ),
-        (5, 1, "copper_mine_tile_2", "copper_mine_spritelayout_ore_1"),
-    ],
-)
-
-industry.add_industry_layout(
-    id="copper_mine_industry_layout_4",
-    layout=[
-        (
-            0,
-            0,
-            "copper_mine_tile_1",
-            "copper_mine_spritelayout_headgear_animated",
-        ),
-        (0, 1, "copper_mine_tile_2", "copper_mine_spritelayout_winding_house"),
-        (
-            0,
-            2,
-            "copper_mine_tile_1",
-            "copper_mine_spritelayout_headgear_animated",
-        ),
-        (0, 3, "copper_mine_tile_2", "copper_mine_spritelayout_winding_house"),
-        (
-            0,
-            4,
-            "copper_mine_tile_2",
-            "copper_mine_spritelayout_crusher_rear_part",
-        ),
-        (1, 0, "copper_mine_tile_2", "copper_mine_spritelayout_exit_shed_rear"),
-        (1, 1, "copper_mine_tile_2", "copper_mine_spritelayout_ore_2"),
-        (1, 2, "copper_mine_tile_2", "copper_mine_spritelayout_exit_shed_rear"),
-        (1, 3, "copper_mine_tile_2", "copper_mine_spritelayout_tile_empty"),
-        (1, 4, "copper_mine_tile_2", "copper_mine_spritelayout_tile_empty"),
-        (
-            2,
-            0,
-            "copper_mine_tile_3",
-            "copper_mine_spritelayout_exit_trestle_animated",
-        ),
-        (2, 1, "copper_mine_tile_2", "copper_mine_spritelayout_hut_vents"),
-        (
-            2,
-            2,
-            "copper_mine_tile_3",
-            "copper_mine_spritelayout_exit_trestle_animated",
-        ),
-        (2, 3, "copper_mine_tile_2", "copper_mine_spritelayout_ore_1"),
-        (
-            2,
-            4,
-            "copper_mine_tile_2",
-            "copper_mine_spritelayout_crusher_front_part",
-        ),
+        (3, 2, "copper_mine_tile_2", "copper_mine_spritelayout_crusher_front_part"),
+        (3, 3, "copper_mine_tile_2", "copper_mine_spritelayout_joined_ore_front"),
     ],
 )
