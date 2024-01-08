@@ -10,7 +10,7 @@ industry = IndustrySecondary(
     map_colour="181",
     location_checks=dict(
         near_at_least_one_of_these_keystone_industries=[
-            ["arable_farm", "fruit_plantation", "coffee_estate", "vineyard"],
+            ["fruit_plantation", "coffee_estate", "vineyard"],
             72,
         ]
     ),
