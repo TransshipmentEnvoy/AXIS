@@ -11,10 +11,6 @@ industry = IndustryPrimaryOrganic(
     map_colour="85",
     # basic farm doesn't cluster, by design - no industry location checks needed
     prospect_chance="0.75",
-    special_flags=[
-        "IND_FLAG_PLANT_FIELDS_PERIODICALLY",
-        "IND_FLAG_PLANT_FIELDS_WHEN_BUILT",
-    ],
     name="string(STR_IND_MIXEDFARM)",
     extra_text_fund="string(STR_FUND_FARM)",
     nearby_station_name="string(STR_STATION_BARNS)",

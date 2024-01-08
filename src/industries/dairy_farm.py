@@ -8,10 +8,6 @@ industry = IndustryPrimaryOrganic(
     map_colour="164",
     location_checks=dict(require_cluster=[72, 4]),
     prospect_chance="0.75",
-    special_flags=[
-        "IND_FLAG_PLANT_FIELDS_PERIODICALLY",
-        "IND_FLAG_PLANT_FIELDS_WHEN_BUILT",
-    ],
     name="string(STR_IND_DAIRY_FARM)",
     extra_text_fund="string(STR_FUND_DAIRY_FARM)",
     nearby_station_name="string(STR_STATION_FARM_2)",
