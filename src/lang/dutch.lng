@@ -1,14 +1,16 @@
 ##grflangid 0x1f
 ##plural 0
 
-STR_GRF_DESC                                                                    :{ORANGE}FIRS Industry Replacement Set{}{BLACK}Gemaakt door andythenorth, FooBar, planetmaker, Terkhen en Yexo met hulp van vele anderen. {SILVER}Lees de 'readme' voor meer informatie, inclusief hoe je FIRS kunt gebruiken. {BLACK}Licentie: GPL V2.
+STR_GRF_DESC                                                                    :{ORANGE}AXIS: Another Xtreme Industry Set{}{BLACK}De officiële opvolger van XIS. Gemaakt door Emperor Jake, gebaseerd op FIRS 4 code door andythenorth, FooBar, planetmaker, Terkhen and Yexo, met hulp van vele anderen. {SILVER}Lees de ‘readme’ voor meer informatie, inclusief hoe je AXIS kunt gebruiken. {BLACK}Licentie: GPL v2.
 
 STR_PARAM_DESC_COAST_DISTANCE_MARINE_INDUSTRY                                   :Maximale afstand tot de kust in tegels voor visgebieden en baggermolens.
 STR_PARAM_DESC_ECONOMIES                                                        :Elke economie heeft een andere combinatie van goederen en industrieën.{}{}Voor spelers die een eenvoudig spelverloop willen zijn er {SILVER}basis{BLACK} economieën die minder industrieën en goederen bevatten.{}{}De FIRS website (Engelstalig) geeft gedetailleerde informatie over elke economie.
 STR_PARAM_DESC_NO_OPENINGS                                                      :Normaal worden er nieuwe industrieën gebouwd tijdens het spel.{}{}Als {SILVER}voorkom bouwen van nieuwe industrieën{BLACK} aan staat, worden geen nieuwe industrieën gebouwd tijdens het spel. Spelers kunnen nieuwe industrieën ook niet kopen of proberen.
+STR_PARAM_DESC_NO_SPAWNING                                                      :Normaal komen er geen nieuwe industrieën tijdens het spel.{}{}Als {SILVER}ontstaan toestaan {BLACK}is aangezet, ontstaan industrieën willekeurig tijdens het spelverloop. De hoeveelheid wordt bepaald door de instelling voor intensiteit van industrie.
 STR_PARAM_NAME_COAST_DISTANCE_MARINE_INDUSTRY                                   :Maximale afstand tot de kust in tegels voor zee-industrieën
 STR_PARAM_NAME_ECONOMIES                                                        :Economie
-STR_PARAM_NAME_NO_OPENINGS                                                      :Voorkom bouwen van nieuwe industrieën tijdens het spel
+STR_PARAM_NAME_NO_OPENINGS                                                      :Verbied financiering van of onderzoek naar nieuwe industrieën.
+STR_PARAM_NAME_NO_SPAWNING                                                      :Sta het ontstaan van industrieën tidens het spel toe.
 STR_PARAM_VALUE_SECONDARY_NEVER_CLOSE_0                                         :Geen limiet
 
 STR_PARAM_NAME_PRIMARY_LEVEL1_REQUIREMENT                                       :Aantal benodigde kratten voor verhoogde productie (standaard 16)
@@ -18,179 +20,399 @@ STR_PARAM_NAME_PRIMARY_LEVEL1_BONUS                                             
 STR_PARAM_NAME_PRIMARY_LEVEL2_BONUS                                             :Productieniveau van gepassioneerde productie (%)
 STR_PARAM_DESC_PRIMARY_LEVEL_BONUS                                              :Productie van boerderijen, mijnen en soortgelijke industrieën bij het vervullen van de bevoorradingseisen (als percentage van {SILVER}normale{BLACK} productie).
 
-STR_PARAM_VALUE_ECONOMIES_BASIC_TEMPERATE                                       :Basiseconomie voor het gematigde klimaat
-STR_PARAM_VALUE_ECONOMIES_BASIC_ARCTIC                                          :Basiseconomie voor het subarctisch klimaat
-STR_PARAM_VALUE_ECONOMIES_BASIC_TROPIC                                          :Basiseconomie voor het subtropisch klimaat
-STR_PARAM_VALUE_ECONOMIES_IN_A_HOT_COUNTRY                                          :In een heet land
+STR_PARAM_NAME_EXPERIMENTAL_FEATURES                                            :Schakelt experimentele opties in.
+STR_PARAM_DESC_EXPERIMENTAL_FEATURES                                            :Schakelt experimentele opties uit.
+
+STR_PARAM_VALUE_ECONOMIES_BASIC_TEMPERATE                                       :INCOMPLEET Klassiek
+STR_PARAM_VALUE_ECONOMIES_BASIC_ARCTIC                                          :INCOMPLEET Arctisch
+STR_PARAM_VALUE_ECONOMIES_BASIC_TROPIC                                          :Tropisch paradijs
+STR_PARAM_VALUE_ECONOMIES_BETTER_LIVING_THROUGH_CHEMISTRY                       :INCOMPLEET Beter leven met chemie
+STR_PARAM_VALUE_ECONOMIES_IN_A_HOT_COUNTRY                                      :INCOMPLEET In een warm land
 STR_PARAM_VALUE_ECONOMIES_STEELTOWN                                             :Staalstad
 
+STR_CARGO_SUBTYPE_DISPLAY_CARGO_SUPPLIED_FLAG                                   :{BLACK}(geleverd)
+STR_EXTRA_TEXT_SECONDARY_NON_COMBINATORY                                        :{BLACK} Produceert op maximaal niveau als {WHITE}een van de {BLACK} benodigde goederen wordt geleverd.
+STR_EXTRA_TEXT_SECONDARY_COMBINATORY                                            :{BLACK}Lever {WHITE}alle {BLACK} benodigde goederen minimaal 1 keer per 3 maanden om maximale productie te halen.
+STR_EXTRA_TEXT_TOWN_PRODUCER                                                    :{BLACK}Productie is evenredig met het aantal inwoners in the stad. Ten minste {WHITE}{SIGNED_WORD} eenheden{BLACK} en niet meer dan {WHITE}{SIGNED_WORD} eenheden{BLACK} worden elke maand geproduceerd.
+STR_PRIMARY_PRODUCTION_1X                                                       :{BLACK}Huidige productie: {YELLOW}Normaal{}{}{BLACK}Lever binnen drie maanden {SIGNED_WORD} eenheden vracht om {WHITE}verhoogd{BLACK} productieniveau te verkrijgen{}Lever {SIGNED_WORD} eenheden vracht voor {WHITE}gepassioneerde{BLACK} productie
+STR_PRIMARY_PRODUCTION_2X                                                       :{BLACK}Huidige productie: {YELLOW}Verhoogd{}{}{BLACK}Lever binnen drie maanden {SIGNED_WORD} kratten constructie-, landbouw- of productiematerialen af om dit productieniveau te handhaven{}Voor {WHITE}gepassioneerde{BLACK} productie, lever {SIGNED_WORD} eenheden
+STR_PRIMARY_PRODUCTION_4X                                                       :{BLACK}Huidige productie: {YELLOW}Gepassioneerd{}{}{BLACK}Lever binnen drie maanden {SKIP}{SIGNED_WORD} kratten constructie-, landbouw- of productiematerialen af om dit productieniveau te handhaven.
+STR_PORT_PRODUCTION_1X                                                          :{BLACK}Huidige productie: {YELLOW}Normaal{}{}{BLACK}Lever binnen drie maanden {SIGNED_WORD} eenheden vracht om {WHITE}verhoogd{BLACK} productieniveau te verkrijgen{}Lever {SIGNED_WORD} eenheden vracht voor {WHITE}gepassioneerde{BLACK} productie
+STR_PORT_PRODUCTION_2X                                                          :{BLACK}Huidige productie: {YELLOW}Verhoogd{}{}{BLACK}Lever binnen drie maanden {SIGNED_WORD} eenheden vracht om dit productieniveau te handhaven{}Voor {WHITE}gepassioneerde{BLACK} productie, lever {SIGNED_WORD} eenheden
+STR_PORT_PRODUCTION_4X                                                          :{BLACK}Huidige productie: {YELLOW}Gepassioneerd{}{}{BLACK}Lever binnen drie maanden {SKIP}{SIGNED_WORD} eenheden vracht om dit productieniveau te handhaven.
+
+STR_INFORMATIVE_EXTRA_TEXT_PLAZA                                                :{SKIP}{SKIP}Stemming van de inwoners:{} {STRING}{STRING}{}{}{BLACK}Optimismescore: {STRING}{SIGNED_WORD} punt{P 2 "" en}{}{BLACK} Behoeften en luxe vervuld: {YELLOW}{SIGNED_WORD} punt{P 3 "" en} {}{BLACK} Vervuiling en verloedering: {YELLOW}{SIGNED_WORD} punt{P 4 "" en} {}{}{BLACK}Vervuiling en verloedering nemen toe met inwoneraantal en door bepaalde industrieën.{}{}Behoeften en luxe worden vervuld door levering aan bepaalde industrieën.{}{}Als de optimismescore boven 10 is, is de stemming van de inwoners {WHITE}optimistisch{BLACK}. Als de optimismescore lager is dan -10,  isde stemming van de inwoners {WHITE}pessimistisch{BLACK}.
+STR_INFORMATIVE_EXTRA_TEXT_PLAZA_MOOD_OPTIMISTIC                                :Optimistisch
+STR_INFORMATIVE_EXTRA_TEXT_PLAZA_MOOD_GLOOMY                                    :Pessimistisch
+STR_INFORMATIVE_EXTRA_TEXT_PLAZA_MOOD_NEUTRAL                                   :Neutraal
+
+STR_CARGO_NAME_ACETIC_ACID                                                      :Azijnzuur
 STR_CARGO_NAME_ACID                                                             :Zuren
 STR_CARGO_NAME_ALCOHOL                                                          :Alcohol
+STR_CARGO_NAME_ALLOY_STEEL                                                      :Staallegeringen
+STR_CARGO_NAME_ALUMINIUM                                                        :Aluminium
+STR_CARGO_NAME_ALUMINIA                                                         :Aluminiumoxide
+STR_CARGO_NAME_AMMONIA                                                          :Ammoniak
+STR_CARGO_NAME_AMMONIUM_NITRATE                                                 :Ammoniumnitraat
 STR_CARGO_NAME_BAUXITE                                                          :Bauxiet
 STR_CARGO_NAME_BEANS                                                            :Bonen
+STR_CARGO_NAME_BIOMASS                                                          :Biomassa
 STR_CARGO_NAME_BUILDING_MATERIALS                                               :Bouwmaterialen
+STR_CARGO_NAME_CARBON_BLACK                                                     :Zwartsel
+STR_CARGO_NAME_CARBON_STEEL                                                     :Koolstofstaal
 STR_CARGO_NAME_CASSAVA                                                          :Cassave
+STR_CARGO_NAME_CAST_IRON                                                        :Gietijzer
 STR_CARGO_NAME_CEMENT                                                           :Cement
-STR_CARGO_NAME_CHEMICALS                                                        :Chemicaliën
+# more specific petrochemicals
+STR_CARGO_NAME_CHEMICALS                                                        :Geraffineerde olie
 STR_CARGO_NAME_CHLORINE                                                         :Chloor
+STR_CARGO_NAME_CHROMITE_ORE                                                     :Chromiet
 STR_CARGO_NAME_CLAY                                                             :Klei
+STR_CARGO_NAME_CLEANING_AGENTS                                                  :Schoonmaakmiddelen
 STR_CARGO_NAME_COFFEE                                                           :Koffie
+# no longer just coal
+STR_CARGO_NAME_COAL_TAR                                                         :Steenkoolteer
 STR_CARGO_NAME_COKE                                                             :Cokes
 STR_CARGO_NAME_COPPER                                                           :Koper
+STR_CARGO_NAME_COPPER_CONCENTRATE                                               :Koperconcentraat
 STR_CARGO_NAME_EDIBLE_OIL                                                       :Spijsolie
+STR_CARGO_NAME_ELECTRICAL_PARTS                                                 :Electronica
 STR_CARGO_NAME_ENGINEERING_SUPPLIES                                             :Constructiematerialen
+# more generic monomer
+STR_CARGO_NAME_ETHYLENE                                                         :Monomeer
 STR_CARGO_NAME_EXPLOSIVES                                                       :Explosieven
-STR_CARGO_NAME_FIBRES                                                           :Katoen
-STR_CARGO_NAME_FISH                                                             :Vis
 STR_CARGO_NAME_FARM_SUPPLIES                                                    :Landbouwmaterialen
+# represents ferrochrome and ferromanganese
+STR_CARGO_NAME_FERROCHROME                                                      :IJzerlegeringen
 STR_CARGO_NAME_FERTILISER                                                       :Kunstmest
-STR_CARGO_NAME_FRUITS                                                           :Groente en fruit
+STR_CARGO_NAME_FIBRES                                                           :Vezels
+# fish and meat was split into its own cargo
+STR_CARGO_NAME_FISH                                                             :Vis
+STR_CARGO_NAME_FISH_AND_MEAT                                                    :Vlees & vis
+STR_CARGO_NAME_FLOUR                                                            :Meel
+STR_CARGO_NAME_FOOD_ADDITIVES                                                   :Voedingsadditieven
+STR_CARGO_NAME_FORGINGS_AND_CASTINGS                                            :Smeed- & gietwerk
+STR_CARGO_NAME_FORMIC_ACID                                                      :Methaanzuur
+STR_CARGO_NAME_FRUITS                                                           :Groente & fruit
+STR_CARGO_NAME_FURNITURE                                                        :Meubels
+STR_CARGO_NAME_GLASS                                                            :Glas
+STR_CARGO_NAME_HYDROCHLORIC_ACID                                                :Zoutzuur
+STR_CARGO_NAME_HYDROGEN                                                         :Waterstof
 STR_CARGO_NAME_KAOLIN                                                           :Kaolien
 STR_CARGO_NAME_LIMESTONE                                                        :Kalksteen
-STR_CARGO_NAME_LUMBER                                                           :Timmerhout
+STR_CARGO_NAME_LOGS                                                             :Boomstammen
+STR_CARGO_NAME_TIMBER                                                           :Timmerhout
+# cargo uses Sodium Hydroxide as string as it's interchangeable with Lye, but lye is convenient for filename / cargo label
+STR_CARGO_NAME_LYE                                                              :Caustische soda
+STR_CARGO_NAME_MEAT                                                             :Vlees
 STR_CARGO_NAME_METAL                                                            :Metaal
+STR_CARGO_NAME_METHANE                                                          :Methaan
+STR_CARGO_NAME_METHANOL                                                         :Methanol
 STR_CARGO_NAME_MILK                                                             :Melk
 STR_CARGO_NAME_MANGANESE                                                        :Mangaan
+STR_CARGO_NAME_NAPHTHA                                                          :Nafta
+STR_CARGO_NAME_NICKEL                                                           :Nikkel
 STR_CARGO_NAME_NITRATES                                                         :Nitraat
+STR_CARGO_NAME_NITROGEN                                                         :Stikstof
 STR_CARGO_NAME_NUTS                                                             :Noten
+STR_CARGO_NAME_OIL_SEEDS                                                        :Oliezaden
+STR_CARGO_NAME_OXYGEN                                                           :Zuurstof
 STR_CARGO_NAME_PACKAGING                                                        :Verpakkingen
+STR_CARGO_NAME_PAINTS_AND_COATINGS                                              :Verfstoffen
 STR_CARGO_NAME_PEAT                                                             :Turf
-STR_CARGO_NAME_PETROL                                                           :Benzine
+STR_CARGO_NAME_PETROL                                                           :Brandstoffen
 STR_CARGO_NAME_PHOSPHATE                                                        :Fosfaat
+STR_CARGO_NAME_PHOSPHORIC_ACID                                                  :Fosforzuur
+# now represents both pig and cast iron
 STR_CARGO_NAME_PIG_IRON                                                         :Ruwijzer
-STR_CARGO_NAME_PIPE                                                             :Pijp
+STR_CARGO_NAME_PIPE                                                             :Buizen
+STR_CARGO_NAME_PLASTICS                                                         :Kunststoffen
+STR_CARGO_NAME_PLASTIC_PARTS                                                    :Kunststof onderdelen
 STR_CARGO_NAME_POTASH                                                           :Potas
+STR_CARGO_NAME_PROPYLENE                                                        :Propeen
 STR_CARGO_NAME_PYRITE_ORE                                                       :Pyriet
 STR_CARGO_NAME_QUICKLIME                                                        :Calciumoxide
-STR_CARGO_NAME_RECYCLABLES                                                      :Kringloopgoederen
+STR_CARGO_NAME_RARE_METALS                                                      :Zeldzame metalen
+STR_CARGO_NAME_RAW_LATEX                                                        :Ruwe latex
+STR_CARGO_NAME_REBAR                                                            :Betonijzer
+STR_CARGO_NAME_RECYCLABLES                                                      :Afval
 STR_CARGO_NAME_SALT                                                             :Zout
 STR_CARGO_NAME_SAND                                                             :Zand
 STR_CARGO_NAME_SCRAP_METAL                                                      :Schroot
 STR_CARGO_NAME_SLAG                                                             :Slak
 STR_CARGO_NAME_SODA_ASH                                                         :Natriumcarbonaat
+STR_CARGO_NAME_STAINLESS_STEEL                                                  :Roestvast staal
 STR_CARGO_NAME_STEEL                                                            :Staal
+# Not just steel
+STR_CARGO_NAME_STEEL_SECTIONS                                                   :Metalen onderdelen
+STR_CARGO_NAME_STEEL_SHEET                                                      :Staalplaat
+# not just steel
+STR_CARGO_NAME_STEEL_WIRE_ROD                                                   :Staaldraad
 STR_CARGO_NAME_STONE                                                            :Grind
-STR_CARGO_NAME_SUGAR_BEET                                                       :Suikerbieten
+STR_CARGO_NAME_SUGAR                                                            :Suiker
+STR_CARGO_NAME_SUGAR_CANE                                                       :Suikerriet
+STR_CARGO_NAME_SUGAR_BEET                                                       :Suikerbiet
 STR_CARGO_NAME_SULPHUR                                                          :Zwavel
-STR_CARGO_NAME_VEHICLE_BODIES                                                   :Carrosserieën
+STR_CARGO_NAME_SULPHURIC_ACID                                                   :Zwavelzuur
+STR_CARGO_NAME_TEXTILES                                                         :Textiel
+STR_CARGO_NAME_TIN                                                              :Tin
+STR_CARGO_NAME_TINPLATE                                                         :Blik
+# not just tyres, also belts, gaskets etc
+STR_CARGO_NAME_TYRES                                                            :Rubber onderdelen
+STR_CARGO_NAME_UREA                                                             :Ureum
+STR_CARGO_NAME_VEHICLE_BODIES                                                   :Carrosseriën
+STR_CARGO_NAME_VEHICLE_ENGINES                                                  :Motoren
 STR_CARGO_NAME_VEHICLE_PARTS                                                    :Voertuigonderdelen
 STR_CARGO_NAME_VEHICLES                                                         :Voertuigen
 STR_CARGO_NAME_WOOL                                                             :Wol
+STR_CARGO_NAME_YARN                                                             :Garen
 STR_CARGO_NAME_ZINC                                                             :Zink
 
+STR_CARGO_UNIT_ACETIC_ACID                                                      :{VOLUME} azijnzuur
 STR_CARGO_UNIT_ACID                                                             :{VOLUME} zuren
 STR_CARGO_UNIT_ALCOHOL                                                          :{VOLUME} alcohol
+STR_CARGO_UNIT_ALLOY_STEEL                                                      :{WEIGHT} staallegeringen
+STR_CARGO_UNIT_ALUMINIA                                                         :{WEIGHT} aluminiumoxide
+STR_CARGO_UNIT_ALUMINIUM                                                        :{WEIGHT} aluminium
+STR_CARGO_UNIT_AMMONIA                                                          :{VOLUME} ammoniak
+STR_CARGO_UNIT_AMMONIUM_NITRATE                                                 :{VOLUME} ammoniumnitraat
 STR_CARGO_UNIT_BAUXITE                                                          :{WEIGHT} bauxiet
 STR_CARGO_UNIT_BEANS                                                            :{WEIGHT} bonen
+STR_CARGO_UNIT_BIOMASS                                                          :{WEIGHT} biomassa
 STR_CARGO_UNIT_BUILDING_MATERIALS                                               :{WEIGHT} bouwmaterialen
+STR_CARGO_UNIT_CARBON_BLACK                                                     :{WEIGHT} zwartsel
+STR_CARGO_UNIT_CARBON_STEEL                                                     :{WEIGHT} koolstofstaal
 STR_CARGO_UNIT_CASSAVA                                                          :{WEIGHT} cassave
+STR_CARGO_UNIT_CAST_IRON                                                        :{WEIGHT} gietijzer
 STR_CARGO_UNIT_CEMENT                                                           :{WEIGHT} cement
-STR_CARGO_UNIT_CHEMICALS                                                        :{VOLUME} chemicaliën
+STR_CARGO_UNIT_CHEMICALS                                                        :{VOLUME} geraffineerde olie
 STR_CARGO_UNIT_CHLORINE                                                         :{VOLUME} chloor
+STR_CARGO_UNIT_CHROMITE_ORE                                                     :{WEIGHT} chromiet
 STR_CARGO_UNIT_CLAY                                                             :{WEIGHT} klei
+STR_CARGO_UNIT_CLEANING_AGENTS                                                  :{WEIGHT} schoonmaakmiddelen
+STR_CARGO_UNIT_COAL_TAR                                                         :{VOLUME} steenkoolteer
 STR_CARGO_UNIT_COFFEE                                                           :{SIGNED_WORD} zak{P 0 "" ken} koffie
 STR_CARGO_UNIT_COKE                                                             :{WEIGHT} cokes
 STR_CARGO_UNIT_COPPER                                                           :{WEIGHT} koper
+STR_CARGO_UNIT_COPPER_CONCENTRATE                                               :{WEIGHT} koperconcentraat
 STR_CARGO_UNIT_EDIBLE_OIL                                                       :{VOLUME} spijsolie
+STR_CARGO_UNIT_ELECTRICAL_PARTS                                                 :{WEIGHT} electronica
 STR_CARGO_UNIT_ENGINEERING_SUPPLIES                                             :{SIGNED_WORD} krat{P 0 "" ten} constructiematerialen
+STR_CARGO_UNIT_ETHYLENE                                                         :{VOLUME} monomeer
 STR_CARGO_UNIT_EXPLOSIVES                                                       :{SIGNED_WORD} krat{P 0 "" ten} explosieven
+STR_CARGO_UNIT_FERROCHROME                                                      :{WEIGHT} ijzerlegeringen
 STR_CARGO_UNIT_FERTILISER                                                       :{WEIGHT} kunstmest
-STR_CARGO_UNIT_FIBRES                                                           :{SIGNED_WORD} ba{P 0 al len} katoen
+STR_CARGO_UNIT_FOOD_ADDITIVES                                                   :{WEIGHT} voedingsadditieven
+STR_CARGO_UNIT_FORGINGS_AND_CASTINGS                                            :{WEIGHT} smeed- en gietwerk
+STR_CARGO_UNIT_FORMIC_ACID                                                      :{VOLUME} methaanzuur
+STR_CARGO_UNIT_FIBRES                                                           :{SIGNED_WORD} ba{P 0 al len} vezels
 STR_CARGO_UNIT_FISH                                                             :{WEIGHT} vis
+STR_CARGO_UNIT_FISH_AND_MEAT                                                    :{WEIGHT} vis en vlees
+STR_CARGO_UNIT_FLOUR                                                            :{WEIGHT} meel
 STR_CARGO_UNIT_FMSP                                                             :{SIGNED_WORD} krat{P 0 "" ten} landbouwmaterialen
 STR_CARGO_UNIT_FRUITS                                                           :{WEIGHT} groente en fruit
+STR_CARGO_UNIT_FURNITURE                                                        :{WEIGHT} meubels
+STR_CARGO_UNIT_GLASS                                                            :{WEIGHT} glas
+STR_CARGO_UNIT_HYDROCHLORIC_ACID                                                :{VOLUME} zoutzuur
+STR_CARGO_UNIT_HYDROGEN                                                         :{VOLUME} waterstof
 STR_CARGO_UNIT_KAOLIN                                                           :{WEIGHT} kaolien
 STR_CARGO_UNIT_LIMESTONE                                                        :{WEIGHT} kalksteen
-STR_CARGO_UNIT_LUMBER                                                           :{WEIGHT} timmerhout
-STR_CARGO_UNIT_LYE                                                              :{VOLUME} natronloog
+STR_CARGO_UNIT_LOGS                                                             :{WEIGHT} boomstammen
+STR_CARGO_UNIT_TIMBER                                                           :{WEIGHT} timmerhout
+# cargo uses Sodium Hydroxide as string as it's interchangeable with Lye, but lye is convenient for filename / cargo label
+STR_CARGO_UNIT_LYE                                                              :{VOLUME} soda
 STR_CARGO_UNIT_MANGANESE                                                        :{WEIGHT} mangaan
 STR_CARGO_UNIT_METAL                                                            :{WEIGHT} metaal
+STR_CARGO_UNIT_MEAT                                                             :{WEIGHT} vlees
+STR_CARGO_UNIT_METHANE                                                          :{VOLUME} methaan
+STR_CARGO_UNIT_METHANOL                                                         :{VOLUME} methanol
 STR_CARGO_UNIT_MILK                                                             :{VOLUME} melk
+STR_CARGO_UNIT_NAPHTHA                                                          :{VOLUME} nafta
 STR_CARGO_UNIT_NICKEL                                                           :{WEIGHT} nikkel
 STR_CARGO_UNIT_NITRATES                                                         :{WEIGHT} nitraat
+STR_CARGO_UNIT_NITROGEN                                                         :{VOLUME} stikstof
 STR_CARGO_UNIT_NUTS                                                             :{SIGNED_WORD} zak{P 0 "" ken} noten
+STR_CARGO_UNIT_OXYGEN                                                           :{VOLUME} zuurstof
+STR_CARGO_UNIT_OIL_SEEDS                                                        :{WEIGHT} oliezaden
 STR_CARGO_UNIT_PACKAGING                                                        :{WEIGHT} verpakkingen
+STR_CARGO_UNIT_PAINTS_AND_COATINGS                                              :{VOLUME} verfstoffen
 STR_CARGO_UNIT_PEAT                                                             :{WEIGHT} turf
-STR_CARGO_UNIT_PETROL                                                           :{VOLUME} benzine
+STR_CARGO_UNIT_PETROL                                                           :{VOLUME} brandstoffen
 STR_CARGO_UNIT_PHOSPHATE                                                        :{WEIGHT} fosfaat
+STR_CARGO_UNIT_PHOSPHORIC_ACID                                                  :{VOLUME} fosforzuur
 STR_CARGO_UNIT_PIG_IRON                                                         :{WEIGHT} ruwijzer
-STR_CARGO_UNIT_PIPE                                                             :{WEIGHT} pijp
+STR_CARGO_UNIT_PIPE                                                             :{WEIGHT} buizen
+STR_CARGO_UNIT_PLASTICS                                                         :{WEIGHT} kunststof
+STR_CARGO_UNIT_PLASTIC_PARTS                                                    :{WEIGHT} kunststof onderdelen
 STR_CARGO_UNIT_POTASH                                                           :{WEIGHT} potas
+STR_CARGO_UNIT_PROPYLENE                                                        :{VOLUME} propeen
 STR_CARGO_UNIT_PYRITE_ORE                                                       :{WEIGHT} pyriet
 STR_CARGO_UNIT_QUICKLIME                                                        :{WEIGHT} calciumoxide
-STR_CARGO_UNIT_RECYCLABLES                                                      :{WEIGHT} kringloopgoederen
+STR_CARGO_UNIT_RARE_METALS                                                      :{WEIGHT} zeldzame metalen
+STR_CARGO_UNIT_RAW_LATEX                                                        :{VOLUME} ruwe latex
+STR_CARGO_UNIT_REBAR                                                            :{WEIGHT} betonijzer
+STR_CARGO_UNIT_RECYCLABLES                                                      :{WEIGHT} afval
 STR_CARGO_UNIT_SALT                                                             :{WEIGHT} zout
 STR_CARGO_UNIT_SAND                                                             :{WEIGHT} zand
 STR_CARGO_UNIT_SCRAP_METAL                                                      :{WEIGHT} schroot
 STR_CARGO_UNIT_SLAG                                                             :{WEIGHT} slak
 STR_CARGO_UNIT_SODA_ASH                                                         :{WEIGHT} natriumcarbonaat
+STR_CARGO_UNIT_STAINLESS_STEEL                                                  :{WEIGHT} roestvast staal
 STR_CARGO_UNIT_STEEL                                                            :{WEIGHT} staal
+STR_CARGO_UNIT_STEEL_SECTIONS                                                   :{WEIGHT} metalen onderdelen
+STR_CARGO_UNIT_STEEL_SHEET                                                      :{WEIGHT} staalplaat
+STR_CARGO_UNIT_STEEL_WIRE_ROD                                                   :{WEIGHT} staaldraad
 STR_CARGO_UNIT_STONE                                                            :{WEIGHT} grind
-STR_CARGO_UNIT_SUGAR_BEET                                                       :{WEIGHT} suikerbieten
+STR_CARGO_UNIT_SUGAR                                                            :{WEIGHT} suiker
+STR_CARGO_UNIT_SUGAR_BEET                                                       :{WEIGHT} suikerbiet
+STR_CARGO_UNIT_SUGAR_CANE                                                       :{SIGNED_WORD} ba{P 0 al len} suikerriet
 STR_CARGO_UNIT_SULPHUR                                                          :{WEIGHT} zwavel
+STR_CARGO_UNIT_SULPHURIC_ACID                                                   :{VOLUME} zwavelzuur
+STR_CARGO_UNIT_TEXTILES                                                         :{WEIGHT} textiel
+STR_CARGO_UNIT_TIN                                                              :{WEIGHT} tin
+STR_CARGO_UNIT_TINPLATE                                                         :{WEIGHT} blik
+STR_CARGO_UNIT_TYRES                                                            :{WEIGHT} rubber onderdelen
+STR_CARGO_UNIT_UREA                                                             :{WEIGHT} ureum
 STR_CARGO_UNIT_VEHICLE_BODIES                                                   :{WEIGHT} carrosserieën
+STR_CARGO_UNIT_VEHICLE_ENGINES                                                  :{WEIGHT} motoren
 STR_CARGO_UNIT_VEHICLE_PARTS                                                    :{WEIGHT} voertuigonderdelen
-STR_CARGO_UNIT_VEHICLES                                                         :{WEIGHT} voertuig{P 0 "" en}
+STR_CARGO_UNIT_VEHICLES                                                         :{WEIGHT} voertuigen
 STR_CARGO_UNIT_WOOL                                                             :{SIGNED_WORD} ba{P 0 al len} wol
+STR_CARGO_UNIT_YARN                                                             :{SIGNED_WORD} ba{P 0 al len} garen
 STR_CARGO_UNIT_ZINC                                                             :{WEIGHT} zink
 
-STR_CID_ACID                                                                    :{TINYFONT}ZR
-STR_CID_ALCOHOL                                                                 :{TINYFONT}AL
-STR_CID_BAUXITE                                                                 :{TINYFONT}BX
-STR_CID_BEANS                                                                   :{TINYFONT}BN
-STR_CID_BUILDING_MATERIALS                                                      :{TINYFONT}BM
-STR_CID_CASSAVA                                                                 :{TINYFONT}CA
-STR_CID_CEMENT                                                                  :{TINYFONT}CE
-STR_CID_CHEMICALS                                                               :{TINYFONT}CM
-STR_CID_CHLORINE                                                                :{TINYFONT}CL
-STR_CID_CLAY                                                                    :{TINYFONT}KL
-STR_CID_COFFEE                                                                  :{TINYFONT}KF
-STR_CID_COKE                                                                    :{TINYFONT}CK
-STR_CID_COPPER                                                                  :{TINYFONT}KR
-STR_CID_EDIBLE_OIL                                                              :{TINYFONT}EO
-STR_CID_ENGINEERING_SUPPLIES                                                    :{TINYFONT}CH
-STR_CID_EXPLOSIVES                                                              :{TINYFONT}EX
-STR_CID_FARM_SUPPLIES                                                           :{TINYFONT}LH
-STR_CID_FERTILISER                                                              :{TINYFONT}KM
-STR_CID_FIBRES                                                                  :{TINYFONT}KT
-STR_CID_FISH                                                                    :{TINYFONT}VS
-STR_CID_KAOLIN                                                                  :{TINYFONT}KA
-STR_CID_LIMESTONE                                                               :{TINYFONT}KS
-STR_CID_LUMBER                                                                  :{TINYFONT}HT
-STR_CID_LYE                                                                     :{TINYFONT}NL
-STR_CID_MANGANESE                                                               :{TINYFONT}MN
-STR_CID_METAL                                                                   :{TINYFONT}MT
-STR_CID_MILK                                                                    :{TINYFONT}ML
-STR_CID_NICKEL                                                                  :{TINYFONT}NK
-STR_CID_NITRATES                                                                :{TINYFONT}NI
-STR_CID_NUTS                                                                    :{TINYFONT}NT
-STR_CID_PACKAGING                                                               :{TINYFONT}VP
-STR_CID_PEAT                                                                    :{TINYFONT}TU
-STR_CID_PETROL                                                                  :{TINYFONT}BZ
-STR_CID_PIG_IRON                                                                :{TINYFONT}RY
-STR_CID_PIPE                                                                    :{TINYFONT}PP
-STR_CID_PHOSPHATE                                                               :{TINYFONT}FF
-STR_CID_POTASH                                                                  :{TINYFONT}PA
-STR_CID_PYRITE_ORE                                                              :{TINYFONT}PY
-STR_CID_QUICKLIME                                                               :{TINYFONT}CO
-STR_CID_RECYCLABLES                                                             :{TINYFONT}KG
-STR_CID_SALT                                                                    :{TINYFONT}ZT
-STR_CID_SAND                                                                    :{TINYFONT}ZD
-STR_CID_SCRAP_METAL                                                             :{TINYFONT}ST
-STR_CID_SLAG                                                                    :{TINYFONT}SK
-STR_CID_SODA_ASH                                                                :{TINYFONT}NC
-STR_CID_STEEL                                                                   :{TINYFONT}SL
-STR_CID_STONE                                                                   :{TINYFONT}GD
-STR_CID_SUGAR_BEET                                                              :{TINYFONT}SB
-STR_CID_SULPHUR                                                                 :{TINYFONT}ZW
-STR_CID_VEHICLE_BODIES                                                          :{TINYFONT}CA
-STR_CID_VEHICLE_PARTS                                                           :{TINYFONT}VO
-STR_CID_VEHICLES                                                                :{TINYFONT}VN
-STR_CID_WOOL                                                                    :{TINYFONT}WL
-STR_CID_ZINC                                                                    :{TINYFONT}ZN
+# it seems that using 2 chars for these is a convention not a limit, I tested 4 chars and OpenTTD renders it fine - May 2020
+STR_CID_ACETIC_ACID                                                             :{TINYFONT}ACET
+STR_CID_ACID                                                                    :{TINYFONT}ACID
+STR_CID_ALCOHOL                                                                 :{TINYFONT}ALCO
+STR_CID_ALLOY_STEEL                                                             :{TINYFONT}ASTL
+STR_CID_ALUMINIA                                                                :{TINYFONT}ALUO
+STR_CID_ALUMINIUM                                                               :{TINYFONT}ALUM
+STR_CID_AMMONIA                                                                 :{TINYFONT}NH3
+STR_CID_AMMONIUM_NITRATE                                                        :{TINYFONT}NHNO
+STR_CID_BAUXITE                                                                 :{TINYFONT}BAUX
+STR_CID_BEANS                                                                   :{TINYFONT}BEAN
+STR_CID_BIOMASS                                                                 :{TINYFONT}BIOM
+STR_CID_BUILDING_MATERIALS                                                      :{TINYFONT}BDMT
+STR_CID_CARBON_BLACK                                                            :{TINYFONT}CBLK
+STR_CID_CARBON_STEEL                                                            :{TINYFONT}CSTL
+STR_CID_CASSAVA                                                                 :{TINYFONT}CASS
+STR_CID_CAST_IRON                                                               :{TINYFONT}CAST
+STR_CID_CEMENT                                                                  :{TINYFONT}CMNT
+STR_CID_CHEMICALS                                                               :{TINYFONT}ROIL
+STR_CID_CHROMITE_ORE                                                            :{TINYFONT}CHRO
+STR_CID_CHLORINE                                                                :{TINYFONT}CHLO
+STR_CID_CLAY                                                                    :{TINYFONT}CLAY
+STR_CID_CLEANING_AGENTS                                                         :{TINYFONT}SOAP
+STR_CID_COFFEE                                                                  :{TINYFONT}BEER
+STR_CID_COAL_TAR                                                                :{TINYFONT}TAR
+STR_CID_COAL                                                                    :{TINYFONT}COAL
+STR_CID_COKE                                                                    :{TINYFONT}COKE
+STR_CID_COPPER                                                                  :{TINYFONT}COPR
+STR_CID_COPPER_CONCENTRATE                                                      :{TINYFONT}COCO
+STR_CID_COPPER_ORE                                                              :{TINYFONT}CORE
+STR_CID_EDIBLE_OIL                                                              :{TINYFONT}EOIL
+STR_CID_ELECTRICAL_PARTS                                                        :{TINYFONT}ELEC
+STR_CID_ENGINEERING_SUPPLIES                                                    :{TINYFONT}ENSP
+STR_CID_ETHYLENE                                                                :{TINYFONT}MONO
+STR_CID_EXPLOSIVES                                                              :{TINYFONT}EXPL
+STR_CID_FARM_SUPPLIES                                                           :{TINYFONT}FMSP
+STR_CID_FERROCHROME                                                             :{TINYFONT}FERA
+STR_CID_FERTILISER                                                              :{TINYFONT}FERT
+STR_CID_FIBRES                                                                  :{TINYFONT}FIBR
+STR_CID_FISH                                                                    :{TINYFONT}FISH
+STR_CID_FISH_AND_MEAT                                                           :{TINYFONT}MEAT
+STR_CID_FLOUR                                                                   :{TINYFONT}FLOU
+STR_CID_FOOD_ADDITIVES                                                          :{TINYFONT}FADD
+STR_CID_FOOD                                                                    :{TINYFONT}FOOD
+STR_CID_FORMIC_ACID                                                             :{TINYFONT}FOAC
+STR_CID_FORGINGS_AND_CASTINGS                                                   :{TINYFONT}CAST
+STR_CID_FRUITS                                                                  :{TINYFONT}PROD
+STR_CID_FURNITURE                                                               :{TINYFONT}FURN
+STR_CID_GLASS                                                                   :{TINYFONT}GLAS
+STR_CID_GOODS                                                                   :{TINYFONT}GOOD
+STR_CID_GRAIN                                                                   :{TINYFONT}GRAI
+STR_CID_HYDROCHLORIC_ACID                                                       :{TINYFONT}HCL
+STR_CID_HYDROGEN                                                                :{TINYFONT}H2
+STR_CID_IRON_ORE                                                                :{TINYFONT}IORE
+STR_CID_KAOLIN                                                                  :{TINYFONT}KAOL
+STR_CID_LIMESTONE                                                               :{TINYFONT}LIME
+STR_CID_LIVESTOCK                                                               :{TINYFONT}LVST
+STR_CID_LOGS                                                                    :{TINYFONT}WOOD
+STR_CID_TIMBER                                                                  :{TINYFONT}TMBR
+# cargo uses Sodium Hydroxide as name string as it's interchangeable with Lye, but lye is convenient for filename / cargo label
+STR_CID_LYE                                                                     :{TINYFONT}LYE
+STR_CID_MAIL                                                                    :{TINYFONT}MAIL
+STR_CID_MANGANESE                                                               :{TINYFONT}MN02
+STR_CID_MEAT                                                                    :{TINYFONT}MEAT
+STR_CID_METAL                                                                   :{TINYFONT}METL
+STR_CID_METHANE                                                                 :{TINYFONT}CH4
+STR_CID_METHANOL                                                                :{TINYFONT}METH
+STR_CID_MILK                                                                    :{TINYFONT}MILK
+STR_CID_NAPHTHA                                                                 :{TINYFONT}NAPH
+STR_CID_NICKEL                                                                  :{TINYFONT}NICK
+STR_CID_NITRATES                                                                :{TINYFONT}NITR
+STR_CID_NITROGEN                                                                :{TINYFONT}N2
+STR_CID_NUTS                                                                    :{TINYFONT}NUTS
+STR_CID_OIL                                                                     :{TINYFONT}OIL
+STR_CID_OIL_SEEDS                                                               :{TINYFONT}OLSD
+STR_CID_OXYGEN                                                                  :{TINYFONT}O2
+STR_CID_PACKAGING                                                               :{TINYFONT}PACK
+STR_CID_PASSENGERS                                                              :{TINYFONT}PAX
+STR_CID_PAINTS_AND_COATINGS                                                     :{TINYFONT}PACO
+STR_CID_PEAT                                                                    :{TINYFONT}PEAT
+STR_CID_PETROL                                                                  :{TINYFONT}PETR
+STR_CID_PIG_IRON                                                                :{TINYFONT}IRON
+STR_CID_PIPE                                                                    :{TINYFONT}PIPE
+STR_CID_PHOSPHATE                                                               :{TINYFONT}PHOS
+STR_CID_PHOSPHORIC_ACID                                                         :{TINYFONT}PHAC
+STR_CID_PLASTICS                                                                :{TINYFONT}PLAS
+STR_CID_PLASTIC_PARTS                                                           :{TINYFONT}PPAR
+STR_CID_POTASH                                                                  :{TINYFONT}PASH
+STR_CID_PROPYLENE                                                               :{TINYFONT}PROP
+STR_CID_PYRITE_ORE                                                              :{TINYFONT}PYRO
+STR_CID_QUICKLIME                                                               :{TINYFONT}QLME
+STR_CID_RARE_METALS                                                             :{TINYFONT}RARE
+STR_CID_RAW_LATEX                                                               :{TINYFONT}RL
+STR_CID_REBAR                                                                   :{TINYFONT}RBAR
+STR_CID_RECYCLABLES                                                             :{TINYFONT}RCYC
+STR_CID_RUBBER                                                                  :{TINYFONT}RUBR
+STR_CID_SALT                                                                    :{TINYFONT}SALT
+STR_CID_SAND                                                                    :{TINYFONT}SAND
+STR_CID_SCRAP_METAL                                                             :{TINYFONT}SCRP
+STR_CID_SLAG                                                                    :{TINYFONT}SLAG
+STR_CID_SODA_ASH                                                                :{TINYFONT}SASH
+STR_CID_STAINLESS_STEEL                                                         :{TINYFONT}SSTL
+STR_CID_STEEL                                                                   :{TINYFONT}STEL
+STR_CID_STONE                                                                   :{TINYFONT}STON
+STR_CID_SUGAR                                                                   :{TINYFONT}SUGR
+STR_CID_SUGAR_BEET                                                              :{TINYFONT}SGBT
+STR_CID_SUGAR_CANE                                                              :{TINYFONT}SGCN
+STR_CID_SULPHUR                                                                 :{TINYFONT}SULP
+STR_CID_SULPHURIC_ACID                                                          :{TINYFONT}SUAC
+STR_CID_STEEL_SECTIONS                                                          :{TINYFONT}MPAR
+STR_CID_STEEL_SHEET                                                             :{TINYFONT}SHET
+STR_CID_STEEL_WIRE_ROD                                                          :{TINYFONT}WIRE
+STR_CID_TEXTILES                                                                :{TINYFONT}TEXT
+STR_CID_TIN                                                                     :{TINYFONT}TIN
+STR_CID_TINPLATE                                                                :{TINYFONT}TINP
+STR_CID_TYRES                                                                   :{TINYFONT}TYRE
+STR_CID_UREA                                                                    :{TINYFONT}UREA
+STR_CID_VEHICLE_BODIES                                                          :{TINYFONT}VBOD
+STR_CID_VEHICLE_ENGINES                                                         :{TINYFONT}VENG
+STR_CID_VEHICLE_PARTS                                                           :{TINYFONT}VPAR
+STR_CID_VEHICLES                                                                :{TINYFONT}CARS
+STR_CID_WOOL                                                                    :{TINYFONT}WOOL
+STR_CID_YARN                                                                    :{TINYFONT}YARN
+STR_CID_ZINC                                                                    :{TINYFONT}ZINC
 
 
 STR_ERR_CLIMATE_TOYLAND                                                         :{ORANGE}FIRS is niet ontworpen om in het speelgoedlandschap gebruikt te worden.
+STR_ERR_OPENTTD_VERSION                                                         :{ORANGE}E00: AXIS heeft OpenTTD 1.7.0 nodig (of voor wie trunk-builds gebruikt: r27769).
+STR_ERR_INCOMPATIBLE_SET                                                        :{ORANGE}E01: {YELLOW}Onverenigbare set: {ORANGE}{STRING}
+STR_ERR_INCOMPATIBLE_PARAM_CANSET                                               :{ORANGE}E02: {YELLOW}Onverenigbare parameter: {ORANGE}CanSet parameter 2 moet 0 zijn om te werken met AXIS.
+STR_ERR_INCOMPATIBLE_PARAM_CITYSET                                              :{ORANGE}E02: {YELLOW}Onverenigbare parameter: {ORANGE}NA City Set parameter 2 moet 0 zijn om te werken met AXIS.
+STR_ERR_INCOMPATIBLE_SET_TTRS_VERSION                                           :{ORANGE}E04: {YELLOW}Onverenigbare versie: {ORANGE}Total Town Replacement Set moet versie 3.11 of hoger zijn.
 
 STR_ERR_LOCATION_NOT_ABOVE_SNOWLINE                                             :moet onder de sneeuwgrens geplaatst worden.
 STR_ERR_LOCATION_NOT_BELOW_SNOWLINE                                             :moet boven de sneeuwgrens geplaatst worden.
@@ -199,56 +421,97 @@ STR_ERR_LOCATION_NOT_IN_DESERT                                                  
 STR_ERR_LOCATION_NOT_ON_STEEP_SLOPE                                             :kan niet op een steile helling geplaatst worden.
 STR_ERR_LOCATION_LIMIT_1_PER_TOWN                                               :slechts één industrie van dit type toegestaan per plaats.
 
+STR_PROD_CHANGE_TEST                                                            :{BIGFONT}{BLACK}Pa's wijze lynx bezag vroom het fikse aquaduct.
+
 STR_IND_ALUMINIUM_PLANT                                                         :Aluminiumfabriek
+STR_IND_ALUMINA_REFINERY                                                        :Aluminiumoxidefabriek
 STR_IND_AMMONIA_PLANT                                                           :Ammoniakfabriek
-STR_IND_ARABLE_FARM                                                             :Landbouwbedrijf
-STR_IND_ASSEMBLY_PLANT                                                          :Autofabriek
+STR_IND_ARABLE_FARM                                                             :Akkerbouwbedrijf
+STR_IND_APPLIANCE_FACTORY                                                       :Apparatenfabriek
+STR_IND_ASSEMBLY_PLANT                                                          :Voertuigfabriek
+STR_IND_BAKERY                                                                  :Bakkerij
 STR_IND_BASIC_OXYGEN_FURNACE                                                    :Oxystaalfabriek
+STR_IND_BAUXITE_MINE                                                            :Bauxietmijn
 STR_IND_BIOREFINERY                                                             :Bioraffinaderij
 STR_IND_BLAST_FURNACE                                                           :Hoogoven
+STR_IND_BODY_PLANT                                                              :Carrosseriefabriek
 STR_IND_BREWERY                                                                 :Brouwerij
 STR_IND_CIDER_MILL                                                              :Distilleerderij
-STR_IND_BRICK_WORKS                                                             :Steenfabriek
-STR_IND_BUILDERS_YARD                                                           :Aannemeropslagplaats
+STR_IND_COTTON_FARM                                                             :Katoenplantage
+STR_IND_BRICK_WORKS                                                             :Brick Works
+STR_IND_BUILDERS_YARD                                                           :Werkplaats
 STR_IND_BULK_TERMINAL                                                           :Bulkoverslagterminal
+STR_IND_CANNERY                                                                 :Conservenfabriek
+STR_IND_CARBON_BLACK_PLANT                                                      :Zwartselfabriek
 STR_IND_CEMENT_PLANT                                                            :Cementfabriek
 STR_IND_CHEMICAL_PLANT                                                          :Chemische fabriek
+STR_IND_CHLOR_ALKALI_PLANT                                                      :Elektrolyse-installatie
+STR_IND_CHROMITE_MINE                                                           :Chromietmijn
+STR_IND_CIVIL_EXPLOSIVES_FACILITY                                               :Explosievenfabriek
 STR_IND_CLAY_PIT                                                                :Kleiwinning
 STR_IND_COFFEE_ESTATE                                                           :Koffieplantage
 STR_IND_COKE_OVEN                                                               :Cokesoven
-STR_IND_COPPER_REFINERY                                                         :Koperraffinaderij
+STR_IND_COMPONENT_FACTORY                                                       :Onderdelenfabriek
+STR_IND_COPPER_CONCENTRATOR                                                     :Koperraffinaderij
+STR_IND_COPPER_REFINERY                                                         :Kopersmelterij
+STR_IND_CRYO_PLANT                                                              :Cryogeeninstallatie
 STR_IND_DAIRY                                                                   :Zuivelfabriek
-STR_IND_DAIRY_FARM                                                              :Veehouderij
+STR_IND_DAIRY_FARM                                                              :Melkveehouderij
+STR_IND_DISTILLERY                                                              :Distilleerderij
 STR_IND_DREDGING_SITE                                                           :Baggermolen
+STR_IND_EDIBLE_OIL_REFINERY                                                     :Oliepers
 STR_IND_ELECTRIC_ARC_FURNACE                                                    :Vlamboogoven
-STR_IND_FISHING_GROUND                                                          :Visgebied
+STR_IND_ELECTRICAL_WORKS                                                        :Electronicafabriek
+STR_IND_ENGINE_PLANT                                                            :Motorenfabriek
+STR_IND_ETHYLENE_CRACKER                                                        :Naftakraker
+STR_IND_FARM                                                                    :Boerderij
+STR_IND_FARM_SUPPLY_YARD                                                        :Landbouwmechanisatie
+STR_IND_FERROCHROME_SMELTER                                                     :IJzersmelterij
+STR_IND_FERTILISER_PLANT                                                        :Kunstmestfabriek
+STR_IND_FACTORY_1                                                               :Fabriek 1
+STR_IND_FACTORY_2                                                               :Fabriek 2
+STR_IND_FACTORY_3                                                               :Fabriek 3
+STR_IND_FISCHER_TROPSCH_PLANT                                                   :Koolwaterstoffabriek
+STR_IND_FISH_FARM                                                               :Viskwekerij
+STR_IND_FISHING_GROUND                                                          :Visgronden
 STR_IND_FISHING_HARBOUR                                                         :Vissershaven
 STR_IND_FISHING_VILLAGE                                                         :Vissersdorp
 STR_IND_FLOUR_MILL                                                              :Graanmolen
-STR_IND_FOOD_MARKET                                                             :Kruidenier
+STR_IND_FOOD_MARKET                                                             :Supermarkt
 STR_IND_FOOD_PROCESSOR                                                          :Voedselfabriek
+STR_IND_FRUIT_PACKING_PLANT                                                     :Fruitverpakkingsfabriek
 STR_IND_FURNITURE_FACTORY                                                       :Meubelfabriek
+STR_IND_FORGE_AND_FOUNDRY                                                       :Smederij & gieterij
 STR_IND_GENERAL_STORE                                                           :Winkel
 STR_IND_GLASS_WORKS                                                             :Glasfabriek
-STR_IND_HARDWARE_STORE                                                          :IJzerhandel
+STR_IND_HARDWARE_STORE                                                          :Bouwmarkt
 STR_IND_HOTEL                                                                   :Hotel
 STR_IND_HERDING_COOP                                                            :Schapenhouderij
 STR_IND_IRON_WORKS                                                              :IJzeroven
 STR_IND_JUNKYARD                                                                :Schroothoop
+STR_IND_LATEX_PROCESSOR                                                         :Rubberfabriek
 STR_IND_LIME_KILN                                                               :Kalkoven
 STR_IND_LIMESTONE_MINE                                                          :Mergelgroeve
 STR_IND_LIQUIDS_TERMINAL                                                        :Vloeistoffenterminal
 STR_IND_LUMBER_YARD                                                             :Houtwerkplaats
-STR_IND_MACHINE_SHOP                                                            :Machinewerkplaats
+STR_IND_MACHINE_SHOP                                                            :Machineverkoop
+STR_IND_MACHINE_WORKS                                                           :Machinefabriek
 STR_IND_MANGANESE_MINE                                                          :Mangaanmijn
+STR_IND_MEAT_PACKING_PLANT                                                      :Vleesverwerkingsbedrijf
 STR_IND_METAL_WORKSHOP                                                          :Metaalwerkplaats
 STR_IND_MIXEDFARM                                                               :Gemengd boerenbedrijf
 STR_IND_NITRATE_MINE                                                            :Nitraatmijn
 STR_IND_ORCHARD_PIGGERY                                                         :Boomgaard en varkensstallen
-STR_IND_PEATLANDS                                                               :Veengronden
+STR_IND_PAINT_FACTORY                                                           :Verffabriek
+STR_IND_PEATLANDS                                                               :Turfgronden
 STR_IND_PETROLPUMP                                                              :Tankstation
 STR_IND_PHOSPHATE_MINE                                                          :Fosfaatmijn
+STR_IND_PHOSPHORIC_ACID_PLANT                                                   :Fosforzuurfabriek
 STR_IND_PLASTICS_PLANT                                                          :Kunststoffabriek
+STR_IND_PLAZA                                                                   :Plaza
+STR_IND_POLYETHYLENE_PLANT                                                      :Polyethyleenfabriek
+STR_IND_POLYPROPYLENE_PLANT                                                     :Polypropyleenfabriek
+STR_IND_POLYMER_PLANT                                                           :Polymerisatiefabriek
 STR_IND_PORT                                                                    :Haven
 STR_IND_POTASH_MINE                                                             :Potasmijn
 STR_IND_PYRITE_MINE                                                             :Pyrietmijn
@@ -256,43 +519,49 @@ STR_IND_PYRITE_SMELTER                                                          
 STR_IND_POWER_PLANT                                                             :Energiecentrale
 STR_IND_QUARRY                                                                  :Zandwinning
 STR_IND_RANCH                                                                   :Ranch
-STR_IND_RECYCLING_DEPOT                                                         :Kringloopwinkel
-STR_IND_RECYCLING_PLANT                                                         :Recyclingfabriek
+STR_IND_RECYCLING_DEPOT                                                         :Afvalstort
+STR_IND_RECYCLING_PLANT                                                         :Afvalverwerking
 STR_IND_REINDEER_FARM                                                           :Rendierboerderij
+STR_IND_SALT_MINE                                                               :Zoutmijn
+STR_IND_SALT_EVAPORATOR                                                         :Zoutpan
+STR_IND_SEAWEED_FARM                                                            :Zeewierkwekerij
 STR_IND_SHEEPFARM                                                               :Schapenhouderij
 STR_IND_SLAG_GRINDING_PLANT                                                     :Slakmaalfabriek
 STR_IND_SMITHY_FORGE                                                            :Smederij
-STR_IND_SODA_ASH_MINE                                                           :Zoutmijn
+STR_IND_SOAP_FACTORY                                                            :Schoonmaakmiddelenfabriek
+STR_IND_SODA_ASH_MINE                                                           :Natriumcarbonaatmijn
+STR_IND_SOLVAY_PLANT                                                            :Solvay-fabriek
+# we use 'integrated_steel_mill' in code to avoid confusion with Steeltown mills, but it's easier to just use 'Steel Mill' for name that players see
+STR_IND_INTEGRATED_STEEL_MILL                                                   :Staalfabriek
+STR_IND_SHEET_MILL                                                              :Staalwalserij
+STR_IND_SHEET_AND_PIPE_MILL                                                     :Plaat- en draadfabriek
+STR_IND_SHIPBREAKER                                                             :Scheepskerkhof 
+STR_IND_SPICE_PLANTATION                                                        :Specerijenplantage
 STR_IND_STOCKYARD                                                               :Slachterij
 STR_IND_SUGAR_REFINERY                                                          :Suikerfabriek
-STR_IND_SUPPLY_YARD                                                             :Zware machinehandel
+STR_IND_SULPHURIC_ACID_PLANT                                                    :Zwavelzuurfabriek
+STR_IND_SUPPLY_YARD                                                             :Bouwgroothandel
+STR_IND_SYNTHETIC_RUBBER_PLANT                                                  :Elastomeerfabriek
+STR_IND_TAR_SANDS_MINE                                                          :Teerzandgroeve
 STR_IND_TEXTILE_MILL                                                            :Textielfabriek
+STR_IND_TINPLATE_WORKS                                                          :Blikslagerij
 STR_IND_TRADING_POST                                                            :Handelspost
 STR_IND_TYRE_PLANT                                                              :Bandenfabriek
 STR_IND_VINEYARD                                                                :Wijngaard
-STR_IND_WHARF                                                                   :Scheepswerf
+STR_IND_VEHICLE_DISTRIBUTOR                                                     :Voertuighandel
+STR_IND_WHARF                                                                   :Werf
+STR_IND_WIRE_AND_SECTION_MILL                                                   :Staaldraadfabriek
 
-
-STR_CARGO_SUBTYPE_DISPLAY_CARGO_SUPPLIED_FLAG                             :{BLACK}(geleverd)
-STR_EXTRA_TEXT_SECONDARY_NON_COMBINATORY                                        :{BLACK} Produceert op maximaal niveau als {WHITE}een van de {BLACK} benodigde goederen wordt geleverd.
-STR_EXTRA_TEXT_SECONDARY_COMBINATORY                                            :{BLACK}Lever {WHITE}alle {BLACK} benodigde goederen minimaal 1 keer per 3 maanden om maximale productie te halen.
-STR_PRIMARY_PRODUCTION_1X                                                       :{BLACK}Huidige productie: {YELLOW}Normaal{}{}{BLACK}Lever binnen drie maanden {SIGNED_WORD} eenheden vracht om {WHITE}verhoogd{BLACK} productieniveau te verkrijgen{}Lever {SIGNED_WORD} eenheden vracht voor {WHITE}gepassioneerde{BLACK} productie
-STR_PRIMARY_PRODUCTION_2X                                                       :{BLACK}Huidige productie: {YELLOW}Verhoogd{}{}{BLACK}Lever binnen drie maanden {SIGNED_WORD} kratten constructie-, landbouw- of productiematerialen af om dit productieniveau te handhaven{}Voor {WHITE}gepassioneerde{BLACK} productie, lever {SIGNED_WORD} eenheden
-STR_PRIMARY_PRODUCTION_4X                                                       :{BLACK}Huidige productie: {YELLOW}Gepassioneerd{}{}{BLACK}Lever binnen drie maanden {SKIP}{SIGNED_WORD} kratten constructie-, landbouw- of productiematerialen af om dit productieniveau te handhaven.
-STR_PORT_PRODUCTION_1X                                                          :{BLACK}Huidige productie: {YELLOW}Normaal{}{}{BLACK}Lever binnen drie maanden {SIGNED_WORD} eenheden vracht om {WHITE}verhoogd{BLACK} productieniveau te verkrijgen{}Lever {SIGNED_WORD} eenheden vracht voor {WHITE}gepassioneerde{BLACK} productie
-STR_PORT_PRODUCTION_2X                                                          :{BLACK}Huidige productie: {YELLOW}Verhoogd{}{}{BLACK}Lever binnen drie maanden {SIGNED_WORD} eenheden vracht om dit productieniveau te handhaven{}Voor {WHITE}gepassioneerde{BLACK} productie, lever {SIGNED_WORD} eenheden
-STR_PORT_PRODUCTION_4X                                                          :{BLACK}Huidige productie: {YELLOW}Gepassioneerd{}{}{BLACK}Lever binnen drie maanden {SKIP}{SIGNED_WORD} eenheden vracht om dit productieniveau te handhaven.
-STR_GENERIC_NEWLINE                                                             :{}
-
-STR_FUND_ARABLE_FARM                                                            :{}{BLACK}Plaats: {YELLOW}Kan niet boven de sneeuwgrens of in woestijnen gebouwd worden.
-STR_FUND_COFFEE_ESTATE                                                          :{}{BLACK}Plaats: {YELLOW}Kan niet boven de sneeuwgrens of in woestijnen gebouwd worden.
-STR_FUND_DAIRY_FARM                                                             :{}{BLACK}Plaats: {YELLOW}Kan niet boven de sneeuwgrens of in woestijnen gebouwd worden.
-STR_FUND_FOREST                                                                 :{}{BLACK}Plaats: {YELLOW}Kan niet in woestijnen gebouwd worden.
-STR_FUND_FRUIT_PLANTATION                                                       :{}{BLACK}Plaats: {YELLOW}Kan niet boven de sneeuwgrens gebouwd worden.
-STR_FUND_HERDING_COOP                                                           :{}{BLACK}Plaats: {YELLOW}Kan alleen op sneeuw geplaatst worden.
-STR_FUND_ORCHARD_PIGGERY                                                        :{}{BLACK}Plaats: {YELLOW}Kan niet boven de sneeuwgrens of in woestijnen gebouwd worden.
-STR_FUND_RUBBER_PLANTATION                                                      :{}{BLACK}Plaats: {YELLOW}Kan niet boven de sneeuwgrens of in woestijnen gebouwd worden.
-STR_FUND_VINEYARD                                                               :{}{BLACK}Plaats: {YELLOW}Kan niet op sneeuw of in woestijnen gebouwd worden.
+STR_FUND_ARABLE_FARM                                                            :{}{BLACK}Locatie: {YELLOW}Kan niet in sneeuw of woestijn geplaatst worden.
+STR_FUND_COFFEE_ESTATE                                                          :{}{BLACK}Locatie: {YELLOW}Kan niet in sneeuw of woestijn geplaatst worden.
+STR_FUND_DAIRY_FARM                                                             :{}{BLACK}Locatie: {YELLOW}Kan niet in sneeuw of woestijn geplaatst worden.
+STR_FUND_FARM                                                                   :{}{BLACK}Locatie: {YELLOW}Kan niet in sneeuw of woestijn geplaatst worden.
+STR_FUND_FOREST                                                                 :{}{BLACK}Locatie: {YELLOW}Kan niet in woestijn geplaatst worden.
+STR_FUND_FRUIT_PLANTATION                                                       :{}{BLACK}Locatie: {YELLOW}Kan niet in sneeuw geplaatst worden.
+STR_FUND_HERDING_COOP                                                           :{}{BLACK}Location: {YELLOW}Kan alleen in sneeuw geplaatst worden.
+STR_FUND_ORCHARD_PIGGERY                                                        :{}{BLACK}Locatie: {YELLOW}Kan niet in sneeuw of woestijn geplaatst worden.
+STR_FUND_RUBBER_PLANTATION                                                      :{}{BLACK}Locatie: {YELLOW}Kan niet in sneeuw of woestijn geplaatst worden.
+STR_FUND_VINEYARD                                                               :{}{BLACK}Locatie: {YELLOW}Kan niet in sneeuw of woestijn geplaatst worden.
 
 STR_FUND_AVAILABLE_FROM                                                         :{}{BLACK}Beschikbaar vanaf: {YELLOW}{COMMA}
 STR_FUND_AVAILABLE_UNTIL                                                        :{}{BLACK}Niet meer beschikbaar na: {YELLOW}{COMMA}
@@ -302,66 +571,87 @@ STR_STATION                                                                     
 
 STR_STATION_ANIMALS                                                             :Veehandel
 STR_STATION_AUTOMOTIVE                                                          :Autodealer
-STR_STATION_BAR_GRILL_AND_ROOMS                                                 :Hotel
+STR_STATION_BAR_GRILL_AND_ROOMS                                                 :Resort
 STR_STATION_BARNS                                                               :Schuren
 STR_STATION_BARREL_AND_KEG                                                      :Brouwerij
 STR_STATION_BASE                                                                :Werf
+STR_STATION_BAUXITE                                                             :Bauxietmijn
 STR_STATION_BONEYARD                                                            :Schroothoop
 STR_STATION_BANK_TOP                                                            :Heuvelrug
+STR_STATION_BRINE_WORKS                                                         :Pekelplaats
+STR_STATION_CANNERY                                                             :Conservenfabriek
 STR_STATION_CASTINGS                                                            :Gieterij
 STR_STATION_COLLIERY                                                            :Kolenmijn
+STR_STATION_COMPONENTS                                                          :Onderdelenfabriek
 STR_STATION_COPPER_LODE                                                         :Kopermijn
 STR_STATION_CREOSOTING                                                          :Paal & Perk
+STR_STATION_CRYO_PLANT                                                          :Cryogeeninstallatie
 STR_STATION_DAIRY_LANE                                                          :Melkweg
+STR_STATION_DYNAMO                                                              :Dynamo
 STR_STATION_ESTATE                                                              :Landgoed
 STR_STATION_EXCHANGE                                                            :Overslag
 STR_STATION_FARM_1                                                              :Landhuis
 STR_STATION_FARM_2                                                              :Weiden
 STR_STATION_FARM_3                                                              :Ranch
+STR_STATION_FEED_AND_SEED                                                       :Voer- en zaadhandel
 STR_STATION_FISHMARKET                                                          :Vismarkt
+STR_STATION_FISH_PENS                                                           :Visteelt
 STR_STATION_FOOD_CORPORATION                                                    :Voedselfabriek
 STR_STATION_FOREST                                                              :Bosweg
 STR_STATION_FORGE                                                               :Smederij
 STR_STATION_FURNACE                                                             :Hoogovens
+STR_STATION_GALVANISING                                                         :Galvaniseerbedrijf
 STR_STATION_HEAVY_EQUIPMENT_YARD                                                :Zware machinerie
 STR_STATION_HEAVY_INDUSTRY_2                                                    :Werken
 STR_STATION_HERDING_COOP                                                        :Herdershut
 STR_STATION_INDUSTRY_ESTATE_1                                                   :Industriegebied
-STR_STATION_INDUSTRY_HARBOUR_1                                                  :Haven
+STR_STATION_INDUSTRY_HARBOUR_1                                                  :Industriehaven
 STR_STATION_INDUSTRY_HARBOUR_2                                                  :Kade
 STR_STATION_INDUSTRY_HARBOUR_3                                                  :Rede
+STR_STATION_INDUSTRY_HARBOUR_4                                                  :Kuststrook
 STR_STATION_IRONSTONE                                                           :IJzermijn
 STR_STATION_JOINERS_SHOP                                                        :Houtbewerking
 STR_STATION_KILNS                                                               :Kalkovens
-STR_STATION_KIMBERLITE_DEPOSITS                                                 :Kimberlietpijp
+STR_STATION_KIMBERLITE_DEPOSITS                                                 :Krater
 STR_STATION_LIMESTONE_MINES                                                     :Mergelgrotten
 STR_STATION_MANGANESE_MINES                                                     :Mangaanmijn
 STR_STATION_MARKET                                                              :Markt
+STR_STATION_MEAT                                                                :Slachthuis
 STR_STATION_MERCHANTS_LANE                                                      :Handelsplaats
-STR_STATION_MILL                                                                :Molenweg
+STR_STATION_MILL                                                                :Molen
 STR_STATION_MINE                                                                :Mijnschacht
 STR_STATION_MOULDINGS                                                           :Kunststoffabriek
 STR_STATION_OIL_RIG                                                             :Booreiland
+STR_STATION_OIL_PRESS                                                           :Oliepers
 STR_STATION_ORCHARDS                                                            :Boomgaard
+STR_STATION_PHENOLS                                                             :Fenolfabriek
 STR_STATION_PIT                                                                 :Groeve
+STR_STATION_PIPE_MILL                                                           :Buizenfabriek
 STR_STATION_PLANTATION                                                          :Plantage
+STR_STATION_PLAZA                                                               :Plaza
+STR_STATION_POLYMERS                                                            :Polymerisatiefabriek
 STR_STATION_POWERHUNGRY                                                         :Energiecentrale
+STR_STATION_POWERTRAIN                                                          :Motorenfabriek
 STR_STATION_PUMPS                                                               :Pompen
 STR_STATION_PYRITES                                                             :Klatergoud
 STR_STATION_REFINERY                                                            :Raffinaderij
+STR_STATION_ROD_MILL                                                            :Draadfabriek
 STR_STATION_RUBBER_COMPANY                                                      :Rubberfabriek
+STR_STATION_SALT                                                                :Zoutvlakte
 STR_STATION_SALTPETER_WORKS                                                     :Salpetergroeve
+STR_STATION_SEAFOOD                                                             :Zeefruit
 STR_STATION_SHARP_STREET                                                        :Scherpe Bocht
 STR_STATION_SHEEP_FOLD                                                          :Schapenstal
 STR_STATION_SHOALS                                                              :Visgronden
 STR_STATION_SILO                                                                :Silo
 STR_STATION_SMELTER                                                             :Smeltoven
+STR_STATION_SOOT_FURNACE                                                        :Roetfabriek
 STR_STATION_STACKS                                                              :Stapelplaats
 STR_STATION_STAMP_AND_PLATE                                                     :Staalpers
 STR_STATION_SUGAR_COMPANY                                                       :Bietenbrug
 STR_STATION_TANK_FARM                                                           :Olieterminal
 STR_STATION_TAPPERS_SHED                                                        :Tappershutje
-STR_STATION_TOWN_1                                                              :Centrum
+STR_STATION_TOWN_1                                                              :Stadskern
 STR_STATION_TOWN_2                                                              :Hoofdstraat
 STR_STATION_TOWN_3                                                              :Winkelcentrum
 STR_STATION_TRONA_BEDS                                                          :Zoutpannen
@@ -369,3 +659,16 @@ STR_STATION_WATER                                                               
 STR_STATION_WEAVE_AND_DYE                                                       :Weverij
 STR_STATION_WELLS                                                               :Bronnen
 STR_STATION_WINERY                                                              :Château
+STR_STATION_VEHICLE_DISTRIBUTOR                                                 :Voertuighandel
+
+# do not translate these
+STR_GENERIC_NEWLINE                                                             :{}
+# to use when dynamically choosing text colours, and we can't return a colour code directly
+STR_COLOUR_BLUE                                                                 :{BLUE}
+STR_COLOUR_GOLD                                                                 :{GOLD}
+STR_COLOUR_GREEN                                                                :{GREEN}
+STR_COLOUR_LTBLUE                                                               :{LTBLUE}
+STR_COLOUR_RED                                                                  :{RED}
+STR_COLOUR_YELLOW                                                               :{YELLOW}
+STR_COLOUR_WHITE                                                                :{WHITE}
+

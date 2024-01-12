@@ -1,172 +1,678 @@
 ##grflangid 0x5a
 ##plural 1
 
-STR_GRF_DESC                                                                    :{ORANGE}FIRS Industry Replacement Set -{}{BLACK}Dibuat untuk anda oleh andythenorth, FooBar, planetmaker, Terkhen and Yexo, dan bantuan dari yang lain. {SILVER}Lihat readme untuk informasi lebih lanjut, termasuk cara penggunaan FIRS. {BLACK}Lisensi: GPL v2.
+STR_GRF_DESC                                                                    :{ORANGE}AXIS: Another Xtreme Industry Set{}{BLACK}Penerus resmi XIS. Dirancang oleh Emperor Jake, berdasarkan kode FIRS 4 oleh andythenorth, FooBar, planetmaker, Terkhen dan Yexo, dengan bantuan dari banyak orang lainnya. {SILVER}Lihat readme untuk informasi lebih lanjut, termasuk cara menggunakan AXIS. {HITAM}Lisensi: GPL v2.
+
 
 STR_PARAM_DESC_COAST_DISTANCE_MARINE_INDUSTRY                                   :Jarak maksimal untuk area tangkapan ikan, anjungan lepas pantai dan pengerukan pasir laut dari pantai dalam petak.
-STR_PARAM_DESC_ECONOMIES                                                        :Setiap ekonomi menyediakan campuran kargo dan industri yang berbeda.{}{}Untuk pemain yang mau main yang gampang, ekonomi 'Dasar' berisi industri dan kargo lebih kurang daripada ekonomi FIRS yang lain.
-STR_PARAM_DESC_NO_OPENINGS                                                      :Secara normal, industri baru akan dibuat dalam permainan.{}{}Jika diaktifkan tidak ada industri dibuat dalam permainan, dan pemain tidak akan bisa membiayai atau memprospek industri.
+STR_PARAM_DESC_ECONOMIES                                                        :Setiap ekonomi menyediakan campuran kargo dan industri yang berbeda.{}{}Untuk pemain yang mau main yang gampang, {BLACK}ekonomi {SILVER}Dasar {BLACK} berisi industri dan kargo lebih kurang daripada ekonomi FIRS yang lain.{}{}Halaman situs FIRS memberikan informasi rinci tentang setiap perekonomian.
+STR_PARAM_DESC_NO_OPENINGS                                                      :Parameter ini mencegah pemain untuk dapat mendanai atau mencari prospek suatu industri.
+STR_PARAM_DESC_NO_SPAWNING                                                      :Secara default, industri baru tidak akan muncul secara acak selama permainan dimulai.{}{}Jika {SILVER}boleh memunculkan {BLACK}maka dihidupkan, industri akan muncul secara acak selama permainan. Besarannya ditentukan oleh pengaturan kepadatan industri.
 STR_PARAM_NAME_COAST_DISTANCE_MARINE_INDUSTRY                                   :Jarak terjauh untuk industri lepas pantai dari garis pantai dalam blok area
-STR_PARAM_NAME_ECONOMIES                                                        :Sistem Ekonomi
-STR_PARAM_NAME_NO_OPENINGS                                                      :Tiadakan pembukaan industri baru
+STR_PARAM_NAME_ECONOMIES                                                        :Ekonomi
+STR_PARAM_NAME_NO_OPENINGS                                                      :Dilarang mendanai or memprospek industri
+STR_PARAM_NAME_NO_SPAWNING                                                      :Boleh industri memunculkan saat permainan dimulai
 STR_PARAM_VALUE_SECONDARY_NEVER_CLOSE_0                                         :Tak Terbatas
 
+STR_PARAM_NAME_PRIMARY_LEVEL1_REQUIREMENT                                       :Peti pasokan diperlukan untuk Peningkatan produksi primer (default 16)
+STR_PARAM_NAME_PRIMARY_LEVEL2_REQUIREMENT                                       :Peti pasokan diperlukan untuk produksi utama Mengengkolnya (default 80)
+STR_PARAM_DESC_PRIMARY_LEVEL_REQUIREMENT                                        :Peternakan, pertambangan, dan industri serupa akan meningkatkan produksi ketika peti pasokan dikirimkan, pertama ke {SILVER}Ditingkatkan{BLACK}, dan kemudian ke {SILVER}Mengengkolnya{BLACK}, jika peti yang dikirimkan cukup. {}{}Nilai defaultnya bagus, namun jika perlu, Anda bisa mengubahnya di sini. {}{}Persyaratan kargo untuk industri tipe pelabuhan akan 8x lipat dari nilai yang ditetapkan di sini.
 
-STR_PARAM_VALUE_ECONOMIES_BASIC_TEMPERATE                                       :Sedang (Iklim) Dasar
-STR_PARAM_VALUE_ECONOMIES_BASIC_ARCTIC                                          :Arktik Dasar
+STR_PARAM_NAME_PRIMARY_LEVEL1_BONUS                                             :Peningkatan tingkat produksi primer (%)
+STR_PARAM_NAME_PRIMARY_LEVEL2_BONUS                                             :Tingkat produksi primer Mengengkolnya (%)
+STR_PARAM_DESC_PRIMARY_LEVEL_BONUS                                              :Produksi pada peternakan, pertambangan, dan industri serupa ketika kebutuhan pasokan terpenuhi (sebagai persentase {BLACK}Tingkat produksi {SILVER}Normal {BLACK}).
+
+STR_PARAM_NAME_EXPERIMENTAL_FEATURES                                            :Nyalakan fitur percobaan
+STR_PARAM_DESC_EXPERIMENTAL_FEATURES                                            :Mengubah fitur percobaan hidup atau mati.
+
+
+STR_PARAM_VALUE_ECONOMIES_BASIC_TEMPERATE                                       :BELUM SELESAI Klasik
+STR_PARAM_VALUE_ECONOMIES_BASIC_ARCTIC                                          :BELUM SELESAI Borealis
 STR_PARAM_VALUE_ECONOMIES_BASIC_TROPIC                                          :Tropis Dasar
-STR_PARAM_VALUE_ECONOMIES_IN_A_HOT_COUNTRY                                          :Hati Kegelapan
+STR_PARAM_VALUE_ECONOMIES_TROPICAL_PARADISE                                     :Surga Tropis
+STR_PARAM_VALUE_ECONOMIES_BETTER_LIVING_THROUGH_CHEMISTRY                       :BELUM SELESAI Kehidupan Yang Lebih Baik Melalui Kimia
+STR_PARAM_VALUE_ECONOMIES_IN_A_HOT_COUNTRY                                          :Disebuah Negara yang Panas
+STR_PARAM_VALUE_ECONOMIES_STEELTOWN                                             :Bandar Besi
 
-STR_CARGO_NAME_ALCOHOL                                                          :Bir
+STR_CARGO_SUBTYPE_DISPLAY_CARGO_SUPPLIED_FLAG                                   : {BLACK}(dipasok)
+STR_EXTRA_TEXT_SECONDARY_NON_COMBINATORY                                        :{BLACK}Berproduksi pada tingkat maksimum jika {WHITE}semua {BLACK}kargo yang dibutuhkan adalah dipasok.
+STR_EXTRA_TEXT_SECONDARY_COMBINATORY                                            :{BLACK}Untuk tingkat produksi maksimum, pasokan {WHITE}semua {BLACK}dibutuhkan kargo yang setidaknya sekali tiap triwulan.
+STR_EXTRA_TEXT_TOWN_PRODUCER                                                    :{BLACK}Produksi adalah proporsi untuk penduduk kota. Setidaknya {WHITE}{SIGNED_WORD} unit{BLACK} dan tidak lebih dari {WHITE}{SIGNED_WORD} unit{BLACK} kargo akan diproduksi setiap bulan.
+STR_PRIMARY_PRODUCTION_1X                                                       :{BLACK}Produksi saat ini: {YELLOW}Normal {}{}{BLACK}Untuk {WHITE}Ditingkatkan {BLACK}produksi terkirim {SIGNED_WORD} peti pasokan setidaknya sekali setiap triwulan.{}Untuk {WHITE}Mengengkolnya {BLACK}produksi terkirim {SIGNED_WORD} peti.
+STR_PRIMARY_PRODUCTION_2X                                                       :{BLACK}Produksi saat ini: {YELLOW}Ditingkatkan {}{}{BLACK}Untuk menjaga tingkat ini, pengiriman {SIGNED_WORD} peti pasokan setidaknya sekali setiap triwulan.{}Untuk {WHITE}Mengengkolnya {BLACK}pengiriman produksi sebanyak {SIGNED_WORD} peti.
+STR_PRIMARY_PRODUCTION_4X                                                       :{BLACK}Produksi saat ini: {YELLOW}Mengengkolnya {}{}{BLACK}Untuk menjaga tingkat ini, pengiriman {SKIP}{SIGNED_WORD} peti pasokan setidaknya sekali setiap triwulan.
+STR_PORT_PRODUCTION_1X                                                          :{BLACK}Produksi saat ini: {YELLOW}Normal {}{}{BLACK}Untuk {WHITE}Ditingkatkan {BLACK}pengiriman produksi {SIGNED_WORD} peti pasokan setidaknya sekali setiap triwulan.{}Untuk {WHITE}Mengengkolnya {BLACK}pengiriman produksi {SIGNED_WORD} unit.
+STR_PORT_PRODUCTION_2X                                                          :{BLACK}Produksi saat ini: {YELLOW}Ditingkatkan {}{}{BLACK}Untuk menjaga tingkat ini, pengiriman {SIGNED_WORD} unit kargo setidaknya sekali setiap triwulan.{}Untuk {WHITE}Mengengkolnya {BLACK}pengiriman produksi {SIGNED_WORD} unit.
+STR_PORT_PRODUCTION_4X                                                          :{BLACK}Produksi saat ini: {YELLOW}Mengengkolnya {}{}{BLACK}Untuk menjaga tingkat ini, pengiriman {SKIP}{SIGNED_WORD} unit kargo setidaknya sekali setiap triwulan.
+
+STR_INFORMATIVE_EXTRA_TEXT_PLAZA                                                :{SKIP}{SKIP}Populasi suasana hati:{} {STRING}{STRING}{}{}{BLACK}Skor optimisme: {STRING}{SIGNED_WORD} poin{}{BLACK} Kebutuhan dan kemewahan terpenuhi: {YELLOW}{SIGNED_WORD} poin {}{BLACK} Polusi dan kemelaratan: {YELLOW}{SIGNED_WORD} poin {}{}{BLACK}Polusi dan kemelaratan meningkat seiring dengan bertambahnya jumlah penduduk dan jenis industri tertentu.{}{}Kebutuhan dan kemewahan dipenuhi dengan melakukan pengiriman ke jenis industri tertentu.{}{}Jika skor optimisme lebih dari 10, suasana hati penduduk akan menjadi {WHITE}optimis{BLACK}. Jika skor optimisme kurang dari -10, suasana hati penduduk akan menjadi {WHITE}suram{BLACK}.
+STR_INFORMATIVE_EXTRA_TEXT_PLAZA_MOOD_OPTIMISTIC                                :Optimis
+STR_INFORMATIVE_EXTRA_TEXT_PLAZA_MOOD_GLOOMY                                    :Suram
+STR_INFORMATIVE_EXTRA_TEXT_PLAZA_MOOD_NEUTRAL                                   :Netral
+
+STR_CARGO_NAME_ACETIC_ACID                                                      :Asam Asetat
+STR_CARGO_NAME_ACID                                                             :Asam
+STR_CARGO_NAME_ALCOHOL                                                          :Minuman beralkohol
+STR_CARGO_NAME_ALLOY_STEEL                                                      :Baja Paduan
+STR_CARGO_NAME_ALUMINIUM                                                        :Aluminium
+STR_CARGO_NAME_ALUMINIA                                                         :Alumina
+STR_CARGO_NAME_AMMONIA                                                          :Amonia
+STR_CARGO_NAME_AMMONIUM_NITRATE                                                 :Amonium Nitrat
 STR_CARGO_NAME_BAUXITE                                                          :Bauksit
+STR_CARGO_NAME_BEANS                                                            :Biji Kacang
+STR_CARGO_NAME_BIOMASS                                                          :Biomasa
 STR_CARGO_NAME_BUILDING_MATERIALS                                               :Material Bangunan
+STR_CARGO_NAME_CARBON_BLACK                                                     :Karbon Hitam
+STR_CARGO_NAME_CARBON_STEEL                                                     :Baja Karbon
+STR_CARGO_NAME_CASSAVA                                                          :Singkong
+STR_CARGO_NAME_CAST_IRON                                                        :Besi Cor
 STR_CARGO_NAME_CEMENT                                                           :Semen
-STR_CARGO_NAME_CHEMICALS                                                        :Bahan Kimia
+# more specific petrochemicals
+STR_CARGO_NAME_CHEMICALS                                                        :Minyak Sulingan
+STR_CARGO_NAME_CHLORINE                                                         :Klorin
+STR_CARGO_NAME_CHROMITE_ORE                                                     :Bijih Kromit
 STR_CARGO_NAME_CLAY                                                             :Tanah Liat
+STR_CARGO_NAME_CLEANING_AGENTS                                                  :Produk Pembersih
 STR_CARGO_NAME_COFFEE                                                           :Kopi
+# no longer just coal
+STR_CARGO_NAME_COAL_TAR                                                         :Tar 
+STR_CARGO_NAME_COKE                                                             :Kokas
+STR_CARGO_NAME_COPPER                                                           :Tembaga
+STR_CARGO_NAME_COPPER_CONCENTRATE                                               :Konsentrat Tembaga
+STR_CARGO_NAME_EDIBLE_OIL                                                       :Minyak Goreng
+STR_CARGO_NAME_ELECTRICAL_PARTS                                                 :Komponen Listrik
 STR_CARGO_NAME_ENGINEERING_SUPPLIES                                             :Alat Teknik
-STR_CARGO_NAME_FIBRES                                                           :Serat Tanaman
-STR_CARGO_NAME_FISH                                                             :Ikan
+# more generic monomer
+STR_CARGO_NAME_ETHYLENE                                                         :Monomer
+STR_CARGO_NAME_EXPLOSIVES                                                       :Bahan Peledak
 STR_CARGO_NAME_FARM_SUPPLIES                                                    :Alat Pertanian
+# represents ferrochrome and ferromanganese
+STR_CARGO_NAME_FERROCHROME                                                      :Paduan besi
+STR_CARGO_NAME_FERTILISER                                                       :Pupuk
+STR_CARGO_NAME_FIBRES                                                           :Serat tanaman
+# fish and meat was split into its own cargo
+STR_CARGO_NAME_FISH                                                             :Ikan
+STR_CARGO_NAME_FISH_AND_MEAT                                                    :Ikan & Daging
+STR_CARGO_NAME_FLOUR                                                            :Tepung
+STR_CARGO_NAME_FOOD_ADDITIVES                                                   :Bahan Tambahan Pangan
+STR_CARGO_NAME_FORGINGS_AND_CASTINGS                                            :Tempat & Coran
+STR_CARGO_NAME_FORMIC_ACID                                                      :Asam Format
 STR_CARGO_NAME_FRUITS                                                           :Buah
-STR_CARGO_NAME_LUMBER                                                           :Kayu Potong
-STR_CARGO_NAME_METAL                                                            :Besi
+STR_CARGO_NAME_FURNITURE                                                        :Mebel
+STR_CARGO_NAME_GLASS                                                            :Kaca
+STR_CARGO_NAME_HYDROCHLORIC_ACID                                                :Asam Hidrokloric
+STR_CARGO_NAME_HYDROGEN                                                         :Hidrogen
+STR_CARGO_NAME_KAOLIN                                                           :Kaolin
+STR_CARGO_NAME_LIMESTONE                                                        :Batu gamping
+STR_CARGO_NAME_LOGS                                                             :Kayu gelondongan
+STR_CARGO_NAME_TIMBER                                                           :Kayu potong
+# cargo uses Sodium Hydroxide as string as it's interchangeable with Lye, but lye is convenient for filename / cargo label
+STR_CARGO_NAME_LYE                                                              :Natrium Hidroksida
+STR_CARGO_NAME_MEAT                                                             :Daging
+STR_CARGO_NAME_METAL                                                            :Logan
+STR_CARGO_NAME_METHANE                                                          :Metana
+STR_CARGO_NAME_METHANOL                                                         :Metanol
 STR_CARGO_NAME_MILK                                                             :Susu
-STR_CARGO_NAME_PETROL                                                           :Bahan Bakar
-STR_CARGO_NAME_RECYCLABLES                                                      :Bahan Daur ulang
+STR_CARGO_NAME_MANGANESE                                                        :Mangan
+STR_CARGO_NAME_NAPHTHA                                                          :Nafta
+STR_CARGO_NAME_NICKEL                                                           :Nikel
+STR_CARGO_NAME_NITRATES                                                         :Nitrat
+STR_CARGO_NAME_NITROGEN                                                         :Nitrogen
+STR_CARGO_NAME_NUTS                                                             :Kacang
+STR_CARGO_NAME_OIL_SEEDS                                                        :Biji Minyak
+STR_CARGO_NAME_OXYGEN                                                           :Oksigen
+STR_CARGO_NAME_PACKAGING                                                        :Pengemasan
+STR_CARGO_NAME_PAINTS_AND_COATINGS                                              :Cat & Pelapis
+STR_CARGO_NAME_PEAT                                                             :Gambut
+STR_CARGO_NAME_PETROL                                                           :Bahan bakar minyak
+STR_CARGO_NAME_PHOSPHATE                                                        :Fosfat
+STR_CARGO_NAME_PHOSPHORIC_ACID                                                  :Asam Fosfat
+# now represents both pig and cast iron
+STR_CARGO_NAME_PIG_IRON                                                         :Besi
+STR_CARGO_NAME_PIPE                                                             :Pipa
+STR_CARGO_NAME_PLASTICS                                                         :Plastik
+STR_CARGO_NAME_PLASTIC_PARTS                                                    :Bagian Plastik
+STR_CARGO_NAME_POTASH                                                           :Kalium Karbonat
+STR_CARGO_NAME_PROPYLENE                                                        :Propilena
+STR_CARGO_NAME_PYRITE_ORE                                                       :Bijih Pirit
+STR_CARGO_NAME_QUICKLIME                                                        :Kapur mentah
+STR_CARGO_NAME_RARE_METALS                                                      :Logam Langka
+STR_CARGO_NAME_RAW_LATEX                                                        :Lateks mentah
+STR_CARGO_NAME_REBAR                                                            :Besi beton
+STR_CARGO_NAME_RECYCLABLES                                                      :Bahan daur ulang
+STR_CARGO_NAME_SALT                                                             :Garam
 STR_CARGO_NAME_SAND                                                             :Pasir
-STR_CARGO_NAME_SCRAP_METAL                                                      :Besi Bekas
+STR_CARGO_NAME_SCRAP_METAL                                                      :Besi bekas
+STR_CARGO_NAME_SLAG                                                             :Terak
+STR_CARGO_NAME_SODA_ASH                                                         :Soda abu
+STR_CARGO_NAME_STAINLESS_STEEL                                                  :Besi tahan karat
+STR_CARGO_NAME_STEEL                                                            :Besi
+# Not just steel
+STR_CARGO_NAME_STEEL_SECTIONS                                                   :Komponen Besi
+STR_CARGO_NAME_STEEL_SHEET                                                      :Lembaran Besar
+# not just steel
+STR_CARGO_NAME_STEEL_WIRE_ROD                                                   :Kawat logam
 STR_CARGO_NAME_STONE                                                            :Batu
-STR_CARGO_NAME_SUGAR_BEET                                                       :Bit Gula
+STR_CARGO_NAME_SUGAR                                                            :Gula
+STR_CARGO_NAME_SUGAR_CANE                                                       :Tebu
+STR_CARGO_NAME_SUGAR_BEET                                                       :Bit gula
+STR_CARGO_NAME_SULPHUR                                                          :Sulfur
+STR_CARGO_NAME_SULPHURIC_ACID                                                   :Asam sulfure
+STR_CARGO_NAME_TEXTILES                                                         :Tekstil
+STR_CARGO_NAME_TIN                                                              :Timah
+STR_CARGO_NAME_TINPLATE                                                         :Pelat Timah
+# not just tyres, also belts, gaskets etc
+STR_CARGO_NAME_TYRES                                                            :Komponen Karet
+STR_CARGO_NAME_UREA                                                             :Urea
+STR_CARGO_NAME_VEHICLE_BODIES                                                   :Bodi Kendaraan
+STR_CARGO_NAME_VEHICLE_ENGINES                                                  :Mesin Kendaraan
+STR_CARGO_NAME_VEHICLE_PARTS                                                    :Suku Cadang Kendaraan
+STR_CARGO_NAME_VEHICLES                                                         :Kendaraan
 STR_CARGO_NAME_WOOL                                                             :Wol
+STR_CARGO_NAME_YARN                                                             :Benang
+STR_CARGO_NAME_ZINC                                                             :Seng
 
-STR_CARGO_UNIT_ALCOHOL                                                          :{VOLUME} dari bir
+STR_CARGO_UNIT_ACETIC_ACID                                                      :{VOLUME} dari asam asetat
+STR_CARGO_UNIT_ACID                                                             :{VOLUME} dari asam
+STR_CARGO_UNIT_ALCOHOL                                                          :{VOLUME} dari minuman beralkohol
+STR_CARGO_UNIT_ALLOY_STEEL                                                      :{WEIGHT} dari baja paduan
+STR_CARGO_UNIT_ALUMINIA                                                         :{WEIGHT} dari alumina
+STR_CARGO_UNIT_ALUMINIUM                                                        :{WEIGHT} dari aluminium
+STR_CARGO_UNIT_AMMONIA                                                          :{VOLUME} dari amonia
+STR_CARGO_UNIT_AMMONIUM_NITRATE                                                 :{VOLUME} dari amonium nitrat
 STR_CARGO_UNIT_BAUXITE                                                          :{WEIGHT} dari bauksit
+STR_CARGO_UNIT_BEANS                                                            :{WEIGHT} dari biji kacang
+STR_CARGO_UNIT_BIOMASS                                                          :{WEIGHT} dari biomasa
 STR_CARGO_UNIT_BUILDING_MATERIALS                                               :{WEIGHT} dari material bangunan
-STR_CARGO_UNIT_CHEMICALS                                                        :{VOLUME} dari bahan kimia
+STR_CARGO_UNIT_CARBON_BLACK                                                     :{WEIGHT} dari karbon hitam
+STR_CARGO_UNIT_CARBON_STEEL                                                     :{WEIGHT} dari baja karbon
+STR_CARGO_UNIT_CASSAVA                                                          :{WEIGHT} dari singkong
+STR_CARGO_UNIT_CAST_IRON                                                        :{WEIGHT} dari besi cor
+STR_CARGO_UNIT_CEMENT                                                           :{WEIGHT} dari semen
+STR_CARGO_UNIT_CHEMICALS                                                        :{VOLUME} dari minyak suling
+STR_CARGO_UNIT_CHLORINE                                                         :{VOLUME} dari klorin
+STR_CARGO_UNIT_CHROMITE_ORE                                                     :{WEIGHT} dari bijih kromit
 STR_CARGO_UNIT_CLAY                                                             :{WEIGHT} dari tanah liat
-STR_CARGO_UNIT_COFFEE                                                           :{SIGNED_WORD} karung kopi
-STR_CARGO_UNIT_ENGINEERING_SUPPLIES                                             :{SIGNED_WORD} peti dari alat teknik
+STR_CARGO_UNIT_CLEANING_AGENTS                                                  :{WEIGHT} dari produk pembersih
+STR_CARGO_UNIT_COAL_TAR                                                         :{VOLUME} dari tar
+STR_CARGO_UNIT_COFFEE                                                           :{SIGNED_WORD} dari karung kopi
+STR_CARGO_UNIT_COKE                                                             :{WEIGHT} dari kokas
+STR_CARGO_UNIT_COPPER                                                           :{WEIGHT} dari tembaga
+STR_CARGO_UNIT_COPPER_CONCENTRATE                                               :{WEIGHT} dari konsentrat tembaga
+STR_CARGO_UNIT_EDIBLE_OIL                                                       :{VOLUME} dari minyak goreng
+STR_CARGO_UNIT_ELECTRICAL_PARTS                                                 :{WEIGHT} dari komponen listrik
+STR_CARGO_UNIT_ENGINEERING_SUPPLIES                                             :{SIGNED_WORD} peti dari pasokan alat teknik
+STR_CARGO_UNIT_ETHYLENE                                                         :{VOLUME} dari monomer
+STR_CARGO_UNIT_EXPLOSIVES                                                       :{SIGNED_WORD} peti dari bahan peledak
+STR_CARGO_UNIT_FERROCHROME                                                      :{WEIGHT} dari ferroalloys
+STR_CARGO_UNIT_FERTILISER                                                       :{WEIGHT} dari fertiliser
+STR_CARGO_UNIT_FOOD_ADDITIVES                                                   :{WEIGHT} dari food additives
+STR_CARGO_UNIT_FORGINGS_AND_CASTINGS                                            :{WEIGHT} dari forgings and castings
+STR_CARGO_UNIT_FORMIC_ACID                                                      :{VOLUME} dari formic acid
 STR_CARGO_UNIT_FIBRES                                                           :{SIGNED_WORD} ikat dari serat tanaman
 STR_CARGO_UNIT_FISH                                                             :{WEIGHT} dari ikan
-STR_CARGO_UNIT_FMSP                                                             :{SIGNED_WORD} peti dari alat pertanian
+STR_CARGO_UNIT_FISH_AND_MEAT                                                    :{WEIGHT} dari ikan & daging
+STR_CARGO_UNIT_FLOUR                                                            :{WEIGHT} dari tepung
+STR_CARGO_UNIT_FMSP                                                             :{SIGNED_WORD} peti dari pasokan alat pertanian
 STR_CARGO_UNIT_FRUITS                                                           :{WEIGHT} dari buah
-STR_CARGO_UNIT_LUMBER                                                           :{WEIGHT} dari kayu
-STR_CARGO_UNIT_METAL                                                            :{WEIGHT} dari besi
+STR_CARGO_UNIT_FURNITURE                                                        :{WEIGHT} dari produk mebel
+STR_CARGO_UNIT_GLASS                                                            :{WEIGHT} dari kaca
+STR_CARGO_UNIT_HYDROCHLORIC_ACID                                                :{VOLUME} dari asam hidrokolik
+STR_CARGO_UNIT_HYDROGEN                                                         :{VOLUME} dari hidrogen
+STR_CARGO_UNIT_KAOLIN                                                           :{WEIGHT} dari kaolin
+STR_CARGO_UNIT_LIMESTONE                                                        :{WEIGHT} dari batu gamping
+STR_CARGO_UNIT_LOGS                                                             :{WEIGHT} dari kayu gelondongan
+STR_CARGO_UNIT_TIMBER                                                           :{WEIGHT} dari kayu potongan
+# cargo uses Sodium Hydroxide as string as it's interchangeable with Lye, but lye is convenient for filename / cargo label
+STR_CARGO_UNIT_LYE                                                              :{VOLUME} dari natrium hidroksida
+STR_CARGO_UNIT_MANGANESE                                                        :{WEIGHT} dari mangan
+STR_CARGO_UNIT_METAL                                                            :{WEIGHT} dari logam
+STR_CARGO_UNIT_MEAT                                                             :{WEIGHT} dari potongan daging
+STR_CARGO_UNIT_METHANE                                                          :{VOLUME} dari metana
+STR_CARGO_UNIT_METHANOL                                                         :{VOLUME} dari metanol
 STR_CARGO_UNIT_MILK                                                             :{VOLUME} dari susu
-STR_CARGO_UNIT_PETROL                                                           :{VOLUME} dari bahan bakar
-STR_CARGO_UNIT_RECYCLABLES                                                      :{WEIGHT} dari sampah
+STR_CARGO_UNIT_NAPHTHA                                                          :{VOLUME} dari nafta
+STR_CARGO_UNIT_NICKEL                                                           :{WEIGHT} dari nikel
+STR_CARGO_UNIT_NITRATES                                                         :{WEIGHT} dari nitrat
+STR_CARGO_UNIT_NITROGEN                                                         :{VOLUME} dari nitrogen
+STR_CARGO_UNIT_NUTS                                                             :{SIGNED_WORD} karung dari kacang
+STR_CARGO_UNIT_OXYGEN                                                           :{VOLUME} dari oksigen
+STR_CARGO_UNIT_OIL_SEEDS                                                        :{WEIGHT} dari biji minyak
+STR_CARGO_UNIT_PACKAGING                                                        :{WEIGHT} dari pengemasan
+STR_CARGO_UNIT_PAINTS_AND_COATINGS                                              :{VOLUME} dari cat dan pelapis
+STR_CARGO_UNIT_PEAT                                                             :{WEIGHT} dari gambut
+STR_CARGO_UNIT_PETROL                                                           :{VOLUME} dari bahan bakar minyak
+STR_CARGO_UNIT_PHOSPHATE                                                        :{WEIGHT} dari fosfat
+STR_CARGO_UNIT_PHOSPHORIC_ACID                                                  :{VOLUME} dari asam fosfat
+STR_CARGO_UNIT_PIG_IRON                                                         :{WEIGHT} dari besi
+STR_CARGO_UNIT_PIPE                                                             :{WEIGHT} dari pipa
+STR_CARGO_UNIT_PLASTICS                                                         :{WEIGHT} dari plastik
+STR_CARGO_UNIT_PLASTIC_PARTS                                                    :{WEIGHT} dari komponen plastik
+STR_CARGO_UNIT_POTASH                                                           :{WEIGHT} dari kalium karbonat
+STR_CARGO_UNIT_PROPYLENE                                                        :{VOLUME} dari propilena
+STR_CARGO_UNIT_PYRITE_ORE                                                       :{WEIGHT} dari bijih pirit
+STR_CARGO_UNIT_QUICKLIME                                                        :{WEIGHT} dari kapur mentah
+STR_CARGO_UNIT_RARE_METALS                                                      :{WEIGHT} dari logam langka
+STR_CARGO_UNIT_RAW_LATEX                                                        :{VOLUME} dari lateks mentah
+STR_CARGO_UNIT_REBAR                                                            :{WEIGHT} dari besi beton
+STR_CARGO_UNIT_RECYCLABLES                                                      :{WEIGHT} dari bahan daur ulang
+STR_CARGO_UNIT_SALT                                                             :{WEIGHT} dari garam
 STR_CARGO_UNIT_SAND                                                             :{WEIGHT} dari pasir
 STR_CARGO_UNIT_SCRAP_METAL                                                      :{WEIGHT} dari besi bekas
+STR_CARGO_UNIT_SLAG                                                             :{WEIGHT} dari terak
+STR_CARGO_UNIT_SODA_ASH                                                         :{WEIGHT} dari soda abu
+STR_CARGO_UNIT_STAINLESS_STEEL                                                  :{WEIGHT} dari baja tahan karat
+STR_CARGO_UNIT_STEEL                                                            :{WEIGHT} dari baja
+STR_CARGO_UNIT_STEEL_SECTIONS                                                   :{WEIGHT} dari komponen logam
+STR_CARGO_UNIT_STEEL_SHEET                                                      :{WEIGHT} dari lembaran baja
+STR_CARGO_UNIT_STEEL_WIRE_ROD                                                   :{WEIGHT} dari kawat baja
 STR_CARGO_UNIT_STONE                                                            :{WEIGHT} dari batu
-STR_CARGO_UNIT_SUGAR_BEET                                                       :{WEIGHT} dari bit gula
+STR_CARGO_UNIT_SUGAR                                                            :{WEIGHT} dari gula
+STR_CARGO_UNIT_SUGAR_BEET                                                       :{WEIGHT} dari gula bit
+STR_CARGO_UNIT_SUGAR_CANE                                                       :{SIGNED_WORD} ikat dari tebu
+STR_CARGO_UNIT_SULPHUR                                                          :{WEIGHT} dari sulfur
+STR_CARGO_UNIT_SULPHURIC_ACID                                                   :{VOLUME} dari asam sulfur
+STR_CARGO_UNIT_TEXTILES                                                         :{WEIGHT} dari tekstil
+STR_CARGO_UNIT_TIN                                                              :{WEIGHT} dari timah
+STR_CARGO_UNIT_TINPLATE                                                         :{WEIGHT} dari pelat timah
+STR_CARGO_UNIT_TYRES                                                            :{WEIGHT} dari komponen karet
+STR_CARGO_UNIT_UREA                                                             :{WEIGHT} dari pupuk urea
+STR_CARGO_UNIT_VEHICLE_BODIES                                                   :{WEIGHT} dari bodi kendaraan
+STR_CARGO_UNIT_VEHICLE_ENGINES                                                  :{WEIGHT} dari mesin kendaraan
+STR_CARGO_UNIT_VEHICLE_PARTS                                                    :{WEIGHT} komponen dari suku cadang kendaraan
+STR_CARGO_UNIT_VEHICLES                                                         :{WEIGHT} unit dari kendaraan
 STR_CARGO_UNIT_WOOL                                                             :{SIGNED_WORD} ikat dari wol
+STR_CARGO_UNIT_YARN                                                             :{SIGNED_WORD} ikat benang
+STR_CARGO_UNIT_ZINC                                                             :{WEIGHT} dari seng
 
-STR_CID_ALCOHOL                                                                 :{TINYFONT}BR
-STR_CID_BAUXITE                                                                 :{TINYFONT}BX
-STR_CID_BUILDING_MATERIALS                                                      :{TINYFONT}MB
-STR_CID_CHEMICALS                                                               :{TINYFONT}BK
-STR_CID_CLAY                                                                    :{TINYFONT}TL
-STR_CID_COFFEE                                                                  :{TINYFONT}KP
-STR_CID_ENGINEERING_SUPPLIES                                                    :{TINYFONT}AT
-STR_CID_FARM_SUPPLIES                                                           :{TINYFONT}AP
-STR_CID_FIBRES                                                                  :{TINYFONT}ST
-STR_CID_FISH                                                                    :{TINYFONT}IK
-STR_CID_LUMBER                                                                  :{TINYFONT}KP
-STR_CID_METAL                                                                   :{TINYFONT}BS
-STR_CID_MILK                                                                    :{TINYFONT}SS
-STR_CID_PETROL                                                                  :{TINYFONT}BM
-STR_CID_RECYCLABLES                                                             :{TINYFONT}SP
-STR_CID_SAND                                                                    :{TINYFONT}PS
-STR_CID_SCRAP_METAL                                                             :{TINYFONT}BB
-STR_CID_STONE                                                                   :{TINYFONT}BT
-STR_CID_SUGAR_BEET                                                              :{TINYFONT}BG
-STR_CID_WOOL                                                                    :{TINYFONT}WL
+# it seems that using 2 chars for these is a convention not a limit, I tested 4 chars and OpenTTD renders it fine - May 2020
+
+TR_CID_ACETIC_ACID                                                             :{TINYFONT}ACET
+STR_CID_ACID                                                                    :{TINYFONT}ACID
+STR_CID_ALCOHOL                                                                 :{TINYFONT}ALCO
+STR_CID_ALLOY_STEEL                                                             :{TINYFONT}ASTL
+STR_CID_ALUMINIA                                                                :{TINYFONT}ALUO
+STR_CID_ALUMINIUM                                                               :{TINYFONT}ALUM
+STR_CID_AMMONIA                                                                 :{TINYFONT}NH3
+STR_CID_AMMONIUM_NITRATE                                                        :{TINYFONT}NHNO
+STR_CID_BAUXITE                                                                 :{TINYFONT}BAUX
+STR_CID_BEANS                                                                   :{TINYFONT}BEAN
+STR_CID_BIOMASS                                                                 :{TINYFONT}BIOM
+STR_CID_BUILDING_MATERIALS                                                      :{TINYFONT}BDMT
+STR_CID_CARBON_BLACK                                                            :{TINYFONT}CBLK
+STR_CID_CARBON_STEEL                                                            :{TINYFONT}CSTL
+STR_CID_CASSAVA                                                                 :{TINYFONT}CASS
+STR_CID_CAST_IRON                                                               :{TINYFONT}CAST
+STR_CID_CEMENT                                                                  :{TINYFONT}CMNT
+STR_CID_CHEMICALS                                                               :{TINYFONT}ROIL
+STR_CID_CHROMITE_ORE                                                            :{TINYFONT}CHRO
+STR_CID_CHLORINE                                                                :{TINYFONT}CHLO
+STR_CID_CLAY                                                                    :{TINYFONT}CLAY
+STR_CID_CLEANING_AGENTS                                                         :{TINYFONT}SOAP
+STR_CID_COFFEE                                                                  :{TINYFONT}BEER
+STR_CID_COAL_TAR                                                                :{TINYFONT}TAR
+STR_CID_COAL                                                                    :{TINYFONT}COAL
+STR_CID_COKE                                                                    :{TINYFONT}COKE
+STR_CID_COPPER                                                                  :{TINYFONT}COPR
+STR_CID_COPPER_CONCENTRATE                                                      :{TINYFONT}COCO
+STR_CID_COPPER_ORE                                                              :{TINYFONT}CORE
+STR_CID_EDIBLE_OIL                                                              :{TINYFONT}EOIL
+STR_CID_ELECTRICAL_PARTS                                                        :{TINYFONT}ELEC
+STR_CID_ENGINEERING_SUPPLIES                                                    :{TINYFONT}ENSP
+STR_CID_ETHYLENE                                                                :{TINYFONT}MONO
+STR_CID_EXPLOSIVES                                                              :{TINYFONT}EXPL
+STR_CID_FARM_SUPPLIES                                                           :{TINYFONT}FMSP
+STR_CID_FERROCHROME                                                             :{TINYFONT}FERA
+STR_CID_FERTILISER                                                              :{TINYFONT}FERT
+STR_CID_FIBRES                                                                  :{TINYFONT}FIBR
+STR_CID_FISH                                                                    :{TINYFONT}FISH
+STR_CID_FISH_AND_MEAT                                                           :{TINYFONT}MEAT
+STR_CID_FLOUR                                                                   :{TINYFONT}FLOU
+STR_CID_FOOD_ADDITIVES                                                          :{TINYFONT}FADD
+STR_CID_FOOD                                                                    :{TINYFONT}FOOD
+STR_CID_FORMIC_ACID                                                             :{TINYFONT}FOAC
+STR_CID_FORGINGS_AND_CASTINGS                                                   :{TINYFONT}CAST
+STR_CID_FRUITS                                                                  :{TINYFONT}PROD
+STR_CID_FURNITURE                                                               :{TINYFONT}FURN
+STR_CID_GLASS                                                                   :{TINYFONT}GLAS
+STR_CID_GOODS                                                                   :{TINYFONT}GOOD
+STR_CID_GRAIN                                                                   :{TINYFONT}GRAI
+STR_CID_HYDROCHLORIC_ACID                                                       :{TINYFONT}HCL
+STR_CID_HYDROGEN                                                                :{TINYFONT}H2
+STR_CID_IRON_ORE                                                                :{TINYFONT}IORE
+STR_CID_KAOLIN                                                                  :{TINYFONT}KAOL
+STR_CID_LIMESTONE                                                               :{TINYFONT}LIME
+STR_CID_LIVESTOCK                                                               :{TINYFONT}LVST
+STR_CID_LOGS                                                                    :{TINYFONT}WOOD
+STR_CID_TIMBER                                                                  :{TINYFONT}TMBR
+# cargo uses Sodium Hydroxide as name string as it's interchangeable with Lye, but lye is convenient for filename / cargo label
+STR_CID_LYE                                                                     :{TINYFONT}LYE
+STR_CID_MAIL                                                                    :{TINYFONT}MAIL
+STR_CID_MANGANESE                                                               :{TINYFONT}MN02
+STR_CID_MEAT                                                                    :{TINYFONT}MEAT
+STR_CID_METAL                                                                   :{TINYFONT}METL
+STR_CID_METHANE                                                                 :{TINYFONT}CH4
+STR_CID_METHANOL                                                                :{TINYFONT}METH
+STR_CID_MILK                                                                    :{TINYFONT}MILK
+STR_CID_NAPHTHA                                                                 :{TINYFONT}NAPH
+STR_CID_NICKEL                                                                  :{TINYFONT}NICK
+STR_CID_NITRATES                                                                :{TINYFONT}NITR
+STR_CID_NITROGEN                                                                :{TINYFONT}N2
+STR_CID_NUTS                                                                    :{TINYFONT}NUTS
+STR_CID_OIL                                                                     :{TINYFONT}OIL
+STR_CID_OIL_SEEDS                                                               :{TINYFONT}OLSD
+STR_CID_OXYGEN                                                                  :{TINYFONT}O2
+STR_CID_PACKAGING                                                               :{TINYFONT}PACK
+STR_CID_PASSENGERS                                                              :{TINYFONT}PAX
+STR_CID_PAINTS_AND_COATINGS                                                     :{TINYFONT}PACO
+STR_CID_PEAT                                                                    :{TINYFONT}PEAT
+STR_CID_PETROL                                                                  :{TINYFONT}PETR
+STR_CID_PIG_IRON                                                                :{TINYFONT}IRON
+STR_CID_PIPE                                                                    :{TINYFONT}PIPE
+STR_CID_PHOSPHATE                                                               :{TINYFONT}PHOS
+STR_CID_PHOSPHORIC_ACID                                                         :{TINYFONT}PHAC
+STR_CID_PLASTICS                                                                :{TINYFONT}PLAS
+STR_CID_PLASTIC_PARTS                                                           :{TINYFONT}PPAR
+STR_CID_POTASH                                                                  :{TINYFONT}PASH
+STR_CID_PROPYLENE                                                               :{TINYFONT}PROP
+STR_CID_PYRITE_ORE                                                              :{TINYFONT}PYRO
+STR_CID_QUICKLIME                                                               :{TINYFONT}QLME
+STR_CID_RARE_METALS                                                             :{TINYFONT}RARE
+STR_CID_RAW_LATEX                                                               :{TINYFONT}RL
+STR_CID_REBAR                                                                   :{TINYFONT}RBAR
+STR_CID_RECYCLABLES                                                             :{TINYFONT}RCYC
+STR_CID_RUBBER                                                                  :{TINYFONT}RUBR
+STR_CID_SALT                                                                    :{TINYFONT}SALT
+STR_CID_SAND                                                                    :{TINYFONT}SAND
+STR_CID_SCRAP_METAL                                                             :{TINYFONT}SCRP
+STR_CID_SLAG                                                                    :{TINYFONT}SLAG
+STR_CID_SODA_ASH                                                                :{TINYFONT}SASH
+STR_CID_STAINLESS_STEEL                                                         :{TINYFONT}SSTL
+STR_CID_STEEL                                                                   :{TINYFONT}STEL
+STR_CID_STONE                                                                   :{TINYFONT}STON
+STR_CID_SUGAR                                                                   :{TINYFONT}SUGR
+STR_CID_SUGAR_BEET                                                              :{TINYFONT}SGBT
+STR_CID_SUGAR_CANE                                                              :{TINYFONT}SGCN
+STR_CID_SULPHUR                                                                 :{TINYFONT}SULP
+STR_CID_SULPHURIC_ACID                                                          :{TINYFONT}SUAC
+STR_CID_STEEL_SECTIONS                                                          :{TINYFONT}MPAR
+STR_CID_STEEL_SHEET                                                             :{TINYFONT}SHET
+STR_CID_STEEL_WIRE_ROD                                                          :{TINYFONT}WIRE
+STR_CID_TEXTILES                                                                :{TINYFONT}TEXT
+STR_CID_TIN                                                                     :{TINYFONT}TIN
+STR_CID_TINPLATE                                                                :{TINYFONT}TINP
+STR_CID_TYRES                                                                   :{TINYFONT}TYRE
+STR_CID_UREA                                                                    :{TINYFONT}UREA
+STR_CID_VEHICLE_BODIES                                                          :{TINYFONT}VBOD
+STR_CID_VEHICLE_ENGINES                                                         :{TINYFONT}VENG
+STR_CID_VEHICLE_PARTS                                                           :{TINYFONT}VPAR
+STR_CID_VEHICLES                                                                :{TINYFONT}CARS
+STR_CID_WOOL                                                                    :{TINYFONT}WOOL
+STR_CID_YARN                                                                    :{TINYFONT}YARN
+STR_CID_ZINC                                                                    :{TINYFONT}ZINC
 
 
 STR_ERR_CLIMATE_TOYLAND                                                         :{ORANGE}FIRS tidak dibuat untuk digunakan dengan lanskap "Taman Bermain"
+STR_ERR_OPENTTD_VERSION                                                         :{ORANGE}E00: FIRS diperlukan untuk versi OpenTTD 1.7.0 keatas (atau bagi mereka yang menggunakan build trunk, r27769)
+STR_ERR_INCOMPATIBLE_SET                                                        :{ORANGE}E01: {YELLOW}Set tidak terkdukung: {ORANGE}{STRING}
+STR_ERR_INCOMPATIBLE_PARAM_CANSET                                               :{ORANGE}E02: {YELLOW}Set tidak terkdukung: {ORANGE}CanSet parameter 2 harus 0 untuk berfungsi dengan FIRS.
+STR_ERR_INCOMPATIBLE_PARAM_CITYSET                                              :{ORANGE}E02: {YELLOW}Set tidak terkdukung: {ORANGE}NA City Set parameter 2 harus 0 untuk berfungsi dengan FIRS.
+STR_ERR_INCOMPATIBLE_SET_TTRS_VERSION                                           :{ORANGE}E04: {YELLOW}Set tidak terkdukung: {ORANGE}Total Town Replacement Harus versi 3.11 keatas.
 
 STR_ERR_LOCATION_NOT_ABOVE_SNOWLINE                                             :hanya diletakkan di atas garis salju.
+STR_ERR_LOCATION_NOT_BELOW_SNOWLINE                                             :hanya diletakkan di bawah garis salju.
 STR_ERR_LOCATION_NOT_ON_WATER                                                   :hanya diletakkan di atas tanah kering.
 STR_ERR_LOCATION_NOT_IN_DESERT                                                  :tidak dapat diletakkan di gurun.
 STR_ERR_LOCATION_NOT_ON_STEEP_SLOPE                                             :tidak dapat diletakkan di tebing.
 STR_ERR_LOCATION_LIMIT_1_PER_TOWN                                               :hanya satu diperbolehkan di kota ini.
 
+STR_PROD_CHANGE_TEST                                                            :{BIGFONT}{BLACK}Tikus melompat keatas kucing
+
 STR_IND_ALUMINIUM_PLANT                                                         :Peleburan Aluminium
+STR_IND_ALUMINA_REFINERY                                                        :Peleburan Alumina
+STR_IND_AMMONIA_PLANT                                                           :Pabrik Amonia
 STR_IND_ARABLE_FARM                                                             :Pertanian Garapan
-STR_IND_BIOREFINERY                                                             :Biorefinery
+STR_IND_APPLIANCE_FACTORY                                                       :Pabrik Peralatan
+STR_IND_ASSEMBLY_PLANT                                                          :Pabrik Perakitan
+STR_IND_BAKERY                                                                  :Pabrik Roti
+STR_IND_BASIC_OXYGEN_FURNACE                                                    :Tanur Oksigen Dasar
+STR_IND_BAUXITE_MINE                                                            :Tambang Bauksit
+STR_IND_BIOREFINERY                                                             :Kilang Minyak Hayati
+STR_IND_BLAST_FURNACE                                                           :Tanur Tinggi
+STR_IND_BODY_PLANT                                                              :Pabrik Bodi Kendaraan
 STR_IND_BREWERY                                                                 :Pabrik Pembuatan Bir
-STR_IND_CIDER_MILL                                                              :Pabrik Cider
-STR_IND_BRICK_WORKS                                                             :Pabrik Batu Bata
-STR_IND_BUILDERS_YARD                                                           :Toko Bangunan
-STR_IND_BULK_TERMINAL                                                           :Terminal Pengumpulan
+STR_IND_CIDER_MILL                                                              :Pabrik Sider
+STR_IND_COTTON_FARM                                                             :Pertanian Kapas
+STR_IND_BRICK_WORKS                                                             :Pengrajin Batu Bata
+STR_IND_BUILDERS_YARD                                                           :Pabrik Konstruksi
+STR_IND_BULK_TERMINAL                                                           :Terminal Curah
+STR_IND_CANNERY                                                                 :Pabrik Pengalengan Makanan
+STR_IND_CARBON_BLACK_PLANT                                                      :Pabrik Karbon Hitam
 STR_IND_CEMENT_PLANT                                                            :Pabrik Semen
+STR_IND_CHEMICAL_PLANT                                                          :Pabrik Bahan Kimia
+STR_IND_CHLOR_ALKALI_PLANT                                                      :Pabrik Klor-alkali
+STR_IND_CHROMITE_MINE                                                           :Tambang Kromit
+STR_IND_CIVIL_EXPLOSIVES_FACILITY                                               :Tempat Fasilitas Bahan Peledak
 STR_IND_CLAY_PIT                                                                :Tambang Tanah Liat
 STR_IND_COFFEE_ESTATE                                                           :Perkebunan Kopi
+STR_IND_COKE_OVEN                                                               :Pemanggangan Kokas
+STR_IND_COMPONENT_FACTORY                                                       :Pabrik Komponen
+STR_IND_COPPER_CONCENTRATOR                                                     :Pabrik Konsentrator Tembaga
+STR_IND_COPPER_REFINERY                                                         :Pabrik Peleburan Tembaga
+STR_IND_CRYO_PLANT                                                              :Pabrik Krio
 STR_IND_DAIRY                                                                   :Pabrik Susu
+STR_IND_DAIRY_FARM                                                              :Peternakan Susu
+STR_IND_DISTILLERY                                                              :Penyulingan dan Pabrik Anggur
 STR_IND_DREDGING_SITE                                                           :Pengerukan Pasir Laut
+STR_IND_EDIBLE_OIL_REFINERY                                                     :Pabrik Minyak Goreng
+STR_IND_ELECTRIC_ARC_FURNACE                                                    :Tanur Busur Listrik
+STR_IND_ELECTRICAL_WORKS                                                        :Bengkel Elektrik
+STR_IND_ENGINE_PLANT                                                            :Pabrik Mesin
+STR_IND_ETHYLENE_CRACKER                                                        :Pabrik Perengkahan Nafta
+STR_IND_FARM                                                                    :Pertanian
+STR_IND_FARM_SUPPLY_YARD                                                        :Tempat Pasokan Alat Pertanian
+STR_IND_FERROCHROME_SMELTER                                                     :Pabrik Peleburan Paduan Besi
+STR_IND_FERTILISER_PLANT                                                        :Pabrik Pupuk
+STR_IND_FACTORY_1                                                               :Pabrik 1
+STR_IND_FACTORY_2                                                               :Pabrik 2
+STR_IND_FACTORY_3                                                               :Pabrik 3
+STR_IND_FISCHER_TROPSCH_PLANT                                                   :Pabrik Pencairan Batu Bara
+STR_IND_FISH_FARM                                                               :Pertanian Ikan
 STR_IND_FISHING_GROUND                                                          :Area Tangkapan Ikan
-STR_IND_FISHING_HARBOUR                                                         :Pelabuhan Ikan
-STR_IND_FOOD_MARKET                                                             :Toko Bahan Pangan
-STR_IND_FURNITURE_FACTORY                                                       :Pabrik Furnitur
+STR_IND_FISHING_HARBOUR                                                         :Pelabuhan Nelayan Ikan
+STR_IND_FISHING_VILLAGE                                                         :Kampung Nelayan
+STR_IND_FLOUR_MILL                                                              :Pabrik Tepung
+STR_IND_FOOD_MARKET                                                             :Toko Kelontong
+STR_IND_FOOD_PROCESSOR                                                          :Pabrik Pengolahan Makanan
+STR_IND_FRUIT_PACKING_PLANT                                                     :Pabrik Pengemasan Buah
+STR_IND_FURNITURE_FACTORY                                                       :Pabrik Mebel
+STR_IND_FORGE_AND_FOUNDRY                                                       :Bengkel Pandai dan Pengecoran Besi
 STR_IND_GENERAL_STORE                                                           :Toko
-STR_IND_GLASS_WORKS                                                             :Peleburan Kaca
+STR_IND_GLASS_WORKS                                                             :Pabrik Pembuatan Kaca
 STR_IND_HARDWARE_STORE                                                          :Toko Perangkat Keras
 STR_IND_HOTEL                                                                   :Hotel
-STR_IND_IRON_WORKS                                                              :Peleburan Besi
+STR_IND_HERDING_COOP                                                            :Tempat Penggembalaan
+STR_IND_IRON_WORKS                                                              :Bengkel Besi
 STR_IND_JUNKYARD                                                                :Pembuangan Besi Bekas
-STR_IND_LIME_KILN                                                               :Pabrik Pembakaran Kapur
+STR_IND_LATEX_PROCESSOR                                                         :Pabrik Pengolahan Lateks
+STR_IND_LIME_KILN                                                               :Tempat Pembakaran Kapur
+STR_IND_LIMESTONE_MINE                                                          :Tambang Batu Gamping
+STR_IND_LIQUIDS_TERMINAL                                                        :Pelabuhan Bahan Cairan
 STR_IND_LUMBER_YARD                                                             :Pemotongan Kayu
 STR_IND_MACHINE_SHOP                                                            :Toko Mesin
+STR_IND_MACHINE_WORKS                                                           :Pabrik Mesin
+STR_IND_MANGANESE_MINE                                                          :Pabrik Mangan
+STR_IND_MEAT_PACKING_PLANT                                                      :Pabrik Pengemasan Daging
+STR_IND_METAL_WORKSHOP                                                          :Bengkel Logam
 STR_IND_MIXEDFARM                                                               :Pertanian Campuran
+STR_IND_NITRATE_MINE                                                            :Tambang Nitrat
 STR_IND_ORCHARD_PIGGERY                                                         :Perkebunan Buah-Buahan dan Perkebunan Babi
-STR_IND_PETROLPUMP                                                              :Stasiun Bahan Bakar
-STR_IND_PLASTICS_PLANT                                                          :Pabrik Plastik
-STR_IND_PORT                                                                    :Pekabuhan
-STR_IND_QUARRY                                                                  :Tambang Pasir
-STR_IND_RANCH                                                                   :Pertanian Besar
+STR_IND_PAINT_FACTORY                                                           :Pabrik Cat
+STR_IND_PEATLANDS                                                               :Lahan Gambut
+STR_IND_PETROLPUMP                                                              :Stasiun Pengisian Bahan Bakar
+STR_IND_PHOSPHATE_MINE                                                          :Tambang Fosfat
+STR_IND_PHOSPHORIC_ACID_PLANT                                                   :Pabrik Asam Fosfat
+STR_IND_PLASTICS_PLANT                                                          :Pabrik Cetakan
+STR_IND_PLAZA                                                                   :Plaza
+STR_IND_POLYETHYLENE_PLANT                                                      :Pabrik Polietilen
+STR_IND_POLYPROPYLENE_PLANT                                                     :Pabrik Polipropilena
+STR_IND_POLYMER_PLANT                                                           :Pabrik Polimer
+STR_IND_PORT                                                                    :Pelabuhan
+STR_IND_POTASH_MINE                                                             :Tambang Kalium Karbonat
+STR_IND_PYRITE_MINE                                                             :Tambang Pirit
+STR_IND_PYRITE_SMELTER                                                          :Peleburan Pirit
+STR_IND_POWER_PLANT                                                             :Stasiun Pembangkit Listrik
+STR_IND_QUARRY                                                                  :Tambang
+STR_IND_RANCH                                                                   :Peternakan Besar
 STR_IND_RECYCLING_DEPOT                                                         :Tempat Pembuangan Sampah
 STR_IND_RECYCLING_PLANT                                                         :Pabrik Daur Ulang
+STR_IND_REINDEER_FARM                                                           :Peternakan Rusa
+STR_IND_SALT_MINE                                                               :Tambang Garam
+STR_IND_SALT_EVAPORATOR                                                         :Tempat Penguap Garam
+STR_IND_SEAWEED_FARM                                                            :Pertanian Rumput Laut
 STR_IND_SHEEPFARM                                                               :Peternakan Domba
+STR_IND_SLAG_GRINDING_PLANT                                                     :Pabrik Penggilingan Terak
 STR_IND_SMITHY_FORGE                                                            :Bengkel Pandai Besi
-STR_IND_STOCKYARD                                                               :Pabrik Pengalengan
+STR_IND_SOAP_FACTORY                                                            :Pabrik Produk Pembersih
+STR_IND_SODA_ASH_MINE                                                           :Tambang Soda Abu
+STR_IND_SOLVAY_PLANT                                                            :Pabrik Solvay
+# we use 'integrated_steel_mill' in code to avoid confusion with Steeltown mills, but it's easier to just use 'Steel Mill' for name that players see
+STR_IND_INTEGRATED_STEEL_MILL                                                   :Pabrik Baja
+STR_IND_SHEET_MILL                                                              :Pabrik Lembaran Besi
+STR_IND_SHEET_AND_PIPE_MILL                                                     :Pabrik Pipa dan Lembaran Besi
+STR_IND_SHIPBREAKER                                                             :Pembuangan Rongsokan Kapal
+STR_IND_SPICE_PLANTATION                                                        :Perkebunan Rempah-Rempah
+STR_IND_STOCKYARD                                                               :Pabrik Pemotongan Daging
 STR_IND_SUGAR_REFINERY                                                          :Pabrik Gula
-STR_IND_TEXTILE_MILL                                                            :Pabrik Pakaian
+STR_IND_SULPHURIC_ACID_PLANT                                                    :Pabrik Asam
+STR_IND_SUPPLY_YARD                                                             :Tempat Pasokan Alat Pertanian
+STR_IND_SYNTHETIC_RUBBER_PLANT                                                  :Pabrik Karet Sintetis
+STR_IND_TAR_SANDS_MINE                                                          :Tambang Pasir Tar
+STR_IND_TEXTILE_MILL                                                            :Pabrik Tekstil
+STR_IND_TINPLATE_WORKS                                                          :Bengkel Pelat Timah
 STR_IND_TRADING_POST                                                            :Tempat Perdagangan
-
-
-STR_PRIMARY_PRODUCTION_1X                                                       :{BLACK}Produksi sekarang: {YELLOW}Normal{}{}{BLACK}Untuk menggandakan produksi antarkan {SIGNED_WORD} peti alat dalam tiga bulan (atau {SIGNED_WORD} peti untuk produksi empat kali lipat)
-STR_PRIMARY_PRODUCTION_2X                                                       :{BLACK}Produksi sekarang: {YELLOW}Naikkan (ganda){}{}{BLACK}Untuk meneruskan tingkat ini, antarkan {SIGNED_WORD} peti alat dalam tiga bulan, atau {SIGNED_WORD} peti alat untuk naikkan ke produksi empat kali lipat
-STR_PRIMARY_PRODUCTION_4X                                                       :{BLACK}Produksi sekarang: {YELLOW}Gung ho (empat kali lipat){}{}{BLACK}Untuk meneruskan tingkat ini, antarkan {SKIP}{SIGNED_WORD} peti alat dalam tiga bulan
-STR_PORT_PRODUCTION_1X                                                          :{BLACK}Produksi sekarang: {YELLOW}Normal{}{}{BLACK}Untuk menggandakan produksi antarkan {SIGNED_WORD} satuan kargo dalam tiga bulan{}Untuk produksi empat kali lipat antarkan {SIGNED_WORD} satuan kargo dalam tiga bulan
-STR_PORT_PRODUCTION_2X                                                          :{BLACK}Produksi sekarang: {YELLOW}Naikkan (ganda){}{}{BLACK}Untuk meneruskan tingkat ini, antarkan {SIGNED_WORD} satuan kargo dalam tiga bulan, atau {SIGNED_WORD} satuan kargo untuk naikkan ke produksi empat kali lipat
-STR_PORT_PRODUCTION_4X                                                          :{BLACK}Produksi sekarang: {YELLOW}Gung ho (empat kali lipat){}{}{BLACK}Untuk meneruskan tingkat ini, antarkan {SKIP}{SIGNED_WORD} satuan kargo dalam tiga bulan
-STR_GENERIC_NEWLINE                                                             :{}
+STR_IND_TYRE_PLANT                                                              :Pabrik Karet dan Ban
+STR_IND_VINEYARD                                                                :Kebun Anggur
+STR_IND_VEHICLE_DISTRIBUTOR                                                     :Dealer Kendaraan
+STR_IND_WHARF                                                                   :Dermaga
+STR_IND_WIRE_AND_SECTION_MILL                                                   :Pabrik Kawat dan Bagian Logam
 
 STR_FUND_ARABLE_FARM                                                            :{}{BLACK}Lokasi: {YELLOW}Tidak dapat dibuat di atas garis salju atau di daerah gurun.
-STR_FUND_COFFEE_ESTATE                                                          :{}{BLACK}Lokasi: {YELLOW}Tidak bisa dibuat di salju atau di gurun.
-STR_FUND_FOREST                                                                 :{}{BLACK}Lokasi: {YELLOW}Tidak dapat dibuat di daerah gurun.
-STR_FUND_FRUIT_PLANTATION                                                       :{}{BLACK}Lokasi: {YELLOW}Tidak dapat dibuat di atas garis salju.
-STR_FUND_ORCHARD_PIGGERY                                                        :{}{BLACK}Lokasi: {YELLOW}Tidak bisa dibuat di salju atau di gurun.
-STR_FUND_RUBBER_PLANTATION                                                      :{}{BLACK}Lokasi: {YELLOW}Tidak bisa dibuat di salju atau di gurun.
+STR_FUND_COFFEE_ESTATE                                                          :{}{BLACK}Lokasi: {YELLOW}Tidak dapat dibuat di atas garis salju atau di daerah gurun.
+STR_FUND_DAIRY_FARM                                                             :{}{BLACK}Lokasi: {YELLOW}Tidak dapat dibuat di atas garis salju atau di daerah gurun.
+STR_FUND_FARM                                                                   :{}{BLACK}Lokasi: {YELLOW}Tidak dapat dibuat di atas garis salju atau di daerah gurun.
+STR_FUND_FOREST                                                                 :{}{BLACK}Lokasi: {YELLOW}Tidak dapat dibuat di atas garis salju atau di daerah gurun.
+STR_FUND_FRUIT_PLANTATION                                                       :{}{BLACK}Lokasi: {YELLOW}Tidak dapat dibuat di atas garis salju atau di daerah gurun.
+STR_FUND_HERDING_COOP                                                           :{}{BLACK}Lokasi: {YELLOW}Hanya dapat dibuat di garis salju.
+STR_FUND_ORCHARD_PIGGERY                                                        :{}{BLACK}Lokasi: {YELLOW}Tidak dapat dibuat di atas garis salju atau di daerah gurun.
+STR_FUND_RUBBER_PLANTATION                                                      :{}{BLACK}Lokasi: {YELLOW}Tidak dapat dibuat di atas garis salju atau di daerah gurun.
+STR_FUND_VINEYARD                                                               :{}{BLACK}Lokasi: {YELLOW}Tidak dapat dibuat di atas garis salju atau di daerah gurun.
 
-STR_FUND_AVAILABLE_FROM                                                         :{}{BLACK}Dapat dibuat sejak: {YELLOW}{COMMA}
-STR_FUND_AVAILABLE_UNTIL                                                        :{}{BLACK}Tidak dapat dibuat sejak: {YELLOW}{COMMA}
+STR_FUND_AVAILABLE_FROM                                                         :{}{BLACK}Dapat dibangun pada: {YELLOW}{COMMA}
+STR_FUND_AVAILABLE_UNTIL                                                        :{}{BLACK}Tidak tersedia dibangun setelah: {YELLOW}{COMMA}
 
 STR_TOWN                                                                        :{STRING}
 STR_STATION                                                                     :{STRING} {STRING}
 
 STR_STATION_ANIMALS                                                             :Pasar Kuda
+STR_STATION_AUTOMOTIVE                                                          :Otomotif
+STR_STATION_BAR_GRILL_AND_ROOMS                                                 :Resor
+STR_STATION_BARNS                                                               :Lumbung
+STR_STATION_BARREL_AND_KEG                                                      :Barel and Tong
+STR_STATION_BASE                                                                :Pangkalan
+STR_STATION_BAUXITE                                                             :Deposit Bauksit
+STR_STATION_BONEYARD                                                            :Tempat Tulang Belulang
+STR_STATION_BANK_TOP                                                            :Bank Atas
+STR_STATION_BRINE_WORKS                                                         :Pengrajin Air Asin
+STR_STATION_CANNERY                                                             :Pengalengan
+STR_STATION_CASTINGS                                                            :Pengecoran
+STR_STATION_COLLIERY                                                            :Tambang batu bara
+STR_STATION_COMPONENTS                                                          :Komponen
+STR_STATION_COPPER_LODE                                                         :Lapisan Tembaga
+STR_STATION_CREOSOTING                                                          :Kreososi
+STR_STATION_CRYO_PLANT                                                          :Pabrik Krio
+STR_STATION_DAIRY_LANE                                                          :Jalur Susu
+STR_STATION_DYNAMO                                                              :Dinamo
+STR_STATION_ESTATE                                                              :Kawasan perkebunan
+STR_STATION_EXCHANGE                                                            :Pertukaran
 STR_STATION_FARM_1                                                              :Tanah milik bangsawan
-STR_STATION_FISHMARKET                                                          :Pasar Ikan
+STR_STATION_FARM_2                                                              :Padang Rumput
+STR_STATION_FARM_3                                                              :Peternakan besar
+STR_STATION_FEED_AND_SEED                                                       :Pakan dan Biji
+STR_STATION_FISHMARKET                                                          :Pasar ikan
+STR_STATION_FISH_PENS                                                           :Kandang ikan
+STR_STATION_FOOD_CORPORATION                                                    :Perusahaan Pangan
+STR_STATION_FOREST                                                              :Pendaratan Kayu Gelondongan
+STR_STATION_FORGE                                                               :Penempaan
+STR_STATION_FURNACE                                                             :Tungku
+STR_STATION_GALVANISING                                                         :Galvanisasi
+STR_STATION_HEAVY_EQUIPMENT_YARD                                                :Lapangan Alat Berat
+STR_STATION_HEAVY_INDUSTRY_2                                                    :Pengrajin
+STR_STATION_HERDING_COOP                                                        :Pondok
 STR_STATION_INDUSTRY_ESTATE_1                                                   :Taman Industri
-STR_STATION_INDUSTRY_HARBOUR_1                                                  :Pelabuhan Industri
+STR_STATION_INDUSTRY_HARBOUR_1                                                  :Lapangan Pasang Surut
+STR_STATION_INDUSTRY_HARBOUR_2                                                  :Pasisir
+STR_STATION_INDUSTRY_HARBOUR_3                                                  :Panggung Pendaratan
+STR_STATION_INDUSTRY_HARBOUR_4                                                  :Tepi pantai
+STR_STATION_IRONSTONE                                                           :Batu besi
+STR_STATION_JOINERS_SHOP                                                        :Toko Tukang Kayu
+STR_STATION_KILNS                                                               :Pembakaran
+STR_STATION_KIMBERLITE_DEPOSITS                                                 :Deposit Kimberlit
+STR_STATION_LIMESTONE_MINES                                                     :Pertambangan Batu Gamping
+STR_STATION_MANGANESE_MINES                                                     :Pertambangan Mangan
 STR_STATION_MARKET                                                              :Pasar
+STR_STATION_MEAT                                                                :Rendering
+STR_STATION_MERCHANTS_LANE                                                      :Jalur Pedagang
 STR_STATION_MILL                                                                :Pabrik
 STR_STATION_MINE                                                                :Jalan penyamak kulit
+STR_STATION_MOULDINGS                                                           :Pencetakan
+STR_STATION_OIL_RIG                                                             :Lapangan Minyak
+STR_STATION_OIL_PRESS                                                           :Pers Minyak
+STR_STATION_ORCHARDS                                                            :Kebun Buah-Buahan
+STR_STATION_PHENOLS                                                             :Fenol
 STR_STATION_PIT                                                                 :Lubang
+STR_STATION_PIPE_MILL                                                           :Pabrik Pipa
 STR_STATION_PLANTATION                                                          :Perkebunan
-STR_STATION_POWERHUNGRY                                                         :Pembangkit listrik
-STR_STATION_REFINERY                                                            :Tanah pelabuhan
+STR_STATION_PLAZA                                                               :Plaza
+STR_STATION_POLYMERS                                                            :Polimer
+STR_STATION_POWERHUNGRY                                                         :Pembangkit Listrik
+STR_STATION_POWERTRAIN                                                          :Unit daya
+STR_STATION_PUMPS                                                               :Pompa
+STR_STATION_PYRITES                                                             :Deposit Pirit
+STR_STATION_REFINERY                                                            :Kilang
+STR_STATION_ROD_MILL                                                            :Pabrik Batang
+STR_STATION_RUBBER_COMPANY                                                      :Perusahaan Karet
+STR_STATION_SALT                                                                :Dataran garam
+STR_STATION_SALTPETER_WORKS                                                     :Pengrajin nitrat
+STR_STATION_SEAFOOD                                                             :Boga bahari
+STR_STATION_SHARP_STREET                                                        :Jalan tajam
+STR_STATION_SHEEP_FOLD                                                          :Kandang domba
+STR_STATION_SHOALS                                                              :Beting
+STR_STATION_SILO                                                                :Silo
+STR_STATION_SMELTER                                                             :Peleburan
+STR_STATION_SOOT_FURNACE                                                        :Tungku Jelaga
+STR_STATION_STACKS                                                              :Tumpukan
+STR_STATION_STAMP_AND_PLATE                                                     :Stempel dan Pelat
+STR_STATION_SUGAR_COMPANY                                                       :Perusahaan Gula
+STR_STATION_TANK_FARM                                                           :Peternakan Tangki
+STR_STATION_TAPPERS_SHED                                                        :Gudang penyadapan
 STR_STATION_TOWN_1                                                              :Balai kota tua
-STR_STATION_WATER                                                               :Gosong pasir
+STR_STATION_TOWN_2                                                              :Jalan bertingkat tinggi
+STR_STATION_TOWN_3                                                              :Pertokoan
+STR_STATION_TRONA_BEDS                                                          :Ranjang trona
+STR_STATION_WATER                                                               :Gorong pasir
+STR_STATION_WEAVE_AND_DYE                                                       :Tenun dan Pewarna
+STR_STATION_WELLS                                                               :Sumur
+STR_STATION_WINERY                                                              :Kilang Anggur
+STR_STATION_VEHICLE_DISTRIBUTOR                                                 :Dealer kendaraan
+
+# do not translate these
+STR_GENERIC_NEWLINE                                                             :{}
+# to use when dynamically choosing text colours, and we can't return a colour code directly
+STR_COLOUR_BLUE                                                                 :{BLUE}
+STR_COLOUR_GOLD                                                                 :{GOLD}
+STR_COLOUR_GREEN                                                                :{GREEN}
+STR_COLOUR_LTBLUE                                                               :{LTBLUE}
+STR_COLOUR_RED                                                                  :{RED}
+STR_COLOUR_YELLOW                                                               :{YELLOW}
+STR_COLOUR_WHITE                                                                :{WHITE}
