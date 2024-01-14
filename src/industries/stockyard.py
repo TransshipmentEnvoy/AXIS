@@ -8,12 +8,6 @@ industry = IndustrySecondary(
     prob_in_game="3",
     prob_map_gen="5",
     map_colour="177",
-    location_checks=dict(
-        near_at_least_one_of_these_keystone_industries=[
-            ["sheep_farm", "farm", "dairy_farm", "orchard_and_piggery"],
-            72,
-        ]
-    ),
     special_flags=["IND_FLAG_MILITARY_HELICOPTER_CAN_EXPLODE"],
     name="string(STR_IND_STOCKYARD)",
     nearby_station_name="string(STR_STATION_ANIMALS)",
