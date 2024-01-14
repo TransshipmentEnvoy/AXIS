@@ -95,7 +95,7 @@ STR_CARGO_NAME_FISH                                                             
 STR_CARGO_NAME_FISH_AND_MEAT                                                    :Ikan & Daging
 STR_CARGO_NAME_FLOUR                                                            :Tepung
 STR_CARGO_NAME_FOOD_ADDITIVES                                                   :Bahan Tambahan Pangan
-STR_CARGO_NAME_FORGINGS_AND_CASTINGS                                            :Tempat & Coran
+STR_CARGO_NAME_FORGINGS_AND_CASTINGS                                            :Tempa & Coran
 STR_CARGO_NAME_FORMIC_ACID                                                      :Asam Format
 STR_CARGO_NAME_FRUITS                                                           :Buah
 STR_CARGO_NAME_FURNITURE                                                        :Mebel
@@ -109,7 +109,7 @@ STR_CARGO_NAME_TIMBER                                                           
 # cargo uses Sodium Hydroxide as string as it's interchangeable with Lye, but lye is convenient for filename / cargo label
 STR_CARGO_NAME_LYE                                                              :Natrium Hidroksida
 STR_CARGO_NAME_MEAT                                                             :Daging
-STR_CARGO_NAME_METAL                                                            :Logan
+STR_CARGO_NAME_METAL                                                            :Logam
 STR_CARGO_NAME_METHANE                                                          :Metana
 STR_CARGO_NAME_METHANOL                                                         :Metanol
 STR_CARGO_NAME_MILK                                                             :Susu
@@ -204,11 +204,11 @@ STR_CARGO_UNIT_ELECTRICAL_PARTS                                                 
 STR_CARGO_UNIT_ENGINEERING_SUPPLIES                                             :{SIGNED_WORD} peti dari pasokan alat teknik
 STR_CARGO_UNIT_ETHYLENE                                                         :{VOLUME} dari monomer
 STR_CARGO_UNIT_EXPLOSIVES                                                       :{SIGNED_WORD} peti dari bahan peledak
-STR_CARGO_UNIT_FERROCHROME                                                      :{WEIGHT} dari ferroalloys
-STR_CARGO_UNIT_FERTILISER                                                       :{WEIGHT} dari fertiliser
-STR_CARGO_UNIT_FOOD_ADDITIVES                                                   :{WEIGHT} dari food additives
-STR_CARGO_UNIT_FORGINGS_AND_CASTINGS                                            :{WEIGHT} dari forgings and castings
-STR_CARGO_UNIT_FORMIC_ACID                                                      :{VOLUME} dari formic acid
+STR_CARGO_UNIT_FERROCHROME                                                      :{WEIGHT} dari paduan besi
+STR_CARGO_UNIT_FERTILISER                                                       :{WEIGHT} dari pupuk
+STR_CARGO_UNIT_FOOD_ADDITIVES                                                   :{WEIGHT} dari bahan tambahan pangan
+STR_CARGO_UNIT_FORGINGS_AND_CASTINGS                                            :{WEIGHT} dari tempa dan coran
+STR_CARGO_UNIT_FORMIC_ACID                                                      :{VOLUME} dari asam format
 STR_CARGO_UNIT_FIBRES                                                           :{SIGNED_WORD} ikat dari serat tanaman
 STR_CARGO_UNIT_FISH                                                             :{WEIGHT} dari ikan
 STR_CARGO_UNIT_FISH_AND_MEAT                                                    :{WEIGHT} dari ikan & daging
