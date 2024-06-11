@@ -62,7 +62,7 @@ STR_CARGO_NAME_BIOMASS                                                          
 STR_CARGO_NAME_BUILDING_MATERIALS                                               :{G=p}Baustoffe
 STR_CARGO_NAME_CARBON_BLACK                                                     :Ruß
 STR_CARGO_NAME_CARBON_STEEL                                                     :Kohlenstoffstahl
-STR_CARGO_NAME_CASSAVA                                                          :Manoik
+STR_CARGO_NAME_CASSAVA                                                          :Maniok
 STR_CARGO_NAME_CAST_IRON                                                        :Gußeisen
 STR_CARGO_NAME_CEMENT                                                           :{G=m}Zement
 # more specific petrochemicals
@@ -442,7 +442,7 @@ STR_IND_BREWERY                                                                 
 STR_IND_CIDER_MILL                                                              :{G=w}Brennerei
 STR_IND_COTTON_FARM                                                             :Baumwollplantage
 STR_IND_BRICK_WORKS                                                             :{G=w}Ziegelei
-STR_IND_BUILDERS_YARD                                                           :Bauhof
+STR_IND_BUILDERS_YARD                                                           :{G=m}Bauhof
 STR_IND_BULK_TERMINAL                                                           :{G=m}Überseehafen
 STR_IND_CANNERY                                                                 :Konservenfabrik
 STR_IND_CARBON_BLACK_PLANT                                                      :Rußfabrik
@@ -456,7 +456,7 @@ STR_IND_COFFEE_ESTATE                                                           
 STR_IND_COKE_OVEN                                                               :Kokerei
 STR_IND_COMPONENT_FACTORY                                                       :Fahrzeugteilefabrik
 STR_IND_COPPER_CONCENTRATOR                                                     :Copper Concentrator
-STR_IND_COPPER_REFINERY                                                         :Kupferraffinerie
+STR_IND_COPPER_REFINERY                                                         :{G=w}Kupferraffinerie
 STR_IND_CRYO_PLANT                                                              :Luftzerleger
 STR_IND_DAIRY                                                                   :{G=w}Molkerei
 STR_IND_DAIRY_FARM                                                              :Meierei
