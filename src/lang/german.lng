@@ -442,7 +442,7 @@ STR_IND_BREWERY                                                                 
 STR_IND_CIDER_MILL                                                              :{G=w}Brennerei
 STR_IND_COTTON_FARM                                                             :Baumwollplantage
 STR_IND_BRICK_WORKS                                                             :{G=w}Ziegelei
-STR_IND_BUILDERS_YARD                                                           :Construction Plant
+STR_IND_BUILDERS_YARD                                                           :Bauhof
 STR_IND_BULK_TERMINAL                                                           :{G=m}Überseehafen
 STR_IND_CANNERY                                                                 :Konservenfabrik
 STR_IND_CARBON_BLACK_PLANT                                                      :Rußfabrik
@@ -452,11 +452,11 @@ STR_IND_CHLOR_ALKALI_PLANT                                                      
 STR_IND_CHROMITE_MINE                                                           :Chromerz-Bergwerk
 STR_IND_CIVIL_EXPLOSIVES_FACILITY                                               :Sprengstoffwerk
 STR_IND_CLAY_PIT                                                                :{G=w}Tongrube
-STR_IND_COFFEE_ESTATE                                                           :Coffee Estate
+STR_IND_COFFEE_ESTATE                                                           :{G=w}Kaffeeplantage
 STR_IND_COKE_OVEN                                                               :Kokerei
-STR_IND_COMPONENT_FACTORY                                                       :Component Factory
+STR_IND_COMPONENT_FACTORY                                                       :Fahrzeugteilefabrik
 STR_IND_COPPER_CONCENTRATOR                                                     :Copper Concentrator
-STR_IND_COPPER_REFINERY                                                         :Copper Smelter
+STR_IND_COPPER_REFINERY                                                         :Kupferraffinerie
 STR_IND_CRYO_PLANT                                                              :Luftzerleger
 STR_IND_DAIRY                                                                   :{G=w}Molkerei
 STR_IND_DAIRY_FARM                                                              :Meierei
@@ -483,7 +483,7 @@ STR_IND_FLOUR_MILL                                                              
 STR_IND_FOOD_MARKET                                                             :{G=m}Lebensmittelladen
 STR_IND_FOOD_PROCESSOR                                                          :Lebensmittelfabrik
 STR_IND_FRUIT_PACKING_PLANT                                                     :Obstverpackungsanlage
-STR_IND_FURNITURE_FACTORY                                                       :Möbelfabrik
+STR_IND_FURNITURE_FACTORY                                                       :{G=w}Möbelfabrik
 STR_IND_FORGE_AND_FOUNDRY                                                       :Schmiede und Gießerei
 STR_IND_GENERAL_STORE                                                           :{G=m}Laden
 STR_IND_GLASS_WORKS                                                             :{G=w}Glashütte
@@ -497,9 +497,10 @@ STR_IND_LIME_KILN                                                               
 STR_IND_LIMESTONE_MINE                                                          :{G=m}Kalksteinbruch
 STR_IND_LIQUIDS_TERMINAL                                                        :Flüssigguthafen
 STR_IND_LUMBER_YARD                                                             :{G=w}Bauhof
+STR_IND_TIMBER_YARD                                                             :{G=w}Bauhof
 STR_IND_MACHINE_SHOP                                                            :{G=m}Maschinenfabrik
-STR_IND_MACHINE_WORKS                                                           :Manganerz-Bergwerk
-STR_IND_MANGANESE_MINE                                                          :Manganese Mine
+STR_IND_MACHINE_WORKS                                                           :
+STR_IND_MANGANESE_MINE                                                          :Manganerz-Bergwerk
 STR_IND_MEAT_PACKING_PLANT                                                      :Fleischwarenfabrik
 STR_IND_METAL_WORKSHOP                                                          :Metallwarenhandel
 STR_IND_MIXEDFARM                                                               :{G=m}Bauernhof
