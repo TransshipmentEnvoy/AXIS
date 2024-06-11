@@ -221,6 +221,7 @@ STR_CARGO_UNIT_HYDROGEN                                                         
 STR_CARGO_UNIT_KAOLIN                                                           :{WEIGHT} Porzellanerde
 STR_CARGO_UNIT_LIMESTONE                                                        :{WEIGHT} Kalkstein
 STR_CARGO_UNIT_LOGS                                                             :{WEIGHT} Baumstämme
+STR_CARGO_UNIT_LUMBER                                                           :{WEIGHT} Schnittholz
 STR_CARGO_UNIT_TIMBER                                                           :{WEIGHT} Schnittholz
 # cargo uses Sodium Hydroxide as string as it's interchangeable with Lye, but lye is convenient for filename / cargo label
 STR_CARGO_UNIT_LYE                                                              :{VOLUME} Natronlauge
