@@ -15,6 +15,7 @@ industry = IndustrySecondary(
     fund_cost_multiplier="45",
     graphics_change_dates=[1952, 1978],
     pollution_and_squalor_factor=2,
+    intro_year="1820",
 )
 
 industry.economy_variations['BETTER_LIVING_THROUGH_CHEMISTRY'].enabled = True

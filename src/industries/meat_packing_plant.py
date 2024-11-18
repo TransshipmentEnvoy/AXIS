@@ -11,6 +11,7 @@ industry = IndustrySecondary(
     name="string(STR_IND_MEAT_PACKING_PLANT)",
     nearby_station_name="string(STR_STATION_MEAT)",
     fund_cost_multiplier="120",
+    intro_year="1860",
 )
 
 

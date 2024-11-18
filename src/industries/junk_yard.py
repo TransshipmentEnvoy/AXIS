@@ -1,17 +1,18 @@
-from industry import IndustrySecondary, TileLocationChecks
+from industry import IndustryTownProducerPopulationDependent, TileLocationChecks
 
-industry = IndustrySecondary(
+industry = IndustryTownProducerPopulationDependent(
     id="junk_yard",
-    accept_cargos_with_input_ratios=[("RCYC", 6)],
-    prod_cargo_types_with_output_ratios=[("SCMT", 3)],
+    prod_cargo_types_with_multipliers=[("SCMT", 16)],
     prob_in_game="3",
     prob_map_gen="10",
     map_colour="64",
+    location_checks=dict(require_town_min_population=800),
     prospect_chance="0.75",
     name="string(STR_IND_JUNKYARD)",
     nearby_station_name="string(STR_STATION_BONEYARD)",
     fund_cost_multiplier="110",
     graphics_change_dates=[1949, 1960, 1980, 2000],
+    intro_year="1855",
 )
 
 

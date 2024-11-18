@@ -13,6 +13,7 @@ industry = IndustrySecondary(
     nearby_station_name="string(STR_STATION_SMELTER)",
     fund_cost_multiplier="120",
     pollution_and_squalor_factor=2,
+    intro_year="1875",
 )
 
 industry.economy_variations["BASIC_ARCTIC"].enabled = True

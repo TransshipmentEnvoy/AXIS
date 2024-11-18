@@ -17,6 +17,7 @@ industry = IndustrySecondary(
         ]
     ),
     fund_cost_multiplier="118",
+    intro_year="1813",
 )
 
 industry.economy_variations["STEELTOWN"].enabled = True

@@ -12,6 +12,7 @@ industry = IndustrySecondary(
     nearby_station_name="string(STR_STATION_SMELTER)",
     fund_cost_multiplier="200",
     graphics_change_dates=[],
+    intro_year="1893",
 )
 
 industry.economy_variations['STEELTOWN'].enabled = True
