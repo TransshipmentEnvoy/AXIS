@@ -12,6 +12,7 @@ industry = IndustrySecondary(
     name="string(STR_IND_GLASS_WORKS)",
     nearby_station_name="string(STR_STATION_SHARP_STREET)",
     fund_cost_multiplier="95",
+    intro_year="1674",
 )
 
 industry.economy_variations["BASIC_TEMPERATE"].enabled = True
