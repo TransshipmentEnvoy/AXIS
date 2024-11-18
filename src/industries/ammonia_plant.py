@@ -14,6 +14,7 @@ industry = IndustrySecondary(
     nearby_station_name="string(STR_STATION_HEAVY_INDUSTRY_2)",
     fund_cost_multiplier="170",
     graphics_change_dates=[1952],
+    intro_year="1900",
 )
 
 industry.economy_variations['BETTER_LIVING_THROUGH_CHEMISTRY'].enabled = True

@@ -11,7 +11,7 @@ industry = IndustrySecondary(
     name="string(STR_IND_POLYMER_PLANT)",
     nearby_station_name="string(STR_STATION_POLYMERS)",
     fund_cost_multiplier="125",
-    intro_year="1900",
+    intro_year="1939",
 )
 
 industry.economy_variations['BETTER_LIVING_THROUGH_CHEMISTRY'].enabled = True

@@ -7,10 +7,11 @@ industry = IndustryTownProducerPopulationDependent(
     prob_map_gen="20",
     map_colour="191",
     life_type="IND_LIFE_TYPE_EXTRACTIVE",
-    location_checks=dict(require_town_min_population=800),
+    location_checks=dict(require_town_min_population=1600),
     name="string(STR_IND_RECYCLING_DEPOT)",
     nearby_station_name="string(STR_STATION_TOWN_2)",
     fund_cost_multiplier="118",
+    intro_year="1978",
 )
 
 industry.economy_variations["STEELTOWN"].enabled = True
