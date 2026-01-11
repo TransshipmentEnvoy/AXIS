@@ -4,6 +4,18 @@ Don't make changes here, make them in the Polar Fox project and redistribute.
 Any changes made here are liable to be over-written.
 """
 
+"""
+This file is generated from the Polar Fox project.
+Don't make changes here, make them in the Polar Fox project and redistribute.
+Any changes made here are liable to be over-written.
+"""
+
+"""
+This file is generated from the Polar Fox project.
+Don't make changes here, make them in the Polar Fox project and redistribute.
+Any changes made here are liable to be over-written.
+"""
+
 # used to construct the cargo table automatically
 # ! order is significant ! - openttd will cascade through default cargos in the order specified by the cargo table
 cargo_labels = [
@@ -108,109 +120,237 @@ cargo_labels = [
     "STSE",
     "SEED",
     "TATO",
+    "WDCH",
+    "BAKE",
+    "N7__",
+    "WELD",
+    "RBAR",
+    "STPP",
+    "SOAP",
+    "H2__",
+    "ALO_",
+    "NHNO",
+    "STIG",
+    "STBL",
+    "STSL",
+    "FEAL",
+    "STTB",
+    "TYCO",
+    "HWAR",
+    "STBR",
+    "STSW",
+    "STPL",
     #
     "NULL",
 ]
 
 # shared lists of allowed classes, shared across multiple vehicle types
+# !! CABBAGE PARTLY UPDATED OCT 2024 UNFINISHED
 base_refits_by_class = {
-    "all_freight": [
-        "CC_BULK",
-        "CC_PIECE_GOODS",
-        "CC_EXPRESS",
-        "CC_LIQUID",
-        "CC_ARMOURED",
-        "CC_REFRIGERATED",
-        "CC_COVERED",
-        "CC_NON_POURABLE",
-    ],
-    "covered_hopper_freight": [],  # explicit allowal by label instead
-    "dump_freight": ["CC_BULK"],
-    "empty": [],
-    "express_freight": ["CC_EXPRESS", "CC_ARMOURED"],
-    "flatbed_freight": ["CC_PIECE_GOODS"],
-    "liquids": ["CC_LIQUID"],
-    "mail": ["CC_MAIL"],
-    "packaged_freight": ["CC_PIECE_GOODS", "CC_EXPRESS", "CC_ARMOURED", "CC_LIQUID"],
-    "pax": ["CC_PASSENGERS"],
-    "refrigerated_freight": ["CC_REFRIGERATED"],
+    "all_freight": {
+        "allowed": [
+            "CC_ARMOURED",
+            "CC_COVERED_BULK",
+            "CC_EXPRESS",
+            "CC_FLATBED",
+            "CC_GAS_BULK",
+            "CC_LIQUID_BULK",
+            "CC_OPEN_BULK",
+            "CC_PIECE_GOODS",
+            "CC_POWDER_BULK",
+            "CC_REFRIGERATED",
+            "CC_WEIRD",
+        ],
+        "disallowed": [],
+    },
+    "covered_hopper_freight_any_grade": {
+        "allowed": [
+            "CC_COVERED_BULK",
+        ],
+        "disallowed": [],
+    },
+    "covered_hopper_freight_food_grade": {
+        "allowed": [
+            "CC_COVERED_BULK",
+        ],
+        "disallowed": [
+            "CC_NON_POTABLE",
+        ],
+    },
+    "covered_hopper_freight_non_food_grade": {
+        "allowed": [
+            "CC_COVERED_BULK",
+        ],
+        "disallowed": [
+            "CC_POTABLE",
+        ],
+    },
+    "cryo_gases": {"allowed": ["CC_GAS_BULK"], "disallowed": []},
+    "dump_freight": {"allowed": ["CC_OPEN_BULK"], "disallowed": []},
+    "empty": {"allowed": [], "disallowed": []},
+    "express_freight": {"allowed": ["CC_EXPRESS", "CC_ARMOURED"], "disallowed": []},
+    "flatbed_freight": {"allowed": ["CC_FLATBED"], "disallowed": []},
+    "liquids_non_food_grade": {
+        "allowed": ["CC_LIQUID_BULK"],
+        "disallowed": ["CC_POTABLE"],
+    },
+    "liquids_food_grade": {
+        "allowed": ["CC_LIQUID_BULK"],
+        "disallowed": ["CC_NON_POTABLE"],
+    },
+    "mail": {"allowed": ["CC_MAIL"], "disallowed": []},
+    "packaged_freight": {
+        "allowed": ["CC_PIECE_GOODS", "CC_EXPRESS"],
+        "disallowed": ["CC_WEIRD"],  # weird covered in all_freight,
+    },
+    "pax": {"allowed": ["CC_PASSENGERS"], "disallowed": []},
+    "refrigerated_freight": {
+        "allowed": ["CC_REFRIGERATED"],
+        "disallowed": ["CC_NON_POTABLE"],
+    },
+    "silo_powders": {"allowed": ["CC_POWDER_BULK"], "disallowed": []},
 }
 
 # generally we want to allow refit on classes, and disallow on labels (see disallowed_refits_by_label)
 # BUT for _some_ specialist vehicle types, it's simpler to just allow refit by label
+# !! CABBAGE NEEDS UPDATED OCT 2024 NOT CLEAR THESE ALL NEEDED !!
 allowed_refits_by_label = {
+    # box cars get some extended cargos
+    # !! CABBAGE NEEDS UPDATED OCT 2024 - STILL NEEDED?
+    # !! some of these might be able to drop back to classes with FIRS 4 or 5
     "box_freight": [
-        "MAIL",
-        "GRAI",
-        "WHEA",
-        "MAIZ",
-        "FRUT",
         "BEAN",
-        "NITR",
         "CMNT",
-    ],  # box cars get some extended cargos
+        "FRUT",
+        "GRAI",
+        "MAIL",
+        "MAIZ",
+        "NITR",
+        "WHEA",
+    ],
+    # seems to be used by intermodal, otherwise chemicals tankers are deprecated in favour of product tankers
+    # !! CABBAGE NEEDS UPDATED OCT 2024 - STILL NEEDED?
+    # !! some of these might be able to drop back to classes with FIRS 4 or 5
+    # !! not used in Horse
     "chemicals": [
         "ACID",
-        "RFPR",
         "CHLO",
-    ],  # seems to be used by intermodal, otherwise chemicals tankers are deprecated in favour of product tankers
-    "cold_metal": ["STEL", "METL", "STCB", "STAL", "STST", "COPR", "STSH", "STWR"],
-    "covered_hoppers": [
-        "GRAI",
-        "WHEA",
-        "MAIZ",
-        "SUGR",
-        "FMSP",
         "RFPR",
-        "CLAY",
+    ],
+    "metal_products": [
+        "ALUM",
+        "COPR",
+        "METL",
+        "RBAR",
+        "STAL",
+        "STBL",
+        "STBR",
+        "STCB",
+        "STEL",
+        "STIG",
+        "STPL",
+        "STSE",
+        "STSH",
+        "STSL",
+        "STST",
+        "STSW",
+        "STWR",
+        "TYCO",
+        "ZINC",
+    ],
+    # 'dirty' mine/quarry covered hopper cargos
+    # !! CABBAGE NEEDS UPDATED OCT 2024 - STILL NEEDED?
+    # !! some of these might be able to drop back to classes with FIRS 4 or 5
+    "covered_hoppers_mineral": [
+        "ALO_",
         "BDMT",
-        "BEAN",
+        "CLAY",
+        "CMNT",
+        "FERT",
+        "FMSP",
+        "KAOL",
         "NITR",
-        "RUBR",
-        "SAND",
+        "PHOS",
         "POTA",
         "QLME",
-        "SASH",
-        "CMNT",
-        "KAOL",
-        "FERT",
+        "RFPR",
         "SALT",
+        "SAND",
+        "SASH",
+    ],
+    # non-food cargos that need 'clean' covered hopper
+    # preference is not to overlap with mineral covered hoppers and farm hoppers (as they will be combined where needed)
+    # !! CABBAGE NEEDS UPDATED OCT 2024 - STILL NEEDED?
+    # !! some of these might be able to drop back to classes with FIRS 4 or 5
+    "covered_hoppers_pellet_powder": [
+        "CBLK",
+        "NHNO",
         "PLAS",
-        "PHOS",
-    ],  # not CBLK, gets dedicated vehicles or box
-    "cryo_gases": ["CHLO", "O2__", "NH3_"],
-    "edible_liquids": ["MILK", "WATR", "BEER", "FOOD", "EOIL"],
-    "fruit_veg": ["FRUT", "BEAN", "CASS", "JAVA", "NUTS"],
+        "RUBR",
+    ],
+    # !! CABBAGE NEEDS UPDATED OCT 2024 - STILL NEEDED?
+    # !! dropped in Horse, keyword still here to avoid breaking Sam compile, but can be dropped after that
+    "cryo_gases": [],
+    # !! CABBAGE NEEDS UPDATED OCT 2024 - STILL NEEDED?
+    # !! some of these might be able to drop back to classes with FIRS 4 or 5
+    # !! dropped in Horse, keyword still here to avoid breaking Sam compile, but can be dropped after that
+    "edible_liquids": [],
+    # !! CABBAGE NEEDS UPDATED OCT 2024 - STILL NEEDED?
+    # !! some of these might be able to drop back to classes with FIRS 4 or 5
+    "farm_food_products": [
+        "BAKE",
+        "CERE",
+        "FERT",
+        "FMSP",
+        "FRUT",
+        "GRAI",
+        "JAVA",
+        "MAIZ",
+        "NUTS",
+        "OLSD",
+        "SEED",
+        "SGBT",
+        "SUGR",
+        "TATO",
+        "WHEA",
+    ],
+    # !! CABBAGE NEEDS UPDATED OCT 2024 - STILL NEEDED?
+    # for bolster wagon
     "long_products": [
-        "STEL",
-        "METL",
-        "STCB",
-        "STAL",
-        "STST",
-        "COPR",
-        "STSH",
-        "STSE",
-        "STWR",
-        "WOOD",
-        "WDPR",
-        "BDMT",
         "ALUM",
-        "PIPE",
-        "ZINC",
+        "BDMT",
+        "COPR",
         "ENSP",
-    ],  # for bolster wagon
+        "METL",
+        "PIPE",
+        "STAL",
+        "STBL",
+        "STCB",
+        "STEL",
+        "STIG",
+        "STSE",
+        "STSH",
+        "STSL",
+        "STST",
+        "STWR",
+        "WDPR",
+        "WOOD",
+        "ZINC",
+    ],
+    # !! CABBAGE NEEDS UPDATED OCT 2024 - STILL NEEDED?
+    # hax for intermodal container sprite selection - reefer car refits work just fine using CC_REFRIGERATED
     "reefer": [
+        "FISH",
         "FOOD",
         "FRUT",
-        "FISH",
-    ],  # hax for intermodal container sprite selection - reefer car refits work just fine using CC_REFRIGERATED
+    ],
 }
 
 # rather than using disallowed classes (can cause breakage), specific labels are disallowed
+# !! CABBAGE NEEDS UPDATED OCT 2024 - STILL NEEDED?
 disallowed_refits_by_label = {
     "non_dump_bulk": [
         "WOOD",
-        "SGCN",
         "FICR",
         "BDMT",
         "WDPR",
@@ -229,7 +369,9 @@ disallowed_refits_by_label = {
         "URAN",
         "CBLK",
         "PLAS",
+        "BAKE",
     ],
+    # used to exclude from standard tankers
     "non_generic_liquids": [
         "MILK",
         "WATR",
@@ -238,23 +380,10 @@ disallowed_refits_by_label = {
         "EOIL",
         "O2__",
         "CHLO",
-    ],  # used to exclude from standard tankers
-    "non_flatbed_freight": [
-        "FOOD",
-        "FISH",
-        "LVST",
-        "FRUT",
-        "BEER",
-        "MILK",
-        "JAVA",
-        "SUGR",
-        "NUTS",
-        "EOIL",
-        "BOOM",
-        "FERT",
-        "PLAS",
-        "CBLK",
+        "N7__",
     ],
+    # !! CABBAGE ... DEPRECATED
+    "non_flatbed_freight": [],
     "non_freight_special_cases": ["TOUR"],
 }
 
@@ -264,38 +393,68 @@ disallowed_refits_by_label = {
 # vehicle classes can also just provide their own list locally, using this is convenient, not obligatory
 # !! the names of these deliberately don't match to the names of the vehicle types in a specific grf, as each grf will use these differently to suit vehicle types
 default_cargos = {
-    "box": ["GOOD", "GLAS", "VPTS", "BOOM"],
-    "box_intermodal": ["POWR", "GOOD", "PAPR"],
+    "box": ["GOOD", "TYRE", "GLAS", "VPTS", "BOOM"],
     "box_curtain_side": ["VBOD", "BDMT", "FRUT", "FERT", "WDPR", "GOOD"],
+    "box_goods": ["GOOD", "GLAS", "FRUT", "BOOM"],
+    "box_intermodal": ["POWR", "GOOD", "PAPR"],
     "box_sliding_wall": ["VENG", "BOOM", "PAPR", "JAVA", "GOOD"],
     "box_vehicle_parts": ["VPTS", "PAPR", "RUBR", "STEL", "WOOL", "GOOD"],
-    "bulkhead": ["STCB", "PIPE", "WDPR", "ALUM", "ZINC", "STEL", "COPR"],
-    "coil": ["STST", "STAL", "STEL"],
-    "coil_covered": ["STSH", "STEL"],
+    "bulkhead": [
+        "STSL",
+        "STBL",
+        "STCB",
+        "PIPE",
+        "STPP",
+        "WDPR",
+        "ALUM",
+        "ZINC",
+        "STEL",
+        "COPR",
+    ],
+    "coil": ["STSH", "STWR", "STST", "STAL", "STEL"],
+    "coil_covered": ["STSH", "STWR", "STEL"],
     "covered_ag": ["GRAI", "MAIZ", "BEAN", "NUTS", "FERT", "QLME"],
     "covered_chemical": ["RFPR", "POTA", "PHOS", "SALT", "SAND"],
     "covered_mineral": ["QLME", "SALT", "PHOS", "POTA", "SAND", "KAOL", "NITR"],
     "covered_pellet": ["PLAS", "RUBR", "KAOL", "FERT", "SAND", "SASH", "BEAN"],
-    "covered_roller_roof": [ "KAOL", "QLME", "SALT"],
+    "covered_roller_roof": ["KAOL", "QLME", "SALT"],
     "cryo_gases": ["O2__", "CHLO"],
     "dump": ["MNO2", "FECR", "NITR", "PHOS", "SAND", "GRVL"],
-    "dump_high_sides": ["COKE", "PEAT", "COAL"],
+    "dump_aggregates": ["LIME", "GRVL", "SAND", "CLAY"],
+    "dump_high_sides": ["COKE", "PEAT", "COAL", "WDCH"],
+    "dump_ore": ["IORE", "PHOS", "PORE", "CORE"],
     "dump_scrap": ["SCMT", "COAL"],
     "edibles_tank": ["WATR", "MILK", "BEER"],
+    # ENSP was tried as default for express, but confusing when attached express cars for mail to pax trains
     "express": [
         "MAIL",
         "ENSP",
         "FMSP",
         "GOOD",
         "FOOD",
-    ],  # ENSP was tried as default, but confusing when attached express cars for mail to pax trains
+        "HWAR",  # because delivered to towns
+    ],
+    "farm_products_box": ["FRUT", "BEAN", "CASS", "JAVA", "NUTS", "FOOD"],
+    "farm_products_hopper": [
+        "MAIZ",
+        "GRAI",
+        "WHEA",
+        "CERE",
+        "SGBT",
+        "OLSD",
+        "CASS",
+        "NUTS",
+        "FOOD",
+    ],
     "flat": ["ALUM", "WDPR", "STEL", "COPR", "METL"],
+    # possibly sliding roof shouldn't be flat at all?
     "flat_sliding_roof": [
         "ZINC",
         "ALUM",
         "WOOL",
         "BDMT",
-    ],  # possibly sliding roof shouldn't be flat at all?
+    ],
+    # possibly tarpaulin roof shouldn't be flat at all?
     "flat_tarpaulin_roof": [
         "STAL",
         "PAPR",
@@ -303,12 +462,13 @@ default_cargos = {
         "WOOL",
         "FMSP",
         "WDPR",
-    ],  # possibly tarpaulin roof shouldn't be flat at all?
+    ],
+    # fruit_veg should be deprecated
     "fruit_veg": ["FRUT", "BEAN", "CASS", "JAVA", "NUTS"],
     "hopper_coal": ["COAL", "COKE", "NITR", "POTA"],
     "hopper_ore": ["IORE", "CORE", "PORE", "PHOS", "COKE"],
     "hopper_rock": ["LIME", "GRVL", "SAND", "PORE", "SALT", "IORE", "CORE"],
-    "long_products": ["STSE", "WOOD", "PIPE", "STEL"],
+    "long_products": ["STSE", "WOOD", "PIPE", "STPP", "STEL"],
     "mail": ["MAIL"],
     "metal": ["STEL", "COPR"],
     "open": ["GOOD", "STWR", "WDPR"],
@@ -360,11 +520,12 @@ cargo_spritesheet_bounding_boxes_base = (
 # also supports multiple cargo sprite types to suit vehicle, e.g. piled fruit, fruit in crates etc
 # keep alphabetised for general quality-of-life
 piece_vehicle_type_to_sprites_maps = {
+    # tarps_grey_1 for DFLT
     "coil": [
         "copper_coils_eye_longitudinal_1",
         "steel_coils_eye_longitudinal_1",
         "tarps_grey_1",
-    ],  # tarps_grey_1 for DFLT
+    ],
     "flat": [
         "barrels_silver_1",
         "copper_coils_eye_to_sky_1",
@@ -382,6 +543,7 @@ piece_vehicle_type_to_sprites_maps = {
         "tarps_gold_1",
         "tarps_red_1",
     ],
+    # tarps_grey_1 for DFLT
     "long_products": [
         "ingots_1",
         "logs_1",
@@ -390,7 +552,7 @@ piece_vehicle_type_to_sprites_maps = {
         "steel_slab_1",
         "steel_wire_rod_1",
         "tarps_grey_1",
-    ],  # tarps_grey_1 for DFLT
+    ],
     "open": [
         "barrels_silver_1",
         "coffee_1",
@@ -434,24 +596,24 @@ piece_sprites_to_cargo_labels_maps = {
     "copper_coils_eye_to_sky_1": ["COPR"],
     "crates_1": ["GOOD"],
     "fruit_1": ["FRUT"],
-    "ingots_1": ["ALUM", "ZINC"],
+    "ingots_1": ["ALUM", "STIG", "ZINC"],
     "logs_1": ["WOOD"],
-    "logs_2": [
-        "DFLT"
-    ],  # logs_2 is intended for vehicles that *only* use the log sprite, so just provide DFLT to avoid duplicate warnings from nmlc
+    # logs_2 is intended for vehicles that *only* use the log sprite, so just provide DFLT to avoid duplicate warnings from nmlc
+    "logs_2": ["DFLT"],
     "lumber_planks_1": ["WDPR"],
     "nuts_1": ["NUTS"],
     "paper_coils_eye_to_sky_1": ["PAPR"],
-    "pipes_1": ["PIPE"],
+    "pipes_1": ["PIPE", "STPP"],
     "sugarcane_1": ["SGCN"],
-    "steel_coils_eye_longitudinal_1": ["STEL", "METL", "STAL", "STCB", "STST", "STSH"],
-    "steel_coils_eye_to_sky_1": ["STEL", "METL", "STSH"],
-    "steel_slab_1": ["STAL", "STCB", "STST"],
-    "steel_wire_rod_1": ["STWR"],
+    "steel_coils_eye_longitudinal_1": ["METL", "STAL", "STCB", "STEL", "STST", "STSH"],
+    "steel_coils_eye_to_sky_1": ["STEL", "STSH", "METL"],
+    "steel_slab_1": ["STAL", "STBL", "STCB", "STSL", "STSE", "STST"],
+    "steel_wire_rod_1": ["RBAR", "STWR", "TYCO"],
     "tarps_blue_1": ["FMSP"],
     "tarps_gold_1": ["ENSP"],
     "tarps_red_1": ["BDMT"],
-    "tarps_grey_1": ["DFLT"],  # see note on use of DFLT above
+    # see note on use of DFLT above
+    "tarps_grey_1": ["DFLT"],
 }
 
 # Tanker recolour maps
@@ -461,14 +623,34 @@ piece_sprites_to_cargo_labels_maps = {
 tanker_livery_recolour_maps_extended = (
     (
         "OIL_",
-        "1CC",  # second value is body recolour map for intermodal bulk containers
+        # second value is body recolour map for intermodal bulk containers
+        "1CC",
         {136: 1, 137: 2, 138: 3, 139: 4, 140: 5, 141: 6, 142: 7, 143: 8},
+        # weathered state
+        {136: 104, 137: 1, 138: 2, 139: 3, 140: 4, 141: 5, 142: 6, 143: 7},
     ),
-    ("CTAR", "1CC", {136: 1, 137: 2, 138: 3, 139: 4, 140: 5, 141: 6, 142: 7, 143: 8}),
+    (
+        "CTAR",
+        "1CC",
+        {136: 104, 137: 1, 138: 2, 139: 3, 140: 4, 141: 5, 142: 6, 143: 7},
+        # weathered state
+        {136: 70, 137: 104, 138: 1, 139: 2, 140: 3, 141: 4, 142: 5, 143: 6},
+    ),
     # see note on DFLT above
     (
         "DFLT",
         "2CC",
+        {
+            136: 198,
+            137: 199,
+            138: 200,
+            139: 201,
+            140: 202,
+            141: 203,
+            142: 204,
+            143: 205,
+        },
+        # weathered state
         {
             136: 198,
             137: 199,
@@ -484,29 +666,43 @@ tanker_livery_recolour_maps_extended = (
         "SULP",
         "1CC",
         {136: 62, 137: 63, 138: 64, 139: 65, 140: 66, 141: 67, 142: 68, 143: 69},
+        # weathered state
+        {136: 62, 137: 63, 138: 64, 139: 193, 140: 194, 141: 50, 142: 51, 143: 52},
     ),
     # RFPR deliberately 2CC to allow combining with 1CC livery details
     (
         "RFPR",
         "1CC",
         {136: 80, 137: 81, 138: 82, 139: 83, 140: 84, 141: 85, 142: 86, 143: 87},
+        # weathered state
+        {136: 80, 137: 81, 138: 82, 139: 83, 140: 84, 141: 85, 142: 86, 143: 87},
     ),
     (
         "RUBR",
         "1CC",
         {136: 40, 137: 41, 138: 42, 139: 43, 140: 44, 141: 45, 142: 46, 143: 47},
+        # weathered state
+        {136: 71, 137: 72, 138: 73, 139: 43, 140: 44, 141: 76, 142: 77, 143: 47},
     ),
     (
         "PETR",
         "1CC",
         {136: 16, 137: 17, 138: 18, 139: 19, 140: 20, 141: 21, 142: 22, 143: 23},
+        # weathered state
+        {136: 16, 137: 5, 138: 6, 139: 8, 140: 9, 141: 21, 142: 22, 143: 23},
     ),
 )
 
 tanker_livery_recolour_maps = [
     (i[0], i[2]) for i in tanker_livery_recolour_maps_extended
 ]
-
+tanker_livery_recolour_maps_weathered = [
+    (i[0], i[3]) for i in tanker_livery_recolour_maps_extended
+]
+# drop the weathered state for containers, the container handling expects a 3-tuple only (oof)
+tanker_livery_recolour_maps_containers = [
+    (i[0], i[1], i[2]) for i in tanker_livery_recolour_maps_extended
+]
 # Bulk
 # keep cargos in alphabetical order for ease of reading
 # the extended format includes information for intermodal that isn't needed in common cases
@@ -515,8 +711,9 @@ tanker_livery_recolour_maps = [
 bulk_cargo_recolour_maps_extended = (
     (
         "AORE",
-        "1CC",  # second value is body recolour map for intermodal bulk containers
-        {170: 42, 171: 123, 172: 74, 173: 125, 174: 162, 175: 126, 176: 78},
+        # second value is body recolour map for intermodal bulk containers
+        "1CC",
+        {170: 122, 171: 123, 172: 74, 173: 125, 174: 162, 175: 126, 176: 78},
     ),
     ("CASS", "1CC", {170: 53, 171: 54, 172: 55, 173: 56, 174: 57, 175: 58, 176: 59}),
     ("CLAY", "1CC", {170: 55, 171: 56, 172: 57, 173: 77, 174: 78, 175: 79, 176: 80}),
@@ -533,9 +730,13 @@ bulk_cargo_recolour_maps_extended = (
     ("KAOL", "1CC", {170: 11, 171: 12, 172: 13, 173: 14, 174: 14, 175: 15, 176: 15}),
     ("MNO2", "1CC", {170: 1, 171: 16, 172: 3, 173: 17, 174: 18, 175: 19, 176: 20}),
     ("NITR", "1CC", {170: 37, 171: 38, 172: 38, 173: 39, 174: 39, 175: 69, 176: 69}),
-    ("PEAT", "1CC", {170: 104, 171: 105, 172: 106, 173: 107, 174: 108, 175: 24, 176: 25}),
+    (
+        "PEAT",
+        "1CC",
+        {170: 104, 171: 105, 172: 106, 173: 107, 174: 108, 175: 24, 176: 25},
+    ),
     ("PHOS", "1CC", {170: 63, 171: 64, 172: 192, 173: 65, 174: 193, 175: 64, 176: 194}),
-    ("PORE", "1CC", {170: 40, 171: 72, 172: 73, 173: 33, 174: 33, 175: 63, 176: 63}),
+    ("PORE", "1CC", {170: 71, 171: 72, 172: 73, 173: 33, 174: 34, 175: 63, 176: 64}),
     ("POTA", "1CC", {170: 63, 171: 64, 172: 192, 173: 65, 174: 193, 175: 64, 176: 194}),
     ("SALT", "red", {170: 58, 171: 12, 172: 13, 173: 14, 174: 14, 175: 15, 176: 15}),
     (
@@ -547,7 +748,17 @@ bulk_cargo_recolour_maps_extended = (
     ("SCMT", "1CC", {170: 104, 171: 3, 172: 2, 173: 70, 174: 71, 175: 72, 176: 3}),
     ("SGBT", "1CC", {170: 60, 171: 53, 172: 54, 173: 55, 174: 56, 175: 57, 176: 58}),
     ("SLAG", "1CC", {170: 24, 171: 3, 172: 2, 173: 3, 174: 4, 175: 5, 176: 5}),
+    (
+        "SGCN",
+        "1CC",
+        {170: 104, 171: 53, 172: 54, 173: 55, 174: 56, 175: 58, 176: 59},
+    ),
     ("SULP", "1CC", {170: 65, 171: 67, 172: 66, 173: 67, 174: 68, 175: 69, 176: 69}),
+    (
+        "WDCH",
+        "2CC",
+        {170: 108, 171: 64, 172: 65, 173: 197, 174: 36, 175: 196, 176: 197},
+    ),
 )
 
 bulk_cargo_recolour_maps = [(i[0], i[2]) for i in bulk_cargo_recolour_maps_extended]
@@ -578,6 +789,8 @@ cryo_tanker_livery_recolour_maps_extended = (
         "DFLT",
         "1CC",
         {136: 5, 137: 7, 138: 9, 139: 11, 140: 12, 141: 13, 142: 14, 143: 15},
+        # weathered
+        {136: 34, 137: 7, 138: 9, 139: 11, 140: 12, 141: 38, 142: 14, 143: 15},
     ),
     (
         "CHLO",
@@ -585,11 +798,22 @@ cryo_tanker_livery_recolour_maps_extended = (
         {
             136: 154,
             137: 155,
-            138: 157,
-            139: 158,
-            140: 159,
+            138: 156,
+            139: 157,
+            140: 158,
             141: 159,
             142: 160,
+            143: 161,
+        },
+        # weathered
+        {
+            136: 96,
+            137: 155,
+            138: 156,
+            139: 157,
+            140: 158,
+            141: 151,
+            142: 152,
             143: 161,
         },
     ),
@@ -597,6 +821,12 @@ cryo_tanker_livery_recolour_maps_extended = (
 
 cryo_tanker_livery_recolour_maps = [
     (i[0], i[2]) for i in cryo_tanker_livery_recolour_maps_extended
+]
+cryo_tanker_livery_recolour_maps_weathered = [
+    (i[0], i[3]) for i in cryo_tanker_livery_recolour_maps_extended
+]
+cryo_tanker_livery_recolour_maps_containers = [
+    (i[0], i[1], i[2]) for i in cryo_tanker_livery_recolour_maps_extended
 ]
 
 # only intended for intermodal containers, curtain side vehicles will be CC
@@ -631,21 +861,24 @@ container_recolour_cargo_maps = (
     (
         "curtain_side",
         (
+            # this single label is a dirty trick to stop warnings about unused DFLT spritesets
             ["VBOD"],
             curtain_side_livery_recolour_maps,
         ),
-    ),  # this single label is a dirty trick to stop warnings about unused DFLT spritesets
+    ),
     ("edibles_tank", (allowed_refits_by_label["edible_liquids"], [])),
     (
         "livestock",
+        # one label only - extend if other livestock labels added in future
         (["LVST"], []),
-    ),  # one label only - extend if other livestock labels added in future
+    ),
     ("reefer", (allowed_refits_by_label["reefer"], [])),
     ("tank", ([], tanker_livery_recolour_maps)),
     (
         "wood",
+        # one label only - note that wood container sprites are slightly different to stake flatrack
         (["WOOD"], []),
-    ),  # one label only - note that wood container sprites are slightly different to stake flatrack
+    ),
 )
 
 # intermodal flatracks use selected entries from piece_sprites_to_cargo_labels_maps
