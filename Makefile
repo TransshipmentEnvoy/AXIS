@@ -73,13 +73,14 @@ $(LANG_DIR): $(shell $(FIND_FILES) --ext=.py --ext=.pynml --ext=.lng src)
 $(HTML_DOCS): $(shell $(FIND_FILES) --ext=.py --ext=.pynml --ext=.pt --ext=.lng src)
 	$(_V) $(PYTHON3) src/render_docs.py $(ARGS)
 # Insane trick to check whether both DOT and GVPR are not empty.
-ifeq ($(DOT)$(GVPR),$(GVPR)$(DOT))
-	echo "[HTML DOCS] graphviz not found, skipping cargo flow graphs"
-else
-	mkdir docs/html/static/img/cargoflow
-	$(GVPR) 'BEG_G { fname = sprintf("docs/html/%s.dot", $$G.name); writeG($$G, fname) }' docs/cargoflow.dotall
-	cd docs/html; $(DOT) -Tsvg -O *.dot
-endif
+# GRAPHVIZ DOCS NERFED OFF TO MAKE AXIS COMPILE WORK
+# ifeq ($(DOT)$(GVPR),$(GVPR)$(DOT))
+	# echo "[HTML DOCS] graphviz not found, skipping cargo flow graphs"
+# else
+	# mkdir docs/html/static/img/cargoflow
+	# $(GVPR) 'BEG_G { fname = sprintf("docs/html/%s.dot", $$G.name); writeG($$G, fname) }' docs/cargoflow.dotall
+	# cd docs/html; $(DOT) -Tsvg -O *.dot
+# endif
 
 $(NML_FILE): $(shell $(FIND_FILES) --ext=.py --ext=.pynml src)
 	$(_V) $(PYTHON3) src/render_nml.py $(ARGS)

@@ -401,7 +401,7 @@ def main():
     txt_docs = ["readme"]
     license_docs = ["license"]
     markdown_docs = ["changelog"]
-    graph_docs = ["cargoflow"]
+    # graph_docs = ["cargoflow"] # nerfed off
     stylesheets = ["cargoflow_styles"]
 
     render_docs(html_docs, "html")
@@ -414,10 +414,11 @@ def main():
     # just render the markdown docs twice to get txt and html versions, simples no?
     render_docs(markdown_docs, "txt")
     render_docs(markdown_docs, "html", use_markdown=True)
-    render_docs(graph_docs, "dotall")
+    # render_docs(graph_docs, "dotall") # nerfed off
     render_docs(stylesheets, "css")
 
     # cargoflow wrappers are just different enough to not fit generic render_docs() case without making it painfully convoluted
+    """ # nerfed off
     for economy in registered_economies:
         template = docs_templates["cargoflow_wrapper.pt"]
         result = template(economy=economy, doc_helper=DocHelper())
@@ -427,6 +428,7 @@ def main():
         )
         doc_file.write(result)
         doc_file.close()
+    """
     # eh, how long does this take anyway?
     print(format((time() - start), ".2f") + "s")
 
