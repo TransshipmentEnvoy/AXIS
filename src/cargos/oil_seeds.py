@@ -6,9 +6,9 @@ cargo = Cargo(
     unit_name="string(STR_CARGO_NAME_OIL_SEEDS)",
     type_abbreviation="string(STR_CID_OIL_SEEDS)",
     sprite="NEW_CARGO_SPRITE",
-    weight="0.5", 
+    weight="0.5",
     is_freight="1",
-    cargo_classes="bitmask(CC_BULK, CC_COVERED)",
+    cargo_classes="bitmask(CC_BULK, CC_COVERED)", # NOT UPDATED FOR FRAX
     cargo_label="OLSD",
     # apart from TOWNGROWTH_PASSENGERS and TOWNGROWTH_MAIL, FIRS does not set any town growth effects; this has the intended effect of disabling food / water requirements for towns in desert and above snowline
     town_growth_effect="TOWNGROWTH_NONE",
