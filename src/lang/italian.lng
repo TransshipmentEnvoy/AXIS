@@ -5,20 +5,20 @@
 
 STR_GRF_DESC                                                                    :{ORANGE}AXIS: Another Xtreme Industry Set{}{BLACK}Il successore ufficiale di XIS. Progettato da Emperor Jake, basato sul codice FIRS 4 di andythenorth, FooBar, planetmaker, Terkhen e Yexo, con l'aiuto di molti altri. {SILVER}Per ulteriori informazioni, incluso l'uso di AXIS, consultare il file readme. {BLACK}Licenza: GPL v2.
 STR_PARAM_DESC_COAST_DISTANCE_MARINE_INDUSTRY                                   :Distanza massima, in caselle, di zone di pesca, piattaforme petrolifere e siti di dragaggio dalla costa.
-STR_PARAM_DESC_ECONOMIES                                                        :Ogni economia dà una combinazione diversa di merci e industrie.{}{}Per uno schema di gioco semplificato, un'economia di {SILVER}base {BLACK} comprende meno industrie e merci rispetto ad altre economie di FIRS.{}{}Sul sito web di FIRS si trovano informazioni dettagliate su ogni economia.
-STR_PARAM_DESC_NO_OPENINGS                                                      :Da predefinito, durante il gioco si apriranno nuove industrie.{}{}Se {SILVER}impedire l'apertura {BLACK} è attivata, le industrie non verranno generate durante il gioco e i giocatori non potranno nemmeno finanziare o fare prospezioni per l'apertura di nuove industrie.
-STR_PARAM_DESC_NO_SPAWNING                                                      :Per impostazione predefinita, non vengono generate in modo casuale nuove industrie durante la partita.{}{}Se si attiva {SILVER}consentire l'apertura {BLACK}, le industrie si riproducono in modo casuale nel corso della partita. La quantità è determinata dall'impostazione della densità delle industrie.
+STR_PARAM_DESC_ECONOMIES                                                        :Ogni economia offre una combinazione diversa di merci e industrie.{}{}Un'economia di {SILVER}base {BLACK} è semplificata comprendendo meno industrie e merci rispetto ad altre economie di FIRS.{}{}Sul sito web di FIRS si trovano informazioni dettagliate su ogni economia.
+STR_PARAM_DESC_NO_OPENINGS                                                      :Di default durante il gioco si apriranno nuove industrie.{}{}Se {SILVER}impedire l'apertura {BLACK} è attivata, le industrie non verranno generate durante il gioco e non si potranno finanziare o fare prospezioni per l'apertura di nuove industrie.
+STR_PARAM_DESC_NO_SPAWNING                                                      :Di default, non vengono generate nuove industrie durante la partita.{}{}Attivando {SILVER}consentire l'apertura {BLACK}, le industrie verranno generate randomicamente durante la partita. La quantità è determinata dall'impostazione della densità delle industrie.
 STR_PARAM_NAME_COAST_DISTANCE_MARINE_INDUSTRY                                   :Distanza massima dalla costa, in caselle, delle industrie marine
 STR_PARAM_NAME_ECONOMIES                                                        :Economia
 STR_PARAM_NAME_NO_OPENINGS                                                      :Impedire l'apertura, la generazione o la prospezione di nuove industrie durante il gioco
 STR_PARAM_NAME_NO_SPAWNING                                                      :Consentire l'apertura, la generazione o la prospezione di nuove industrie durante il gioco
 STR_PARAM_VALUE_SECONDARY_NEVER_CLOSE_0                                         :Illimitata
 
-STR_PARAM_NAME_PRIMARY_LEVEL1_REQUIREMENT                                       :Casse di forniture necessarie per il livello di produzione Elevato (valore predefinito: 16)
-STR_PARAM_NAME_PRIMARY_LEVEL2_REQUIREMENT                                       :Casse di forniture necessarie per il livello di produzione Abnorme (valore predefinito: 80)
-STR_PARAM_DESC_PRIMARY_LEVEL_REQUIREMENT                                        :La produzione delle fattorie, miniere e industrie simili raggiungerà il livello {SILVER}Elevato{BLACK}, e poi il livello {SILVER}Abnorme{BLACK}, se viene consegnato un numero sufficiente di casse.{}{}I valori di default sono già ottimizzati, ma possono essere modificati qui.{}{}Le richieste dei porti e delle industrie simili saranno 8x i valori impostati qui.
-STR_PARAM_NAME_PRIMARY_LEVEL1_BONUS                                             :Livello di produzione Elevato per industrie primarie (%)
-STR_PARAM_NAME_PRIMARY_LEVEL2_BONUS                                             :Livello di produzione Abnorme per industrie primarie (%)
+STR_PARAM_NAME_PRIMARY_LEVEL1_REQUIREMENT                                       :Casse di forniture necessarie per il livello di produzione Migliorato (valore predefinito: 16)
+STR_PARAM_NAME_PRIMARY_LEVEL2_REQUIREMENT                                       :Casse di forniture necessarie per il livello di produzione Estremo (valore predefinito: 80)
+STR_PARAM_DESC_PRIMARY_LEVEL_REQUIREMENT                                        :La produzione delle fattorie, miniere e industrie simili raggiungerà il livello {SILVER}Migliorato{BLACK}, e poi il livello {SILVER}Estremo{BLACK}, se viene consegnato un numero sufficiente di casse.{}{}I valori di default sono già ottimizzati, ma possono essere modificati qui.{}{}Le richieste dei porti e delle industrie simili saranno 8x i valori impostati qui.
+STR_PARAM_NAME_PRIMARY_LEVEL1_BONUS                                             :Livello di produzione Migliorato per industrie primarie (%)
+STR_PARAM_NAME_PRIMARY_LEVEL2_BONUS                                             :Livello di produzione Estremo per industrie primarie (%)
 STR_PARAM_DESC_PRIMARY_LEVEL_BONUS                                              :Produzione delle fattorie, miniere e industrie simili, quando le merci richieste vengono consegnate (espresso in percentuale del valore {SILVER}Normale{BLACK} di produzione).
 
 STR_PARAM_NAME_EXPERIMENTAL_FEATURES                                            :Abilita funzionalità sperimentali
@@ -30,26 +30,25 @@ STR_PARAM_VALUE_ECONOMIES_BASIC_TROPIC                                          
 STR_PARAM_VALUE_ECONOMIES_TROPICAL_PARADISE                                     :Paradiso tropicale
 STR_PARAM_VALUE_ECONOMIES_BETTER_LIVING_THROUGH_CHEMISTRY                       :Vivere meglio grazie alla chimica INCOMPLETO
 STR_PARAM_VALUE_ECONOMIES_IN_A_HOT_COUNTRY                                      :In un paese caldo INCOMPLETO
-STR_PARAM_VALUE_ECONOMIES_STEELTOWN                                             :Città d'acciaio
+STR_PARAM_VALUE_ECONOMIES_STEELTOWN                                             :Città di acciaio
 
 STR_CARGO_SUBTYPE_DISPLAY_CARGO_SUPPLIED_FLAG                                   : {BLACK}(consegnato)
 STR_EXTRA_TEXT_SECONDARY_NON_COMBINATORY                                        :{BLACK}Raggiunge il massimo tasso di produzione se {WHITE}una qualsiasi {BLACK}delle merci richieste viene consegnata.
 STR_EXTRA_TEXT_SECONDARY_COMBINATORY                                            :{BLACK}Per ottenere il massimo tasso di produzione, fornire {WHITE}tutti {BLACK}i tipi di merce richiesti almeno una volta ogni tre mesi.
 STR_EXTRA_TEXT_TOWN_PRODUCER                                                    :{BLACK}La produzione è proporzionale alla popolazione cittadina. Ogni mese la produzione sarà compresa tra un minimo di {WHITE}{SIGNED_WORD} unità{BLACK} e non più di {WHITE}{SIGNED_WORD} unità{BLACK} di carico.
-STR_PRIMARY_PRODUCTION_1X                                                       :{BLACK}Produzione attuale: {YELLOW}Normale{}{}{BLACK}Il livello di produzione {WHITE}Elevato {BLACK} si raggiunge consegnando {SIGNED_WORD} casse di forniture entro 3 mesi{}Per salire al livello {WHITE}Abnorme {BLACK}si devono consegnare {SIGNED_WORD} casse.
-STR_PRIMARY_PRODUCTION_2X                                                       :{BLACK}Produzione attuale: {YELLOW}Elevata{}{}{BLACK}Per mantenere questo livello di produzione, si devono consegnare {SIGNED_WORD} casse di forniture entro 3 mesi{}Per salire al livello {WHITE}Abnorme {BLACK}si devono consegnare {SIGNED_WORD} casse.
-STR_PRIMARY_PRODUCTION_4X                                                       :{BLACK}Produzione attuale: {YELLOW}Abnorme{}{}{BLACK}Per mantenere questo livello di produzione, consegnare {SKIP}{SIGNED_WORD} casse di forniture entro 3 mesi.
-STR_PORT_PRODUCTION_1X                                                          :{BLACK}Produzione attuale: {YELLOW}Normale{}{}{BLACK}Il livello di produzione {WHITE}Elevato {BLACK}si raggiunge consegnando {SIGNED_WORD} unità di forniture entro 3 mesi{}Per salire al livello {WHITE}Abnorme {BLACK}si devono consegnare {SIGNED_WORD} unità.
-STR_PORT_PRODUCTION_2X                                                          :{BLACK}Produzione attuale: {YELLOW}Elevata{}{}{BLACK}Per mantenere questo livello di produzione, si devono consegnare {SIGNED_WORD} unità di merci entro 3 mesi{}Per salire al livello {WHITE}Abnorme {BLACK}si devono consegnare {SIGNED_WORD} unità.
-STR_PORT_PRODUCTION_4X                                                          :{BLACK}Produzione attuale: {YELLOW}Abnorme{}{}{BLACK}Per mantenere questo livello di produzione, si devono consegnare {SKIP}{SIGNED_WORD} unità di merci entro 3 mesi.
+STR_PRIMARY_PRODUCTION_1X                                                       :{BLACK}Produzione attuale: {YELLOW}Normale{}{}{BLACK}Il livello di produzione {WHITE}Migliorato {BLACK} si raggiunge consegnando {SIGNED_WORD} casse di forniture entro 3 mesi{}Per il livello {WHITE}Estremo {BLACK}si devono consegnare {SIGNED_WORD} casse.
+STR_PRIMARY_PRODUCTION_2X                                                       :{BLACK}Produzione attuale: {YELLOW}Migliorata{}{}{BLACK}Per mantenere questo livello di produzione, si devono consegnare {SIGNED_WORD} casse di forniture entro 3 mesi{}Per il livello {WHITE}Estremo {BLACK}si devono consegnare {SIGNED_WORD} casse.
+STR_PRIMARY_PRODUCTION_4X                                                       :{BLACK}Produzione attuale: {YELLOW}Estrema{}{}{BLACK}Per mantenere questo livello di produzione, consegnare {SKIP}{SIGNED_WORD} casse di forniture entro 3 mesi.
+STR_PORT_PRODUCTION_1X                                                          :{BLACK}Produzione attuale: {YELLOW}Normale{}{}{BLACK}Il livello di produzione {WHITE}Migliorato {BLACK}si raggiunge consegnando {SIGNED_WORD} unità di forniture entro 3 mesi{}Per il livello {WHITE}Estremo {BLACK}si devono consegnare {SIGNED_WORD} unità.
+STR_PORT_PRODUCTION_2X                                                          :{BLACK}Produzione attuale: {YELLOW}Migliorata{}{}{BLACK}Per mantenere questo livello di produzione, si devono consegnare {SIGNED_WORD} unità di merci entro 3 mesi{}Per il livello {WHITE}Estremo {BLACK}si devono consegnare {SIGNED_WORD} unità.
+STR_PORT_PRODUCTION_4X                                                          :{BLACK}Produzione attuale: {YELLOW}Estrema{}{}{BLACK}Per mantenere questo livello di produzione, si devono consegnare {SKIP}{SIGNED_WORD} unità di merci entro 3 mesi.
 
 STR_INFORMATIVE_EXTRA_TEXT_PLAZA                                                :{SKIP}{SKIP}Umore della popolazione:{} {STRING}{STRING}{}{}{BLACK}Punteggio di ottimismo: {STRING}{SIGNED_WORD} punt{P 2 o i}{}{BLACK} Bisogni e lussi soddisfatti: {YELLOW}{SIGNED_WORD} punt{P 3 o i} {}{BLACK} Inquinamento e squallore: {YELLOW}{SIGNED_WORD} punto{P 4 o i} {}{}{BLACK}Inquinamento e squallore aumentano con la popolazione e determinati tipi di industrie.{}{}Bisogni e lusso vengono soddisfatti rifornendo determinati tipi di industrie.{}{}Se il punteggio di ottimismo è superiore a 10, l'umore della popolazione sarà {WHITE}ottimista{BLACK}. Se il punteggio di ottimismo è inferiore a -10, l'umore della popolazione sarà {WHITE}pessimista{BLACK}.
 STR_INFORMATIVE_EXTRA_TEXT_PLAZA_MOOD_OPTIMISTIC                                :Ottimista
 STR_INFORMATIVE_EXTRA_TEXT_PLAZA_MOOD_GLOOMY                                    :Pessimista
 STR_INFORMATIVE_EXTRA_TEXT_PLAZA_MOOD_NEUTRAL                                   :Neutrale
-
 STR_CARGO_NAME_ACETIC_ACID                                                      :Acido Acetico
-STR_CARGO_NAME_ACID                                                             :{G=m}Acidi
+STR_CARGO_NAME_ACID                                                             :{G=m}Acido
 STR_CARGO_NAME_ALCOHOL                                                          :{G=m}Alcolici
 STR_CARGO_NAME_ALLOY_STEEL                                                      :{G=m}Acciaio legato
 STR_CARGO_NAME_ALUMINIUM                                                        :{G=m}Alluminio
@@ -68,7 +67,7 @@ STR_CARGO_NAME_CEMENT                                                           
 # more specific petrochemicals
 STR_CARGO_NAME_CHEMICALS                                                        :{G=m}Petrolio raffinato
 STR_CARGO_NAME_CHLORINE                                                         :{G=m}Cloro
-STR_CARGO_NAME_CHROMITE_ORE                                                     :{G=m}Minerale di cromite
+STR_CARGO_NAME_CHROMITE_ORE                                                     :{G=m}Cromite
 STR_CARGO_NAME_CLAY                                                             :{G=f}Argilla
 STR_CARGO_NAME_CLEANING_AGENTS                                                  :{G=m}Detergenti
 STR_CARGO_NAME_COFFEE                                                           :{G=m}Caffé
@@ -189,7 +188,7 @@ STR_CARGO_UNIT_CAST_IRON                                                        
 STR_CARGO_UNIT_CEMENT                                                           :{WEIGHT} di cemento
 STR_CARGO_UNIT_CHEMICALS                                                        :{VOLUME} di petrolio raffinato
 STR_CARGO_UNIT_CHLORINE                                                         :{VOLUME} di cloro
-STR_CARGO_UNIT_CHROMITE_ORE                                                     :{WEIGHT} di minerale di cromite
+STR_CARGO_UNIT_CHROMITE_ORE                                                     :{WEIGHT} di cromite
 STR_CARGO_UNIT_CLAY                                                             :{WEIGHT} di argilla
 STR_CARGO_UNIT_CLEANING_AGENTS                                                  :{WEIGHT} di detergenti
 STR_CARGO_UNIT_COAL_TAR                                                         :{VOLUME} di catrame
@@ -197,7 +196,7 @@ STR_CARGO_UNIT_COFFEE                                                           
 STR_CARGO_UNIT_COKE                                                             :{WEIGHT} di coke
 STR_CARGO_UNIT_COPPER                                                           :{WEIGHT} di rame
 STR_CARGO_UNIT_COPPER_CONCENTRATE                                               :{WEIGHT} di rame concentrato
-STR_CARGO_UNIT_EDIBLE_OIL                                                       :{VOLUME} di olio da cucina
+STR_CARGO_UNIT_EDIBLE_OIL                                                       :{VOLUME} di olio edibile
 STR_CARGO_UNIT_ELECTRICAL_PARTS                                                 :{WEIGHT} di componenti elettrici
 STR_CARGO_UNIT_ENGINEERING_SUPPLIES                                             :{SIGNED_WORD} cass{P 0 a e} di forniture meccaniche
 STR_CARGO_UNIT_ETHYLENE                                                         :{VOLUME} di etilene
@@ -221,7 +220,7 @@ STR_CARGO_UNIT_KAOLIN                                                           
 STR_CARGO_UNIT_LIMESTONE                                                        :{WEIGHT} di calcare
 STR_CARGO_UNIT_LOGS                                                             :{WEIGHT} di tronchi
 STR_CARGO_UNIT_TIMBER                                                           :{WEIGHT} di legname
-# Per il nome del carico si usa "Idrossido di sodio" che è alternativo a "Soda" (Lye) che è invece più comodo da usare per la label o il nome del file
+# Per il nome del carico si usa "Sodium Hydroxide" che è alternativo a "Soda" (Lye) che è invece più comodo da usare per la label o il nome del file
 STR_CARGO_UNIT_LYE                                                              :{VOLUME} di idrossido di sodio
 STR_CARGO_UNIT_MANGANESE                                                        :{WEIGHT} di manganese
 STR_CARGO_UNIT_METAL                                                            :{WEIGHT} di metalli
@@ -248,7 +247,7 @@ STR_CARGO_UNIT_PLASTICS                                                         
 STR_CARGO_UNIT_PLASTIC_PARTS                                                    :{WEIGHT} di componenti plastici
 STR_CARGO_UNIT_POTASH                                                           :{WEIGHT} di potassa
 STR_CARGO_UNIT_PROPYLENE                                                        :{VOLUME} di propilene
-STR_CARGO_UNIT_PYRITE_ORE                                                       :{WEIGHT} di minerale di pirite
+STR_CARGO_UNIT_PYRITE_ORE                                                       :{WEIGHT} di pirite
 STR_CARGO_UNIT_QUICKLIME                                                        :{WEIGHT} di calce viva
 STR_CARGO_UNIT_RARE_METALS                                                      :{WEIGHT} di metalli rari
 STR_CARGO_UNIT_RAW_LATEX                                                        :{VOLUME} di lattice grezzo
@@ -275,8 +274,8 @@ STR_CARGO_UNIT_TIN                                                              
 STR_CARGO_UNIT_TINPLATE                                                         :{WEIGHT} di latta
 STR_CARGO_UNIT_TYRES                                                            :{WEIGHT} di componenti in gomma
 STR_CARGO_UNIT_UREA                                                             :{WEIGHT} di urea
-STR_CARGO_UNIT_VEHICLE_BODIES                                                   :{WEIGHT} di scocche di veicoli
-STR_CARGO_UNIT_VEHICLE_ENGINES                                                  :{WEIGHT} di motori di veicoli
+STR_CARGO_UNIT_VEHICLE_BODIES                                                   :{WEIGHT} di scocche
+STR_CARGO_UNIT_VEHICLE_ENGINES                                                  :{WEIGHT} di motori
 STR_CARGO_UNIT_VEHICLE_PARTS                                                    :{WEIGHT} di componenti auto
 STR_CARGO_UNIT_VEHICLES                                                         :{WEIGHT} di veicoli
 STR_CARGO_UNIT_WOOL                                                             :{SIGNED_WORD} ball{P 0 a e} di lana
@@ -284,7 +283,7 @@ STR_CARGO_UNIT_YARN                                                             
 STR_CARGO_UNIT_ZINC                                                             :{WEIGHT} di zinco
 
 # Sembra che l'uso di 2 caratteri per questi sotto sia una convenzione e non un limite, ho testato 4 caratteri e OpenTTD li rende bene - Maggio 2020
-																							   
+STR_CID_ACETIC_ACID                                                             :{TINYFONT}ACET
 STR_CID_ACID                                                                    :{TINYFONT}ACID
 STR_CID_ALCOHOL                                                                 :{TINYFONT}ALCO
 STR_CID_ALLOY_STEEL                                                             :{TINYFONT}ALEG
@@ -314,7 +313,7 @@ STR_CID_COPPER                                                                  
 STR_CID_COPPER_CONCENTRATE                                                      :{TINYFONT}RAMC
 STR_CID_COPPER_ORE                                                              :{TINYFONT}MIRM
 STR_CID_EDIBLE_OIL                                                              :{TINYFONT}OLIO
-STR_CID_ELECTRICAL_PARTS													                            	:{TINYFONT}ELET
+STR_CID_ELECTRICAL_PARTS													   :{TINYFONT}ELET
 STR_CID_ENGINEERING_SUPPLIES                                                    :{TINYFONT}FMEC
 STR_CID_ETHYLENE                                                                :{TINYFONT}ETIL
 STR_CID_EXPLOSIVES                                                              :{TINYFONT}ESPL
@@ -328,7 +327,7 @@ STR_CID_FLOUR                                                                   
 STR_CID_FOOD_ADDITIVES                                                          :{TINYFONT}AALI
 STR_CID_FOOD                                                                    :{TINYFONT}ALIM
 STR_CID_FORMIC_ACID                                                             :{TINYFONT}FORM
-STR_CID_FORGINGS_AND_CASTINGS												                            :{TINYFONT}FORG
+STR_CID_FORGINGS_AND_CASTINGS												   :{TINYFONT}FORG
 STR_CID_FRUITS                                                                  :{TINYFONT}PAGR
 STR_CID_FURNITURE                                                               :{TINYFONT}MOBI
 STR_CID_GLASS                                                                   :{TINYFONT}VETR
@@ -342,7 +341,7 @@ STR_CID_LIMESTONE                                                               
 STR_CID_LIVESTOCK                                                               :{TINYFONT}BEST
 STR_CID_LOGS                                                                    :{TINYFONT}TRON
 STR_CID_TIMBER                                                                  :{TINYFONT}LEGN
-# cargo uses Sodium Hydroxide as name string as it's interchangeable with Lye, but lye is convenient for filename / cargo label
+# Per il nome del carico si usa "Sodium Hydroxide" che è alternativo a "Soda" (Lye) che è invece più comodo da usare per la label o il nome del file
 STR_CID_LYE                                                                     :{TINYFONT}ISOD
 STR_CID_MAIL                                                                    :{TINYFONT}POST
 STR_CID_MANGANESE                                                               :{TINYFONT}MANG
@@ -423,7 +422,6 @@ STR_ERR_LOCATION_NOT_ON_STEEP_SLOPE                                             
 STR_ERR_LOCATION_LIMIT_1_PER_TOWN                                               :si può costruire solo un'industria di questo tipo per ogni città
 
 STR_PROD_CHANGE_TEST                                                            :{BIGFONT}{BLACK}Il topo salta sul gatto
-
 STR_IND_ALUMINIUM_PLANT                                                         :{G=f}Fabbrica di alluminio
 STR_IND_ALUMINA_REFINERY                                                        :{G=f}Raffineria di allumina
 STR_IND_AMMONIA_PLANT                                                           :{G=f}Fabbrica di ammoniaca
@@ -454,13 +452,13 @@ STR_IND_COFFEE_ESTATE                                                           
 STR_IND_COKE_OVEN                                                               :{G=m}Forno per coke
 STR_IND_COMPONENT_FACTORY                                                       :{G=f}Fabbrica di componenti
 STR_IND_COPPER_CONCENTRATOR                                                     :{G=m}Concentratore di rame
-STR_IND_COPPER_REFINERY														                              :{G=f}Fonderia di rame
+STR_IND_COPPER_REFINERY														   :{G=f}Fonderia di rame
 STR_IND_CRYO_PLANT                                                              :{G=m}Impianto criogenico
 STR_IND_DAIRY                                                                   :{G=f}Azienda casearia
 STR_IND_DAIRY_FARM                                                              :{G=m}Cascina
 STR_IND_DISTILLERY                                                              :{G=m}Distilleria e cantina
 STR_IND_DREDGING_SITE                                                           :{G=m}Sito di dragaggio
-STR_IND_EDIBLE_OIL_REFINERY                                                     :{G=f}Raffineria di olio alimentare
+STR_IND_EDIBLE_OIL_REFINERY                                                     :{G=f}Raffineria olio edibile
 STR_IND_ELECTRIC_ARC_FURNACE                                                    :{G=m}Forno elettrico ad arco
 STR_IND_ELECTRICAL_WORKS                                                        :{G=m}Impianti elettrici
 STR_IND_ENGINE_PLANT                                                            :{G=f}Fabbrica di motori
@@ -469,10 +467,10 @@ STR_IND_FARM                                                                    
 STR_IND_FARM_SUPPLY_YARD                                                        :{G=m}Cantiere di forniture agricole
 STR_IND_FERROCHROME_SMELTER                                                     :{G=f}Fonderia di ferrolega
 STR_IND_FERTILISER_PLANT                                                        :{G=f}Fabbrica di fertilizzanti
-STR_IND_FACTORY_1                                                               :{G=f}Fabbrica
-STR_IND_FACTORY_2                                                               :{G=f}Fabbrica
-STR_IND_FACTORY_3                                                               :{G=f}Fabbrica
-STR_IND_FISCHER_TROPSCH_PLANT                                                   :{G=m}Impianto di liquefazione del carbone
+STR_IND_FACTORY_1                                                               :{G=f}Fabbrica 1
+STR_IND_FACTORY_2                                                               :{G=f}Fabbrica 2
+STR_IND_FACTORY_3                                                               :{G=f}Fabbrica 3
+STR_IND_FISCHER_TROPSCH_PLANT                                                   :{G=m}Impianto liquefazione carbone
 STR_IND_FISH_FARM                                                               :{G=f}Azienda ittica
 STR_IND_FISHING_GROUND                                                          :{G=f}Zona di pesca
 STR_IND_FISHING_HARBOUR                                                         :{G=m}Porto di pesca
@@ -480,7 +478,7 @@ STR_IND_FISHING_VILLAGE                                                         
 STR_IND_FLOUR_MILL                                                              :{G=m}Mulino
 STR_IND_FOOD_MARKET                                                             :{G=m}Negozio di alimentari
 STR_IND_FOOD_PROCESSOR                                                          :{G=f}Fabbrica di alimentari
-STR_IND_FRUIT_PACKING_PLANT                                                     :{G=m}Impianto di imballaggio della frutta
+STR_IND_FRUIT_PACKING_PLANT                                                     :{G=m}Impianto imballaggio frutta
 STR_IND_FURNITURE_FACTORY                                                       :{G=m}Mobilifico
 STR_IND_FORGE_AND_FOUNDRY                                                       :{G=f}Forgia e fonderia
 STR_IND_GENERAL_STORE                                                           :{G=m}Emporio
@@ -493,12 +491,12 @@ STR_IND_JUNKYARD                                                                
 STR_IND_LATEX_PROCESSOR                                                         :{G=f}Lavorazione del lattice
 STR_IND_LIME_KILN                                                               :{G=m}Forno per calce
 STR_IND_LIMESTONE_MINE                                                          :{G=f}Miniere di calcare
-STR_IND_LIQUIDS_TERMINAL                                                        :{G=m}Terminal stoccaggio liquidi
+STR_IND_LIQUIDS_TERMINAL                                                        :{G=m}Terminal liquidi
 STR_IND_LUMBER_YARD                                                             :{G=m}Deposito di legname
 STR_IND_MACHINE_SHOP                                                            :{G=m}Negozio di macchinari
 STR_IND_MACHINE_WORKS                                                           :{G=f}Officina macchinari
 STR_IND_MANGANESE_MINE                                                          :{G=f}Miniera di manganese
-STR_IND_MEAT_PACKING_PLANT                                                      :{G=m}Impianto di confezionamento della carne
+STR_IND_MEAT_PACKING_PLANT                                                      :{G=m}Impianto confezionamento carne
 STR_IND_METAL_WORKSHOP                                                          :{G=m}Fabbro
 STR_IND_MIXEDFARM                                                               :{G=f}Azienda agricola mista
 STR_IND_NITRATE_MINE                                                            :{G=f}Miniera di nitrati
@@ -520,34 +518,34 @@ STR_IND_PYRITE_SMELTER                                                          
 STR_IND_POWER_PLANT                                                             :{G=f}Centrale elettrica
 STR_IND_QUARRY                                                                  :{G=f}Cava di pietre
 STR_IND_RANCH                                                                   :{G=m}Ranch
-STR_IND_RECYCLING_DEPOT                                                         :{G=m}Deposito materiali riciclabili
-STR_IND_RECYCLING_PLANT                                                         :{G=m}Impianto di riciclaggio
+STR_IND_RECYCLING_DEPOT                                                         :{G=m}Deposito riciclabili
+STR_IND_RECYCLING_PLANT                                                         :{G=m}Impianto riciclaggio
 STR_IND_REINDEER_FARM                                                           :{G=m}Allevamento di renne
 STR_IND_SALT_MINE                                                               :{G=f}Miniera di sale
 STR_IND_SALT_EVAPORATOR                                                         :{G=m}Evaporatore di sale
 STR_IND_SEAWEED_FARM                                                            :{G=f}Fattoria di alghe
 STR_IND_SHEEPFARM                                                               :{G=m}Allevamento di pecore
-STR_IND_SLAG_GRINDING_PLANT                                                     :{G=m}Impianto di frantumazione scorie
+STR_IND_SLAG_GRINDING_PLANT                                                     :{G=m}Impianto frantumazione scorie
 STR_IND_SMITHY_FORGE                                                            :{G=f}Piccola fucina
-STR_IND_SOAP_FACTORY                                                            :{G=f}Fabbrica di detersivi
+STR_IND_SOAP_FACTORY                                                            :{G=f}Fabbrica detersivi
 STR_IND_SODA_ASH_MINE                                                           :{G=f}Miniera di carbonato di sodio
 STR_IND_SOLVAY_PLANT                                                            :{G=m}Stabilimento Solvay
 # Nel codice usiamo 'integrated_steel_mill' per evitare fuorvianti confusioni con le fabbriche di Steeltown, ma per il nome che vedono i giocatori è preferibile usare 'Acciaieria'.
 STR_IND_INTEGRATED_STEEL_MILL                                                   :{G=m}Acciaieria
 STR_IND_SHEET_MILL                                                              :{G=m}Laminatorio
-STR_IND_SHEET_AND_PIPE_MILL                                                     :{G=f}Fabbrica di tubi e laminati
+STR_IND_SHEET_AND_PIPE_MILL                                                     :{G=f}Fabbrica tubi e laminati
 STR_IND_SHIPBREAKER                                                             :{G=m}Cantiere smaltimento navi
 STR_IND_SPICE_PLANTATION                                                        :{G=f}Piantagione di spezie
 STR_IND_STOCKYARD                                                               :{G=m}Mattatoio
 STR_IND_SUGAR_REFINERY                                                          :{G=f}Raffineria di zucchero
-STR_IND_SULPHURIC_ACID_PLANT                                                    :{G=f}Fabbrica di acido solforico
+STR_IND_SULPHURIC_ACID_PLANT                                                    :{G=f}Fabbrica acido solforico
 STR_IND_SUPPLY_YARD                                                             :{G=m}Deposito di forniture
-STR_IND_SYNTHETIC_RUBBER_PLANT                                                  :{G=f}Fabbrica di gomma sintetica
+STR_IND_SYNTHETIC_RUBBER_PLANT                                                  :{G=f}Fabbrica gomma sintetica
 STR_IND_TAR_SANDS_MINE                                                          :{G=m}Miniera di sabbie bituminose
 STR_IND_TEXTILE_MILL                                                            :{G=m}Industria tessile
-STR_IND_TINPLATE_WORKS                                                          :{G=f}Fabbrica di prodotti in latta
+STR_IND_TINPLATE_WORKS                                                          :{G=f}Fabbrica prodotti in latta
 STR_IND_TRADING_POST                                                            :{G=f}Stazione commerciale
-STR_IND_TYRE_PLANT                                                              :{G=f}Fabbrica di pneumatici e gomma
+STR_IND_TYRE_PLANT                                                              :{G=f}Fabbrica pneumatici e gomma
 STR_IND_VINEYARD                                                                :{G=f}Vigna
 STR_IND_VEHICLE_DISTRIBUTOR                                                     :{G=m}Concessionario autoveicoli
 STR_IND_WHARF                                                                   :{G=m}Moli
@@ -565,7 +563,6 @@ STR_FUND_VINEYARD                                                               
 
 STR_FUND_AVAILABLE_FROM                                                         :{}{BLACK}Disponibile dal: {YELLOW}{COMMA}
 STR_FUND_AVAILABLE_UNTIL                                                        :{}{BLACK}Non più disponibile dopo il: {YELLOW}{COMMA}
-
 STR_TOWN                                                                        :{STRING}
 STR_STATION                                                                     :{STRING} {STRING}
 
