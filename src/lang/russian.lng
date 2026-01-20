@@ -415,7 +415,6 @@ STR_CARGO_UNIT_FISH                                                             
 STR_CARGO_UNIT_FISH_AND_MEAT                                                    :{WEIGHT} морепродуктов
 STR_CARGO_UNIT_FLOUR                                                            :{WEIGHT} муки
 STR_CARGO_UNIT_FMSP                                                             :{SIGNED_WORD} единиц{P 0 а ы ""} агротехсредств
-STR_CARGO_NAME_FARM_SUPPLIES                                                    :{SIGNED_WORD} единиц{P 0 а ы ""} агротехсредств
 STR_CARGO_UNIT_FRUITS                                                           :{WEIGHT} фруктов
 STR_CARGO_UNIT_FURNITURE                                                        :{WEIGHT} мебели
 STR_CARGO_UNIT_GLASS                                                            :{WEIGHT} стекла
@@ -438,7 +437,7 @@ STR_CARGO_UNIT_NAPHTHA                                                          
 STR_CARGO_UNIT_NICKEL                                                           :{WEIGHT} никеля
 STR_CARGO_UNIT_NITRATES                                                         :{WEIGHT} нитрата
 STR_CARGO_UNIT_NITROGEN                                                         :{VOLUME} азота
-STR_CARGO_UNIT_NUTS                                                             :{SIGNED_WORD} меш{P 0 "" ок ка ков} орехов
+STR_CARGO_UNIT_NUTS                                                             :{SIGNED_WORD} меш{P 0 "" ок ка} орехов
 STR_CARGO_UNIT_OXYGEN                                                           :{VOLUME} кислорода
 STR_CARGO_UNIT_OIL_SEEDS                                                        :{WEIGHT} масла из семян
 STR_CARGO_UNIT_PACKAGING                                                        :{WEIGHT} упаковки
@@ -641,8 +640,6 @@ STR_IND_ALUMINA_REFINERY                                                        
 STR_IND_ALUMINA_REFINERY.gen                                                    :глиноземного завода
 STR_IND_AMMONIA_PLANT                                                           :Аммиачный завод
 STR_IND_AMMONIA_PLANT.gen                                                       :аммиачного завода
-STR_IND_ARABLE_FARM                                                             :Пахотное хозяйство
-STR_IND_ARABLE_FARM.gen                                                         :пахотного хозяйства
 STR_IND_APPLIANCE_FACTORY                                                       :Завод бытовой техники
 STR_IND_APPLIANCE_FACTORY.gen                                                   :завода бытовой техники
 STR_IND_ASSEMBLY_PLANT                                                          :Сборочный цех
@@ -820,13 +817,13 @@ STR_IND_REINDEER_FARM.gen                                                       
 STR_IND_SALT_MINE                                                               :Соляная шахта
 STR_IND_SALT_MINE.gen                                                           :соляной шахты
 STR_IND_SALT_EVAPORATOR                                                         :Солевой испаритель
-STR_IND_SALT_EVAPORATOR                                                         :солевого испарителя
+STR_IND_SALT_EVAPORATOR.gen                                                         :солевого испарителя
 STR_IND_SEAWEED_FARM                                                            :Водорослевая ферма
 STR_IND_SEAWEED_FARM.gen                                                        :водорослевой фермы
 STR_IND_SHEEPFARM                                                               :Овцеводческое хозяйство
 STR_IND_SHEEPFARM.gen                                                           :овцеводческого хозяйства
 STR_IND_SLAG_GRINDING_PLANT                                                     :Завод по измельчению шлака
-STR_IND_SLAG_GRINDING_PLANT                                                     :завода по измельчению шлака
+STR_IND_SLAG_GRINDING_PLANT.gen                                                     :завода по измельчению шлака
 STR_IND_SMITHY_FORGE                                                            :Мастерская
 STR_IND_SMITHY_FORGE.gen                                                        :мастерской
 STR_IND_SOAP_FACTORY                                                            :Завод чистящих средств
@@ -870,7 +867,7 @@ STR_PORT_PRODUCTION_1X                                                          
 STR_PORT_PRODUCTION_2X                                                          :{BLACK}Уровень производства: {YELLOW}Улучшеный (удвоеный){}{}{BLACK}Для поддержки данного уровня доставте {SIGNED_WORD} ящик{P "" а ов} материалов в течении трех месяцев, или {SIGNED_WORD} ящик{P "" а ов} для учетверения производства
 STR_PORT_PRODUCTION_4X                                                          :{BLACK}Уровень производства: {YELLOW}Лучший (учетверенный){}{}{BLACK}Для поддержки данного уровня доставьте {SKIP}{SIGNED_WORD} ящик{P "" а ов} материалов в течение трех месяцев
 
-STR_INFORMATIVE_EXTRA_TEXT_PLAZA                                                {SKIP}{SKIP}Настроение населения:{} {STRING}{STRING}{}{}{BLACK}Оценка оптимизма: {STRING}{SIGNED_WORD} очк{P 2 "" а ов}{}{BLACK} Удовлетворение потребностей и роскоши: {YELLOW}{SIGNED_WORD} очк{P 3 "" а ов} {}{BLACK} Загрязнение и убожество: {YELLOW}{SIGNED_WORD} очк{P 4 "" а ов} {}{}{BLACK}Загрязнение и убожество увеличиваются с ростом населения и определенных видов промышленности.{}{}Потребности и роскошь удовлетворяются за счет поставок в определенные виды промышленности.{}{}Если показатель оптимизма больше 10, настроение населения будет {WHITE}оптимистичным{BLACK}. Если показатель оптимизма меньше -10, настроение населения будет {WHITE} мрачным{BLACK}.
+STR_INFORMATIVE_EXTRA_TEXT_PLAZA                                                :{SKIP}{SKIP}Настроение населения:{} {STRING}{STRING}{}{}{BLACK}Оценка оптимизма: {STRING}{SIGNED_WORD} очк{P 2 "" а ов}{}{BLACK} Удовлетворение потребностей и роскоши: {YELLOW}{SIGNED_WORD} очк{P 3 "" а ов} {}{BLACK} Загрязнение и убожество: {YELLOW}{SIGNED_WORD} очк{P 4 "" а ов} {}{}{BLACK}Загрязнение и убожество увеличиваются с ростом населения и определенных видов промышленности.{}{}Потребности и роскошь удовлетворяются за счет поставок в определенные виды промышленности.{}{}Если показатель оптимизма больше 10, настроение населения будет {WHITE}оптимистичным{BLACK}. Если показатель оптимизма меньше -10, настроение населения будет {WHITE} мрачным{BLACK}.
 STR_INFORMATIVE_EXTRA_TEXT_PLAZA_MOOD_OPTIMISTIC                                :Оптимистичный
 STR_INFORMATIVE_EXTRA_TEXT_PLAZA_MOOD_GLOOMY                                    :Мрачный
 STR_INFORMATIVE_EXTRA_TEXT_PLAZA_MOOD_NEUTRAL                                   :Нейтральный

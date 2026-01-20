@@ -1,7 +1,7 @@
 ##grflangid 0x5a
 ##plural 1
 
-STR_GRF_DESC                                                                    :{ORANGE}AXIS: Another Xtreme Industry Set{}{BLACK}Penerus resmi XIS. Dirancang oleh Emperor Jake, berdasarkan kode FIRS 4 oleh andythenorth, FooBar, planetmaker, Terkhen dan Yexo, dengan bantuan dari banyak orang lainnya. {SILVER}Lihat readme untuk informasi lebih lanjut, termasuk cara menggunakan AXIS. {HITAM}Lisensi: GPL v2.
+STR_GRF_DESC                                                                    :{ORANGE}AXIS: Another Xtreme Industry Set{}{BLACK}Penerus resmi XIS. Dirancang oleh Emperor Jake, berdasarkan kode FIRS 4 oleh andythenorth, FooBar, planetmaker, Terkhen dan Yexo, dengan bantuan dari banyak orang lainnya. {SILVER}Lihat readme untuk informasi lebih lanjut, termasuk cara menggunakan AXIS. {BLACK}Lisensi: GPL v2.
 
 
 STR_PARAM_DESC_COAST_DISTANCE_MARINE_INDUSTRY                                   :Jarak maksimal untuk area tangkapan ikan, anjungan lepas pantai dan pengerukan pasir laut dari pantai dalam petak.

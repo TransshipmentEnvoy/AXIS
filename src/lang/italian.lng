@@ -266,7 +266,7 @@ STR_CARGO_UNIT_STEEL_WIRE_ROD                                                   
 STR_CARGO_UNIT_STONE                                                            :{WEIGHT} di ghiaia
 STR_CARGO_UNIT_SUGAR                                                            :{WEIGHT} di zucchero
 STR_CARGO_UNIT_SUGAR_BEET                                                       :{WEIGHT} di barbabietola da zucchero
-STR_CARGO_UNIT_SUGAR_CANE                                                       :{SIGNED_WORD} ball{P 0 "" a e} di canna da zucchero
+STR_CARGO_UNIT_SUGAR_CANE                                                       :{SIGNED_WORD} ball{P 0 a e} di canna da zucchero
 STR_CARGO_UNIT_SULPHUR                                                          :{WEIGHT} di zolfo
 STR_CARGO_UNIT_SULPHURIC_ACID                                                   :{VOLUME} di acido solforico
 STR_CARGO_UNIT_TEXTILES                                                         :{WEIGHT} di tessuti
