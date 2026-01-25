@@ -1,5 +1,7 @@
 from cargo import Cargo
 
+# note that in AXIS, the generic cargo label RFPR is "Refined oil", not "Chemicals" as in FIRS
+
 cargo = Cargo(
     id="chemicals",
     type_name="string(STR_CARGO_NAME_CHEMICALS)",
@@ -8,7 +10,7 @@ cargo = Cargo(
     sprite="NEW_CARGO_SPRITE",
     weight="1.2",  # extra realism, per forum suggestion Nov 2017
     is_freight="1",
-    cargo_classes="bitmask(CC_LIQUID, CC_PIECE_GOODS, CC_HAZARDOUS)",
+    cargo_classes="bitmask(CC_LIQUID_BULK, CC_PIECE_GOODS, CC_NON_POTABLE)",
     cargo_label="RFPR",
     # apart from TOWNGROWTH_PASSENGERS and TOWNGROWTH_MAIL, FIRS does not set any town growth effects; this has the intended effect of disabling food / water requirements for towns in desert and above snowline
     town_growth_effect="TOWNGROWTH_NONE",
