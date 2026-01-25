@@ -17,7 +17,7 @@ industry = IndustryPrimaryExtractive(
 
 industry.economy_variations["BASIC_TEMPERATE"].enabled = True
 industry.economy_variations["BASIC_TEMPERATE"].prod_cargo_types_with_multipliers = [
-    ("KAOL", 16)
+    ("CLAY", 16)
 ]
 
 industry.economy_variations["BASIC_TROPIC"].enabled = True

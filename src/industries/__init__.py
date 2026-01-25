@@ -277,9 +277,6 @@ from industries import junk_yard
 junk_yard.industry.register()
 
 
-from industries import latex_processor
-latex_processor.industry.register()
-
 
 from industries import lime_kiln
 
@@ -391,6 +388,10 @@ power_plant.industry.register()
 from industries import potash_mine
 
 potash_mine.industry.register()
+
+from industries import printing_plant
+
+printing_plant.industry.register()
 
 from industries import pyrite_mine
 

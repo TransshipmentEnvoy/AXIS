@@ -8,14 +8,6 @@ industry = IndustrySecondary(
     prob_in_game="3",
     prob_map_gen="5",
     map_colour="19",
-    # the keystones are quite specific to IAHC, and location checks aren't economy specific, so this might need adjusted if other economies gain cement plant
-    location_checks=dict(
-        near_at_least_one_of_these_keystone_industries=[
-            ["quarry", "phosphate_mine"],
-            96,
-        ],
-        same_type_distance=96,
-    ),
     special_flags=["IND_FLAG_MILITARY_HELICOPTER_CAN_EXPLODE"],
     name="string(STR_IND_CEMENT_PLANT)",
     nearby_station_name="string(STR_STATION_SILO)",
@@ -56,6 +48,18 @@ industry.economy_variations["BASIC_TROPIC"].accept_cargos_with_input_ratios = [
     ("SLAG", 2),  
 ]
 industry.economy_variations["BASIC_TROPIC"].prod_cargo_types_with_output_ratios = [
+    ("BDMT", 6),
+    ("QLME", 2),
+]
+
+industry.economy_variations["BASIC_TEMPERATE"].enabled = True
+industry.economy_variations["BASIC_TEMPERATE"].accept_cargos_with_input_ratios = [
+    ("CMNT", 2), 
+    ("COKE", 2),
+    ("SAND", 2),  
+    ("LIME", 2),  
+]
+industry.economy_variations["BASIC_TEMPERATE"].prod_cargo_types_with_output_ratios = [
     ("BDMT", 6),
     ("QLME", 2),
 ]

@@ -18,6 +18,8 @@ industry = IndustryPrimaryOrganic(
 
 industry.economy_variations["BASIC_TROPIC"].enabled = True
 
+industry.economy_variations["BASIC_TEMPERATE"].enabled = True
+
 industry.add_tile(
     id="vineyard_tile_1",
     foundations="return CB_RESULT_NO_FOUNDATIONS",

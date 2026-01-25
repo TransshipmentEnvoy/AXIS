@@ -6,16 +6,15 @@ registered_economies = []
 
 
 
+from economies import basic_temperate
+basic_temperate.economy.register()
+
 from economies import steeltown
 steeltown.economy.register()
 
 from economies import basic_tropic
 basic_tropic.economy.register()
 
-
-
-from economies import basic_temperate
-basic_temperate.economy.register()
 
 from economies import basic_arctic
 basic_arctic.economy.register()

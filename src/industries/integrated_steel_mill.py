@@ -13,9 +13,7 @@ industry = IndustrySecondary(
     fund_cost_multiplier="190",
 )
 
-
-industry.economy_variations["BASIC_TEMPERATE"].enabled = True
-industry.economy_variations["BASIC_TEMPERATE"].intro_year = 1800
+# delete
 
 industry.add_tile(
     id="integrated_steel_mill_tile_1",

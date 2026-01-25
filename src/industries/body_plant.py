@@ -20,6 +20,9 @@ industry.economy_variations[
     "STEELTOWN"
 ].prob_in_game = "0"  # do not build during gameplay
 
+
+
+
 industry.add_tile(
     id="body_plant_tile_1",
     animation_length=71,

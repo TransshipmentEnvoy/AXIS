@@ -31,6 +31,17 @@ industry.economy_variations["BASIC_TROPIC"].accept_cargos_with_input_ratios = [
     ("GRAI", 6),
 ]
 
+industry.economy_variations["BASIC_TEMPERATE"].enabled = True
+industry.economy_variations["BASIC_TEMPERATE"].accept_cargos_with_input_ratios = [
+    ("BEAN", 6),
+    ("BIOM", 6),  
+    ("GRAI", 6),
+]
+industry.economy_variations["BASIC_TEMPERATE"].prod_cargo_types_with_output_ratios = [
+    ("RFPR", 5),
+    ("PETR", 4),
+    ("PLAS", 3),
+]
 
 industry.add_tile(
     id="biorefinery_tile_1",

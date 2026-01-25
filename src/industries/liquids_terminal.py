@@ -39,6 +39,11 @@ industry.economy_variations["BASIC_TROPIC"].accept_cargo_types = ["PHAC", "SOAP"
 industry.economy_variations['BASIC_TROPIC'].prod_cargo_types_with_multipliers = [('OIL_', 20), ('SUAC', 20),('PETR', 20), ('RFPR', 20)]
 
 
+industry.economy_variations["BASIC_TEMPERATE"].enabled = True
+industry.economy_variations["BASIC_TEMPERATE"].accept_cargo_types = ["CHLO", "RUBR", "PETR"]
+industry.economy_variations['BASIC_TEMPERATE'].prod_cargo_types_with_multipliers = [('OIL_', 20), ('ACID', 18), ('RFPR', 18)]
+
+
 
 industry.add_tile(
     id="liquids_terminal_tile_1",

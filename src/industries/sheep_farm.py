@@ -19,6 +19,8 @@ industry.economy_variations["BASIC_TROPIC"].prod_cargo_types_with_multipliers = 
     ("FICR", 13),
 ]
 
+industry.economy_variations["BASIC_TEMPERATE"].enabled = True
+
 
 
 industry.add_tile(

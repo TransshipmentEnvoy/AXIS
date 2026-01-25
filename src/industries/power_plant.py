@@ -27,9 +27,14 @@ industry.economy_variations["BASIC_TROPIC"].accept_cargo_types = [
     "COAL",
     "PETR",
     "BIOM",
-
 ]
 
+industry.economy_variations["BASIC_TEMPERATE"].enabled = True
+industry.economy_variations["BASIC_TEMPERATE"].accept_cargo_types = [
+    "COAL",
+    "PETR",
+    "BIOM",
+]
 
 
 industry.add_tile(

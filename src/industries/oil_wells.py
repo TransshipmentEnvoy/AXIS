@@ -18,6 +18,8 @@ industry.economy_variations["IN_A_HOT_COUNTRY"].enabled = True
 
 industry.economy_variations["STEELTOWN"].enabled = True
 
+industry.economy_variations["BASIC_TEMPERATE"].enabled = True
+
 industry.add_tile(
     id="oil_wells_tile_1",
     location_checks=TileLocationChecks(disallow_industry_adjacent=True),

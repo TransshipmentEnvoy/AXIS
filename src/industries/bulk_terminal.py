@@ -51,6 +51,15 @@ industry.economy_variations["BASIC_TROPIC"].prod_cargo_types_with_multipliers = 
     ("LIME", 16),
 ]
 
+industry.economy_variations["BASIC_TEMPERATE"].enabled = True
+industry.economy_variations["BASIC_TEMPERATE"].accept_cargo_types = ["BDMT", "FERT", "VEHI"]
+industry.economy_variations["BASIC_TEMPERATE"].prod_cargo_types_with_multipliers = [
+    ("IORE", 19),
+    ("COAL", 19),
+    ("AORE", 16),
+    ("CORE", 16),
+]
+
 industry.add_tile(
     id="bulk_terminal_tile_1",
     land_shape_flags="bitmask(LSF_ONLY_ON_FLAT_LAND)",

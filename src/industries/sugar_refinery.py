@@ -34,7 +34,11 @@ industry.economy_variations["BASIC_TROPIC"].prod_cargo_types_with_output_ratios 
     ("BIOM", 2),
 ]
 
-
+industry.economy_variations["BASIC_TEMPERATE"].enabled = True
+industry.economy_variations["BASIC_TEMPERATE"].prod_cargo_types_with_output_ratios = [
+    ("FOOD", 6),
+    ("BIOM", 2),
+]
 
 
 industry.add_tile(

@@ -23,6 +23,7 @@ industry.economy_variations["BASIC_TROPIC"].enabled = True
 
 industry.economy_variations["STEELTOWN"].enabled = True
 
+industry.economy_variations["BASIC_TEMPERATE"].enabled = True
 
 industry.add_tile(
     id="trading_post_tile_1",

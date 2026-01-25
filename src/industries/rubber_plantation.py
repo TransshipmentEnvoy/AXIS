@@ -23,6 +23,8 @@ industry.economy_variations["IN_A_HOT_COUNTRY"].prod_cargo_types_with_multiplier
 
 industry.economy_variations["BASIC_TROPIC"].enabled = True
 
+industry.economy_variations["BASIC_TEMPERATE"].enabled = True
+
 industry.add_tile(
     id="rubber_plantation_tile_1",
     foundations="return CB_RESULT_NO_FOUNDATIONS",

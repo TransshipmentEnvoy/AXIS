@@ -36,6 +36,13 @@ industry.economy_variations["BASIC_TROPIC"].prod_cargo_types_with_output_ratios 
     ("SULP", 2),
 ]
 
+industry.economy_variations["BASIC_TEMPERATE"].enabled = True
+industry.economy_variations["BASIC_TEMPERATE"].prod_cargo_types_with_output_ratios = [
+    ("RFPR", 6),
+    ("PETR", 4),
+    ("SULP", 2),
+]
+
 industry.add_tile(
     id="oil_refinery_tile_1",
     location_checks=TileLocationChecks(

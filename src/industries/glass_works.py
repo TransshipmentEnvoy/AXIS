@@ -17,10 +17,12 @@ industry = IndustrySecondary(
 industry.economy_variations["BASIC_TEMPERATE"].enabled = True
 industry.economy_variations["BASIC_TEMPERATE"].accept_cargos_with_input_ratios = [
     ("SAND", 6),
-    ("RFPR", 2),
+    ("SASH", 2),
+    ("QLME", 2),
 ]
 industry.economy_variations["BASIC_TEMPERATE"].prod_cargo_types_with_output_ratios = [
-    ("GOOD", 8)
+    ("GLAS", 8),
+    ("MNSP", 8),
 ]
 
 industry.economy_variations['BETTER_LIVING_THROUGH_CHEMISTRY'].enabled = True
