@@ -23,7 +23,7 @@ STR_PARAM_DESC_PRIMARY_LEVEL_BONUS                                              
 STR_PARAM_NAME_EXPERIMENTAL_FEATURES                                            :Enable experimental features
 STR_PARAM_DESC_EXPERIMENTAL_FEATURES                                            :Turns experimental features on or off.
 
-STR_PARAM_VALUE_ECONOMIES_BASIC_TEMPERATE                                       :INCOMPLETE Classic
+STR_PARAM_VALUE_ECONOMIES_BASIC_TEMPERATE                                       :Extreme Classic
 STR_PARAM_VALUE_ECONOMIES_BASIC_ARCTIC                                          :INCOMPLETE Boreal
 STR_PARAM_VALUE_ECONOMIES_BASIC_TROPIC                                          :Tropical Paradise
 STR_PARAM_VALUE_ECONOMIES_TROPICAL_PARADISE                                     :Tropical Paradise
@@ -515,6 +515,7 @@ STR_IND_POLYPROPYLENE_PLANT                                                     
 STR_IND_POLYMER_PLANT                                                           :Polymerisation Plant
 STR_IND_PORT                                                                    :Port
 STR_IND_POTASH_MINE                                                             :Potash Mine
+STR_IND_PRINTING_PLANT                                                          :Printing Plant
 STR_IND_PYRITE_MINE                                                             :Pyrite Mine
 STR_IND_PYRITE_SMELTER                                                          :Pyrite Smelter
 STR_IND_POWER_PLANT                                                             :Power Plant

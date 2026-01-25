@@ -24,6 +24,22 @@ industry.economy_variations[
     "STEELTOWN"
 ].prob_in_game = "1"  # low chance of build during gameplay
 
+industry.economy_variations["BASIC_TEMPERATE"].enabled = True
+industry.economy_variations[
+    "BASIC_TEMPERATE"
+].prob_in_game = "1"  # low chance of build during gameplay
+industry.economy_variations["BASIC_TEMPERATE"].accept_cargos_with_input_ratios = [
+    ("SCMT", 4),
+    ("QLME", 2),
+]
+industry.economy_variations["BASIC_TEMPERATE"].prod_cargo_types_with_output_ratios = [
+    ("STEL", 6),
+    ("SLAG", 2),
+]
+
+
+
+
 industry.add_tile(
     id="electric_arc_furnace_tile_1",
     animation_length=47,

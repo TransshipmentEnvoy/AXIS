@@ -18,7 +18,8 @@ industry = IndustrySecondary(
 
 industry.economy_variations["BASIC_TEMPERATE"].enabled = True
 industry.economy_variations["BASIC_TEMPERATE"].accept_cargos_with_input_ratios = [
-    ("LVST", 6)
+    ("LVST", 6),
+    ("MNSP", 2),  
 ]
 
 industry.economy_variations["BASIC_TROPIC"].enabled = True

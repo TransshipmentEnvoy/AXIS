@@ -44,6 +44,20 @@ industry.economy_variations["BASIC_TROPIC"].prod_cargo_types_with_output_ratios 
     ("SLAG", 2),
 ]
 
+industry.economy_variations["BASIC_TEMPERATE"].enabled = True
+industry.economy_variations[
+    "BASIC_TEMPERATE"
+].prob_in_game = "0"  # do not build during gameplay
+industry.economy_variations["BASIC_TEMPERATE"].accept_cargos_with_input_ratios = [
+    ("IORE", 4),
+    ("COKE", 3),
+    ("LIME", 2),
+]
+industry.economy_variations["BASIC_TEMPERATE"].prod_cargo_types_with_output_ratios = [
+    ("IRON", 6),
+    ("SLAG", 2),
+]
+
 industry.add_tile(
     id="blast_furnace_tile_1",
     animation_length=7,

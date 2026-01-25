@@ -31,6 +31,7 @@ industry.economy_variations["IN_A_HOT_COUNTRY"].prob_map_gen = "14"
 
 
 
+
 industry.add_tile(
     id="builders_yard_tile_1",
     location_checks=TileLocationChecks(

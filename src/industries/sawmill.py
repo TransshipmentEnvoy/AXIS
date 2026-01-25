@@ -22,6 +22,8 @@ industry.economy_variations["BASIC_ARCTIC"].enabled = True
 
 industry.economy_variations["BASIC_TROPIC"].enabled = True
 
+industry.economy_variations["BASIC_TEMPERATE"].enabled = True
+
 
 industry.add_tile(
     id="sawmill_tile_1",

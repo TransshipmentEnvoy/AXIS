@@ -48,6 +48,20 @@ industry.economy_variations["STEELTOWN"].prod_cargo_types_with_multipliers = [
     ("PLAS", 10),
 ]
 
+industry.economy_variations["BASIC_TEMPERATE"].enabled = True
+industry.economy_variations["BASIC_TEMPERATE"].accept_cargo_types = [
+    "ALUM",
+    "COPR",
+    "BOOM",
+    "GOOD",
+]
+industry.economy_variations["BASIC_TEMPERATE"].prod_cargo_types_with_multipliers = [
+    ("STSE", 19),
+    ("RAMT", 16),
+    ("ENSP", 12),
+    ("FMSP", 12),
+]
+
 industry.add_tile(
     id="wharf_tile_1",
     land_shape_flags="bitmask(LSF_ONLY_ON_FLAT_LAND)",

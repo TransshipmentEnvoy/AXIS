@@ -43,6 +43,20 @@ industry.economy_variations["BASIC_TROPIC"].prod_cargo_types_with_output_ratios 
     ("FMSP", 2),
 ]
 
+industry.economy_variations["BASIC_TEMPERATE"].enabled = True
+industry.economy_variations["BASIC_TEMPERATE"].accept_cargos_with_input_ratios = [
+    ("POWR", 3),
+    ("VPTS", 2),
+    ("STSE", 2),
+    ("TYRE", 2),
+    ("GLAS", 2),
+]
+industry.economy_variations["BASIC_TEMPERATE"].prod_cargo_types_with_output_ratios = [
+    ("GOOD", 4),
+    ("ENSP", 2),
+    ("FMSP", 2),
+]
+
 industry.add_tile(
     id="machine_shop_tile_1",
     animation_length=71,

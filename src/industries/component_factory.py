@@ -40,6 +40,14 @@ industry.economy_variations["BASIC_TROPIC"].accept_cargos_with_input_ratios = [
 ]
 
 
+industry.economy_variations["BASIC_TEMPERATE"].enabled = True
+industry.economy_variations["BASIC_TEMPERATE"].accept_cargos_with_input_ratios = [
+    ("STSE", 2),
+    ("PLAS", 2),  
+    ("TEXT", 2),  
+    ("POWR", 2),  
+]
+
 industry.add_tile(
     id="component_factory_tile_1",
     location_checks=TileLocationChecks(

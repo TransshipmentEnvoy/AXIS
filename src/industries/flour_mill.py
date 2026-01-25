@@ -37,6 +37,8 @@ industry.economy_variations["IN_A_HOT_COUNTRY"].accept_cargos_with_input_ratios 
     ("MAIZ", 6),
 ]
 
+industry.economy_variations["BASIC_TEMPERATE"].enabled = True
+
 
 industry.add_tile(
     id="flour_mill_tile_1",

@@ -35,6 +35,17 @@ industry.economy_variations["BASIC_TROPIC"].prod_cargo_types_with_output_ratios 
     ("RUBR", 3),
 ]
 
+industry.economy_variations["BASIC_TEMPERATE"].enabled = True
+industry.economy_variations["BASIC_TEMPERATE"].accept_cargos_with_input_ratios = [
+    ("RFPR", 6),
+    ("CHLO", 2),
+    ("ACID", 2),
+]
+industry.economy_variations["BASIC_TEMPERATE"].prod_cargo_types_with_output_ratios = [
+    ("PLAS", 5),
+    ("RUBR", 3),
+]
+
 
 industry.add_tile(
     id="polyethylene_plant_tile_1",

@@ -27,6 +27,12 @@ industry.economy_variations["STEELTOWN"].prod_cargo_types_with_multipliers = [
     ("GRAI", 28),
 ]
 
+industry.economy_variations["BASIC_TEMPERATE"].enabled = True
+industry.economy_variations["BASIC_TEMPERATE"].prod_cargo_types_with_multipliers = [
+    ("GRAI", 14),
+    ("SGBT", 24),
+]
+
 industry.add_tile(
     id="arable_farm_tile_1",
     location_checks=TileLocationChecks(
