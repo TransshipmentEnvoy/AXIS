@@ -13,7 +13,7 @@ industry = IndustrySecondary(
     fund_cost_multiplier="200",
     graphics_change_dates=[],
     pollution_and_squalor_factor=2,
-    intro_year="1875",
+    intro_year="1865",
 )
 
 industry.economy_variations["BASIC_TROPIC"].enabled = True
