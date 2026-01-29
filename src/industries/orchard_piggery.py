@@ -17,7 +17,6 @@ industry = IndustryPrimaryOrganic(
 )
 
 industry.economy_variations["BASIC_TEMPERATE"].enabled = True
-#maybe readd if need another farm
 
 industry.economy_variations["STEELTOWN"].enabled = True
 

@@ -8,12 +8,6 @@ industry = IndustrySecondary(
     prob_in_game="3",
     prob_map_gen="5",
     map_colour="181",
-    location_checks=dict(
-        near_at_least_one_of_these_keystone_industries=[
-            ["fruit_plantation", "coffee_estate", "vineyard"],
-            72,
-        ]
-    ),
     name="string(STR_IND_CANNERY)",
     nearby_station_name="string(STR_STATION_CANNERY)",
     fund_cost_multiplier="65",

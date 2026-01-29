@@ -50,7 +50,6 @@ industry.economy_variations["STEELTOWN"].prod_cargo_types_with_multipliers = [
 
 industry.economy_variations["BASIC_TEMPERATE"].enabled = True
 industry.economy_variations["BASIC_TEMPERATE"].accept_cargo_types = [
-    "ALUM",
     "COPR",
     "BOOM",
     "GOOD",
