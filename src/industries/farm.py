@@ -40,7 +40,7 @@ industry.economy_variations["BASIC_TROPIC"].prod_cargo_types_with_multipliers = 
 
 industry.economy_variations["BASIC_TEMPERATE"].enabled = True
 industry.economy_variations["BASIC_TEMPERATE"].prod_cargo_types_with_multipliers = [
-    ("BEAN", 20),
+    ("OLSD", 20),
     ("LVST", 12),
 ]
 

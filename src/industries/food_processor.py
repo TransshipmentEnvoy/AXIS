@@ -54,7 +54,7 @@ industry.economy_variations["BASIC_TEMPERATE"].enabled = True
 industry.economy_variations["BASIC_TEMPERATE"].accept_cargos_with_input_ratios = [
     ("FRUT", 4),
     ("FISH", 4),
-    ("BEAN", 4),
+    ("EOIL", 4),
     ("MNSP", 2),
     ("SALT", 2),
 

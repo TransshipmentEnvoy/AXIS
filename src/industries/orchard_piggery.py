@@ -16,7 +16,7 @@ industry = IndustryPrimaryOrganic(
     pollution_and_squalor_factor=1,
 )
 
-# industry.economy_variations["BASIC_TEMPERATE"].enabled = True
+industry.economy_variations["BASIC_TEMPERATE"].enabled = True
 #maybe readd if need another farm
 
 industry.economy_variations["STEELTOWN"].enabled = True

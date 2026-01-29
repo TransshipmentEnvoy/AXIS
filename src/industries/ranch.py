@@ -15,13 +15,14 @@ industry = IndustryPrimaryOrganic(
 
 industry.economy_variations["BASIC_TROPIC"].enabled = True
 industry.economy_variations["BASIC_TROPIC"].prod_cargo_types_with_multipliers = [
-    ("FICR", 14),
+    ("FICR", 18),
     ("OLSD", 14),
 ]
 
 industry.economy_variations["BASIC_TEMPERATE"].enabled = True
 industry.economy_variations["BASIC_TEMPERATE"].prod_cargo_types_with_multipliers = [
     ("FICR", 18),
+    ("OLSD", 14),
 ]
 
 

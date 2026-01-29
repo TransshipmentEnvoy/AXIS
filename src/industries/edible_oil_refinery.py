@@ -15,8 +15,13 @@ industry = IndustrySecondary(
     fund_cost_multiplier="118",
 )
 
-
 industry.economy_variations["BASIC_TROPIC"].enabled = True
+
+industry.economy_variations["BASIC_TEMPERATE"].enabled = True
+industry.economy_variations["BASIC_TEMPERATE"].accept_cargos_with_input_ratios = [
+    ("OLSD", 4),
+]
+
 
 industry.add_tile(
     id="edible_oil_refinery_tile_1",

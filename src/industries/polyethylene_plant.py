@@ -44,6 +44,7 @@ industry.economy_variations["BASIC_TEMPERATE"].accept_cargos_with_input_ratios =
 industry.economy_variations["BASIC_TEMPERATE"].prod_cargo_types_with_output_ratios = [
     ("PLAS", 5),
     ("RUBR", 3),
+    ("FICR", 3),    
 ]
 
 

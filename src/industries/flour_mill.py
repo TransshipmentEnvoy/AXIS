@@ -38,6 +38,11 @@ industry.economy_variations["IN_A_HOT_COUNTRY"].accept_cargos_with_input_ratios 
 ]
 
 industry.economy_variations["BASIC_TEMPERATE"].enabled = True
+industry.economy_variations["BASIC_TEMPERATE"].prod_cargo_types_with_output_ratios = [
+    ("FOOD", 6),
+    ("EOIL", 4),
+]
+
 
 
 industry.add_tile(

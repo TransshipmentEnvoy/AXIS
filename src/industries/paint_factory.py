@@ -49,8 +49,8 @@ industry.economy_variations["BASIC_TEMPERATE"].enabled = True
 industry.economy_variations["BASIC_TEMPERATE"].accept_cargos_with_input_ratios = [
     ("RFPR", 2),
     ("QLME", 2),
-    ("ACID", 2),
     ("PLAS", 2),
+    ("MNSP", 2),
 ]
 industry.economy_variations["BASIC_TEMPERATE"].prod_cargo_types_with_output_ratios = [
     ("COAT", 6),

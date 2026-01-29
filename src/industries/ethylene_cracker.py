@@ -3,7 +3,7 @@ from industry import IndustrySecondary, TileLocationChecks
 industry = IndustrySecondary(
     id="ethylene_cracker",
     accept_cargos_with_input_ratios=[("NAPH", 8)],
-    # not combinatorial, accept naptha or Methane
+    combined_cargos_boost_prod=True,
     prod_cargo_types_with_output_ratios=[("C2H4", 4), ("C3H6", 3)],
     prob_in_game="3",
     prob_map_gen="5",
@@ -34,6 +34,7 @@ industry.economy_variations["BASIC_TEMPERATE"].accept_cargos_with_input_ratios =
 industry.economy_variations["BASIC_TEMPERATE"].prod_cargo_types_with_output_ratios = [
     ("PETR", 5),
     ("COKE", 3),
+    ("SULP", 2),
 ]
 
 
