@@ -1,5 +1,5 @@
-##grflangid 0x01
-##plural 0
+##grflangid 0x56
+##plural 1
 
 STR_GRF_DESC                                                                    :{ORANGE}AXIS：极致工业扩展集{}{BLACK}XIS官方续作，由Emperor Jake设计，基于andythenorth、FooBar、planetmaker、Terkhen和Yexo开发的FIRS 4代码打造，并有多位开发者参与协助。{SILVER}更多使用说明及详情请参阅自述文件。{BLACK}协议：GPL v2。
 
