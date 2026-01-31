@@ -5,7 +5,7 @@ industry = IndustrySecondary(
     accept_cargos_with_input_ratios=[("STCB", 3), ("SOAP", 1), ("ALUM", 2), ("COPR", 2)],
     combined_cargos_boost_prod=True,
     prod_cargo_types_with_output_ratios=[
-        ("STSE", 4),
+        ("MPAR", 4),
         ("STWR", 3),
         ("SCMT", 1),
     ],  # balance is deliberate, steel sections need to feed wharf, vehicle chain is already well supplied

@@ -20,7 +20,7 @@ industry.economy_variations["STEELTOWN"].accept_cargos_with_input_ratios = [
     ("POWR", 2),
     ("VENG", 2),
     ("VPTS", 2),
-    ("STSE", 1),
+    ("MPAR", 1),
     ("COAT", 1),
 ]
 industry.economy_variations["STEELTOWN"].prod_cargo_types_with_output_ratios = [
@@ -47,7 +47,7 @@ industry.economy_variations["BASIC_TEMPERATE"].enabled = True
 industry.economy_variations["BASIC_TEMPERATE"].accept_cargos_with_input_ratios = [
     ("POWR", 3),
     ("VPTS", 2),
-    ("STSE", 2),
+    ("MPAR", 2),
     ("TYRE", 2),
     ("GLAS", 2),
 ]

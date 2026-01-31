@@ -66,6 +66,7 @@ from cargos import lye
 from cargos import mail
 from cargos import maize
 from cargos import manganese
+from cargos import metal_parts
 from cargos import meat
 from cargos import methanol
 from cargos import milk
@@ -205,6 +206,7 @@ mail.cargo.register()
 maize.cargo.register()
 manganese.cargo.register()
 meat.cargo.register()
+metal_parts.cargo.register()
 methanol.cargo.register()
 milk.cargo.register()
 naphtha.cargo.register()

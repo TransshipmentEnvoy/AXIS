@@ -44,6 +44,7 @@ economy = Economy(
         "limestone",
         "livestock",
         "logs",
+        "metal_parts",
         "milk",
         "nitrates",
         "oil",
@@ -68,7 +69,6 @@ economy = Economy(
         "slag",
         "soda_ash",
         "steel",
-        "steel_sections", #not in xis
         "sugar_beet", #or sugarcane?
         "sulphur",
         "textiles",

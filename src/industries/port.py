@@ -18,15 +18,16 @@ industry = IndustryPrimaryPort(
 
 industry.economy_variations["BASIC_TEMPERATE"].enabled = True
 industry.economy_variations["BASIC_TEMPERATE"].accept_cargo_types = [
-    "ZINC",
+    "BDMT",
     "FOOD",
     "BEER",
+    "PAPR",
 ]
 industry.economy_variations["BASIC_TEMPERATE"].prod_cargo_types_with_multipliers = [
     ("ENSP", 19),
     ("FMSP", 19),
     ("POWR", 12),
-    ("STSE", 12),    
+    ("MPAR", 12),    
 ]
 industry.economy_variations["BASIC_TEMPERATE"].prob_map_gen = "10"
 

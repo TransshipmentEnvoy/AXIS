@@ -3,7 +3,7 @@ from industry import IndustrySecondary, TileLocationChecks
 industry = IndustrySecondary(
     id="component_factory",
     accept_cargos_with_input_ratios=[
-        ("STSE", 2),
+        ("MPAR", 2),
         ("PPAR", 2),
         ("STAL", 2),
         ("POWR", 2),
@@ -32,7 +32,7 @@ industry.economy_variations['IN_A_HOT_COUNTRY'].prod_cargo_types_with_output_rat
 
 industry.economy_variations["BASIC_TROPIC"].enabled = True
 industry.economy_variations["BASIC_TROPIC"].accept_cargos_with_input_ratios = [
-    ("STSE", 2),
+    ("MPAR", 2),
     ("TYRE", 2),  
     ("PLAS", 2),  
     ("TEXT", 2),  
@@ -42,7 +42,7 @@ industry.economy_variations["BASIC_TROPIC"].accept_cargos_with_input_ratios = [
 
 industry.economy_variations["BASIC_TEMPERATE"].enabled = True
 industry.economy_variations["BASIC_TEMPERATE"].accept_cargos_with_input_ratios = [
-    ("STSE", 2),
+    ("MPAR", 2),
     ("PLAS", 2),  
     ("TEXT", 2),  
     ("POWR", 2),  

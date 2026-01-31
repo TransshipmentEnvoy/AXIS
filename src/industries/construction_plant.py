@@ -4,7 +4,7 @@ industry = IndustrySecondary(
     id="construction_plant",
     accept_cargos_with_input_ratios=[
         ("CMNT", 2),
-        ("STSE", 2),
+        ("MPAR", 2),
         ("STWR", 2),
         ("GLAS", 2),
     ],

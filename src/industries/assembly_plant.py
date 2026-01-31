@@ -47,7 +47,7 @@ industry.economy_variations["BASIC_TEMPERATE"].accept_cargos_with_input_ratios =
     ("STEL", 3),
     ("GLAS", 2),  
     ("VPTS", 2),
-    ("STSE", 2), 
+    ("MPAR", 2), 
     ("TYRE", 2),  
     ("COAT", 2),  
     

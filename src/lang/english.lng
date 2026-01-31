@@ -109,6 +109,7 @@ STR_CARGO_NAME_MEAT                                                             
 STR_CARGO_NAME_METAL                                                            :Metal
 STR_CARGO_NAME_METHANE                                                          :Methane
 STR_CARGO_NAME_METHANOL                                                         :Methanol
+STR_CARGO_NAME_METAL_PARTS                                                      :Metal Parts
 STR_CARGO_NAME_MILK                                                             :Milk
 STR_CARGO_NAME_MANGANESE                                                        :Manganese
 STR_CARGO_NAME_NAPHTHA                                                          :Naphtha
@@ -145,7 +146,7 @@ STR_CARGO_NAME_SODA_ASH                                                         
 STR_CARGO_NAME_STAINLESS_STEEL                                                  :Stainless Steel
 STR_CARGO_NAME_STEEL                                                            :Steel
 # Not just steel
-STR_CARGO_NAME_STEEL_SECTIONS                                                   :Metal Parts
+STR_CARGO_NAME_STEEL_SECTIONS                                                   :Steel Sections
 STR_CARGO_NAME_STEEL_SHEET                                                      :Steel Sheet
 # not just steel
 STR_CARGO_NAME_STEEL_WIRE_ROD                                                   :Metal Wire
@@ -224,6 +225,7 @@ STR_CARGO_UNIT_TIMBER                                                           
 STR_CARGO_UNIT_LYE                                                              :{VOLUME} of sodium hydroxide
 STR_CARGO_UNIT_MANGANESE                                                        :{WEIGHT} of manganese
 STR_CARGO_UNIT_METAL                                                            :{WEIGHT} of metal
+STR_CARGO_UNIT_METAL_PARTS                                                      :{WEIGHT} of metal parts
 STR_CARGO_UNIT_MEAT                                                             :{WEIGHT} of meat
 STR_CARGO_UNIT_METHANE                                                          :{VOLUME} of methane
 STR_CARGO_UNIT_METHANOL                                                         :{VOLUME} of methanol
@@ -260,7 +262,7 @@ STR_CARGO_UNIT_SLAG                                                             
 STR_CARGO_UNIT_SODA_ASH                                                         :{WEIGHT} of soda ash
 STR_CARGO_UNIT_STAINLESS_STEEL                                                  :{WEIGHT} of stainless steel
 STR_CARGO_UNIT_STEEL                                                            :{WEIGHT} of steel
-STR_CARGO_UNIT_STEEL_SECTIONS                                                   :{WEIGHT} of metal parts
+STR_CARGO_UNIT_STEEL_SECTIONS                                                   :{WEIGHT} of steel sections
 STR_CARGO_UNIT_STEEL_SHEET                                                      :{WEIGHT} of steel sheet
 STR_CARGO_UNIT_STEEL_WIRE_ROD                                                   :{WEIGHT} of metal wire
 STR_CARGO_UNIT_STONE                                                            :{WEIGHT} of stone
@@ -347,6 +349,7 @@ STR_CID_MAIL                                                                    
 STR_CID_MANGANESE                                                               :{TINYFONT}MN02
 STR_CID_MEAT                                                                    :{TINYFONT}MEAT
 STR_CID_METAL                                                                   :{TINYFONT}METL
+STR_CID_METAL_PARTS                                                             :{TINYFONT}MPAR
 STR_CID_METHANE                                                                 :{TINYFONT}CH4
 STR_CID_METHANOL                                                                :{TINYFONT}METH
 STR_CID_MILK                                                                    :{TINYFONT}MILK
@@ -391,7 +394,7 @@ STR_CID_SUGAR_BEET                                                              
 STR_CID_SUGAR_CANE                                                              :{TINYFONT}SGCN
 STR_CID_SULPHUR                                                                 :{TINYFONT}SULP
 STR_CID_SULPHURIC_ACID                                                          :{TINYFONT}SUAC
-STR_CID_STEEL_SECTIONS                                                          :{TINYFONT}MPAR
+STR_CID_STEEL_SECTIONS                                                          :{TINYFONT}STSE
 STR_CID_STEEL_SHEET                                                             :{TINYFONT}SHET
 STR_CID_STEEL_WIRE_ROD                                                          :{TINYFONT}WIRE
 STR_CID_TEXTILES                                                                :{TINYFONT}TEXT

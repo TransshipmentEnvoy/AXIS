@@ -27,7 +27,7 @@ industry.economy_variations["STEELTOWN"].accept_cargos_with_input_ratios = [
 
 industry.economy_variations["BASIC_TROPIC"].enabled = True
 industry.economy_variations["BASIC_TROPIC"].accept_cargos_with_input_ratios = [
-    ("STSE", 4),
+    ("MPAR", 4),
     ("GLAS", 2),
     ("PLAS", 2),
     ("TYRE", 2),
@@ -35,7 +35,7 @@ industry.economy_variations["BASIC_TROPIC"].accept_cargos_with_input_ratios = [
 
 industry.economy_variations["BASIC_TEMPERATE"].enabled = True
 industry.economy_variations["BASIC_TEMPERATE"].accept_cargos_with_input_ratios = [
-    ("STSE", 4),
+    ("MPAR", 4),
     ("POWR", 4),
     ("GLAS", 2),
     ("PLAS", 2),
