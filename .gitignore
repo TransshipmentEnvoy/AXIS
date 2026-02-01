@@ -10,3 +10,7 @@ Makefile.local
 .DS_Store
 .~lock.xis2.ods\#
 *.pyc
+
+.github/copilot*
+/CLAUDE.md
+/AGENTS.md
