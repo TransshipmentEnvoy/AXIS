@@ -19,7 +19,7 @@ industry.economy_variations['BETTER_LIVING_THROUGH_CHEMISTRY'].enabled = True
 industry.economy_variations["STEELTOWN"].enabled = True
 industry.economy_variations["STEELTOWN"].accept_cargos_with_input_ratios = [
     ("PLAS", 5),
-    ("STSE", 3),
+    ("MPAR", 3),
 ]
 industry.economy_variations["STEELTOWN"].prod_cargo_types_with_output_ratios = [
     ("PPAR", 6),
@@ -40,7 +40,7 @@ industry.economy_variations["BASIC_TROPIC"].prod_cargo_types_with_output_ratios 
 industry.economy_variations["BASIC_TEMPERATE"].enabled = True
 industry.economy_variations["BASIC_TEMPERATE"].accept_cargos_with_input_ratios = [
     ("PLAS", 5),
-    ("STSE", 3),
+    ("MPAR", 3),
 ]
 industry.economy_variations["BASIC_TEMPERATE"].prod_cargo_types_with_output_ratios = [
     ("MNSP", 6),
